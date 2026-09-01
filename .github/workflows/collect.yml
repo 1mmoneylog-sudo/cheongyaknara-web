@@ -8,9 +8,6 @@ on:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: cheongyaknara-web
     steps:
       - uses: actions/checkout@v4
 
