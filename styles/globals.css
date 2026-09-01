@@ -25,32 +25,69 @@ body{
 }
 .mono{font-family:'JetBrains Mono', monospace;}
 a{color:inherit;}
+button{font-family:inherit;}
 
+/* ===== Header ===== */
 header.site-header{background:var(--brand); color:#fff; padding:0 24px;}
 .header-inner{max-width:1120px; margin:0 auto; display:flex; align-items:center; gap:28px; height:68px;}
-.logo{font-size:21px; font-weight:800; letter-spacing:-0.02em; display:flex; align-items:center; gap:8px;}
+.logo{font-size:21px; font-weight:800; letter-spacing:-0.02em; display:flex; align-items:center; gap:8px; white-space:nowrap; text-decoration:none;}
 .logo .dot{width:7px; height:7px; border-radius:50%; background:var(--urgent);}
+nav{display:flex; gap:22px; font-size:16px; font-weight:500; color:#C9D5E1;}
+nav a{color:inherit; text-decoration:none;}
+nav a.active{color:#fff; font-weight:700;}
+.header-right{margin-left:auto; display:flex; align-items:center; gap:14px; font-size:15px; color:#C9D5E1;}
+.btn-ghost-inv{border:1px solid rgba(255,255,255,0.28); color:#fff; background:transparent; padding:8px 15px; border-radius:8px; font-size:14.5px; font-weight:600; cursor:pointer;}
 
-.layout{max-width:1120px; margin:0 auto; padding:22px 24px 60px;}
+/* ===== Hero ===== */
+.hero{background:linear-gradient(180deg,var(--brand) 0%, #123655 100%); color:#fff; padding:34px 24px 26px;}
+.hero-inner{max-width:1120px; margin:0 auto;}
+.hero h1{font-size:30px; font-weight:800; letter-spacing:-0.02em; margin:0 0 8px;}
+.hero p{margin:0 0 22px; color:#B9CADA; font-size:16px;}
+.stat-row{display:flex; gap:10px; flex-wrap:wrap;}
+.stat-chip{background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.14); border-radius:10px; padding:12px 18px; min-width:136px;}
+.stat-chip .num{font-family:'JetBrains Mono'; font-size:24px; font-weight:700; color:#fff;}
+.stat-chip .num.accent{color:#FF8F73;}
+.stat-chip .label{font-size:13px; color:#A9BCCC; margin-top:3px;}
+
+/* ===== Search + filter bar ===== */
+.search-wrap{background:var(--surface); border-bottom:1px solid var(--line);}
+.search-inner{max-width:1120px; margin:0 auto; padding:16px 24px;}
+.search-box{display:flex; align-items:center; gap:10px; background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:11px 16px; margin-bottom:14px;}
+.search-box input{border:none; background:none; outline:none; flex:1; font-size:16px; color:var(--ink); font-family:inherit;}
+.search-box .icon{color:var(--ink-faint); font-size:16px;}
+
+.filter-row{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+.seg{display:flex; background:var(--bg); border:1px solid var(--line); border-radius:9px; overflow:hidden;}
+.seg button{border:none; background:none; padding:9px 16px; font-size:14.5px; font-weight:600; color:var(--ink-soft); cursor:pointer;}
+.seg button.active{background:var(--brand); color:#fff;}
+.seg button.disabled{color:var(--ink-faint); cursor:not-allowed;}
+.pill-select{border:1px solid var(--line); background:#fff; border-radius:9px; padding:9px 13px; font-size:14.5px; color:var(--ink-soft); font-weight:500; cursor:pointer;}
+.filter-spacer{flex:1;}
+.sort-tabs{display:flex; gap:2px; font-size:14.5px;}
+.sort-tabs button{border:none; background:none; padding:9px 11px; color:var(--ink-faint); font-weight:600; cursor:pointer;}
+.sort-tabs button.active{color:var(--brand);}
+
+/* ===== Layout ===== */
+.layout{max-width:1120px; margin:0 auto; padding:22px 24px 60px; display:flex; gap:24px; align-items:flex-start;}
+.main-col{flex:1; min-width:0;}
 .result-count{font-size:15px; color:var(--ink-soft); margin-bottom:14px;}
 .result-count b{color:var(--ink); font-weight:700;}
 
-.filter-row{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px;}
-.seg{display:flex; background:var(--surface); border:1px solid var(--line); border-radius:9px; overflow:hidden;}
-.seg button{border:none; background:none; padding:9px 16px; font-size:14.5px; font-weight:600; color:var(--ink-soft); cursor:pointer; font-family:inherit;}
-.seg button.active{background:var(--brand); color:#fff;}
-
+/* ===== List card ===== */
 .card{
   background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--line);
   border-radius:12px; padding:19px 20px; margin-bottom:12px;
   display:flex; align-items:center; gap:20px; text-decoration:none; color:inherit;
+  transition:box-shadow .15s ease, transform .15s ease; cursor:pointer;
 }
+.card:hover{box-shadow:0 4px 16px rgba(15,42,67,0.08); transform:translateY(-1px);}
 .card.urgent{border-left-color:var(--urgent);}
 .card.soon{border-left-color:var(--soon);}
 .card.calm{border-left-color:var(--calm);}
 .card-body{flex:1; min-width:0;}
 .badge-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:9px;}
 .badge{font-size:12.5px; font-weight:700; padding:4px 9px; border-radius:6px;}
+.badge.new{background:var(--brand-tint); color:var(--brand-2);}
 .badge.agency{background:#EEF0F3; color:var(--ink-soft);}
 .badge.type{background:#F3EEFB; color:#6B4FA8;}
 .badge.kind{background:var(--brand-tint); color:var(--brand-2);}
@@ -59,7 +96,8 @@ header.site-header{background:var(--brand); color:#fff; padding:0 24px;}
 .meta-row b{color:var(--ink); font-weight:700;}
 
 .dday-block{width:132px; flex-shrink:0; text-align:right; display:flex; flex-direction:column; align-items:flex-end; gap:7px;}
-.dday-num{font-family:'JetBrains Mono'; font-weight:800; font-size:36px; line-height:1;}
+.dday-foot{display:flex; align-items:center; gap:8px;}
+.dday-num{font-family:'JetBrains Mono'; font-weight:800; font-size:32px; line-height:1;}
 .dday-num.urgent{color:var(--urgent);}
 .dday-num.soon{color:var(--soon);}
 .dday-num.calm{color:var(--calm);}
@@ -69,7 +107,43 @@ header.site-header{background:var(--brand); color:#fff; padding:0 24px;}
 .gauge-fill.urgent{background:var(--urgent);}
 .gauge-fill.soon{background:var(--soon);}
 .gauge-fill.calm{background:var(--calm);}
+.bookmark{width:28px; height:28px; border-radius:7px; border:1px solid var(--line); background:#fff; display:flex; align-items:center; justify-content:center; color:var(--ink-faint); font-size:14px; cursor:pointer; flex-shrink:0;}
+.bookmark.active{color:#DB8A0E; border-color:#DB8A0E;}
 
+/* ===== Pagination ===== */
+.pagination{display:flex; justify-content:center; gap:6px; margin-top:22px;}
+.pagination button{width:34px; height:34px; border-radius:8px; border:1px solid var(--line); background:#fff; font-family:'JetBrains Mono'; font-size:13.5px; color:var(--ink-soft); cursor:pointer;}
+.pagination button.active{background:var(--brand); color:#fff; border-color:var(--brand); font-weight:700;}
+.pagination button:disabled{opacity:0.4; cursor:default;}
+
+/* ===== Sidebar ===== */
+.sidebar{width:260px; flex-shrink:0; display:flex; flex-direction:column; gap:16px;}
+.side-card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 18px;}
+.side-card h3{font-size:14px; font-weight:700; color:var(--ink-soft); margin:0 0 13px;}
+.side-link-list{display:flex; flex-direction:column; gap:3px;}
+.side-link-list button{
+  display:flex; justify-content:space-between; align-items:center; width:100%;
+  padding:8px 5px; border-radius:6px; border:none; background:none; text-align:left;
+  color:var(--ink); font-size:14.5px; font-weight:500; cursor:pointer;
+}
+.side-link-list button:hover, .side-link-list button.active{background:var(--bg);}
+.side-link-list .n{font-family:'JetBrains Mono'; font-size:13px; color:var(--ink-faint); font-weight:600;}
+
+.type-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+.type-grid button{
+  border:1px solid var(--line); border-radius:9px; padding:11px 10px; background:var(--bg);
+  color:var(--ink); font-size:13.5px; font-weight:600; text-align:center; cursor:pointer;
+}
+.type-grid button:hover, .type-grid button.active{border-color:var(--brand-2); color:var(--brand-2); background:var(--brand-tint);}
+
+.cta-card{background:var(--brand); color:#fff; border-radius:12px; padding:19px;}
+.cta-card h4{font-size:15.5px; font-weight:700; margin:0 0 7px;}
+.cta-card p{font-size:13.5px; color:#B9CADA; margin:0 0 13px; line-height:1.5;}
+.cta-card button{width:100%; background:#fff; color:var(--brand); border:none; border-radius:8px; padding:11px; font-weight:700; font-size:14px; cursor:pointer;}
+
+.empty-state{text-align:center; padding:60px 20px; color:var(--ink-soft);}
+
+/* ===== Detail page ===== */
 .detail-hero{background:var(--brand); color:#fff; padding:28px 24px;}
 .detail-hero .inner{max-width:800px; margin:0 auto;}
 .info-card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px; margin-bottom:14px;}
@@ -79,3 +153,368 @@ header.site-header{background:var(--brand); color:#fff; padding:0 24px;}
 .info-row span:first-child{color:var(--ink-soft);}
 .info-row span:last-child{font-weight:700;}
 .file-list a{display:block; padding:9px 0; font-size:14px; color:var(--brand-2); text-decoration:none; border-bottom:1px solid var(--line);}
+
+@media (max-width: 860px){
+  .sidebar{display:none;}
+  .card{flex-wrap:wrap;}
+  .dday-block{width:auto; flex-direction:row; align-items:center; margin-left:auto;}
+  .gauge{width:60px;}
+  nav{display:none;}
+}import { useMemo, useState } from "react";
+import Link from "next/link";
+import noticesData from "../data/notices.json";
+import { getDday, getUrgencyLevel, getProgressPercent } from "../lib/dday";
+
+export async function getStaticProps() {
+  return { props: { generatedAt: noticesData.generated_at }, revalidate: 3600 };
+}
+
+const PAGE_SIZE = 8;
+const NEW_WINDOW_DAYS = 3;
+
+function isRecentlyAnnounced(announceDate) {
+  if (!announceDate) return false;
+  const cleaned = String(announceDate).replace(/[^0-9]/g, "");
+  if (cleaned.length !== 8) return false;
+  const d = new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
+  const diffDays = (Date.now() - d.getTime()) / (1000 * 60 * 60 * 24);
+  return diffDays >= 0 && diffDays <= NEW_WINDOW_DAYS;
+}
+
+export default function Home() {
+  const notices = noticesData.notices;
+
+  const [query, setQuery] = useState("");
+  const [agencyFilter, setAgencyFilter] = useState("전체");
+  const [regionFilter, setRegionFilter] = useState("전체");
+  const [kindFilter, setKindFilter] = useState("전체");
+  const [sortMode, setSortMode] = useState("dday");
+  const [page, setPage] = useState(1);
+  const [bookmarks, setBookmarks] = useState(new Set());
+
+  const enriched = useMemo(
+    () =>
+      notices.map((n) => ({
+        ...n,
+        dday: getDday(n.apply_end_date),
+        urgency: getUrgencyLevel(getDday(n.apply_end_date)),
+        progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
+        isNew: isRecentlyAnnounced(n.announce_date),
+      })),
+    [notices]
+  );
+
+  const regionCounts = useMemo(() => {
+    const map = new Map();
+    enriched.forEach((n) => {
+      if (!n.region_sido) return;
+      map.set(n.region_sido, (map.get(n.region_sido) || 0) + 1);
+    });
+    return [...map.entries()].sort((a, b) => b[1] - a[1]);
+  }, [enriched]);
+
+  const lhCount = enriched.filter((n) => n.source_agency === "LH").length;
+  const ghCount = enriched.filter((n) => n.source_agency === "GH").length;
+  const todayNewCount = enriched.filter((n) => n.isNew).length;
+  const threeDayCount = enriched.filter((n) => n.dday !== null && n.dday >= 0 && n.dday <= 3).length;
+
+  const filtered = useMemo(() => {
+    let list = enriched;
+    if (agencyFilter !== "전체") list = list.filter((n) => n.source_agency === agencyFilter);
+    if (regionFilter !== "전체") list = list.filter((n) => n.region_sido === regionFilter);
+    if (kindFilter !== "전체") list = list.filter((n) => n.supply_kind === kindFilter);
+    if (query.trim()) {
+      const q = query.trim().toLowerCase();
+      list = list.filter(
+        (n) =>
+          n.title?.toLowerCase().includes(q) ||
+          n.region_sido?.toLowerCase().includes(q) ||
+          n.source_agency?.toLowerCase().includes(q)
+      );
+    }
+
+    const sorted = [...list];
+    if (sortMode === "dday") {
+      sorted.sort((a, b) => (a.dday ?? 9999) - (b.dday ?? 9999));
+    } else if (sortMode === "latest") {
+      sorted.sort((a, b) => (b.announce_date ?? "").localeCompare(a.announce_date ?? ""));
+    } else if (sortMode === "household") {
+      sorted.sort((a, b) => (b.household_count ?? 0) - (a.household_count ?? 0));
+    }
+    return sorted;
+  }, [enriched, agencyFilter, regionFilter, kindFilter, query, sortMode]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const pageItems = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+
+  function resetPage() {
+    setPage(1);
+  }
+
+  function toggleBookmark(e, id) {
+    e.preventDefault();
+    e.stopPropagation();
+    setBookmarks((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  }
+
+  return (
+    <div>
+      <header className="site-header">
+        <div className="header-inner">
+          <Link href="/" className="logo">
+            <span className="dot" />
+            청약나라
+          </Link>
+          <nav>
+            <a href="/" className="active">모집공고</a>
+            <a href="#" onClick={(e) => e.preventDefault()}>가점계산기</a>
+            <a href="#" onClick={(e) => e.preventDefault()}>자격진단</a>
+            <a href="#" onClick={(e) => e.preventDefault()}>청약캘린더</a>
+          </nav>
+          <div className="header-right">
+            <button className="btn-ghost-inv" onClick={(e) => e.preventDefault()}>
+              알림 설정
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section className="hero">
+        <div className="hero-inner">
+          <h1>LH·GH 모집공고, 한 곳에서 놓치지 않게</h1>
+          <p>공공분양·공공임대 공고를 모아 마감 D-day 순으로 정리합니다. (SH는 연동 준비중)</p>
+          <div className="stat-row">
+            <div className="stat-chip">
+              <div className="num">{todayNewCount}</div>
+              <div className="label">최근 {NEW_WINDOW_DAYS}일 내 신규</div>
+            </div>
+            <div className="stat-chip">
+              <div className="num accent">{threeDayCount}</div>
+              <div className="label">3일 안에 마감</div>
+            </div>
+            <div className="stat-chip">
+              <div className="num">{lhCount}</div>
+              <div className="label">LH 공고</div>
+            </div>
+            <div className="stat-chip">
+              <div className="num">{ghCount}</div>
+              <div className="label">GH 공고</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="search-wrap">
+        <div className="search-inner">
+          <div className="search-box">
+            <span className="icon">⌕</span>
+            <input
+              type="text"
+              placeholder="단지명, 지역, 기관으로 검색 (예: 위례, 화성시, LH)"
+              value={query}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                resetPage();
+              }}
+            />
+          </div>
+          <div className="filter-row">
+            <div className="seg">
+              {["전체", "LH", "GH"].map((a) => (
+                <button
+                  key={a}
+                  className={agencyFilter === a ? "active" : ""}
+                  onClick={() => {
+                    setAgencyFilter(a);
+                    resetPage();
+                  }}
+                >
+                  {a}
+                </button>
+              ))}
+              <button className="disabled" disabled title="곧 연동 예정">
+                SH(준비중)
+              </button>
+            </div>
+
+            <select
+              className="pill-select"
+              value={regionFilter}
+              onChange={(e) => {
+                setRegionFilter(e.target.value);
+                resetPage();
+              }}
+            >
+              <option value="전체">지역 전체</option>
+              {regionCounts.map(([region]) => (
+                <option key={region} value={region}>
+                  {region}
+                </option>
+              ))}
+            </select>
+
+            <select
+              className="pill-select"
+              value={kindFilter}
+              onChange={(e) => {
+                setKindFilter(e.target.value);
+                resetPage();
+              }}
+            >
+              <option value="전체">공급유형 전체</option>
+              <option value="임대">임대</option>
+              <option value="분양">분양</option>
+            </select>
+
+            <div className="filter-spacer" />
+
+            <div className="sort-tabs">
+              <button className={sortMode === "dday" ? "active" : ""} onClick={() => setSortMode("dday")}>
+                마감임박순
+              </button>
+              <button className={sortMode === "latest" ? "active" : ""} onClick={() => setSortMode("latest")}>
+                최신순
+              </button>
+              <button className={sortMode === "household" ? "active" : ""} onClick={() => setSortMode("household")}>
+                세대수순
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="layout">
+        <div className="main-col">
+          <div className="result-count">
+            총 <b>{filtered.length}</b>개의 접수중·예정 공고
+          </div>
+
+          {pageItems.length === 0 && (
+            <div className="empty-state">조건에 맞는 공고가 없습니다. 필터를 조정해보세요.</div>
+          )}
+
+          {pageItems.map((n) => (
+            <Link key={n.id} href={`/notice/${n.id}`} className={`card ${n.urgency}`}>
+              <div className="card-body">
+                <div className="badge-row">
+                  {n.isNew && <span className="badge new">NEW</span>}
+                  <span className="badge agency">{n.source_agency}</span>
+                  {n.notice_type && <span className="badge type">{n.notice_type}</span>}
+                  {n.supply_kind && <span className="badge kind">{n.supply_kind}</span>}
+                </div>
+                <p className="card-title">{n.title}</p>
+                <div className="meta-row">
+                  {n.region_sido && (
+                    <span>
+                      위치 <b>{n.region_sido}</b>
+                    </span>
+                  )}
+                  {n.household_count && (
+                    <span>
+                      세대수 <b>{n.household_count}</b>
+                    </span>
+                  )}
+                  {n.area_range && (
+                    <span>
+                      전용면적 <b>{n.area_range}㎡</b>
+                    </span>
+                  )}
+                </div>
+              </div>
+              <div className="dday-block">
+                <div className="dday-foot">
+                  <div
+                    className={`bookmark ${bookmarks.has(n.id) ? "active" : ""}`}
+                    onClick={(e) => toggleBookmark(e, n.id)}
+                  >
+                    {bookmarks.has(n.id) ? "★" : "☆"}
+                  </div>
+                  <div className={`dday-num mono ${n.urgency}`}>
+                    {n.dday === null ? "-" : n.dday >= 0 ? `D-${n.dday}` : "마감"}
+                  </div>
+                </div>
+                <div className="gauge">
+                  <div className={`gauge-fill ${n.urgency}`} style={{ width: `${n.progress}%` }} />
+                </div>
+                <div className="dday-sub mono">~{n.apply_end_date ?? "-"}</div>
+              </div>
+            </Link>
+          ))}
+
+          {totalPages > 1 && (
+            <div className="pagination">
+              <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>
+                ‹
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                <button key={p} className={p === currentPage ? "active" : ""} onClick={() => setPage(p)}>
+                  {p}
+                </button>
+              ))}
+              <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)}>
+                ›
+              </button>
+            </div>
+          )}
+        </div>
+
+        <aside className="sidebar">
+          <div className="side-card">
+            <h3>기관별</h3>
+            <div className="side-link-list">
+              <button
+                className={agencyFilter === "LH" ? "active" : ""}
+                onClick={() => {
+                  setAgencyFilter("LH");
+                  resetPage();
+                }}
+              >
+                LH <span className="n">{lhCount}</span>
+              </button>
+              <button
+                className={agencyFilter === "GH" ? "active" : ""}
+                onClick={() => {
+                  setAgencyFilter("GH");
+                  resetPage();
+                }}
+              >
+                GH <span className="n">{ghCount}</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="side-card">
+            <h3>지역별 (많은 순)</h3>
+            <div className="type-grid">
+              {regionCounts.slice(0, 6).map(([region, count]) => (
+                <button
+                  key={region}
+                  className={regionFilter === region ? "active" : ""}
+                  onClick={() => {
+                    setRegionFilter(region);
+                    resetPage();
+                  }}
+                >
+                  {region} {count}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="cta-card">
+            <h4>가점 계산이 헷갈리시나요?</h4>
+            <p>청약저축 기간·부양가족 수를 입력해 예상 가점을 계산하는 기능을 준비 중입니다.</p>
+            <button disabled style={{ opacity: 0.6, cursor: "default" }}>
+              준비중
+            </button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  );
+}
