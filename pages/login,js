@@ -1,0 +1,65 @@
+import Link from "next/link";
+
+export default function Login() {
+  return (
+    <div className="login-wrap">
+      <div className="login-card">
+        <h1>로그인</h1>
+
+        <label>아이디 또는 이메일</label>
+        <input type="text" />
+
+        <label>비밀번호</label>
+        <input type="password" />
+
+        <button className="login-submit">로그인</button>
+
+        <div className="divider"><span>또는 간편하게</span></div>
+
+        <button className="social-btn kakao">카카오로 시작하기</button>
+        <button className="social-btn naver">N 네이버로 시작하기</button>
+        <button className="social-btn google">G 구글로 시작하기</button>
+
+        <p className="login-footer">
+          계정이 없으신가요? <Link href="/signup">회원가입</Link> ·{" "}
+          <Link href="/find-password">비밀번호 찾기</Link>
+        </p>
+      </div>
+    </div>
+  );
+}
+.login-wrap {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f8fa;
+}
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.login-card h1 { text-align: center; margin-bottom: 28px; }
+.login-card label { display: block; font-size: 13px; color: #666; margin: 14px 0 6px; }
+.login-card input {
+  width: 100%; padding: 12px 14px; border: 1px solid #e2e2e2; border-radius: 8px;
+}
+.login-submit {
+  width: 100%; margin-top: 22px; background: #111; color: #fff;
+  padding: 14px; border-radius: 8px; font-weight: 600;
+}
+.divider { text-align: center; margin: 22px 0; color: #999; font-size: 13px; position: relative; }
+.divider::before, .divider::after {
+  content: ""; position: absolute; top: 50%; width: 35%; height: 1px; background: #eee;
+}
+.divider::before { left: 0; } .divider::after { right: 0; }
+.social-btn { width: 100%; padding: 12px; border-radius: 8px; margin-bottom: 10px; font-weight: 500; }
+.social-btn.kakao { background: #FEE500; color: #111; }
+.social-btn.naver { background: #03C75A; color: #fff; }
+.social-btn.google { background: #fff; border: 1px solid #e2e2e2; color: #333; }
+.login-footer { text-align: center; font-size: 13px; color: #666; margin-top: 20px; }
+.login-footer a { color: #111; font-weight: 600; }
