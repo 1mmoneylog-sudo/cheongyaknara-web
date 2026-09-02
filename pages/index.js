@@ -133,10 +133,10 @@ export default function Home() {
             <Link href="/calendar">청약캘린더</Link>
           </nav>
           <div className="header-right">
-            <button className="btn-ghost-inv" onClick={(e) => e.preventDefault()}>
-              알림 설정
-            </button>
-          </div>
+  <Link href="/contact" className="gnb-link">문의하기</Link>
+  <Link href="/login" className="gnb-link">로그인</Link>
+  <Link href="/signup" className="btn-signup">회원가입</Link>
+</div>
         </div>
       </header>
 
