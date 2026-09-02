@@ -1,1 +1,30 @@
+import Link from "next/link";
 
+export default function FloatingContactButton() {
+  return (
+    <Link href="/contact" className="fab-contact" aria-label="문의하기">
+      <span className="fab-icon">💬</span>
+      <span className="fab-text">문의하기</span>
+    </Link>
+  );
+}
+.fab-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #111;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  z-index: 100;
+}
+.fab-icon { font-size: 16px; }
+@media (max-width: 768px) {
+  .fab-text { display: none; }
+  .fab-contact { padding: 14px; }
+}
