@@ -292,3 +292,95 @@ nav a.active{color:#fff; font-weight:700;}
   font-weight: 600;
   text-decoration: none;
 }
+/* GNB 버튼 */
+.gnb-link {
+  color: #fff;
+  opacity: 0.85;
+  font-size: 14px;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+.gnb-link:hover { opacity: 1; }
+
+.btn-signup {
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* 플로팅 문의하기 버튼 */
+.fab-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #111;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  z-index: 100;
+}
+.fab-icon { font-size: 16px; }
+
+/* 로그인 페이지 */
+.login-wrap {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f8fa;
+}
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.login-card h1 { text-align: center; margin-bottom: 28px; }
+.login-card label { display: block; font-size: 13px; color: #666; margin: 14px 0 6px; }
+.login-card input {
+  width: 100%; padding: 12px 14px; border: 1px solid #e2e2e2; border-radius: 8px;
+}
+.login-submit {
+  width: 100%; margin-top: 22px; background: #111; color: #fff;
+  padding: 14px; border-radius: 8px; font-weight: 600;
+}
+.divider { text-align: center; margin: 22px 0; color: #999; font-size: 13px; position: relative; }
+.divider::before, .divider::after {
+  content: ""; position: absolute; top: 50%; width: 35%; height: 1px; background: #eee;
+}
+.divider::before { left: 0; } .divider::after { right: 0; }
+.social-btn { width: 100%; padding: 12px; border-radius: 8px; margin-bottom: 10px; font-weight: 500; }
+.social-btn.kakao { background: #FEE500; color: #111; }
+.social-btn.naver { background: #03C75A; color: #fff; }
+.social-btn.google { background: #fff; border: 1px solid #e2e2e2; color: #333; }
+.login-footer { text-align: center; font-size: 13px; color: #666; margin-top: 20px; }
+.login-footer a { color: #111; font-weight: 600; }
+
+/* 모바일 반응형 (768px 이하) */
+@media (max-width: 768px) {
+  .header-inner nav { display: none; }
+
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { order: 2; margin-top: 24px; }
+
+  .meta-row span { font-size: 13.5px; color: #333; }
+
+  .bookmark, .search-confirm-btn, .seg button, .sort-tabs button {
+    min-height: 44px; min-width: 44px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .stat-row { flex-wrap: wrap; gap: 10px; }
+  .filter-row { flex-wrap: wrap; gap: 8px; }
+}
