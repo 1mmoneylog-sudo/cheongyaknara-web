@@ -70,18 +70,57 @@ async function collectGh() {
   }
 }
 
+function parseFlexibleDate(str) {
+  if (!str) return null;
+  const cleaned = String(str).replace(/[^0-9]/g, "");
+  if (cleaned.length !== 8) return null;
+  const y = cleaned.slice(0, 4);
+  const m = cleaned.slice(4, 6);
+  const d = cleaned.slice(6, 8);
+  const parsed = new Date(`${y}-${m}-${d}T23:59:59+09:00`);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+/** 접수마감일이 오늘 이후(=진행중이거나 예정)인 공고만 남긴다. 마감일을 알 수 없는 경우는 일단 보여준다. */
+function isStillRelevant(notice, now) {
+  const end = parseFlexibleDate(notice.apply_end_date);
+  if (!end) return true; // 마감일 정보가 없으면 판단 보류하고 노출
+  return end.getTime() >= now.getTime();
+}
+
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
   const [lhNotices, ghNotices] = await Promise.all([collectLh(), collectGh()]);
-  const all = [...lhNotices, ...ghNotices];
+  const combined = [...lhNotices, ...ghNotices];
 
-  all.sort((a, b) => new Date(a.apply_end_date?.replace(/\./g, "-")) - new Date(b.apply_end_date?.replace(/\./g, "-")));
+  const now = new Date();
+  const relevant = combined.filter((n) => isStillRelevant(n, now));
+  console.log(`마감 제외 필터: ${combined.length}건 → ${relevant.length}건`);
+
+  // 같은 id가 중복으로 들어오는 경우(원본 데이터 중복 등) 제거
+  const seen = new Set();
+  const deduped = relevant.filter((n) => {
+    if (seen.has(n.id)) return false;
+    seen.add(n.id);
+    return true;
+  });
+  console.log(`중복 제거: ${relevant.length}건 → ${deduped.length}건`);
+
+  deduped.sort(
+    (a, b) =>
+      (parseFlexibleDate(a.apply_end_date)?.getTime() ?? Infinity) -
+      (parseFlexibleDate(b.apply_end_date)?.getTime() ?? Infinity)
+  );
 
   fs.writeFileSync(
     OUTPUT_PATH,
-    JSON.stringify({ generated_at: new Date().toISOString(), count: all.length, notices: all }, null, 2)
+    JSON.stringify(
+      { generated_at: new Date().toISOString(), count: deduped.length, notices: deduped },
+      null,
+      2
+    )
   );
-  console.log(`=== 완료: 총 ${all.length}건 저장 (${OUTPUT_PATH}) ===`);
+  console.log(`=== 완료: 총 ${deduped.length}건 저장 (${OUTPUT_PATH}) ===`);
 }
 
 main().catch((err) => {

@@ -1,5 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import noticesData from "../data/notices.json";
 import { getDday, getUrgencyLevel, getProgressPercent } from "../lib/dday";
 
@@ -9,6 +10,11 @@ export async function getStaticProps() {
 
 const PAGE_SIZE = 8;
 const NEW_WINDOW_DAYS = 3;
+
+function todayStr() {
+  const d = new Date();
+  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
+}
 
 function isRecentlyAnnounced(announceDate) {
   if (!announceDate) return false;
@@ -21,8 +27,10 @@ function isRecentlyAnnounced(announceDate) {
 
 export default function Home() {
   const notices = noticesData.notices;
+  const router = useRouter();
 
   const [query, setQuery] = useState("");
+  const [pendingQuery, setPendingQuery] = useState("");
   const [agencyFilter, setAgencyFilter] = useState("전체");
   const [regionFilter, setRegionFilter] = useState("전체");
   const [kindFilter, setKindFilter] = useState("전체");
@@ -30,15 +38,25 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [bookmarks, setBookmarks] = useState(new Set());
 
+  // 상세페이지 하단 링크(?agency=LH, ?region=경기도)로 들어온 경우 초기 필터 적용
+  useEffect(() => {
+    if (!router.isReady) return;
+    if (typeof router.query.agency === "string") setAgencyFilter(router.query.agency);
+    if (typeof router.query.region === "string") setRegionFilter(router.query.region);
+  }, [router.isReady, router.query.agency, router.query.region]);
+
   const enriched = useMemo(
     () =>
-      notices.map((n) => ({
-        ...n,
-        dday: getDday(n.apply_end_date),
-        urgency: getUrgencyLevel(getDday(n.apply_end_date)),
-        progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
-        isNew: isRecentlyAnnounced(n.announce_date),
-      })),
+      notices
+        .map((n) => ({
+          ...n,
+          dday: getDday(n.apply_end_date),
+          urgency: getUrgencyLevel(getDday(n.apply_end_date)),
+          progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
+          isNew: isRecentlyAnnounced(n.announce_date),
+        }))
+        // 마감일 정보가 있는데 이미 지났으면 화면에 노출하지 않음 (수집 단계에서 걸러지지만 이중 방어)
+        .filter((n) => n.dday === null || n.dday >= 0),
     [notices]
   );
 
@@ -110,9 +128,9 @@ export default function Home() {
           </Link>
           <nav>
             <a href="/" className="active">모집공고</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>가점계산기</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>자격진단</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>청약캘린더</a>
+            <Link href="/gajeom">가점계산기</Link>
+            <Link href="/jagyeok">자격진단</Link>
+            <Link href="/calendar">청약캘린더</Link>
           </nav>
           <div className="header-right">
             <button className="btn-ghost-inv" onClick={(e) => e.preventDefault()}>
@@ -154,12 +172,24 @@ export default function Home() {
             <input
               type="text"
               placeholder="단지명, 지역, 기관으로 검색 (예: 위례, 화성시, LH)"
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                resetPage();
+              value={pendingQuery}
+              onChange={(e) => setPendingQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  setQuery(pendingQuery);
+                  resetPage();
+                }
               }}
             />
+            <button
+              className="search-confirm-btn"
+              onClick={() => {
+                setQuery(pendingQuery);
+                resetPage();
+              }}
+            >
+              확인
+            </button>
           </div>
           <div className="filter-row">
             <div className="seg">
