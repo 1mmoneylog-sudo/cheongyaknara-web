@@ -5,12 +5,16 @@
 //   LH_SERVICE_KEY=발급받은키 GH_SERVICE_KEY=발급받은키 REB_SERVICE_KEY=발급받은키 npm run collect
 //
 // ✅ 2026-09-02 수정: 청약홈(한국부동산원) API로 GH 세대수를 보완하는 단계 추가
+// ✅ 2026-09-03 수정:
+//   - "테스트지구" 등 GH 내부 테스트용 더미 공고를 걸러내는 필터 추가
+//   - 청약홈 API를 세대수 보완용뿐 아니라, 청약홈 자체 공고(분양+임대)도
+//     LH·GH와 나란히 목록에 추가하도록 확장
 
 const fs = require("fs");
 const path = require("path");
 const { fetchLhList, fetchLhDetail, fetchLhSupply, normalizeLhNotice } = require("../lib/collectors/lh");
 const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
-const { fetchRebAptAll, fillHouseholdCountFromReb } = require("../lib/collectors/reb");
+const { fetchRebAll, normalizeAllRebNotices, fillHouseholdCountFromReb } = require("../lib/collectors/reb");
 
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "notices.json");
 
@@ -73,21 +77,30 @@ async function collectGh() {
   }
 }
 
-/** 청약홈 데이터로 세대수를 보완한다 (주로 GH 공고의 빈 값을 채움) */
-async function supplementWithReb(notices) {
+/** 청약홈 원본 데이터를 한 번만 가져와서, ① 자체 공고 목록과 ② GH 세대수 보완에 함께 쓴다 */
+async function collectReb() {
   const serviceKey = process.env.REB_SERVICE_KEY;
   if (!serviceKey) {
-    console.warn("⚠️ REB_SERVICE_KEY가 없어 청약홈 보완을 건너뜁니다.");
-    return notices;
+    console.warn("⚠️ REB_SERVICE_KEY가 없어 청약홈 수집을 건너뜁니다.");
+    return { notices: [], rebResults: [] };
   }
   try {
-    const rebRows = await fetchRebAptAll(serviceKey);
-    console.log(`청약홈 APT 분양정보: ${rebRows.length}건`);
-    return fillHouseholdCountFromReb(notices, rebRows);
+    const rebResults = await fetchRebAll(serviceKey);
+    const notices = normalizeAllRebNotices(rebResults);
+    console.log(`청약홈 전체(분양+임대 등): ${notices.length}건`);
+    return { notices, rebResults };
   } catch (err) {
-    console.error("청약홈 보완 실패:", err.message);
-    return notices; // 실패해도 기존 데이터는 그대로 유지
+    console.error("청약홈 수집 실패:", err.message);
+    return { notices: [], rebResults: [] };
   }
+}
+
+/** 제목에 이런 단어가 포함되면 실제 공고가 아닌 내부 테스트/점검용 데이터로 보고 제외한다.
+ *  (GH 원본 데이터에 "테스트지구", "오픈테스트" 등 더미 공고가 섞여 있는 게 확인됨, 2026-09-03) */
+const TEST_TITLE_PATTERN = /테스트|점검용|오픈테스트|시스템\s*점검/;
+
+function isTestNotice(notice) {
+  return TEST_TITLE_PATTERN.test(notice.title || "");
 }
 
 function parseFlexibleDate(str) {
@@ -101,14 +114,6 @@ function parseFlexibleDate(str) {
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
-/** 제목에 이런 단어가 포함되면 실제 공고가 아닌 내부 테스트/점검용 데이터로 보고 제외한다.
- *  (GH 원본 데이터에 "테스트지구", "오픈테스트" 등 더미 공고가 섞여 있는 게 확인됨, 2026-09-03) */
-const TEST_TITLE_PATTERN = /테스트|점검용|오픈테스트|시스템\s*점검/;
-
-function isTestNotice(notice) {
-  return TEST_TITLE_PATTERN.test(notice.title || "");
-}
-
 /** 접수마감일이 오늘 이후(=진행중이거나 예정)인 공고만 남긴다. 마감일을 알 수 없는 경우는 일단 보여준다. */
 function isStillRelevant(notice, now) {
   const end = parseFlexibleDate(notice.apply_end_date);
@@ -118,8 +123,8 @@ function isStillRelevant(notice, now) {
 
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
-  const [lhNotices, ghNotices] = await Promise.all([collectLh(), collectGh()]);
-  const combined = [...lhNotices, ...ghNotices];
+  const [lhNotices, ghNotices, reb] = await Promise.all([collectLh(), collectGh(), collectReb()]);
+  const combined = [...lhNotices, ...ghNotices, ...reb.notices];
 
   const now = new Date();
   const noTestNotices = combined.filter((n) => !isTestNotice(n));
@@ -136,9 +141,10 @@ async function main() {
   });
   console.log(`중복 제거: ${relevant.length}건 → ${deduped.length}건`);
 
-  // 마감되지 않은, 중복 제거된 공고들만 대상으로 청약홈 세대수 보완 실행
-  // (전체 990건이 아니라 실제로 화면에 뜨는 공고만 대상으로 하면 훨씬 빠름)
-  const supplemented = await supplementWithReb(deduped);
+  // 마감되지 않은, 중복 제거된 공고들만 대상으로 GH 세대수를 청약홈 데이터로 보완
+  // (청약홈 자체 공고는 이미 위에서 combined에 포함되어 있으므로 여기선 GH 등 다른
+  //  소스의 빈 세대수만 채운다)
+  const supplemented = fillHouseholdCountFromReb(deduped, reb.rebResults);
 
   supplemented.sort(
     (a, b) =>
