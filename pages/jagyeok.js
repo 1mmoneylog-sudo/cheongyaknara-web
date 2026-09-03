@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FloatingContactButton from "../components/FloatingContactButton";
 import { useMemo, useState } from "react";
 
 const QUESTIONS = [
@@ -86,6 +87,7 @@ export default function Jagyeok() {
           매년 다릅니다.</b> 반드시 관심 있는 공고의 원문 공고문에서 자격요건을 확인하세요.
         </div>
       </div>
+            <FloatingContactButton />
     </div>
   );
 }
