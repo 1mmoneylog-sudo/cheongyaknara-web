@@ -62,14 +62,27 @@ async function collectGh() {
     const { notices, supplies, housingTypes, projects } = await fetchGhAll(serviceKey);
     console.log(`GH 모집정보(필터 전): ${notices.length}건`);
 
-    // GH API에는 "테스트지구", "테스트(...)" 같은 시스템 점검용 더미 데이터가 섞여 있어 제외
+    // 테스트/점검/샘플 더미 데이터 제외
     const realNotices = notices.filter((n) => {
       const title = n["공고명"] ?? "";
       return !title.includes("테스트") && !title.includes("점검") && !title.includes("샘플");
     });
-    console.log(`GH 모집정보(테스트 데이터 제외): ${realNotices.length}건`);
 
-    return realNotices
+    // GH API가 20년치 과거 데이터를 다 주기 때문에, 게시일자가 최근 1년 이내인 것만 우선 처리
+    // (오래된 마감 공고를 붙잡고 있을 이유가 없음)
+    const oneYearAgo = new Date();
+    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+    const recentNotices = realNotices.filter((n) => {
+      const raw = n["게시일자"] ?? n["공고일자"];
+      if (!raw) return true; // 게시일자 자체가 없으면 일단 통과시켜서 뒤에서 판단
+      const cleaned = String(raw).replace(/[^0-9]/g, "");
+      if (cleaned.length < 8) return true;
+      const d = new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
+      return Number.isNaN(d.getTime()) ? true : d.getTime() >= oneYearAgo.getTime();
+    });
+    console.log(`GH 모집정보(테스트 제외): ${realNotices.length}건 → (최근 1년 이내): ${recentNotices.length}건`);
+
+    return recentNotices
       .map((n) => normalizeGhNotice(n, supplies, housingTypes, projects))
       .filter((n) => n.apply_end_date);
   } catch (err) {
