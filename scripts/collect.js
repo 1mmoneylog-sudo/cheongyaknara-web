@@ -95,9 +95,10 @@ async function collectReb() {
   }
 }
 
-/** 제목에 이런 단어가 포함되면 실제 공고가 아닌 내부 테스트/점검용 데이터로 보고 제외한다.
- *  (GH 원본 데이터에 "테스트지구", "오픈테스트" 등 더미 공고가 섞여 있는 게 확인됨, 2026-09-03) */
-const TEST_TITLE_PATTERN = /테스트|점검용|오픈테스트|시스템\s*점검/;
+/** 제목에 이런 단어가 포함되면 실제 공고가 아닌 내부 테스트/점검/관리용 데이터로 보고 제외한다.
+ *  (GH 원본 데이터에 "테스트지구", "오픈테스트", "OOOO년 데이터관리" 등 더미 공고가
+ *   섞여 있는 게 확인됨, 2026-09-03) */
+const TEST_TITLE_PATTERN = /테스트|점검용|오픈테스트|시스템\s*점검|데이터\s*관리|\d{4}년.*데이터/;
 
 function isTestNotice(notice) {
   return TEST_TITLE_PATTERN.test(notice.title || "");
