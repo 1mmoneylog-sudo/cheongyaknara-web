@@ -38,7 +38,40 @@ export default function Signup() {
         <label>이름(실명)</label>
         <input type="text" placeholder="실명 (신청서·이력서에 사용)" />
 
-        {/* 여기 아래에 전화번호, 약관동의, 가입버튼 등이 이어질 예정 */}
+        <div className="agree-list">
+          <label className="agree-item">
+            <input type="checkbox" />
+            <span><Link href="/terms">이용약관</Link>에 동의합니다 (필수)</span>
+          </label>
+          <label className="agree-item">
+            <input type="checkbox" />
+            <span><Link href="/privacy">개인정보처리방침</Link>에 동의합니다 (필수)</span>
+          </label>
+          <label className="agree-item">
+            <input type="checkbox" />
+            <span>만 14세 이상입니다 (필수)</span>
+          </label>
+
+          <label className="agree-item agree-optional">
+            <input type="checkbox" />
+            <span>[선택] 맞춤알림용 이메일 수신에 동의합니다</span>
+          </label>
+          <p className="agree-hint">
+            동의하지 않으시면 가입과 공고 열람 이용에는 지장이 없으나, 가입 후 혜택 알림에서 안내드릴 수 있어요.
+          </p>
+        </div>
+
+        <button className="login-submit">가입하기</button>
+
+        <div className="divider"><span>또는 간편하게</span></div>
+
+        <button className="social-btn kakao">카카오로 시작하기</button>
+        <button className="social-btn naver">N 네이버로 시작하기</button>
+        <button className="social-btn google">G 구글로 시작하기</button>
+
+        <p className="login-footer">
+          이미 계정이 있으신가요? <Link href="/login">로그인</Link>
+        </p>
       </div>
     </div>
   );
