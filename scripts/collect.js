@@ -4,8 +4,8 @@
 const fs = require("fs");
 const path = require("path");
 const { fetchLhList, fetchLhDetail, fetchLhSupply, normalizeLhNotice } = require("../lib/collectors/lh");
-//const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
-const { fetchCheongyakhomeAll, normalizeCheongyakhomeNotice } = require("../lib/collectors/cheongyakhome");
+const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
+//const { fetchCheongyakhomeAll, normalizeCheongyakhomeNotice } = require("../lib/collectors/cheongyakhome");
 
 const SHARED_SERVICE_KEY =
   process.env.PUBLIC_DATA_API_KEY || process.env.LH_SERVICE_KEY || process.env.GH_SERVICE_KEY;
