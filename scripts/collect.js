@@ -101,6 +101,14 @@ function parseFlexibleDate(str) {
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
+/** 제목에 이런 단어가 포함되면 실제 공고가 아닌 내부 테스트/점검용 데이터로 보고 제외한다.
+ *  (GH 원본 데이터에 "테스트지구", "오픈테스트" 등 더미 공고가 섞여 있는 게 확인됨, 2026-09-03) */
+const TEST_TITLE_PATTERN = /테스트|점검용|오픈테스트|시스템\s*점검/;
+
+function isTestNotice(notice) {
+  return TEST_TITLE_PATTERN.test(notice.title || "");
+}
+
 /** 접수마감일이 오늘 이후(=진행중이거나 예정)인 공고만 남긴다. 마감일을 알 수 없는 경우는 일단 보여준다. */
 function isStillRelevant(notice, now) {
   const end = parseFlexibleDate(notice.apply_end_date);
@@ -114,8 +122,10 @@ async function main() {
   const combined = [...lhNotices, ...ghNotices];
 
   const now = new Date();
-  const relevant = combined.filter((n) => isStillRelevant(n, now));
-  console.log(`마감 제외 필터: ${combined.length}건 → ${relevant.length}건`);
+  const noTestNotices = combined.filter((n) => !isTestNotice(n));
+  console.log(`테스트/점검용 공고 제외: ${combined.length}건 → ${noTestNotices.length}건`);
+  const relevant = noTestNotices.filter((n) => isStillRelevant(n, now));
+  console.log(`마감 제외 필터: ${noTestNotices.length}건 → ${relevant.length}건`);
 
   // 같은 id가 중복으로 들어오는 경우(원본 데이터 중복 등) 제거
   const seen = new Set();
