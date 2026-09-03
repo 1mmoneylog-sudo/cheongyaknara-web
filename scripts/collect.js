@@ -1,14 +1,16 @@
 // 정기 수집 스크립트 — GitHub Actions가 이 파일을 주기적으로 실행해서
 // data/notices.json 을 최신 상태로 갱신합니다.
+//
+// 로컬에서 테스트하려면:
+//   LH_SERVICE_KEY=발급받은키 GH_SERVICE_KEY=발급받은키 REB_SERVICE_KEY=발급받은키 npm run collect
+//
+// ✅ 2026-09-02 수정: 청약홈(한국부동산원) API로 GH 세대수를 보완하는 단계 추가
 
 const fs = require("fs");
 const path = require("path");
 const { fetchLhList, fetchLhDetail, fetchLhSupply, normalizeLhNotice } = require("../lib/collectors/lh");
 const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
-//const { fetchCheongyakhomeAll, normalizeCheongyakhomeNotice } = require("../lib/collectors/cheongyakhome");
-
-const SHARED_SERVICE_KEY =
-  process.env.PUBLIC_DATA_API_KEY || process.env.LH_SERVICE_KEY || process.env.GH_SERVICE_KEY;
+const { fetchRebAptAll, fillHouseholdCountFromReb } = require("../lib/collectors/reb");
 
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "notices.json");
 
@@ -20,12 +22,13 @@ function formatDate(d) {
 }
 
 async function collectLh() {
-  const serviceKey = SHARED_SERVICE_KEY;
+  const serviceKey = process.env.LH_SERVICE_KEY;
   if (!serviceKey) {
-    console.warn("⚠️ 인증키가 없어 LH 수집을 건너뜁니다.");
+    console.warn("⚠️ LH_SERVICE_KEY가 없어 LH 수집을 건너뜁니다.");
     return [];
   }
 
+  // 오늘 기준 앞뒤 넓게 잡아서 현재 접수중/예정 공고를 최대한 포함
   const today = new Date();
   const past = new Date(today);
   past.setDate(past.getDate() - 60);
@@ -45,56 +48,47 @@ async function collectLh() {
       results.push(normalizeLhNotice(item, detail, supplyRows));
     } catch (err) {
       console.error(`LH 상세 수집 실패 (PAN_ID=${item.PAN_ID}):`, err.message);
+      // 상세 실패해도 목록 정보만으로 최소한의 카드는 유지
       results.push(normalizeLhNotice(item, {}, []));
     }
+    // 공공데이터포털 트래픽 보호를 위해 약간의 간격을 둠
     await new Promise((r) => setTimeout(r, 150));
   }
   return results;
 }
 
 async function collectGh() {
-  const serviceKey = SHARED_SERVICE_KEY;
+  const serviceKey = process.env.GH_SERVICE_KEY;
   if (!serviceKey) {
-    console.warn("⚠️ 인증키가 없어 GH 수집을 건너뜁니다.");
+    console.warn("⚠️ GH_SERVICE_KEY가 없어 GH 수집을 건너뜁니다.");
     return [];
   }
   try {
     const { notices, supplies, housingTypes, projects } = await fetchGhAll(serviceKey);
-    console.log(`GH 모집정보(필터 전): ${notices.length}건`);
-
-    // 테스트/점검/샘플 더미 데이터 제외
-    const realNotices = notices.filter((n) => {
-      const title = n["공고명"] ?? "";
-      return !title.includes("테스트") && !title.includes("점검") && !title.includes("샘플");
-    });
-
-    // GH API가 20년치 과거 데이터를 다 주기 때문에, 게시일자가 최근 1년 이내인 것만 우선 처리
-    // (오래된 마감 공고를 붙잡고 있을 이유가 없음)
-    const oneYearAgo = new Date();
-    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
-    const recentNotices = realNotices.filter((n) => {
-      const raw = n["게시일자"] ?? n["공고일자"];
-      if (!raw) return true; // 게시일자 자체가 없으면 일단 통과시켜서 뒤에서 판단
-      const cleaned = String(raw).replace(/[^0-9]/g, "");
-      if (cleaned.length < 8) return true;
-      const d = new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
-      return Number.isNaN(d.getTime()) ? true : d.getTime() >= oneYearAgo.getTime();
-    });
-    console.log(`GH 모집정보(테스트 제외): ${realNotices.length}건 → (최근 1년 이내): ${recentNotices.length}건`);
-
-    return recentNotices
-      .map((n) => normalizeGhNotice(n, supplies, housingTypes, projects))
-      .filter((n) => n.apply_end_date);
+    console.log(`GH 모집정보: ${notices.length}건`);
+    return (notices ?? []).map((n) => normalizeGhNotice(n, supplies, housingTypes, projects));
   } catch (err) {
     console.error("GH 수집 실패:", err.message);
     return [];
   }
 }
-async function collectCheongyakhome() {
-  console.warn("⚠️ 청약홈 수집은 아직 준비되지 않아 건너뜁니다.");
-  return [];
-}
 
+/** 청약홈 데이터로 세대수를 보완한다 (주로 GH 공고의 빈 값을 채움) */
+async function supplementWithReb(notices) {
+  const serviceKey = process.env.REB_SERVICE_KEY;
+  if (!serviceKey) {
+    console.warn("⚠️ REB_SERVICE_KEY가 없어 청약홈 보완을 건너뜁니다.");
+    return notices;
+  }
+  try {
+    const rebRows = await fetchRebAptAll(serviceKey);
+    console.log(`청약홈 APT 분양정보: ${rebRows.length}건`);
+    return fillHouseholdCountFromReb(notices, rebRows);
+  } catch (err) {
+    console.error("청약홈 보완 실패:", err.message);
+    return notices; // 실패해도 기존 데이터는 그대로 유지
+  }
+}
 
 function parseFlexibleDate(str) {
   if (!str) return null;
@@ -107,25 +101,23 @@ function parseFlexibleDate(str) {
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
+/** 접수마감일이 오늘 이후(=진행중이거나 예정)인 공고만 남긴다. 마감일을 알 수 없는 경우는 일단 보여준다. */
 function isStillRelevant(notice, now) {
   const end = parseFlexibleDate(notice.apply_end_date);
-  if (!end) return true;
+  if (!end) return true; // 마감일 정보가 없으면 판단 보류하고 노출
   return end.getTime() >= now.getTime();
 }
 
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
-  const [lhNotices, ghNotices, chNotices] = await Promise.all([
-    collectLh(),
-    collectGh(),
-    collectCheongyakhome(),
-  ]);
-  const combined = [...lhNotices, ...ghNotices, ...chNotices];
+  const [lhNotices, ghNotices] = await Promise.all([collectLh(), collectGh()]);
+  const combined = [...lhNotices, ...ghNotices];
 
   const now = new Date();
   const relevant = combined.filter((n) => isStillRelevant(n, now));
   console.log(`마감 제외 필터: ${combined.length}건 → ${relevant.length}건`);
 
+  // 같은 id가 중복으로 들어오는 경우(원본 데이터 중복 등) 제거
   const seen = new Set();
   const deduped = relevant.filter((n) => {
     if (seen.has(n.id)) return false;
@@ -134,7 +126,11 @@ async function main() {
   });
   console.log(`중복 제거: ${relevant.length}건 → ${deduped.length}건`);
 
-  deduped.sort(
+  // 마감되지 않은, 중복 제거된 공고들만 대상으로 청약홈 세대수 보완 실행
+  // (전체 990건이 아니라 실제로 화면에 뜨는 공고만 대상으로 하면 훨씬 빠름)
+  const supplemented = await supplementWithReb(deduped);
+
+  supplemented.sort(
     (a, b) =>
       (parseFlexibleDate(a.apply_end_date)?.getTime() ?? Infinity) -
       (parseFlexibleDate(b.apply_end_date)?.getTime() ?? Infinity)
@@ -143,12 +139,12 @@ async function main() {
   fs.writeFileSync(
     OUTPUT_PATH,
     JSON.stringify(
-      { generated_at: new Date().toISOString(), count: deduped.length, notices: deduped },
+      { generated_at: new Date().toISOString(), count: supplemented.length, notices: supplemented },
       null,
       2
     )
   );
-  console.log(`=== 완료: 총 ${deduped.length}건 저장 (${OUTPUT_PATH}) ===`);
+  console.log(`=== 완료: 총 ${supplemented.length}건 저장 (${OUTPUT_PATH}) ===`);
 }
 
 main().catch((err) => {
