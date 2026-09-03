@@ -4,7 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const { fetchLhList, fetchLhDetail, fetchLhSupply, normalizeLhNotice } = require("../lib/collectors/lh");
-const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
+//const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
 const { fetchCheongyakhomeAll, normalizeCheongyakhomeNotice } = require("../lib/collectors/cheongyakhome");
 
 const SHARED_SERVICE_KEY =
@@ -77,22 +77,11 @@ async function collectGh() {
     return [];
   }
 }
-
 async function collectCheongyakhome() {
-  const serviceKey = SHARED_SERVICE_KEY;
-  if (!serviceKey) {
-    console.warn("⚠️ 인증키가 없어 청약홈 수집을 건너뜁니다.");
-    return [];
-  }
-  try {
-    const { apt } = await fetchCheongyakhomeAll(serviceKey);
-    console.log(`청약홈 APT 분양정보: ${apt.length}건`);
-    return apt.map(normalizeCheongyakhomeNotice);
-  } catch (err) {
-    console.error("청약홈 수집 실패:", err.message);
-    return [];
-  }
+  console.warn("⚠️ 청약홈 수집은 아직 준비되지 않아 건너뜁니다.");
+  return [];
 }
+
 
 function parseFlexibleDate(str) {
   if (!str) return null;
