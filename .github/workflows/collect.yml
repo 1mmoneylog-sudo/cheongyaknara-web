@@ -22,6 +22,7 @@ jobs:
         env:
           LH_SERVICE_KEY: ${{ secrets.LH_SERVICE_KEY }}
           GH_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
+          REB_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
         run: npm run collect
 
       - name: 변경사항 저장소에 반영
