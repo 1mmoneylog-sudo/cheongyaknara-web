@@ -1,4 +1,4 @@
-import FloatingContactButton from "../components/FloatingContactButton";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 const HOMELESS_OPTIONS = [
@@ -133,7 +133,6 @@ export default function Gajeom() {
           공공임대주택은 소득·자산 기준과 별도의 배점·추첨 방식을 적용하므로, 각 공고문의 자격요건을 반드시 함께 확인하세요.
         </div>
       </div>
-         <FloatingContactButton />   
     </div>
   );
 }
