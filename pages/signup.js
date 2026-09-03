@@ -9,7 +9,7 @@ export default function Signup() {
         <div className="signup-benefit-box">
           <div className="benefit-item">
             <span className="dot-icon">○</span>
-            관심 <b>지역·분야</b>의 새 공고를 이메일로 받아보세요
+            관심 <b>지역</b>의 새 공고를 이메일로 받아보세요
           </div>
           <div className="benefit-item">
             <span className="dot-icon">○</span>
@@ -17,7 +17,7 @@ export default function Signup() {
           </div>
           <div className="benefit-item">
             <span className="dot-icon">○</span>
-            관심 공고 저장·이력서 관리까지 <b>전부 무료</b>
+            관심 공고 저장 및 관리까지 <b>전부 무료</b>
           </div>
         </div>
 
