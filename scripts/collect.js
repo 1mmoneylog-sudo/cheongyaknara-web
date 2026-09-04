@@ -22,9 +22,11 @@ const { fetchRebAll, normalizeAllRebNotices, fillHouseholdCountFromReb } = requi
 
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "notices.json");
 
-// 마감 후에도 며칠까지는 화면에 남겨둘지 (예: 방금 마감된 걸 바로 없애기보다
-// 잠깐은 "마감" 표시로 보여주고 싶을 때)
-const CLOSED_GRACE_DAYS = 3;
+// ✅ 2026-09-04: 마감 유예(3일) 없애고 바로 제외하도록 단순화.
+//    대신 당첨자 발표일이 있는 공고는 "당첨자 발표" 페이지에서 볼 수 있도록
+//    발표일 기준 WINNER_TRACK_DAYS일 동안은 데이터에 남겨둠 (메인 목록에는 안 뜨고
+//    당첨자 발표 페이지에서만 조회됨 — 프론트엔드가 dday<0인 건 메인 목록에서 걸러냄)
+const WINNER_TRACK_DAYS = 14;
 
 // 예정 공고를 얼마나 먼 미래까지 노출할지 (일 단위). 이보다 먼 예정 공고는
 // 이번 회차에서는 빼고, 시작일이 이 범위 안으로 들어오면 다음 수집 때 자동으로 포함됨.
@@ -128,14 +130,31 @@ function parseFlexibleDate(str) {
  *  - 접수시작일이 UPCOMING_WINDOW_DAYS일보다 더 뒤인 "너무 먼 예정"이면 → 제외
  *  - 그 외(진행중, 방금 마감, 한 달 이내 예정, 날짜 정보 없음)는 → 노출
  */
+/**
+ * 공고를 화면 데이터에 남길지 판단한다.
+ *  - 당첨자 발표일이 있고, 그 발표일로부터 WINNER_TRACK_DAYS일이 안 지났으면 → 유지
+ *    (접수는 끝났어도 "당첨자 발표" 페이지에서 조회할 수 있어야 하므로)
+ *  - 그 외의 경우, 접수마감일이 이미 지났으면 → 제외 (유예 없음)
+ *  - 접수시작일이 UPCOMING_WINDOW_DAYS일보다 더 뒤인 "너무 먼 예정"이면 → 제외
+ */
 function shouldKeep(notice, now) {
   const start = parseFlexibleDate(notice.apply_start_date);
   const end = parseFlexibleDate(notice.apply_end_date);
+  const winner = parseFlexibleDate(notice.winner_date);
 
-  if (end) {
-    const daysSinceEnd = (now.getTime() - end.getTime()) / (24 * 60 * 60 * 1000);
-    if (daysSinceEnd > CLOSED_GRACE_DAYS) return false; // 마감 후 유예기간도 지남
+  if (winner) {
+    const daysSinceWinner = (now.getTime() - winner.getTime()) / (24 * 60 * 60 * 1000);
+    if (daysSinceWinner <= WINNER_TRACK_DAYS) {
+      // 당첨자 발표 페이지용으로는 유지하되, "너무 먼 예정" 규칙은 그대로 적용
+      if (start && start.getTime() > now.getTime()) {
+        const daysUntilStart = (start.getTime() - now.getTime()) / (24 * 60 * 60 * 1000);
+        if (daysUntilStart > UPCOMING_WINDOW_DAYS) return false;
+      }
+      return true;
+    }
   }
+
+  if (end && end.getTime() < now.getTime()) return false; // 마감된 공고는 바로 제외 (유예 없음)
 
   if (start && start.getTime() > now.getTime()) {
     const daysUntilStart = (start.getTime() - now.getTime()) / (24 * 60 * 60 * 1000);
@@ -167,7 +186,7 @@ async function main() {
   const now = new Date();
   const kept = supplemented.filter((n) => shouldKeep(n, now));
   console.log(
-    `마감(유예 ${CLOSED_GRACE_DAYS}일 초과)·너무 먼 예정(${UPCOMING_WINDOW_DAYS}일 초과) 제외: ` +
+    `마감(당첨자 발표 ${WINNER_TRACK_DAYS}일 이내 제외)·너무 먼 예정(${UPCOMING_WINDOW_DAYS}일 초과) 제외: ` +
       `${supplemented.length}건 → ${kept.length}건`
   );
 
