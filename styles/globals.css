@@ -611,3 +611,100 @@ nav a.active{color:#fff; font-weight:700;}
   font-weight: 600;
   text-decoration: none;
 }
+/* ===== 위원나라 스타일 페이지 (문의하기) ===== */
+.wn-page {
+  background: #fff;
+  padding: 50px 20px 80px;
+}
+.wn-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.wn-badge {
+  display: inline-block;
+  background: #F3EEFF;
+  color: #7C3AED;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.wn-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 14px;
+  color: #111;
+}
+.wn-subtitle {
+  font-size: 15px;
+  color: #6B7280;
+  margin: 0 0 32px;
+}
+.wn-step-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+.wn-step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #7C3AED;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wn-step-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+.wn-step-desc {
+  font-size: 13.5px;
+  color: #6B7280;
+}
+.wn-highlight-box {
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 28px 26px;
+  margin-top: 18px;
+}
+.wn-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.wn-textarea {
+  min-height: 140px;
+  resize: vertical;
+  font-family: inherit;
+}
+.wn-submit-btn {
+  width: 100%;
+  margin-top: 22px;
+  background: #111;
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .wn-form-row { grid-template-columns: 1fr; }
+  .wn-title { font-size: 24px; }
+}
