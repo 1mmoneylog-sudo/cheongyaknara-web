@@ -291,7 +291,6 @@ export default function Home() {
               onToggleBookmark={toggleBookmark}
             />
           ))}
-          ))}
 
           {totalPages > 1 && (
             <div className="pagination">
