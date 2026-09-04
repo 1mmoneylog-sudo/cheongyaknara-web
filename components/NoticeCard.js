@@ -10,16 +10,14 @@ function isRecentlyAnnounced(announceDate, windowDays = 3) {
   return diffDays >= 0 && diffDays <= windowDays;
 }
 
-/** 값이 있는 메타 항목만 "|" 구분선으로 이어붙여 렌더링 */
+/** 항상 정해진 항목만, 정해진 순서로 렌더링. 값이 없으면 "-"로 표시 */
 function MetaRow({ items }) {
-  const visible = items.filter((it) => it.value);
-  if (visible.length === 0) return null;
   return (
     <div className="meta-row">
-      {visible.map((it, i) => (
+      {items.map((it, i) => (
         <span key={it.label}>
           {i > 0 && <span className="meta-divider">|</span>}
-          {it.label} <b>{it.value}</b>
+          {it.label} <b>{it.value ?? "-"}</b>
         </span>
       ))}
     </div>
@@ -31,7 +29,6 @@ export default function NoticeCard({ notice, bookmarked, onToggleBookmark, close
   const urgency = closed ? "calm" : getUrgencyLevel(dday);
   const progress = getProgressPercent(notice.apply_start_date, notice.apply_end_date);
   const isNew = !closed && isRecentlyAnnounced(notice.announce_date);
-
   const applyRange =
     notice.apply_start_date && notice.apply_end_date
       ? `${notice.apply_start_date} ~ ${notice.apply_end_date}`
@@ -59,8 +56,7 @@ export default function NoticeCard({ notice, bookmarked, onToggleBookmark, close
         <MetaRow
           items={[
             { label: "위치", value: notice.region_sido },
-            { label: "세대수", value: notice.household_count },
-            { label: "전용면적", value: notice.area_range ? `${notice.area_range}㎡` : null },
+            { label: "모집세대수", value: notice.household_count },
             { label: "접수기간", value: applyRange },
             { label: "당첨자발표", value: notice.winner_date },
           ]}
