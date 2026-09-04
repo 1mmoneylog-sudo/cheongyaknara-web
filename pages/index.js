@@ -149,7 +149,6 @@ export default function Home() {
             <Link href="/login" className="btn-ghost-inv">로그인</Link>
             <Link href="/signup" className="btn-primary-inv">회원가입</Link>
           </div>
-            </button>
           </div>
         </div>
       </header>
