@@ -507,3 +507,107 @@ nav a.active{color:#fff; font-weight:700;}
 @media (max-width: 640px) {
   .contact-row { grid-template-columns: 1fr; }
 }
+/* ===== 로그인/회원가입 (auth) ===== */
+.auth-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f8fa;
+  padding: 40px 20px;
+}
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.auth-card h1 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 22px;
+}
+.auth-benefit-box {
+  background: #eafaf0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  font-size: 13.5px;
+  color: #1a7a4a;
+  line-height: 1.8;
+}
+.auth-label {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin: 14px 0 6px;
+}
+.auth-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-family: inherit;
+}
+.auth-hint {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+.auth-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: #444;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.auth-checkbox-row input {
+  width: 16px;
+  height: 16px;
+}
+.auth-submit-btn {
+  width: 100%;
+  margin-top: 22px;
+  background: #111;
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.auth-divider {
+  text-align: center;
+  margin: 22px 0;
+  color: #999;
+  font-size: 13px;
+  position: relative;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background: #eee;
+}
+.auth-divider::before { left: 0; }
+.auth-divider::after { right: 0; }
+.auth-footer-links {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 20px;
+}
+.auth-footer-links a {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+}
