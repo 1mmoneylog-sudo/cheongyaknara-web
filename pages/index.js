@@ -10,6 +10,8 @@ export async function getStaticProps() {
 
 const PAGE_SIZE = 8;
 const NEW_WINDOW_DAYS = 3;
+// 페이지네이션에서 한 번에 보여줄 숫자 버튼 개수 (2026-09-03 추가)
+const PAGINATION_WINDOW = 5;
 
 function todayStr() {
   const d = new Date();
@@ -23,6 +25,21 @@ function isRecentlyAnnounced(announceDate) {
   const d = new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
   const diffDays = (Date.now() - d.getTime()) / (1000 * 60 * 60 * 24);
   return diffDays >= 0 && diffDays <= NEW_WINDOW_DAYS;
+}
+
+/** 현재 페이지를 중심으로 최대 PAGINATION_WINDOW개의 페이지 번호만 골라 반환한다.
+ *  (2026-09-03 추가: 페이지가 많을 때 숫자가 전부 다 뜨는 문제 수정) */
+function getVisiblePageNumbers(currentPage, totalPages, windowSize = PAGINATION_WINDOW) {
+  if (totalPages <= windowSize) {
+    return Array.from({ length: totalPages }, (_, i) => i + 1);
+  }
+  let start = Math.max(1, currentPage - Math.floor(windowSize / 2));
+  let end = start + windowSize - 1;
+  if (end > totalPages) {
+    end = totalPages;
+    start = end - windowSize + 1;
+  }
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
 }
 
 export default function Home() {
@@ -104,6 +121,7 @@ export default function Home() {
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
   const pageItems = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const visiblePageNumbers = getVisiblePageNumbers(currentPage, totalPages);
 
   function resetPage() {
     setPage(1);
@@ -279,6 +297,13 @@ export default function Home() {
                   <span className="badge agency">{n.source_agency}</span>
                   {n.notice_type && <span className="badge type">{n.notice_type}</span>}
                   {n.supply_kind && <span className="badge kind">{n.supply_kind}</span>}
+                  {/* 2026-09-03 추가: 특별공급/1순위/2순위/무순위/임의공급 태그 */}
+                  {n.special_supply_tags &&
+                    n.special_supply_tags.map((tag) => (
+                      <span key={tag} className="badge rank">
+                        {tag}
+                      </span>
+                    ))}
                 </div>
                 <p className="card-title">{n.title}</p>
                 <div className="meta-row">
@@ -321,16 +346,41 @@ export default function Home() {
 
           {totalPages > 1 && (
             <div className="pagination">
+              <button disabled={currentPage === 1} onClick={() => setPage(1)} title="처음으로">
+                «
+              </button>
               <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>
                 ‹
               </button>
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+
+              {/* 2026-09-03 수정: 전체 페이지 번호 대신 현재 페이지 주변 PAGINATION_WINDOW개만 표시 */}
+              {visiblePageNumbers[0] > 1 && (
+                <>
+                  <button onClick={() => setPage(1)}>1</button>
+                  {visiblePageNumbers[0] > 2 && <span className="pagination-ellipsis">…</span>}
+                </>
+              )}
+
+              {visiblePageNumbers.map((p) => (
                 <button key={p} className={p === currentPage ? "active" : ""} onClick={() => setPage(p)}>
                   {p}
                 </button>
               ))}
+
+              {visiblePageNumbers[visiblePageNumbers.length - 1] < totalPages && (
+                <>
+                  {visiblePageNumbers[visiblePageNumbers.length - 1] < totalPages - 1 && (
+                    <span className="pagination-ellipsis">…</span>
+                  )}
+                  <button onClick={() => setPage(totalPages)}>{totalPages}</button>
+                </>
+              )}
+
               <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)}>
                 ›
+              </button>
+              <button disabled={currentPage === totalPages} onClick={() => setPage(totalPages)} title="마지막으로">
+                »
               </button>
             </div>
           )}
