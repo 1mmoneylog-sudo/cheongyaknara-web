@@ -75,7 +75,7 @@ export default function Signup() {
           <input
             className="auth-input"
             type="text"
-            placeholder="실명 (신청서 이력서에 사용)"
+            placeholder="실명"
             value={form.name}
             onChange={(e) => update("name", e.target.value)}
           />
