@@ -3,6 +3,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import noticesData from "../data/notices.json";
 import { getDday, getUrgencyLevel, getProgressPercent } from "../lib/dday";
+import NoticeCard from "../components/NoticeCard";
+
+// 최신순 정렬용 — lib/dday.js를 건드리지 않도록 이 파일 안에 별도로 둠
+function parseAnnounceDate(str) {
+  if (!str) return null;
+  const cleaned = String(str).replace(/[^0-9]/g, "");
+  if (cleaned.length !== 8) return null;
+  return new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
+}
 
 export async function getStaticProps() {
   return { props: { generatedAt: noticesData.generated_at }, revalidate: 3600 };
@@ -10,8 +19,6 @@ export async function getStaticProps() {
 
 const PAGE_SIZE = 8;
 const NEW_WINDOW_DAYS = 3;
-// 페이지네이션에서 한 번에 보여줄 숫자 버튼 개수 (2026-09-03 추가)
-const PAGINATION_WINDOW = 5;
 
 function todayStr() {
   const d = new Date();
@@ -25,21 +32,6 @@ function isRecentlyAnnounced(announceDate) {
   const d = new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
   const diffDays = (Date.now() - d.getTime()) / (1000 * 60 * 60 * 24);
   return diffDays >= 0 && diffDays <= NEW_WINDOW_DAYS;
-}
-
-/** 현재 페이지를 중심으로 최대 PAGINATION_WINDOW개의 페이지 번호만 골라 반환한다.
- *  (2026-09-03 추가: 페이지가 많을 때 숫자가 전부 다 뜨는 문제 수정) */
-function getVisiblePageNumbers(currentPage, totalPages, windowSize = PAGINATION_WINDOW) {
-  if (totalPages <= windowSize) {
-    return Array.from({ length: totalPages }, (_, i) => i + 1);
-  }
-  let start = Math.max(1, currentPage - Math.floor(windowSize / 2));
-  let end = start + windowSize - 1;
-  if (end > totalPages) {
-    end = totalPages;
-    start = end - windowSize + 1;
-  }
-  return Array.from({ length: end - start + 1 }, (_, i) => start + i);
 }
 
 export default function Home() {
@@ -111,7 +103,11 @@ export default function Home() {
     if (sortMode === "dday") {
       sorted.sort((a, b) => (a.dday ?? 9999) - (b.dday ?? 9999));
     } else if (sortMode === "latest") {
-      sorted.sort((a, b) => (b.announce_date ?? "").localeCompare(a.announce_date ?? ""));
+      sorted.sort(
+        (a, b) =>
+          (parseAnnounceDate(b.announce_date)?.getTime() ?? 0) -
+          (parseAnnounceDate(a.announce_date)?.getTime() ?? 0)
+      );
     } else if (sortMode === "household") {
       sorted.sort((a, b) => (b.household_count ?? 0) - (a.household_count ?? 0));
     }
@@ -121,15 +117,12 @@ export default function Home() {
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
   const pageItems = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
-  const visiblePageNumbers = getVisiblePageNumbers(currentPage, totalPages);
 
   function resetPage() {
     setPage(1);
   }
 
-  function toggleBookmark(e, id) {
-    e.preventDefault();
-    e.stopPropagation();
+  function toggleBookmark(id) {
     setBookmarks((prev) => {
       const next = new Set(prev);
       next.has(id) ? next.delete(id) : next.add(id);
@@ -150,12 +143,13 @@ export default function Home() {
             <Link href="/gajeom">가점계산기</Link>
             <Link href="/jagyeok">자격진단</Link>
             <Link href="/calendar">청약캘린더</Link>
+            <Link href="/closed">마감공고</Link>
           </nav>
-        <div className="header-right">
-  <Link href="/contact" className="gnb-link">문의하기</Link>
-  <Link href="/login" className="gnb-link">로그인</Link>
-  <Link href="/signup" className="btn-signup">회원가입</Link>
-</div>
+          <div className="header-right">
+            <button className="btn-ghost-inv" onClick={(e) => e.preventDefault()}>
+              알림 설정
+            </button>
+          </div>
         </div>
       </header>
 
@@ -290,97 +284,27 @@ export default function Home() {
           )}
 
           {pageItems.map((n) => (
-            <Link key={n.id} href={`/notice/${n.id}`} className={`card ${n.urgency}`}>
-              <div className="card-body">
-                <div className="badge-row">
-                  {n.isNew && <span className="badge new">NEW</span>}
-                  <span className="badge agency">{n.source_agency}</span>
-                  {n.notice_type && <span className="badge type">{n.notice_type}</span>}
-                  {n.supply_kind && <span className="badge kind">{n.supply_kind}</span>}
-                  {/* 2026-09-03 추가: 특별공급/1순위/2순위/무순위/임의공급 태그 */}
-                  {n.special_supply_tags &&
-                    n.special_supply_tags.map((tag) => (
-                      <span key={tag} className="badge rank">
-                        {tag}
-                      </span>
-                    ))}
-                </div>
-                <p className="card-title">{n.title}</p>
-                <div className="meta-row">
-                  {n.region_sido && (
-                    <span>
-                      위치 <b>{n.region_sido}</b>
-                    </span>
-                  )}
-                  {n.household_count && (
-                    <span>
-                      세대수 <b>{n.household_count}</b>
-                    </span>
-                  )}
-                  {n.area_range && (
-                    <span>
-                      전용면적 <b>{n.area_range}㎡</b>
-                    </span>
-                  )}
-                </div>
-              </div>
-              <div className="dday-block">
-                <div className="dday-foot">
-                  <div
-                    className={`bookmark ${bookmarks.has(n.id) ? "active" : ""}`}
-                    onClick={(e) => toggleBookmark(e, n.id)}
-                  >
-                    {bookmarks.has(n.id) ? "★" : "☆"}
-                  </div>
-                  <div className={`dday-num mono ${n.urgency}`}>
-                    {n.dday === null ? "-" : n.dday >= 0 ? `D-${n.dday}` : "마감"}
-                  </div>
-                </div>
-                <div className="gauge">
-                  <div className={`gauge-fill ${n.urgency}`} style={{ width: `${n.progress}%` }} />
-                </div>
-                <div className="dday-sub mono">~{n.apply_end_date ?? "-"}</div>
-              </div>
-            </Link>
+            <NoticeCard
+              key={n.id}
+              notice={n}
+              bookmarked={bookmarks.has(n.id)}
+              onToggleBookmark={toggleBookmark}
+            />
+          ))}
           ))}
 
           {totalPages > 1 && (
             <div className="pagination">
-              <button disabled={currentPage === 1} onClick={() => setPage(1)} title="처음으로">
-                «
-              </button>
               <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>
                 ‹
               </button>
-
-              {/* 2026-09-03 수정: 전체 페이지 번호 대신 현재 페이지 주변 PAGINATION_WINDOW개만 표시 */}
-              {visiblePageNumbers[0] > 1 && (
-                <>
-                  <button onClick={() => setPage(1)}>1</button>
-                  {visiblePageNumbers[0] > 2 && <span className="pagination-ellipsis">…</span>}
-                </>
-              )}
-
-              {visiblePageNumbers.map((p) => (
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
                 <button key={p} className={p === currentPage ? "active" : ""} onClick={() => setPage(p)}>
                   {p}
                 </button>
               ))}
-
-              {visiblePageNumbers[visiblePageNumbers.length - 1] < totalPages && (
-                <>
-                  {visiblePageNumbers[visiblePageNumbers.length - 1] < totalPages - 1 && (
-                    <span className="pagination-ellipsis">…</span>
-                  )}
-                  <button onClick={() => setPage(totalPages)}>{totalPages}</button>
-                </>
-              )}
-
               <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)}>
                 ›
-              </button>
-              <button disabled={currentPage === totalPages} onClick={() => setPage(totalPages)} title="마지막으로">
-                »
               </button>
             </div>
           )}

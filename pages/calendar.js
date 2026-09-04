@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import noticesData from "../data/notices.json";
 import { getDday, getUrgencyLevel } from "../lib/dday";
+import NoticeCard from "../components/NoticeCard";
 
 const WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"];
 
@@ -100,6 +101,7 @@ export default function Calendar() {
             <Link href="/gajeom">가점계산기</Link>
             <Link href="/jagyeok">자격진단</Link>
             <Link href="/calendar" className="active">청약캘린더</Link>
+            <Link href="/closed">마감공고</Link>
           </nav>
         </div>
       </header>
@@ -151,28 +153,7 @@ export default function Calendar() {
         {listForSelection.length === 0 && <div className="empty-state">해당하는 공고가 없습니다.</div>}
 
         {listForSelection.map((n) => (
-          <Link key={n.id} href={`/notice/${n.id}`} className={`card ${n.urgency}`}>
-            <div className="card-body">
-              <div className="badge-row">
-                <span className="badge agency">{n.source_agency}</span>
-                {n.notice_type && <span className="badge type">{n.notice_type}</span>}
-              </div>
-              <p className="card-title">{n.title}</p>
-              <div className="meta-row">
-                {n.region_sido && (
-                  <span>
-                    위치 <b>{n.region_sido}</b>
-                  </span>
-                )}
-              </div>
-            </div>
-            <div className="dday-block">
-              <div className={`dday-num mono ${n.urgency}`}>
-                {n.dday === null ? "-" : n.dday >= 0 ? `D-${n.dday}` : "마감"}
-              </div>
-              <div className="dday-sub mono">~{n.apply_end_date}</div>
-            </div>
-          </Link>
+          <NoticeCard key={n.id} notice={n} />
         ))}
       </div>
     </div>
