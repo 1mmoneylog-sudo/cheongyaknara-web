@@ -1,77 +1,118 @@
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Signup() {
+  const [form, setForm] = useState({ id: "", pw: "", pw2: "", email: "", name: "" });
+
+  function update(key, value) {
+    setForm((prev) => ({ ...prev, [key]: value }));
+  }
+
   return (
-    <div className="login-wrap">
-      <div className="login-card">
-        <h1>회원가입</h1>
+    <div>
+      <header className="site-header">
+        <div className="header-inner">
+          <Link href="/" className="logo">
+            <span className="dot" />
+            청약나라
+          </Link>
+          <nav>
+            <Link href="/">모집공고</Link>
+            <Link href="/gajeom">가점계산기</Link>
+            <Link href="/jagyeok">자격진단</Link>
+            <Link href="/calendar">청약캘린더</Link>
+          </nav>
+        </div>
+      </header>
 
-        <div className="signup-benefit-box">
-          <div className="benefit-item">
-            <span className="dot-icon">○</span>
-            관심 <b>지역</b>의 새 공고를 이메일로 받아보세요
+      <div className="auth-page">
+        <div className="auth-card">
+          <h1>회원가입</h1>
+
+          <div className="auth-benefit-box">
+            <div>✓ 관심 지역·유형에 새 공고를 이메일로 받아보세요</div>
+            <div>✓ 찜한 공고는 마감 임박(D-3, D-1)에 다시 알려드려요</div>
+            <div>✓ 관심 공고 저장하려면 가입까지 전부 무료</div>
           </div>
-          <div className="benefit-item">
-            <span className="dot-icon">○</span>
-            찜한 공고는 <b>마감 임박(D-3·D-1)</b>에 다시 알려드려요
-          </div>
-          <div className="benefit-item">
-            <span className="dot-icon">○</span>
-            관심 공고 저장 및 관리까지 <b>전부 무료</b>
+
+          <label className="auth-label">아이디</label>
+          <input
+            className="auth-input"
+            type="text"
+            placeholder="로그인에 사용할 아이디"
+            value={form.id}
+            onChange={(e) => update("id", e.target.value)}
+          />
+          <div className="auth-hint">영문·숫자 4~20자 (로그인할 때 사용합니다)</div>
+
+          <label className="auth-label">비밀번호</label>
+          <input
+            className="auth-input"
+            type="password"
+            value={form.pw}
+            onChange={(e) => update("pw", e.target.value)}
+          />
+          <div className="auth-hint">8자 이상, 숫자/문자 조합을 권장해요</div>
+
+          <label className="auth-label">비밀번호 확인</label>
+          <input
+            className="auth-input"
+            type="password"
+            value={form.pw2}
+            onChange={(e) => update("pw2", e.target.value)}
+          />
+
+          <label className="auth-label">이메일</label>
+          <input
+            className="auth-input"
+            type="email"
+            placeholder="you@example.com"
+            value={form.email}
+            onChange={(e) => update("email", e.target.value)}
+          />
+
+          <label className="auth-label">이름(실명)</label>
+          <input
+            className="auth-input"
+            type="text"
+            placeholder="실명 (신청서 이력서에 사용)"
+            value={form.name}
+            onChange={(e) => update("name", e.target.value)}
+          />
+
+          <label className="auth-checkbox-row">
+            <input type="checkbox" /> 이용약관에 동의합니다 (필수)
+          </label>
+          <label className="auth-checkbox-row">
+            <input type="checkbox" /> 개인정보처리방침에 동의합니다 (필수)
+          </label>
+          <label className="auth-checkbox-row">
+            <input type="checkbox" /> 만 14세 이상입니다 (필수)
+          </label>
+          <label className="auth-checkbox-row">
+            <input type="checkbox" /> (선택) 새 공고 등 광고성 정보 메일 수신에 동의합니다
+          </label>
+
+          <button className="auth-submit-btn" onClick={(e) => e.preventDefault()}>
+            가입하기
+          </button>
+
+          <div className="auth-divider"><span>또는 간편하게</span></div>
+
+          <button className="social-btn kakao" onClick={(e) => e.preventDefault()}>
+            💬 카카오로 시작하기
+          </button>
+          <button className="social-btn naver" onClick={(e) => e.preventDefault()}>
+            N 네이버로 시작하기
+          </button>
+          <button className="social-btn google" onClick={(e) => e.preventDefault()}>
+            G 구글로 시작하기
+          </button>
+
+          <div className="auth-footer-links">
+            이미 계정이 있으신가요? <Link href="/login">로그인</Link>
           </div>
         </div>
-
-        <label>아이디</label>
-        <input type="text" placeholder="로그인에 사용할 아이디" />
-        <p className="field-hint">영문·숫자 4~20자 (로그인할 때 사용합니다)</p>
-
-        <label>비밀번호</label>
-        <input type="password" />
-        <p className="field-hint">8자 이상, 숫자로만 만들지 마세요.</p>
-
-        <label>비밀번호 확인</label>
-        <input type="password" />
-
-        <label>이메일</label>
-        <input type="email" placeholder="you@example.com" />
-
-        <label>이름(실명)</label>
-        <input type="text" placeholder="실명 (신청서·이력서에 사용)" />
-
-        <div className="agree-list">
-          <label className="agree-item">
-            <input type="checkbox" />
-            <span><Link href="/terms">이용약관</Link>에 동의합니다 (필수)</span>
-          </label>
-          <label className="agree-item">
-            <input type="checkbox" />
-            <span><Link href="/privacy">개인정보처리방침</Link>에 동의합니다 (필수)</span>
-          </label>
-          <label className="agree-item">
-            <input type="checkbox" />
-            <span>만 14세 이상입니다 (필수)</span>
-          </label>
-
-          <label className="agree-item agree-optional">
-            <input type="checkbox" />
-            <span>[선택] 맞춤알림용 이메일 수신에 동의합니다</span>
-          </label>
-          <p className="agree-hint">
-            동의하지 않으시면 가입과 공고 열람 이용에는 지장이 없으나, 가입 후 혜택 알림에서 안내드릴 수 있어요.
-          </p>
-        </div>
-
-        <button className="login-submit">가입하기</button>
-
-        <div className="divider"><span>또는 간편하게</span></div>
-
-        <button className="social-btn kakao">카카오로 시작하기</button>
-        <button className="social-btn naver">N 네이버로 시작하기</button>
-        <button className="social-btn google">G 구글로 시작하기</button>
-
-        <p className="login-footer">
-          이미 계정이 있으신가요? <Link href="/login">로그인</Link>
-        </p>
       </div>
     </div>
   );
