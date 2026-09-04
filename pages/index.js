@@ -143,7 +143,6 @@ export default function Home() {
             <Link href="/gajeom">가점계산기</Link>
             <Link href="/jagyeok">자격진단</Link>
             <Link href="/calendar">청약캘린더</Link>
-            <Link href="/closed">마감공고</Link>
           </nav>
           <div className="header-right">
             <button className="btn-ghost-inv" onClick={(e) => e.preventDefault()}>
