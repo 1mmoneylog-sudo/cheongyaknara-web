@@ -54,20 +54,20 @@ export default function Home() {
     if (typeof router.query.region === "string") setRegionFilter(router.query.region);
   }, [router.isReady, router.query.agency, router.query.region]);
 
-  const enriched = useMemo(
-    () =>
-      notices
-        .map((n) => ({
-          ...n,
-          dday: getDday(n.apply_end_date),
-          urgency: getUrgencyLevel(getDday(n.apply_end_date)),
-          progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
-          isNew: isRecentlyAnnounced(n.announce_date),
-        }))
-        // 마감일 정보가 있는데 이미 지났으면 화면에 노출하지 않음 (수집 단계에서 걸러지지만 이중 방어)
-        .filter((n) => n.dday === null || n.dday >= 0),
-    [notices]
-  );
+ const enriched = useMemo(
+  () =>
+    notices
+      .map((n) => ({
+        ...n,
+        dday: getDday(n.apply_end_date),
+        urgency: getUrgencyLevel(getDday(n.apply_end_date)),
+        progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
+        isNew: isRecentlyAnnounced(n.announce_date),
+      }))
+      // 마감일이 없거나 이미 지난 공고는 화면에 노출하지 않음
+      .filter((n) => n.apply_end_date && n.dday !== null && n.dday >= 0),
+  [notices]
+);
 
   const regionCounts = useMemo(() => {
     const map = new Map();
