@@ -66,7 +66,7 @@ export default function Signup() {
           <input
             className="auth-input"
             type="email"
-            placeholder="you@example.com"
+            placeholder="-빼고 숫자만 입력"
             value={form.email}
             onChange={(e) => update("email", e.target.value)}
           />
