@@ -30,7 +30,7 @@ export default function Signup() {
           <h1>회원가입</h1>
 
           <div className="auth-benefit-box">
-            <div>✓ 관심 지역·유형에 새 공고를 이메일로 받아보세요</div>
+            <div>✓ 관심 지역·유형에 새 공고를 문자로 받아보세요</div>
             <div>✓ 찜한 공고는 마감 임박(D-3, D-1)에 다시 알려드려요</div>
             <div>✓ 관심 공고 저장하려면 가입까지 전부 무료</div>
           </div>
@@ -62,7 +62,7 @@ export default function Signup() {
             onChange={(e) => update("pw2", e.target.value)}
           />
 
-          <label className="auth-label">이메일</label>
+          <label className="auth-label">연락처</label>
           <input
             className="auth-input"
             type="email"
