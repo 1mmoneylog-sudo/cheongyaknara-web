@@ -209,7 +209,7 @@ export default function Home() {
           </div>
           <div className="filter-row">
             <div className="seg">
-              {["전체", "LH", "GH", "청약홈"].map((a) => (
+  {["전체", "LH", "GH", "SH", "청약홈"].map((a) => (
                 <button
                   key={a}
                   className={agencyFilter === a ? "active" : ""}
