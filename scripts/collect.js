@@ -13,6 +13,10 @@
 //    - 접수마감일이 지난 지 3일이 넘은 공고는 완전히 제외 (그 안에는 노출 유지)
 //    - 접수시작일이 한 달(30일)보다 더 뒤인 "너무 먼 예정" 공고는 이번 회차에서 제외
 //      (시작일이 가까워지면 다음 수집 때 자동으로 포함됨)
+// ✅ 2026-09-05: LH청약플러스가 정기 점검(예: 매주 토요일)에 들어가면 목록 API 자체가
+//    HTML 안내 페이지를 반환해 collectLh() 전체가 예외를 던지는 문제가 있었음.
+//    LH 목록 수집만 별도로 try/catch로 감싸서, LH가 점검 중이어도 GH·청약홈은
+//    정상적으로 계속 수집·저장되도록 격리함. LH는 점검이 끝나면 다음 회차에 자동 복구됨.
 
 const fs = require("fs");
 const path = require("path");
@@ -52,7 +56,15 @@ async function collectLh() {
   const future = new Date(today);
   future.setDate(future.getDate() + 180);
 
-  const listItems = await fetchLhList(serviceKey, formatDate(past), formatDate(future));
+  let listItems;
+  try {
+    listItems = await fetchLhList(serviceKey, formatDate(past), formatDate(future));
+  } catch (err) {
+    // LH청약플러스 정기 점검 등으로 목록 자체를 못 가져오는 경우, LH만 건너뛰고
+    // GH·청약홈은 정상적으로 계속 수집되도록 함 (다음 회차에 LH 자동 복구)
+    console.error("⚠️ LH 목록 수집 실패, 이번 회차는 LH를 건너뜁니다:", err.message);
+    return [];
+  }
   console.log(`LH 목록: ${listItems.length}건 (필터링 후)`);
 
   const results = [];
@@ -124,12 +136,6 @@ function parseFlexibleDate(str) {
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
-/**
- * 이 공고를 화면에 남길지 여부를 판단한다.
- *  - 접수마감일이 지난 지 CLOSED_GRACE_DAYS일이 넘으면 → 제외 (완전히 마감된 걸로 봄)
- *  - 접수시작일이 UPCOMING_WINDOW_DAYS일보다 더 뒤인 "너무 먼 예정"이면 → 제외
- *  - 그 외(진행중, 방금 마감, 한 달 이내 예정, 날짜 정보 없음)는 → 노출
- */
 /**
  * 공고를 화면 데이터에 남길지 판단한다.
  *  - 당첨자 발표일이 있고, 그 발표일로부터 WINNER_TRACK_DAYS일이 안 지났으면 → 유지
