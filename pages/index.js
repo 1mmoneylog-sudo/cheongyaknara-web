@@ -309,38 +309,47 @@ export default function Home() {
         </div>
 
         <aside className="sidebar">
-          <div className="side-card">
-            <h3>기관별</h3>
-            <div className="side-link-list">
-              <button
-                className={agencyFilter === "LH" ? "active" : ""}
-                onClick={() => {
-                  setAgencyFilter("LH");
-                  resetPage();
-                }}
-              >
-                LH <span className="n">{lhCount}</span>
-              </button>
-              <button
-                className={agencyFilter === "GH" ? "active" : ""}
-                onClick={() => {
-                  setAgencyFilter("GH");
-                  resetPage();
-                }}
-              >
-                GH <span className="n">{ghCount}</span>
-              </button>
-              <button
-                className={agencyFilter === "청약홈" ? "active" : ""}
-                onClick={() => {
-                  setAgencyFilter("청약홈");
-                  resetPage();
-                }}
-              >
-                청약홈 <span className="n">{chCount}</span>
-              </button>
-            </div>
-          </div>
+         <div className="side-card">
+  <h3>기관별</h3>
+  <div className="side-link-list">
+    <button
+      className={agencyFilter === "LH" ? "active" : ""}
+      onClick={() => {
+        setAgencyFilter("LH");
+        resetPage();
+      }}
+    >
+      LH <span className="n">{lhCount}</span>
+    </button>
+    <button
+      className={agencyFilter === "GH" ? "active" : ""}
+      onClick={() => {
+        setAgencyFilter("GH");
+        resetPage();
+      }}
+    >
+      GH <span className="n">{ghCount}</span>
+    </button>
+    <button
+      className={agencyFilter === "SH" ? "active" : ""}
+      onClick={() => {
+        setAgencyFilter("SH");
+        resetPage();
+      }}
+    >
+      SH <span className="n">{shCount}</span>
+    </button>
+    <button
+      className={agencyFilter === "청약홈" ? "active" : ""}
+      onClick={() => {
+        setAgencyFilter("청약홈");
+        resetPage();
+      }}
+    >
+      청약홈 <span className="n">{chCount}</span>
+    </button>
+  </div>
+</div>
 
           <div className="side-card">
             <h3>지역별 (많은 순)</h3>
