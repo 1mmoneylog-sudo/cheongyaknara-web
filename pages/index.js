@@ -156,7 +156,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-inner">
           <h1>LH·GH 모집공고, 한 곳에서 놓치지 않게</h1>
-          <p>공공분양·공공임대 공고를 모아 마감 D-day 순으로 정리합니다. (SH는 연동 준비중)</p>
+          <p>공공분양·공공임대 공고를 모아 마감 D-day 순으로 정리합니다.</p>
           <div className="stat-row">
             <div className="stat-chip">
               <div className="num">{todayNewCount}</div>
@@ -222,9 +222,6 @@ export default function Home() {
                   {a}
                 </button>
               ))}
-              <button className="disabled" disabled title="곧 연동 예정">
-                SH(준비중)
-              </button>
             </div>
 
             <select
