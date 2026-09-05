@@ -80,6 +80,7 @@ export default function Home() {
 
   const lhCount = enriched.filter((n) => n.source_agency === "LH").length;
   const ghCount = enriched.filter((n) => n.source_agency === "GH").length;
+  const shCount = enriched.filter((n) => n.source_agency === "SH").length;
   const chCount = enriched.filter((n) => n.source_agency === "청약홈").length;
   const todayNewCount = enriched.filter((n) => n.isNew).length;
   const threeDayCount = enriched.filter((n) => n.dday !== null && n.dday >= 0 && n.dday <= 3).length;
