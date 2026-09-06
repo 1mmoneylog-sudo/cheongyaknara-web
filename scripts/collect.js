@@ -186,11 +186,27 @@ async function main() {
   });
   console.log(`중복 제거: ${noTestNotices.length}건 → ${deduped.length}건`);
 
-  // GH 등 세대수가 비어있는 공고를 청약홈 데이터로 보완
-  const supplemented = fillHouseholdCountFromReb(deduped, reb.rebResults);
+// GH 등 세대수가 비어있는 공고를 청약홈 데이터로 보완
+const supplemented = fillHouseholdCountFromReb(deduped, reb.rebResults);
 
-  const now = new Date();
-  const kept = supplemented.filter((n) => shouldKeep(n, now));
+// 🔍 임시 디버그: SH로 재분류된 공고가 필터링 전에 몇 건 있는지, 접수기간이 어떻게 찍히는지 확인
+const shBeforeFilter = supplemented.filter((n) => n.source_agency === "SH");
+console.log(
+  `[디버그] 마감 필터 적용 전 SH 공고 ${shBeforeFilter.length}건:`,
+  JSON.stringify(
+    shBeforeFilter.map((n) => ({
+      title: n.title,
+      apply_start_date: n.apply_start_date,
+      apply_end_date: n.apply_end_date,
+      winner_date: n.winner_date,
+    })),
+    null,
+    2
+  )
+);
+
+const now = new Date();
+const kept = supplemented.filter((n) => shouldKeep(n, now));
   console.log(
     `마감(당첨자 발표 ${WINNER_TRACK_DAYS}일 이내 제외)·너무 먼 예정(${UPCOMING_WINDOW_DAYS}일 초과) 제외: ` +
       `${supplemented.length}건 → ${kept.length}건`
