@@ -33,7 +33,7 @@ export default function Contact() {
         <div className="contact-header">
           <span className="contact-badge">전문가 1:1 맞춤 상담</span>
           <h1 className="contact-title">
-            복잡한 청약 고민,<br />전문 상담 신청하기
+            내집마련 고민,<br />전문 상담 신청하기
           </h1>
           <p className="contact-desc">
             청약 자격, 가점 계산, 분양 일정 등 궁금하신 점을 남겨주시면 전문가가 맞춤 솔루션을 제공해 드립니다.
