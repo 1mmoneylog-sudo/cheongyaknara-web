@@ -17,10 +17,6 @@
 //    HTML 안내 페이지를 반환해 collectLh() 전체가 예외를 던지는 문제가 있었음.
 //    LH 목록 수집만 별도로 try/catch로 감싸서, LH가 점검 중이어도 GH·청약홈은
 //    정상적으로 계속 수집·저장되도록 격리함. LH는 점검이 끝나면 다음 회차에 자동 복구됨.
-// ✅ 2026-09-06: "이상 감지 후 저장 보류" 안전장치 추가.
-//    이번에 수집된 건수가 기존 저장분보다 비정상적으로 크게 줄어들면(기본 50% 초과),
-//    API/스크래핑 쪽 일시적 오류로 보고 저장을 건너뛰고 기존 데이터를 그대로 유지함.
-//    (파일을 안 건드리면 뒤이은 git commit 단계에서 변경사항이 없어 커밋 자체가 안 생김)
 
 const fs = require("fs");
 const path = require("path");
@@ -39,9 +35,6 @@ const WINNER_TRACK_DAYS = 14;
 // 예정 공고를 얼마나 먼 미래까지 노출할지 (일 단위). 이보다 먼 예정 공고는
 // 이번 회차에서는 빼고, 시작일이 이 범위 안으로 들어오면 다음 수집 때 자동으로 포함됨.
 const UPCOMING_WINDOW_DAYS = 30;
-
-// 🛡️ 이번 수집 건수가 기존 대비 이 비율(0~1)보다 더 많이 줄면 저장을 건너뜀
-const SANITY_DROP_RATIO = 0.5;
 
 function formatDate(d) {
   const y = d.getFullYear();
@@ -177,19 +170,6 @@ function shouldKeep(notice, now) {
   return true;
 }
 
-/** 기존 저장 파일의 건수를 읽어온다. 파일이 없거나 읽기 실패하면 null (= 첫 실행으로 간주) */
-function readExistingCount(filePath) {
-  try {
-    const raw = fs.readFileSync(filePath, "utf-8");
-    const json = JSON.parse(raw);
-    if (typeof json.count === "number") return json.count;
-    if (Array.isArray(json.notices)) return json.notices.length;
-    return null;
-  } catch {
-    return null;
-  }
-}
-
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
   const [lhNotices, ghNotices, reb] = await Promise.all([collectLh(), collectGh(), collectReb()]);
@@ -206,11 +186,27 @@ async function main() {
   });
   console.log(`중복 제거: ${noTestNotices.length}건 → ${deduped.length}건`);
 
-  // GH 등 세대수가 비어있는 공고를 청약홈 데이터로 보완
-  const supplemented = fillHouseholdCountFromReb(deduped, reb.rebResults);
+// GH 등 세대수가 비어있는 공고를 청약홈 데이터로 보완
+const supplemented = fillHouseholdCountFromReb(deduped, reb.rebResults);
 
-  const now = new Date();
-  const kept = supplemented.filter((n) => shouldKeep(n, now));
+// 🔍 임시 디버그: SH로 재분류된 공고가 필터링 전에 몇 건 있는지, 접수기간이 어떻게 찍히는지 확인
+const shBeforeFilter = supplemented.filter((n) => n.source_agency === "SH");
+console.log(
+  `[디버그] 마감 필터 적용 전 SH 공고 ${shBeforeFilter.length}건:`,
+  JSON.stringify(
+    shBeforeFilter.map((n) => ({
+      title: n.title,
+      apply_start_date: n.apply_start_date,
+      apply_end_date: n.apply_end_date,
+      winner_date: n.winner_date,
+    })),
+    null,
+    2
+  )
+);
+
+const now = new Date();
+const kept = supplemented.filter((n) => shouldKeep(n, now));
   console.log(
     `마감(당첨자 발표 ${WINNER_TRACK_DAYS}일 이내 제외)·너무 먼 예정(${UPCOMING_WINDOW_DAYS}일 초과) 제외: ` +
       `${supplemented.length}건 → ${kept.length}건`
@@ -221,21 +217,6 @@ async function main() {
       (parseFlexibleDate(a.apply_end_date)?.getTime() ?? Infinity) -
       (parseFlexibleDate(b.apply_end_date)?.getTime() ?? Infinity)
   );
-
-  // 🛡️ 이상 감지: 기존보다 비정상적으로 크게 줄었으면 저장을 건너뛰고 기존 데이터를 지킨다
-  const previousCount = readExistingCount(OUTPUT_PATH);
-  if (previousCount !== null && previousCount > 0) {
-    const dropRatio = (previousCount - kept.length) / previousCount;
-    if (kept.length === 0 || dropRatio > SANITY_DROP_RATIO) {
-      console.error(
-        `🚨 이상 감지: 기존 ${previousCount}건 → 이번 ${kept.length}건 (${Math.round(
-          dropRatio * 100
-        )}% 감소). API/스크래핑 쪽 일시적 오류로 보고 저장을 건너뛰고 기존 데이터를 유지합니다.`
-      );
-      console.log("=== 저장 보류로 종료 (기존 파일 그대로 유지됨) ===");
-      return;
-    }
-  }
 
   fs.writeFileSync(
     OUTPUT_PATH,
