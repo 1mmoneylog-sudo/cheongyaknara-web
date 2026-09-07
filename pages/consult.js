@@ -20,28 +20,39 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.agree) {
-      alert("개인정보 수집 및 이용에 동의해 주세요.");
+      alert("개인정보 수집 및 상담 활용에 동의해 주세요.");
       return;
     }
-    alert("상담 신청이 완료되었습니다. 전문 상담사가 확인 후 신속히 연락드리겠습니다.");
+    alert("상담 신청이 접수되었습니다. 담당 전문가가 빠른 시일 내에 연락드리겠습니다.");
   };
 
   return (
-    <div className="contact-page-container">
-      <div className="contact-wrapper">
-        {/* 헤더 섹션: 위원나라 스타일 톤앤매너 */}
-        <div className="contact-header">
-          <span className="contact-badge">전문가 1:1 맞춤 상담</span>
-          <h1 className="contact-title">
-            내집마련 고민,<br />전문 상담 신청하기
-          </h1>
-          <p className="contact-desc">
-            청약 자격, 가점 계산, 분양 일정 등 궁금하신 점을 남겨주시면 전문가가 맞춤 솔루션을 제공해 드립니다.
+    <div className="consult-page-container">
+      <div className="consult-wrapper">
+        {/* 위원나라 스타일 상단 헤더 */}
+        <div className="consult-header">
+          <div className="consult-badge">전문가 1:1 맞춤 컨설팅</div>
+          <h1 className="consult-title">청약 관련 전문가 상담 신청</h1>
+          <p className="consult-desc">
+            복잡한 자격 조건, 가점 계산, 특별공급 전략 등 고민되는 사항을 남겨주시면
+            담당 전문가가 직접 분석 후 연락을 드립니다.
           </p>
         </div>
 
-        {/* 폼 카드 */}
-        <div className="contact-form-card">
+        {/* 신뢰감을 주는 안내 박스 */}
+        <div className="consult-notice-box">
+          <div className="notice-item">
+            <span className="notice-icon">✓</span>
+            <span>전문 상담사의 1:1 맞춤 분석</span>
+          </div>
+          <div className="notice-item">
+            <span className="notice-icon">✓</span>
+            <span>접수 후 24시간 이내 신속한 상담</span>
+          </div>
+        </div>
+
+        {/* 상담 신청 폼 */}
+        <div className="consult-form-card">
           <form onSubmit={handleSubmit}>
             <div className="input-group">
               <label className="input-label">신청자 성함</label>
@@ -70,7 +81,7 @@ export default function Contact() {
             </div>
 
             <div className="input-group">
-              <label className="input-label">주요 상담 분야</label>
+              <label className="input-label">상담 분야 선택</label>
               <select
                 name="topic"
                 className="form-input form-select"
@@ -78,9 +89,9 @@ export default function Contact() {
                 onChange={handleChange}
               >
                 <option value="청약 자격 및 가점 진단">청약 자격 및 가점 진단</option>
-                <option value="신혼부부/생애최초 특별공급">신혼부부/생애최초 특별공급</option>
-                <option value="관심 단지 분석 및 전략">관심 단지 분석 및 전략</option>
-                <option value="기타 청약 일반 문의">기타 청약 일반 문의</option>
+                <option value="신혼부부 / 생애최초 특별공급">신혼부부 / 생애최초 특별공급</option>
+                <option value="관심 단지 분석 및 당첨 전략">관심 단지 분석 및 당첨 전략</option>
+                <option value="기타 청약/부동산 문의">기타 청약/부동산 문의</option>
               </select>
             </div>
 
@@ -89,7 +100,7 @@ export default function Contact() {
               <textarea
                 name="content"
                 className="form-input form-textarea"
-                placeholder="현재 상황이나 궁금하신 내용을 상세히 적어주시면 더 정확한 상담이 가능합니다."
+                placeholder="현재 무주택 여부, 부양가족 수, 청약통장 가입 기간 등 상황을 함께 남겨주시면 더욱 정확한 상담이 가능합니다."
                 rows={5}
                 value={formData.content}
                 onChange={handleChange}
@@ -106,11 +117,11 @@ export default function Contact() {
                 onChange={handleChange}
                 required
               />
-              <label htmlFor="agree">개인정보 수집 및 상담 활용에 동의합니다 (필수)</label>
+              <label htmlFor="agree">개인정보 수집 및 상담 활용 동의 (필수)</label>
             </div>
 
-            <button type="submit" className="btn-submit btn-consulting">
-              1:1 맞춤 상담 신청하기
+            <button type="submit" className="btn-consult-submit">
+              무료 상담 신청하기
             </button>
           </form>
         </div>
