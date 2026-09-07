@@ -85,16 +85,6 @@ async function collectLh() {
 }
 
 async function collectGh() {
-  async function collectGhScrape() {
-  try {
-    const rows = await fetchGhScrapeAll({ maxPagesPerBoard: 5 }); // 게시판당 최근 5페이지(약 50건)만
-    console.log(`GH 스크래핑: ${rows.length}건`);
-    return rows.map((row, i) => normalizeGhScraped(row, i));
-  } catch (err) {
-    console.error("GH 스크래핑 실패:", err.message);
-    return [];
-  }
-}
   const serviceKey = process.env.GH_SERVICE_KEY;
   if (!serviceKey) {
     console.warn("⚠️ GH_SERVICE_KEY가 없어 GH 수집을 건너뜁니다.");
@@ -106,6 +96,17 @@ async function collectGh() {
     return (notices ?? []).map((n) => normalizeGhNotice(n, supplies, housingTypes, projects));
   } catch (err) {
     console.error("GH 수집 실패:", err.message);
+    return [];
+  }
+}
+
+async function collectGhScrape() {
+  try {
+    const rows = await fetchGhScrapeAll({ maxPagesPerBoard: 5 }); // 게시판당 최근 5페이지(약 50건)만
+    console.log(`GH 스크래핑: ${rows.length}건`);
+    return rows.map((row, i) => normalizeGhScraped(row, i));
+  } catch (err) {
+    console.error("GH 스크래핑 실패:", err.message);
     return [];
   }
 }
@@ -182,8 +183,13 @@ function shouldKeep(notice, now) {
 
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
-  const [ghScrapedNotices, lhNotices, ghNotices, reb] = await Promise.all([collectLh(), collectGh(), collectReb()]);
-  const combined = [ghScrapedNotices, ...lhNotices, ...ghNotices, ...reb.notices];
+  const [lhNotices, ghNotices, reb, ghScrapedNotices] = await Promise.all([
+    collectLh(),
+    collectGh(),
+    collectReb(),
+    collectGhScrape(),
+  ]);
+  const combined = [...lhNotices, ...ghNotices, ...reb.notices, ...ghScrapedNotices];
 
   const noTestNotices = combined.filter((n) => !isTestNotice(n));
   console.log(`테스트/점검/관리용 공고 제외: ${combined.length}건 → ${noTestNotices.length}건`);
