@@ -5,7 +5,6 @@ import noticesData from "../data/notices.json";
 import { getDday, getUrgencyLevel, getProgressPercent } from "../lib/dday";
 import NoticeCard from "../components/NoticeCard";
 
-// 최신순 정렬용 — lib/dday.js를 건드리지 않도록 이 파일 안에 별도로 둠
 function parseAnnounceDate(str) {
   if (!str) return null;
   const cleaned = String(str).replace(/[^0-9]/g, "");
@@ -19,11 +18,6 @@ export async function getStaticProps() {
 
 const PAGE_SIZE = 8;
 const NEW_WINDOW_DAYS = 3;
-
-function todayStr() {
-  const d = new Date();
-  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
-}
 
 function isRecentlyAnnounced(announceDate) {
   if (!announceDate) return false;
@@ -47,27 +41,25 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [bookmarks, setBookmarks] = useState(new Set());
 
-  // 상세페이지 하단 링크(?agency=LH, ?region=경기도)로 들어온 경우 초기 필터 적용
   useEffect(() => {
     if (!router.isReady) return;
     if (typeof router.query.agency === "string") setAgencyFilter(router.query.agency);
     if (typeof router.query.region === "string") setRegionFilter(router.query.region);
   }, [router.isReady, router.query.agency, router.query.region]);
 
- const enriched = useMemo(
-  () =>
-    notices
-      .map((n) => ({
-        ...n,
-        dday: getDday(n.apply_end_date),
-        urgency: getUrgencyLevel(getDday(n.apply_end_date)),
-        progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
-        isNew: isRecentlyAnnounced(n.announce_date),
-      }))
-      // 마감일이 없거나 이미 지난 공고는 화면에 노출하지 않음
-      .filter((n) => n.apply_end_date && n.dday !== null && n.dday >= 0),
-  [notices]
-);
+  const enriched = useMemo(
+    () =>
+      notices
+        .map((n) => ({
+          ...n,
+          dday: getDday(n.apply_end_date),
+          urgency: getUrgencyLevel(getDday(n.apply_end_date)),
+          progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
+          isNew: isRecentlyAnnounced(n.announce_date),
+        }))
+        .filter((n) => n.apply_end_date && n.dday !== null && n.dday >= 0),
+    [notices]
+  );
 
   const regionCounts = useMemo(() => {
     const map = new Map();
@@ -84,6 +76,9 @@ export default function Home() {
   const chCount = enriched.filter((n) => n.source_agency === "청약홈").length;
   const todayNewCount = enriched.filter((n) => n.isNew).length;
   const threeDayCount = enriched.filter((n) => n.dday !== null && n.dday >= 0 && n.dday <= 3).length;
+
+  // 롤링 배너용 최신 공고 5개 추출
+  const newNotices = useMemo(() => enriched.filter((n) => n.isNew).slice(0, 5), [enriched]);
 
   const filtered = useMemo(() => {
     let list = enriched;
@@ -132,7 +127,8 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="bg-light-gray min-h-screen">
+      {/* 헤더 네비게이션 */}
       <header className="site-header">
         <div className="header-inner">
           <Link href="/" className="logo">
@@ -153,67 +149,118 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="hero">
-        <div className="hero-inner">
-          <h1>LH·GH 모집공고, 한 곳에서 놓치지 않게</h1>
-          <p>공공분양·공공임대 공고를 모아 마감 D-day 순으로 정리합니다.</p>
-          <div className="stat-row">
-            <div className="stat-chip">
-              <div className="num">{todayNewCount}</div>
-              <div className="label">최근 {NEW_WINDOW_DAYS}일 내 신규</div>
+      {/* 위원나라 스타일 히어로 세션 */}
+      <section className="hero-section">
+        <div className="hero-container">
+          {/* 좌측 히어로 메인 */}
+          <div className="hero-left">
+            <h1 className="hero-title">
+              청약 모집공고, <br />
+              한 곳에서 한눈에
+            </h1>
+            <p className="hero-desc">
+              LH · SH · GH · 청약홈에 흩어진 공공분양 및 임대주택 공고를 실시간 수집하여 정리합니다.
+            </p>
+            {/* 알약형 통합 검색창 */}
+            <div className="hero-search-box">
+              <input
+                type="text"
+                placeholder="관심 지역, 단지명, 기관명 검색 (예: 판교, LH)"
+                value={pendingQuery}
+                onChange={(e) => setPendingQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    setQuery(pendingQuery);
+                    resetPage();
+                  }
+                }}
+              />
+              <button
+                onClick={() => {
+                  setQuery(pendingQuery);
+                  resetPage();
+                }}
+              >
+                검색
+              </button>
             </div>
-            <div className="stat-chip">
-              <div className="num accent">{threeDayCount}</div>
-              <div className="label">3일 안에 마감</div>
-            </div>
-            <div className="stat-chip">
-              <div className="num">{lhCount}</div>
-              <div className="label">LH 공고</div>
-            </div>
-            <div className="stat-chip">
-              <div className="num">{ghCount}</div>
-              <div className="label">GH 공고</div>
-            </div>
-            <div className="stat-chip">
-              <div className="num">{chCount}</div>
-              <div className="label">청약홈 공고</div>
+          </div>
+
+          {/* 우측 위원나라 요약 대시보드 위젯 */}
+          <div className="hero-right">
+            <div className="status-widget">
+              <div className="widget-header">
+                <span className="widget-date">{new Date().toLocaleDateString("ko-KR")} 기준</span>
+              </div>
+              <div className="widget-item">
+                <span className="label">오늘 새로 올라온 공고</span>
+                <span className="val text-primary">{todayNewCount}</span>
+              </div>
+              <div className="widget-item">
+                <span className="label">3일 안에 마감되는 공고</span>
+                <span className="val text-red">{threeDayCount}</span>
+              </div>
+              <div className="widget-item border-none">
+                <span className="label">전체 수집 공고 수</span>
+                <span className="val">{enriched.length}</span>
+              </div>
+              <div className="widget-sub-stats">
+                <span>LH <b>{lhCount}</b></span>
+                <span>SH <b>{shCount}</b></span>
+                <span>GH <b>{ghCount}</b></span>
+                <span>청약홈 <b>{chCount}</b></span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="search-wrap">
-        <div className="search-inner">
-          <div className="search-box">
-            <span className="icon">⌕</span>
-            <input
-              type="text"
-              placeholder="단지명, 지역, 기관으로 검색 (예: 위례, 화성시, LH)"
-              value={pendingQuery}
-              onChange={(e) => setPendingQuery(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  setQuery(pendingQuery);
-                  resetPage();
-                }
-              }}
-            />
-            <button
-              className="search-confirm-btn"
-              onClick={() => {
-                setQuery(pendingQuery);
-                resetPage();
-              }}
-            >
-              확인
-            </button>
+      {/* 실시간 롤링 띠 배너 */}
+      <div className="ticker-banner">
+        <div className="ticker-inner">
+          <div className="ticker-track">
+            {newNotices.length > 0 ? (
+              newNotices.map((n) => (
+                <span key={n.id} className="ticker-item">
+                  <span className="badge-new">NEW</span> {n.title} (~{n.apply_end_date})
+                </span>
+              ))
+            ) : (
+              <span className="ticker-item">
+                <span className="badge-new">NEW</span> 실시간 최신 청약 공고가 자동으로 업데이트됩니다.
+              </span>
+            )}
           </div>
-          <div className="filter-row">
-            <div className="seg">
-  {["전체", "LH", "GH", "SH", "청약홈"].map((a) => (
+        </div>
+      </div>
+
+      {/* 메인 리스트 레이아웃 */}
+      <div className="layout">
+        <div className="main-col">
+          {/* 상단 탭 & 필터 바 */}
+          <div className="filter-card">
+            <div className="filter-header">
+              <h2 className="section-title">현재 지원 가능한 공고</h2>
+              <div className="sort-pill-tabs">
+                <button className={sortMode === "dday" ? "active" : ""} onClick={() => setSortMode("dday")}>
+                  마감임박순
+                </button>
+                <button className={sortMode === "latest" ? "active" : ""} onClick={() => setSortMode("latest")}>
+                  최신순
+                </button>
+                <button className={sortMode === "household" ? "active" : ""} onClick={() => setSortMode("household")}>
+                  세대수순
+                </button>
+              </div>
+            </div>
+
+            {/* 기관별 칩 필터 */}
+            <div className="chip-row">
+              <span className="chip-label">기관</span>
+              {["전체", "LH", "GH", "SH", "청약홈"].map((a) => (
                 <button
                   key={a}
-                  className={agencyFilter === a ? "active" : ""}
+                  className={`chip-btn ${agencyFilter === a ? "active" : ""}`}
                   onClick={() => {
                     setAgencyFilter(a);
                     resetPage();
@@ -224,60 +271,45 @@ export default function Home() {
               ))}
             </div>
 
-            <select
-              className="pill-select"
-              value={regionFilter}
-              onChange={(e) => {
-                setRegionFilter(e.target.value);
-                resetPage();
-              }}
-            >
-              <option value="전체">지역 전체</option>
-              {regionCounts.map(([region]) => (
-                <option key={region} value={region}>
-                  {region}
-                </option>
+            {/* 공급유형 & 지역 선택 세그먼트 */}
+            <div className="chip-row">
+              <span className="chip-label">유형</span>
+              {["전체", "분양", "임대"].map((k) => (
+                <button
+                  key={k}
+                  className={`chip-btn ${kindFilter === k ? "active" : ""}`}
+                  onClick={() => {
+                    setKindFilter(k);
+                    resetPage();
+                  }}
+                >
+                  {k}
+                </button>
               ))}
-            </select>
-
-            <select
-              className="pill-select"
-              value={kindFilter}
-              onChange={(e) => {
-                setKindFilter(e.target.value);
-                resetPage();
-              }}
-            >
-              <option value="전체">공급유형 전체</option>
-              <option value="임대">임대</option>
-              <option value="분양">분양</option>
-            </select>
-
-            <div className="filter-spacer" />
-
-            <div className="sort-tabs">
-              <button className={sortMode === "dday" ? "active" : ""} onClick={() => setSortMode("dday")}>
-                마감임박순
-              </button>
-              <button className={sortMode === "latest" ? "active" : ""} onClick={() => setSortMode("latest")}>
-                최신순
-              </button>
-              <button className={sortMode === "household" ? "active" : ""} onClick={() => setSortMode("household")}>
-                세대수순
-              </button>
+              <select
+                className="region-select"
+                value={regionFilter}
+                onChange={(e) => {
+                  setRegionFilter(e.target.value);
+                  resetPage();
+                }}
+              >
+                <option value="전체">지역 전체</option>
+                {regionCounts.map(([region]) => (
+                  <option key={region} value={region}>
+                    {region}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div className="layout">
-        <div className="main-col">
           <div className="result-count">
-            총 <b>{filtered.length}</b>개의 접수중·예정 공고
+            총 <b>{filtered.length}</b>개의 공고를 찾았습니다.
           </div>
 
           {pageItems.length === 0 && (
-            <div className="empty-state">조건에 맞는 공고가 없습니다. 필터를 조정해보세요.</div>
+            <div className="empty-state">조건에 맞는 공고가 없습니다. 필터를 조정해 보세요.</div>
           )}
 
           {pageItems.map((n) => (
@@ -306,51 +338,28 @@ export default function Home() {
           )}
         </div>
 
+        {/* 사이드바 */}
         <aside className="sidebar">
-         <div className="side-card">
-  <h3>기관별</h3>
-  <div className="side-link-list">
-    <button
-      className={agencyFilter === "LH" ? "active" : ""}
-      onClick={() => {
-        setAgencyFilter("LH");
-        resetPage();
-      }}
-    >
-      LH <span className="n">{lhCount}</span>
-    </button>
-    <button
-      className={agencyFilter === "GH" ? "active" : ""}
-      onClick={() => {
-        setAgencyFilter("GH");
-        resetPage();
-      }}
-    >
-      GH <span className="n">{ghCount}</span>
-    </button>
-    <button
-      className={agencyFilter === "SH" ? "active" : ""}
-      onClick={() => {
-        setAgencyFilter("SH");
-        resetPage();
-      }}
-    >
-      SH <span className="n">{shCount}</span>
-    </button>
-    <button
-      className={agencyFilter === "청약홈" ? "active" : ""}
-      onClick={() => {
-        setAgencyFilter("청약홈");
-        resetPage();
-      }}
-    >
-      청약홈 <span className="n">{chCount}</span>
-    </button>
-  </div>
-</div>
+          <div className="side-card">
+            <h3>기관별 공고 현황</h3>
+            <div className="side-link-list">
+              <button className={agencyFilter === "LH" ? "active" : ""} onClick={() => { setAgencyFilter("LH"); resetPage(); }}>
+                LH 한국토지주택공사 <span className="n">{lhCount}</span>
+              </button>
+              <button className={agencyFilter === "SH" ? "active" : ""} onClick={() => { setAgencyFilter("SH"); resetPage(); }}>
+                SH 서울주택도시공사 <span className="n">{shCount}</span>
+              </button>
+              <button className={agencyFilter === "GH" ? "active" : ""} onClick={() => { setAgencyFilter("GH"); resetPage(); }}>
+                GH 경기주택도시공사 <span className="n">{ghCount}</span>
+              </button>
+              <button className={agencyFilter === "청약홈" ? "active" : ""} onClick={() => { setAgencyFilter("청약홈"); resetPage(); }}>
+                한국부동산원 청약홈 <span className="n">{chCount}</span>
+              </button>
+            </div>
+          </div>
 
           <div className="side-card">
-            <h3>지역별 (많은 순)</h3>
+            <h3>인기 지역</h3>
             <div className="type-grid">
               {regionCounts.slice(0, 6).map(([region, count]) => (
                 <button
@@ -361,18 +370,10 @@ export default function Home() {
                     resetPage();
                   }}
                 >
-                  {region} {count}
+                  {region} ({count})
                 </button>
               ))}
             </div>
-          </div>
-
-          <div className="cta-card">
-            <h4>가점 계산이 헷갈리시나요?</h4>
-            <p>청약저축 기간·부양가족 수를 입력해 예상 가점을 계산하는 기능을 준비 중입니다.</p>
-            <button disabled style={{ opacity: 0.6, cursor: "default" }}>
-              준비중
-            </button>
           </div>
         </aside>
       </div>
