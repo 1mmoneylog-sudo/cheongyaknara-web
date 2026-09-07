@@ -23,7 +23,7 @@ const path = require("path");
 const { fetchLhList, fetchLhDetail, fetchLhSupply, normalizeLhNotice } = require("../lib/collectors/lh");
 const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
 const { fetchRebAll, normalizeAllRebNotices, fillHouseholdCountFromReb } = require("../lib/collectors/reb");
-
+const { fetchGhScrapeAll, normalizeGhScraped } = require("../lib/collectors/gh-scrape");
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "notices.json");
 
 // ✅ 2026-09-04: 마감 유예(3일) 없애고 바로 제외하도록 단순화.
@@ -85,6 +85,16 @@ async function collectLh() {
 }
 
 async function collectGh() {
+  async function collectGhScrape() {
+  try {
+    const rows = await fetchGhScrapeAll({ maxPagesPerBoard: 5 }); // 게시판당 최근 5페이지(약 50건)만
+    console.log(`GH 스크래핑: ${rows.length}건`);
+    return rows.map((row, i) => normalizeGhScraped(row, i));
+  } catch (err) {
+    console.error("GH 스크래핑 실패:", err.message);
+    return [];
+  }
+}
   const serviceKey = process.env.GH_SERVICE_KEY;
   if (!serviceKey) {
     console.warn("⚠️ GH_SERVICE_KEY가 없어 GH 수집을 건너뜁니다.");
@@ -172,8 +182,8 @@ function shouldKeep(notice, now) {
 
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
-  const [lhNotices, ghNotices, reb] = await Promise.all([collectLh(), collectGh(), collectReb()]);
-  const combined = [...lhNotices, ...ghNotices, ...reb.notices];
+  const [ghScrapedNotices, lhNotices, ghNotices, reb] = await Promise.all([collectLh(), collectGh(), collectReb()]);
+  const combined = [ghScrapedNotices, ...lhNotices, ...ghNotices, ...reb.notices];
 
   const noTestNotices = combined.filter((n) => !isTestNotice(n));
   console.log(`테스트/점검/관리용 공고 제외: ${combined.length}건 → ${noTestNotices.length}건`);
