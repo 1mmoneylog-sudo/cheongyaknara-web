@@ -19,6 +19,10 @@ export default function Login() {
             <Link href="/jagyeok">자격진단</Link>
             <Link href="/calendar">청약캘린더</Link>
           </nav>
+          <div className="header-right">
+            <Link href="/contact" className="btn-ghost-inv">문의하기</Link>
+            <Link href="/signup" className="btn-primary-inv">회원가입</Link>
+          </div>
         </div>
       </header>
 
@@ -30,6 +34,7 @@ export default function Login() {
           <input
             className="auth-input"
             type="text"
+            placeholder="아이디를 입력하세요"
             value={id}
             onChange={(e) => setId(e.target.value)}
           />
@@ -38,6 +43,7 @@ export default function Login() {
           <input
             className="auth-input"
             type="password"
+            placeholder="비밀번호를 입력하세요"
             value={pw}
             onChange={(e) => setPw(e.target.value)}
           />
