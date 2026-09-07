@@ -2,7 +2,7 @@ name: 청약 데이터 자동 수집
 
 on:
   schedule:
-    - cron: "0 17,3 * * *"
+    - cron: "0 17,3 * * *" # 한국시간 02시, 12시 실행
   workflow_dispatch: {}
 
 jobs:
@@ -16,14 +16,17 @@ jobs:
           node-version: 20
 
       - name: 의존성 설치
-        run: npm install --omit=dev
+        run: npm install
 
-      - name: 데이터 수집 실행
+      - name: API 기반 데이터 수집 (LH, GH, 청약홈)
         env:
           LH_SERVICE_KEY: ${{ secrets.LH_SERVICE_KEY }}
           GH_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
           REB_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
-        run: npm run collect
+        run: npm run collect || true
+
+      - name: 웹 스크래핑 데이터 수집 (SH)
+        run: node lib/collectors/sh-scrape.js || true
 
       - name: 변경사항 저장소에 반영
         run: |
