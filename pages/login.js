@@ -1,72 +1,58 @@
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Login() {
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // 기존 로그인 로직 유지
+  };
 
   return (
-    <div>
-      <header className="site-header">
-        <div className="header-inner">
-          <Link href="/" className="logo">
-            <span className="dot" />
-            청약나라
-          </Link>
-          <nav>
-            <Link href="/">모집공고</Link>
-            <Link href="/gajeom">가점계산기</Link>
-            <Link href="/jagyeok">자격진단</Link>
-            <Link href="/calendar">청약캘린더</Link>
-          </nav>
-          <div className="header-right">
-            <Link href="/contact" className="btn-ghost-inv">문의하기</Link>
-            <Link href="/signup" className="btn-primary-inv">회원가입</Link>
+    <div className="page-container">
+      <div className="form-card">
+        <h1 className="card-title">로그인</h1>
+
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label className="input-label">아이디 또는 이메일</label>
+            <input
+              type="text"
+              className="form-input"
+              placeholder=""
+              required
+            />
           </div>
-        </div>
-      </header>
 
-      <div className="auth-page">
-        <div className="auth-card">
-          <h1>로그인</h1>
+          <div className="input-group">
+            <label className="input-label">비밀번호</label>
+            <input
+              type="password"
+              className="form-input"
+              placeholder=""
+              required
+            />
+          </div>
 
-          <label className="auth-label">아이디 또는 이메일</label>
-          <input
-            className="auth-input"
-            type="text"
-            placeholder="아이디를 입력하세요"
-            value={id}
-            onChange={(e) => setId(e.target.value)}
-          />
-
-          <label className="auth-label">비밀번호</label>
-          <input
-            className="auth-input"
-            type="password"
-            placeholder="비밀번호를 입력하세요"
-            value={pw}
-            onChange={(e) => setPw(e.target.value)}
-          />
-
-          <button className="auth-submit-btn" onClick={(e) => e.preventDefault()}>
+          <button type="submit" className="btn-submit">
             로그인
           </button>
+        </form>
 
-          <div className="auth-divider"><span>또는 간편하게</span></div>
+        <div className="divider">또는 간편하게</div>
 
-          <button className="social-btn kakao" onClick={(e) => e.preventDefault()}>
-            💬 카카오로 시작하기
+        <div className="social-buttons">
+          <button type="button" className="btn-social btn-kakao">
+            <span>💬</span> 카카오로 시작하기
           </button>
-          <button className="social-btn naver" onClick={(e) => e.preventDefault()}>
-            N 네이버로 시작하기
+          <button type="button" className="btn-social btn-naver">
+            <span>N</span> 네이버로 시작하기
           </button>
-          <button className="social-btn google" onClick={(e) => e.preventDefault()}>
-            G 구글로 시작하기
+          <button type="button" className="btn-social btn-google">
+            <span>G</span> 구글로 시작하기
           </button>
+        </div>
 
-          <div className="auth-footer-links">
-            계정이 없으신가요? <Link href="/signup">회원가입</Link> · <a href="#">비밀번호 찾기</a>
-          </div>
+        <div className="auth-footer">
+          계정이 없으신가요? <Link href="/signup">회원가입</Link> · <Link href="/find-password">비밀번호 찾기</Link>
         </div>
       </div>
     </div>
