@@ -33,22 +33,27 @@ function isRecentlyAnnounced(announceDate) {
 export async function getStaticProps() {
   let fetchedNotices = [];
   try {
-    // 1. sh-scrape.js 불러오기 (루트 폴더 기준 "@/sh-scrape", lib 폴더 내 위치시 "@/lib/sh-scrape")
+    // Node.js require를 위해 상대 경로(../)를 명시적으로 지정합니다.
     let scraper;
     try {
-      scraper = require("@/lib/sh-scrape");
-    } catch (e) {
-      scraper = require("@/sh-scrape");
+      // 1. 루트 폴더에 sh-scrape.js 가 있는 경우
+      scraper = require("../sh-scrape");
+    } catch (e1) {
+      try {
+        // 2. lib 폴더 안에 sh-scrape.js 가 있는 경우
+        scraper = require("../lib/sh-scrape");
+      } catch (e2) {
+        throw new Error("sh-scrape.js 파일을 찾을 수 없습니다.");
+      }
     }
 
     const { fetchShScrapeAll, normalizeShScraped } = scraper;
 
-    // 2. Vercel 무료 플랜 타임아웃(10초) 방지를 위해 최대 3페이지 수집
+    // Vercel 10초 타임아웃 방지를 위해 최대 3페이지 수집
     const rawList = await fetchShScrapeAll({ maxPages: 3 });
     fetchedNotices = rawList.map((item, index) => normalizeShScraped(item, index));
   } catch (error) {
     console.error("SH 공고 수집 중 오류 발생 (빌드 타임):", error);
-    // Vercel 해외 IP 차단 또는 수집 실패 시에도 빌드가 터지지 않게 예외 처리
     fetchedNotices = [];
   }
 
