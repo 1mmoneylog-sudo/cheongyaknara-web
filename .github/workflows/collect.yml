@@ -18,20 +18,26 @@ jobs:
       - name: 의존성 설치
         run: npm install
 
-      - name: API 기반 데이터 수집 (LH, GH, 청약홈)
+      # 1. API 연동 수집 (LH, 청약홈)
+      - name: API 데이터 수집 (LH, 청약홈)
         env:
           LH_SERVICE_KEY: ${{ secrets.LH_SERVICE_KEY }}
-          GH_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
           REB_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
         run: npm run collect || true
 
-      - name: 웹 스크래핑 데이터 수집 (SH)
+      # 2. 웹 스크래핑 수집 (GH)
+      - name: GH 웹 스크래핑 수집
+        run: node lib/collectors/gh-scrape.js || true
+
+      # 3. 웹 스크래핑 수집 (SH)
+      - name: SH 웹 스크래핑 수집
         run: node lib/collectors/sh-scrape.js || true
 
+      # 4. 최종 누적 결과 저장
       - name: 변경사항 저장소에 반영
         run: |
           git config user.name "cheongyaknara-bot"
           git config user.email "bot@users.noreply.github.com"
           git add data/notices.json
-          git diff --staged --quiet || git commit -m "chore: 청약 공고 자동 업데이트 $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "chore: 청약 공고 전체 자동 업데이트 $(date -u +%Y-%m-%d)"
           git push
