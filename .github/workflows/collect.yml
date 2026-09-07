@@ -2,7 +2,8 @@ name: 청약 데이터 자동 수집
 
 on:
   schedule:
-    - cron: "0 17,3 * * *" # 한국시간 02시, 12시 실행
+    # 💡 UTC 기준 2시간마다 실행 ('0 */2 * * *' = 한국시간 기준 매 짝수 시 정각)
+    - cron: "0 */2 * * *"
   workflow_dispatch: {}
 
 jobs:
@@ -22,7 +23,7 @@ jobs:
         env:
           LH_SERVICE_KEY: ${{ secrets.LH_SERVICE_KEY }}
           GH_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
-          REB_SERVICE_KEY: ${{ secrets.REB_SERVICE_KEY || secrets.GH_SERVICE_KEY }}
+          REB_SERVICE_KEY: ${{ secrets.REB_SERVICE_KEY }}
         run: npm run collect
 
       - name: 변경사항 저장소에 반영
