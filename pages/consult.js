@@ -25,12 +25,9 @@ export default function Contact() {
       return;
     }
 
-    // 데이터 정상 수집 확인용 console.log
     console.log("제출된 데이터:", formData);
-
     alert("상담 신청이 접수되었습니다. 담당 전문가가 빠른 시일 내에 연락드리겠습니다.");
     
-    // 폼 초기화
     setFormData({
       name: "",
       phone: "",
@@ -43,7 +40,6 @@ export default function Contact() {
   return (
     <div className="consult-page-container">
       <div className="consult-wrapper">
-        {/* 상단 헤더 */}
         <div className="consult-header">
           <div className="consult-badge">전문가 1:1 맞춤 컨설팅</div>
           <h1 className="consult-title">청약 관련 전문가 상담 신청</h1>
@@ -53,7 +49,6 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* 안내 박스 */}
         <div className="consult-notice-box">
           <div className="notice-item">
             <span className="notice-icon">✓</span>
@@ -65,7 +60,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* 폼 카드 */}
         <div className="consult-form-card">
           <form onSubmit={handleSubmit}>
             <div className="input-group">
