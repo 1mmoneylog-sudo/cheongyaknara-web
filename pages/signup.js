@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 기존 회원가입 제출 로직 유지
   };
 
   return (
@@ -13,21 +12,11 @@ export default function Signup() {
 
         <form onSubmit={handleSubmit}>
           <div className="input-group">
-            <label className="input-label">이름</label>
-            <input
-              type="text"
-              className="form-input"
-              placeholder="홍길동"
-              required
-            />
-          </div>
-
-          <div className="input-group">
-            <label className="input-label">이메일 계정</label>
+            <label className="input-label">아이디 또는 이메일</label>
             <input
               type="email"
               className="form-input"
-              placeholder="example@email.com"
+              placeholder=""
               required
             />
           </div>
@@ -37,7 +26,7 @@ export default function Signup() {
             <input
               type="password"
               className="form-input"
-              placeholder="8자리 이상 입력"
+              placeholder=""
               required
             />
           </div>
@@ -47,22 +36,39 @@ export default function Signup() {
             <input
               type="password"
               className="form-input"
-              placeholder="비밀번호 재입력"
+              placeholder=""
               required
             />
           </div>
 
-          <div className="checkbox-group">
-            <label className="checkbox-label">
-              <input type="checkbox" required />
-              <span>[필수] 이용약관 및 개인정보 수집·이용에 동의합니다.</span>
-            </label>
+          <div className="input-group">
+            <label className="input-label">이름</label>
+            <input
+              type="text"
+              className="form-input"
+              placeholder=""
+              required
+            />
           </div>
 
-          <button type="submit" className="btn-submit">
-            가입하기
+          <button type="submit" className="btn-submit" style={{ marginTop: '16px' }}>
+            회원가입
           </button>
         </form>
+
+        <div className="divider">또는 간편 회원가입</div>
+
+        <div className="social-buttons">
+          <button type="button" className="btn-social btn-kakao">
+            <span>💬</span> 카카오로 시작하기
+          </button>
+          <button type="button" className="btn-social btn-naver">
+            <span>N</span> 네이버로 시작하기
+          </button>
+          <button type="button" className="btn-social btn-google">
+            <span>G</span> 구글로 시작하기
+          </button>
+        </div>
 
         <div className="auth-footer">
           이미 계정이 있으신가요? <Link href="/login">로그인</Link>
