@@ -21,7 +21,7 @@ jobs:
         run: npm install axios cheerio
 
       - name: Run SH Scraper
-        run: node scrape-sh.js
+        run: node sh-scrape.js
 
       - name: Commit & Push updated notices.json
         run: |
