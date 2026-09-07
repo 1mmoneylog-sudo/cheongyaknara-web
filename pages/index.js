@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { fetchShScrapeAll, normalizeShScraped } from "../lib/shScraper"; // shScraper 경로에 맞게 조정
 import { getDday, getUrgencyLevel, getProgressPercent } from "../lib/dday";
 import NoticeCard from "../components/NoticeCard";
 
@@ -29,17 +28,28 @@ function isRecentlyAnnounced(announceDate) {
 }
 
 // ============================================================================
-// [서버 사이드/빌드 타임 실행] - 스크래퍼 자동 실행 및 데이터 가져오기
-// 별도 run.js 실행 필요 없이 Next.js가 직접 스크래핑을 수행합니다.
+// [서버 사이드 / 빌드 타임] sh-scrape.js 자동 연동
 // ============================================================================
 export async function getStaticProps() {
   let fetchedNotices = [];
   try {
-    // 1. SH 공고 자동 스크래핑 실행 (최대 5페이지)
-    const rawList = await fetchShScrapeAll({ maxPages: 5 });
+    // 1. sh-scrape.js 불러오기 (루트 폴더 기준 "@/sh-scrape", lib 폴더 내 위치시 "@/lib/sh-scrape")
+    let scraper;
+    try {
+      scraper = require("@/lib/sh-scrape");
+    } catch (e) {
+      scraper = require("@/sh-scrape");
+    }
+
+    const { fetchShScrapeAll, normalizeShScraped } = scraper;
+
+    // 2. Vercel 무료 플랜 타임아웃(10초) 방지를 위해 최대 3페이지 수집
+    const rawList = await fetchShScrapeAll({ maxPages: 3 });
     fetchedNotices = rawList.map((item, index) => normalizeShScraped(item, index));
   } catch (error) {
-    console.error("SH 공고 수집 중 오류 발생:", error);
+    console.error("SH 공고 수집 중 오류 발생 (빌드 타임):", error);
+    // Vercel 해외 IP 차단 또는 수집 실패 시에도 빌드가 터지지 않게 예외 처리
+    fetchedNotices = [];
   }
 
   return {
@@ -47,8 +57,7 @@ export async function getStaticProps() {
       initialNotices: fetchedNotices,
       generatedAt: new Date().toISOString(),
     },
-    // 1시간(3600초)마다 백그라운드에서 자동으로 최신 데이터 스크래핑 갱신 (ISR)
-    revalidate: 3600,
+    revalidate: 3600, // 1시간마다 백그라운드 자동 최신화
   };
 }
 
