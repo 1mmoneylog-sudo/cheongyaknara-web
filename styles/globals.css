@@ -589,11 +589,11 @@ nav a.active { color: #fff; font-weight: 700; }
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
-.card-title {
-  font-size: 22px;
-  font-weight: 800;
+.auth-card-title {
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   color: #111827;
 }
 
