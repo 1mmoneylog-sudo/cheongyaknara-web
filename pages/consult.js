@@ -19,17 +19,31 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!formData.agree) {
-      alert("개인정보 수집 및 상담 활용에 동의해 주세요.");
+      alert("개인정보 수집 및 상담 활용 동의가 필요합니다.");
       return;
     }
+
+    // 데이터 정상 수집 확인용 console.log
+    console.log("제출된 데이터:", formData);
+
     alert("상담 신청이 접수되었습니다. 담당 전문가가 빠른 시일 내에 연락드리겠습니다.");
+    
+    // 폼 초기화
+    setFormData({
+      name: "",
+      phone: "",
+      topic: "청약 자격 및 가점 진단",
+      content: "",
+      agree: false,
+    });
   };
 
   return (
     <div className="consult-page-container">
       <div className="consult-wrapper">
-        {/* 위원나라 스타일 상단 헤더 */}
+        {/* 상단 헤더 */}
         <div className="consult-header">
           <div className="consult-badge">전문가 1:1 맞춤 컨설팅</div>
           <h1 className="consult-title">청약 관련 전문가 상담 신청</h1>
@@ -39,7 +53,7 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* 신뢰감을 주는 안내 박스 */}
+        {/* 안내 박스 */}
         <div className="consult-notice-box">
           <div className="notice-item">
             <span className="notice-icon">✓</span>
@@ -51,7 +65,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* 상담 신청 폼 */}
+        {/* 폼 카드 */}
         <div className="consult-form-card">
           <form onSubmit={handleSubmit}>
             <div className="input-group">
@@ -108,7 +122,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="checkbox-item" style={{ margin: "20px 0 24px 0" }}>
+            <div className="checkbox-item" style={{ margin: "20px 0 24px 0", display: "flex", alignItems: "center", gap: "8px" }}>
               <input
                 type="checkbox"
                 name="agree"
@@ -117,7 +131,9 @@ export default function Contact() {
                 onChange={handleChange}
                 required
               />
-              <label htmlFor="agree">개인정보 수집 및 상담 활용 동의 (필수)</label>
+              <label htmlFor="agree" style={{ cursor: "pointer", fontSize: "14px", color: "#334155" }}>
+                개인정보 수집 및 상담 활용 동의 (필수)
+              </label>
             </div>
 
             <button type="submit" className="btn-consult-submit">
