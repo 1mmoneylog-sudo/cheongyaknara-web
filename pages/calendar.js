@@ -1,160 +1,188 @@
+import { useState, useMemo } from "react";
 import Link from "next/link";
-import { useMemo, useState } from "react";
 import noticesData from "../data/notices.json";
-import { getDday, getUrgencyLevel } from "../lib/dday";
-import NoticeCard from "../components/NoticeCard";
 
-const WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"];
+// 유형별 대표 색상 지정 (청약홈 스타일)
+const TYPE_COLORS = {
+  "특별공급": { bg: "#3B82F6", text: "#FFFFFF" }, // 파랑
+  "1순위": { bg: "#22C55E", text: "#FFFFFF" },   // 초록
+  "2순위": { bg: "#F97316", text: "#FFFFFF" },   // 주황
+  "당첨자발표": { bg: "#A855F7", text: "#FFFFFF" }, // 보라
+  "기타": { bg: "#64748B", text: "#FFFFFF" },    // 회색
+};
 
-function parseFlexibleDate(str) {
-  if (!str) return null;
-  const cleaned = String(str).replace(/[^0-9]/g, "");
-  if (cleaned.length !== 8) return null;
-  return new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
-}
+export default function CalendarPage() {
+  const notices = noticesData.notices || [];
 
-function buildMonthGrid(year, month) {
-  // month: 0-indexed
-  const first = new Date(year, month, 1);
-  const startOffset = (first.getDay() + 6) % 7; // 월요일 시작 기준 오프셋
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const cells = [];
-  for (let i = 0; i < startOffset; i++) cells.push(null);
-  for (let d = 1; d <= daysInMonth; d++) cells.push(d);
-  while (cells.length % 7 !== 0) cells.push(null);
-  return cells;
-}
+  // 2026년 9월 기본 설정 (필요 시 현재 날짜 기준 변경 가능)
+  const [currentYear, setCurrentYear] = useState(2026);
+  const [currentMonth, setCurrentMonth] = useState(9); // 1 ~ 12
+  const [selectedType, setSelectedType] = useState("전체");
 
-export default function Calendar() {
-  const today = new Date();
-  const [year, setYear] = useState(today.getFullYear());
-  const [month, setMonth] = useState(today.getMonth());
-  const [selectedDay, setSelectedDay] = useState(null);
+  // 이전/다음 월 이동
+  const handlePrevMonth = () => {
+    if (currentMonth === 1) {
+      setCurrentYear((prev) => prev - 1);
+      setCurrentMonth(12);
+    } else {
+      setCurrentMonth((prev) => prev - 1);
+    }
+  };
 
-  const notices = useMemo(
-    () =>
-      noticesData.notices.map((n) => ({
-        ...n,
-        endDateObj: parseFlexibleDate(n.apply_end_date),
-        dday: getDday(n.apply_end_date),
-        urgency: getUrgencyLevel(getDday(n.apply_end_date)),
-      })),
-    []
-  );
+  const handleNextMonth = () => {
+    if (currentMonth === 12) {
+      setCurrentYear((prev) => prev + 1);
+      setCurrentMonth(1);
+    } else {
+      setCurrentMonth((prev) => prev + 1);
+    }
+  };
 
-  const countByDay = useMemo(() => {
-    const map = new Map();
+  // 해당 월의 달력 그리드 계산 (1일의 요일, 총 일수)
+  const calendarDays = useMemo(() => {
+    const firstDay = new Date(currentYear, currentMonth - 1, 1).getDay(); // 0(일) ~ 6(토)
+    const totalDays = new Date(currentYear, currentMonth, 0).getDate();
+
+    const days = [];
+    // 이전 달 빈 칸
+    for (let i = 0; i < firstDay; i++) {
+      days.push(null);
+    }
+    // 현재 달 일자
+    for (let d = 1; d <= totalDays; d++) {
+      days.push(d);
+    }
+    return days;
+  }, [currentYear, currentMonth]);
+
+  // 날짜별 이벤트 매핑
+  const eventsByDate = useMemo(() => {
+    const map = {};
+
     notices.forEach((n) => {
-      if (!n.endDateObj) return;
-      if (n.endDateObj.getFullYear() === year && n.endDateObj.getMonth() === month) {
-        const d = n.endDateObj.getDate();
-        map.set(d, (map.get(d) || 0) + 1);
+      // apply_start_date, apply_end_date 등을 사용해 일정 매핑 (YYYY-MM-DD 또는 YYYYMMDD 형식 고려)
+      if (!n.apply_start_date) return;
+      const cleanStart = String(n.apply_start_date).replace(/[^0-9]/g, "");
+      if (cleanStart.length !== 8) return;
+
+      const y = parseInt(cleanStart.slice(0, 4));
+      const m = parseInt(cleanStart.slice(4, 6));
+      const d = parseInt(cleanStart.slice(6, 8));
+
+      if (y === currentYear && m === currentMonth) {
+        if (!map[d]) map[d] = [];
+        map[d].push({
+          id: n.id,
+          title: n.title,
+          agency: n.source_agency,
+          type: n.supply_kind === "분양" ? "1순위" : "특별공급", // 예시 매핑
+        });
       }
     });
+
     return map;
-  }, [notices, year, month]);
-
-  const cells = useMemo(() => buildMonthGrid(year, month), [year, month]);
-
-  const listForSelection = useMemo(() => {
-    return notices
-      .filter((n) => {
-        if (!n.endDateObj) return false;
-        if (n.endDateObj.getFullYear() !== year || n.endDateObj.getMonth() !== month) return false;
-        if (selectedDay) return n.endDateObj.getDate() === selectedDay;
-        return true;
-      })
-      .sort((a, b) => (a.endDateObj?.getTime() ?? 0) - (b.endDateObj?.getTime() ?? 0));
-  }, [notices, year, month, selectedDay]);
-
-  function goPrevMonth() {
-    setSelectedDay(null);
-    if (month === 0) {
-      setYear((y) => y - 1);
-      setMonth(11);
-    } else {
-      setMonth((m) => m - 1);
-    }
-  }
-  function goNextMonth() {
-    setSelectedDay(null);
-    if (month === 11) {
-      setYear((y) => y + 1);
-      setMonth(0);
-    } else {
-      setMonth((m) => m + 1);
-    }
-  }
-
-  const isCurrentMonth = year === today.getFullYear() && month === today.getMonth();
+  }, [notices, currentYear, currentMonth]);
 
   return (
-    <div>
+    <div className="bg-light-gray min-h-screen">
+      {/* 헤더 */}
       <header className="site-header">
         <div className="header-inner">
           <Link href="/" className="logo">
-            <span className="dot" />
-            청약나라
+            <span className="dot" /> 청약나라
           </Link>
           <nav>
             <Link href="/">모집공고</Link>
             <Link href="/gajeom">가점계산기</Link>
             <Link href="/jagyeok">자격진단</Link>
             <Link href="/calendar" className="active">청약캘린더</Link>
-            <Link href="/closed">마감공고</Link>
           </nav>
         </div>
       </header>
 
-      <div className="tool-hero">
-        <div className="tool-hero-inner">
-          <h1>청약 캘린더</h1>
-          <p>날짜를 클릭하면 그날 마감하는 공고만 모아볼 수 있어요.</p>
-        </div>
-      </div>
-
-      <div className="layout" style={{ maxWidth: 800, display: "block" }}>
-        <div className="calendar-nav">
-          <button onClick={goPrevMonth}>‹</button>
-          <div className="calendar-title">
-            {year}년 {month + 1}월
+      {/* 캘린더 메인 컨테이너 */}
+      <div className="calendar-page-container">
+        {/* 상단 월 선택 컨트롤러 */}
+        <div className="calendar-header-bar">
+          <div className="month-picker">
+            <button onClick={handlePrevMonth} className="nav-btn">‹</button>
+            <span className="current-month-text">{currentYear}.{String(currentMonth).padStart(2, "0")}</span>
+            <button onClick={handleNextMonth} className="nav-btn">›</button>
           </div>
-          <button onClick={goNextMonth}>›</button>
+
+          {/* 월 선택 탭 (1월 ~ 12월) */}
+          <div className="month-tabs">
+            {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
+              <button
+                key={m}
+                className={`month-tab-btn ${m === currentMonth ? "active" : ""}`}
+                onClick={() => setCurrentMonth(m)}
+              >
+                {m}월
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="calendar-grid">
-          {WEEKDAYS.map((w) => (
-            <div key={w} className="calendar-weekday">
-              {w}
+        {/* 범례 및 유형 필터 */}
+        <div className="calendar-legend-bar">
+          {Object.entries(TYPE_COLORS).map(([typeName, color]) => (
+            <button
+              key={typeName}
+              className={`legend-item ${selectedType === typeName ? "active" : ""}`}
+              onClick={() => setSelectedType(selectedType === typeName ? "전체" : typeName)}
+            >
+              <span className="legend-badge" style={{ backgroundColor: color.bg }} />
+              <span className="legend-label">{typeName}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* 청약홈 스타일 달력 그리드 */}
+        <div className="ch-calendar-grid">
+          {/* 요일 헤더 */}
+          {["일", "월", "화", "수", "목", "금", "토"].map((day, idx) => (
+            <div key={day} className={`ch-weekday-header ${idx === 0 ? "sun" : idx === 6 ? "sat" : ""}`}>
+              {day}
             </div>
           ))}
-          {cells.map((d, i) => {
-            const count = d ? countByDay.get(d) : 0;
-            const isToday = isCurrentMonth && d === today.getDate();
+
+          {/* 일자 셀 */}
+          {calendarDays.map((dayNum, idx) => {
+            const dayEvents = dayNum ? eventsByDate[dayNum] || [] : [];
+            const isSunday = idx % 7 === 0;
+            const isSaturday = idx % 7 === 6;
+
             return (
-              <button
-                key={i}
-                className={`calendar-cell ${d ? "" : "empty"} ${selectedDay === d ? "selected" : ""} ${isToday ? "today" : ""}`}
-                disabled={!d}
-                onClick={() => setSelectedDay(selectedDay === d ? null : d)}
-              >
-                {d && <span className="calendar-daynum">{d}</span>}
-                {count > 0 && <span className="calendar-dot">{count}</span>}
-              </button>
+              <div key={idx} className={`ch-calendar-cell ${!dayNum ? "empty" : ""}`}>
+                {dayNum && (
+                  <>
+                    <div className={`ch-day-number ${isSunday ? "sun" : isSaturday ? "sat" : ""}`}>
+                      {dayNum}
+                    </div>
+
+                    <div className="ch-event-list">
+                      {dayEvents.map((evt, i) => {
+                        const style = TYPE_COLORS[evt.type] || TYPE_COLORS["기타"];
+                        return (
+                          <div
+                            key={i}
+                            className="ch-event-bar"
+                            style={{ backgroundColor: style.bg, color: style.text }}
+                            title={evt.title}
+                          >
+                            <span className="evt-agency">[{evt.agency}]</span>
+                            <span className="evt-title">{evt.title}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+              </div>
             );
           })}
         </div>
-
-        <div className="result-count" style={{ marginTop: 20 }}>
-          {selectedDay ? `${month + 1}월 ${selectedDay}일 마감 공고` : `${month + 1}월 전체 마감 공고`} —{" "}
-          <b>{listForSelection.length}</b>건
-        </div>
-
-        {listForSelection.length === 0 && <div className="empty-state">해당하는 공고가 없습니다.</div>}
-
-        {listForSelection.map((n) => (
-          <NoticeCard key={n.id} notice={n} />
-        ))}
       </div>
     </div>
   );
