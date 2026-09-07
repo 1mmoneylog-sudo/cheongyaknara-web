@@ -17,6 +17,7 @@
 //    HTML 안내 페이지를 반환해 collectLh() 전체가 예외를 던지는 문제가 있었음.
 //    LH 목록 수집만 별도로 try/catch로 감싸서, LH가 점검 중이어도 GH·청약홈은
 //    정상적으로 계속 수집·저장되도록 격리함. LH는 점검이 끝나면 다음 회차에 자동 복구됨.
+// ✅ 2026-09-07: SH 공고 웹 스크래핑 수집 모듈(collectShScrape) 추가 통합
 
 const fs = require("fs");
 const path = require("path");
@@ -24,6 +25,8 @@ const { fetchLhList, fetchLhDetail, fetchLhSupply, normalizeLhNotice } = require
 const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
 const { fetchRebAll, normalizeAllRebNotices, fillHouseholdCountFromReb } = require("../lib/collectors/reb");
 const { fetchGhScrapeAll, normalizeGhScraped } = require("../lib/collectors/gh-scrape");
+const { fetchShScrapeAll, normalizeShScraped } = require("../lib/collectors/sh-scrape");
+
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "notices.json");
 
 // ✅ 2026-09-04: 마감 유예(3일) 없애고 바로 제외하도록 단순화.
@@ -60,8 +63,6 @@ async function collectLh() {
   try {
     listItems = await fetchLhList(serviceKey, formatDate(past), formatDate(future));
   } catch (err) {
-    // LH청약플러스 정기 점검 등으로 목록 자체를 못 가져오는 경우, LH만 건너뛰고
-    // GH·청약홈은 정상적으로 계속 수집되도록 함 (다음 회차에 LH 자동 복구)
     console.error("⚠️ LH 목록 수집 실패, 이번 회차는 LH를 건너뜁니다:", err.message);
     return [];
   }
@@ -102,11 +103,22 @@ async function collectGh() {
 
 async function collectGhScrape() {
   try {
-    const rows = await fetchGhScrapeAll({ maxPagesPerBoard: 5 }); // 게시판당 최근 5페이지(약 50건)만
+    const rows = await fetchGhScrapeAll({ maxPagesPerBoard: 5 });
     console.log(`GH 스크래핑: ${rows.length}건`);
     return rows.map((row, i) => normalizeGhScraped(row, i));
   } catch (err) {
     console.error("GH 스크래핑 실패:", err.message);
+    return [];
+  }
+}
+
+async function collectShScrape() {
+  try {
+    const rows = await fetchShScrapeAll();
+    console.log(`SH 스크래핑: ${rows.length}건`);
+    return rows.map((row, i) => normalizeShScraped(row, i));
+  } catch (err) {
+    console.error("SH 스크래핑 실패:", err.message);
     return [];
   }
 }
@@ -162,7 +174,6 @@ function shouldKeep(notice, now) {
   if (winner) {
     const daysSinceWinner = (now.getTime() - winner.getTime()) / (24 * 60 * 60 * 1000);
     if (daysSinceWinner <= WINNER_TRACK_DAYS) {
-      // 당첨자 발표 페이지용으로는 유지하되, "너무 먼 예정" 규칙은 그대로 적용
       if (start && start.getTime() > now.getTime()) {
         const daysUntilStart = (start.getTime() - now.getTime()) / (24 * 60 * 60 * 1000);
         if (daysUntilStart > UPCOMING_WINDOW_DAYS) return false;
@@ -171,11 +182,11 @@ function shouldKeep(notice, now) {
     }
   }
 
-  if (end && end.getTime() < now.getTime()) return false; // 마감된 공고는 바로 제외 (유예 없음)
+  if (end && end.getTime() < now.getTime()) return false;
 
   if (start && start.getTime() > now.getTime()) {
     const daysUntilStart = (start.getTime() - now.getTime()) / (24 * 60 * 60 * 1000);
-    if (daysUntilStart > UPCOMING_WINDOW_DAYS) return false; // 너무 먼 예정
+    if (daysUntilStart > UPCOMING_WINDOW_DAYS) return false;
   }
 
   return true;
@@ -183,13 +194,21 @@ function shouldKeep(notice, now) {
 
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
-  const [lhNotices, ghNotices, reb, ghScrapedNotices] = await Promise.all([
+  const [lhNotices, ghNotices, reb, ghScrapedNotices, shScrapedNotices] = await Promise.all([
     collectLh(),
     collectGh(),
     collectReb(),
     collectGhScrape(),
+    collectShScrape(),
   ]);
-  const combined = [...lhNotices, ...ghNotices, ...reb.notices, ...ghScrapedNotices];
+  
+  const combined = [
+    ...lhNotices, 
+    ...ghNotices, 
+    ...reb.notices, 
+    ...ghScrapedNotices, 
+    ...shScrapedNotices
+  ];
 
   const noTestNotices = combined.filter((n) => !isTestNotice(n));
   console.log(`테스트/점검/관리용 공고 제외: ${combined.length}건 → ${noTestNotices.length}건`);
@@ -202,27 +221,27 @@ async function main() {
   });
   console.log(`중복 제거: ${noTestNotices.length}건 → ${deduped.length}건`);
 
-// GH 등 세대수가 비어있는 공고를 청약홈 데이터로 보완
-const supplemented = fillHouseholdCountFromReb(deduped, reb.rebResults);
+  // GH 등 세대수가 비어있는 공고를 청약홈 데이터로 보완
+  const supplemented = fillHouseholdCountFromReb(deduped, reb.rebResults);
 
-// 🔍 임시 디버그: SH로 재분류된 공고가 필터링 전에 몇 건 있는지, 접수기간이 어떻게 찍히는지 확인
-const shBeforeFilter = supplemented.filter((n) => n.source_agency === "SH");
-console.log(
-  `[디버그] 마감 필터 적용 전 SH 공고 ${shBeforeFilter.length}건:`,
-  JSON.stringify(
-    shBeforeFilter.map((n) => ({
-      title: n.title,
-      apply_start_date: n.apply_start_date,
-      apply_end_date: n.apply_end_date,
-      winner_date: n.winner_date,
-    })),
-    null,
-    2
-  )
-);
+  // 🔍 임시 디버그: SH로 재분류된 공고가 필터링 전에 몇 건 있는지, 접수기간이 어떻게 찍히는지 확인
+  const shBeforeFilter = supplemented.filter((n) => n.source_agency === "SH");
+  console.log(
+    `[디버그] 마감 필터 적용 전 SH 공고 ${shBeforeFilter.length}건:`,
+    JSON.stringify(
+      shBeforeFilter.map((n) => ({
+        title: n.title,
+        apply_start_date: n.apply_start_date,
+        apply_end_date: n.apply_end_date,
+        winner_date: n.winner_date,
+      })),
+      null,
+      2
+    )
+  );
 
-const now = new Date();
-const kept = supplemented.filter((n) => shouldKeep(n, now));
+  const now = new Date();
+  const kept = supplemented.filter((n) => shouldKeep(n, now));
   console.log(
     `마감(당첨자 발표 ${WINNER_TRACK_DAYS}일 이내 제외)·너무 먼 예정(${UPCOMING_WINDOW_DAYS}일 초과) 제외: ` +
       `${supplemented.length}건 → ${kept.length}건`
@@ -243,54 +262,5 @@ const kept = supplemented.filter((n) => shouldKeep(n, now));
 
 main().catch((err) => {
   console.error("수집 스크립트 실패:", err);
-  process.exit(1);
-});
-// scripts/collect.js 예시
-const fs = require("fs");
-const path = require("path");
-
-// 스크래퍼 모듈 불러오기
-const { fetchGhScrapeAll, normalizeGhScraped } = require("../lib/collectors/gh-scrape");
-const { fetchShScrapeAll, normalizeShScraped } = require("../lib/collectors/sh-scrape");
-// LH, 청약홈 API 모듈 불러오기 (기존 코드)
-// const { fetchLhData } = require(...);
-// const { fetchRebData } = require(...);
-
-async function main() {
-  console.log("🚀 전체 청약 공고 데이터 수집 시작...");
-
-  // 1. API 데이터 수집 (LH, 청약홈)
-  console.log("1. LH & 청약홈 API 데이터 수집 중...");
-  const lhNotices = await fetchLhData(); // 기존 LH 수집 함수
-  const rebNotices = await fetchRebData(); // 기존 청약홈 수집 함수
-
-  // 2. GH 스크래핑
-  console.log("2. GH 웹 스크래핑 중...");
-  const rawGh = await fetchGhScrapeAll({ maxPagesPerBoard: 3 });
-  const ghNotices = rawGh.map((item, idx) => normalizeGhScraped(item, idx));
-
-  // 3. SH 스크래핑
-  console.log("3. SH 웹 스크래핑 중...");
-  const rawSh = await fetchShScrapeAll();
-  const shNotices = rawSh.map((item, idx) => normalizeShScraped(item, idx));
-
-  // 4. 모든 기관 데이터 하나로 취합
-  const allNotices = [...lhNotices, ...rebNotices, ...ghNotices, ...shNotices];
-
-  // 5. data/notices.json 단 1회 업데이터 및 저장
-  const payload = {
-    generated_at: new Date().toISOString(),
-    total_count: allNotices.length,
-    notices: allNotices,
-  };
-
-  const outputPath = path.join(process.cwd(), "data", "notices.json");
-  fs.writeFileSync(outputPath, JSON.stringify(payload, null, 2), "utf-8");
-
-  console.log(`✅ 모든 수집 완료! 총 ${allNotices.length}개 공고가 저장되었습니다.`);
-}
-
-main().catch((err) => {
-  console.error("❌ 수집 중 오류 발생:", err);
   process.exit(1);
 });
