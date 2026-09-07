@@ -1,41 +1,7 @@
 {
-  "generated_at": "2026-09-07T07:26:13.932Z",
-  "count": 189,
+  "generated_at": "2026-09-07T07:30:40.442Z",
+  "count": 139,
   "notices": [
-    {
-      "id": "gh-401",
-      "source_agency": "GH",
-      "source_notice_id": "401",
-      "title": "(39,49) (59) 안성공도 국민임대주택 참아름 5단지",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": "경기도 안성시 공도읍 만정리 783-2 경기도시공사참아름",
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2008-07-17",
-      "apply_end_date": "2008-12-31",
-      "announce_date": "2008-07-10",
-      "winner_date": "2222-02-22",
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": "경기도 안성시 공도읍 만정리 783-2 경기도시공사참아름",
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.490Z",
-      "data_source_type": "file"
-    },
     {
       "id": "reb-remndr-2026910218",
       "source_agency": "청약홈",
@@ -68,7 +34,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -105,7 +71,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -138,7 +104,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.138Z",
       "data_source_type": "api"
     },
     {
@@ -171,7 +137,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.138Z",
       "data_source_type": "api"
     },
     {
@@ -204,7 +170,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -241,7 +207,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -278,7 +244,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -315,7 +281,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -352,7 +318,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -389,7 +355,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -422,7 +388,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -455,7 +421,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -488,7 +454,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.468Z",
+      "fetched_at": "2026-09-07T07:29:16.129Z",
       "data_source_type": "api"
     },
     {
@@ -521,7 +487,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.468Z",
+      "fetched_at": "2026-09-07T07:29:16.129Z",
       "data_source_type": "api"
     },
     {
@@ -556,7 +522,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -589,7 +555,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.138Z",
       "data_source_type": "api"
     },
     {
@@ -622,7 +588,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -655,7 +621,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -688,7 +654,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -721,7 +687,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.468Z",
+      "fetched_at": "2026-09-07T07:29:16.129Z",
       "data_source_type": "api"
     },
     {
@@ -754,7 +720,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.468Z",
+      "fetched_at": "2026-09-07T07:29:16.129Z",
       "data_source_type": "api"
     },
     {
@@ -789,7 +755,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -822,7 +788,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -859,7 +825,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -896,7 +862,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -933,7 +899,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -970,7 +936,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1007,7 +973,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1043,7 +1009,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1078,7 +1044,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1111,7 +1077,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -1148,7 +1114,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1185,7 +1151,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1220,7 +1186,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1255,7 +1221,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1288,7 +1254,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -1321,7 +1287,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.468Z",
+      "fetched_at": "2026-09-07T07:29:16.129Z",
       "data_source_type": "api"
     },
     {
@@ -1356,7 +1322,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1391,7 +1357,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1424,7 +1390,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -1461,7 +1427,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1498,7 +1464,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1531,7 +1497,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.468Z",
+      "fetched_at": "2026-09-07T07:29:16.129Z",
       "data_source_type": "api"
     },
     {
@@ -1566,7 +1532,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1602,7 +1568,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1637,7 +1603,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1670,7 +1636,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -1705,7 +1671,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1738,7 +1704,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -1773,7 +1739,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1808,7 +1774,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -1844,7 +1810,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1880,7 +1846,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -1913,7 +1879,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.468Z",
+      "fetched_at": "2026-09-07T07:29:16.129Z",
       "data_source_type": "api"
     },
     {
@@ -1946,7 +1912,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.468Z",
+      "fetched_at": "2026-09-07T07:29:16.129Z",
       "data_source_type": "api"
     },
     {
@@ -1981,7 +1947,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -2014,7 +1980,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.138Z",
       "data_source_type": "api"
     },
     {
@@ -2047,7 +2013,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -2080,7 +2046,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -2113,7 +2079,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -2200,7 +2166,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:01.976Z",
+      "fetched_at": "2026-09-07T07:29:32.620Z",
       "data_source_type": "api"
     },
     {
@@ -2271,7 +2237,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:02.718Z",
+      "fetched_at": "2026-09-07T07:29:33.353Z",
       "data_source_type": "api"
     },
     {
@@ -2331,7 +2297,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:03.336Z",
+      "fetched_at": "2026-09-07T07:29:33.931Z",
       "data_source_type": "api"
     },
     {
@@ -2385,7 +2351,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:25:04.164Z",
+      "fetched_at": "2026-09-07T07:29:34.772Z",
       "data_source_type": "api"
     },
     {
@@ -2439,7 +2405,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:25:04.850Z",
+      "fetched_at": "2026-09-07T07:29:35.456Z",
       "data_source_type": "api"
     },
     {
@@ -2536,7 +2502,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:19.168Z",
+      "fetched_at": "2026-09-07T07:29:49.709Z",
       "data_source_type": "api"
     },
     {
@@ -2745,7 +2711,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:22.824Z",
+      "fetched_at": "2026-09-07T07:29:53.324Z",
       "data_source_type": "api"
     },
     {
@@ -2954,7 +2920,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:25.010Z",
+      "fetched_at": "2026-09-07T07:29:55.484Z",
       "data_source_type": "api"
     },
     {
@@ -3051,7 +3017,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:27.018Z",
+      "fetched_at": "2026-09-07T07:29:57.643Z",
       "data_source_type": "api"
     },
     {
@@ -3114,7 +3080,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:31.719Z",
+      "fetched_at": "2026-09-07T07:30:02.188Z",
       "data_source_type": "api"
     },
     {
@@ -3211,7 +3177,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:38.374Z",
+      "fetched_at": "2026-09-07T07:30:08.728Z",
       "data_source_type": "api"
     },
     {
@@ -3420,7 +3386,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:40.609Z",
+      "fetched_at": "2026-09-07T07:30:10.884Z",
       "data_source_type": "api"
     },
     {
@@ -3499,7 +3465,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:43.209Z",
+      "fetched_at": "2026-09-07T07:30:13.469Z",
       "data_source_type": "api"
     },
     {
@@ -3780,7 +3746,7 @@
           "area": "80.89"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:46.749Z",
+      "fetched_at": "2026-09-07T07:30:16.852Z",
       "data_source_type": "api"
     },
     {
@@ -3867,7 +3833,7 @@
       "unit_types": [
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:47.157Z",
+      "fetched_at": "2026-09-07T07:30:17.244Z",
       "data_source_type": "api"
     },
     {
@@ -4148,7 +4114,7 @@
           "area": "80.89"
         }
       ],
-      "fetched_at": "2026-09-07T07:26:01.576Z",
+      "fetched_at": "2026-09-07T07:30:30.816Z",
       "data_source_type": "api"
     },
     {
@@ -4202,7 +4168,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:26:10.564Z",
+      "fetched_at": "2026-09-07T07:30:37.314Z",
       "data_source_type": "api"
     },
     {
@@ -4271,7 +4237,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:26:11.299Z",
+      "fetched_at": "2026-09-07T07:30:37.994Z",
       "data_source_type": "api"
     },
     {
@@ -4334,7 +4300,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:26:11.918Z",
+      "fetched_at": "2026-09-07T07:30:38.616Z",
       "data_source_type": "api"
     },
     {
@@ -4405,7 +4371,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:26:12.653Z",
+      "fetched_at": "2026-09-07T07:30:39.328Z",
       "data_source_type": "api"
     },
     {
@@ -4492,7 +4458,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:26:13.611Z",
+      "fetched_at": "2026-09-07T07:30:40.252Z",
       "data_source_type": "api"
     },
     {
@@ -4528,7 +4494,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -4563,7 +4529,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.470Z",
+      "fetched_at": "2026-09-07T07:29:16.132Z",
       "data_source_type": "api"
     },
     {
@@ -4596,7 +4562,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.475Z",
+      "fetched_at": "2026-09-07T07:29:16.139Z",
       "data_source_type": "api"
     },
     {
@@ -4663,7 +4629,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:57.803Z",
+      "fetched_at": "2026-09-07T07:30:27.191Z",
       "data_source_type": "api"
     },
     {
@@ -4730,7 +4696,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:26:00.496Z",
+      "fetched_at": "2026-09-07T07:30:29.745Z",
       "data_source_type": "api"
     },
     {
@@ -4767,7 +4733,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -4804,7 +4770,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -4856,7 +4822,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:31.070Z",
+      "fetched_at": "2026-09-07T07:30:01.576Z",
       "data_source_type": "api"
     },
     {
@@ -4908,7 +4874,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:26:03.585Z",
+      "fetched_at": "2026-09-07T07:30:32.783Z",
       "data_source_type": "api"
     },
     {
@@ -5020,7 +4986,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:12.685Z",
+      "fetched_at": "2026-09-07T07:29:45.958Z",
       "data_source_type": "api"
     },
     {
@@ -5092,7 +5058,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:19.647Z",
+      "fetched_at": "2026-09-07T07:29:50.214Z",
       "data_source_type": "api"
     },
     {
@@ -5164,7 +5130,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:20.147Z",
+      "fetched_at": "2026-09-07T07:29:50.698Z",
       "data_source_type": "api"
     },
     {
@@ -5216,7 +5182,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:26:09.382Z",
+      "fetched_at": "2026-09-07T07:30:36.225Z",
       "data_source_type": "api"
     },
     {
@@ -5273,7 +5239,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:15.928Z",
+      "fetched_at": "2026-09-07T07:29:46.493Z",
       "data_source_type": "api"
     },
     {
@@ -5329,7 +5295,7 @@
       "unit_types": [
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:16.481Z",
+      "fetched_at": "2026-09-07T07:29:47.001Z",
       "data_source_type": "api"
     },
     {
@@ -5383,7 +5349,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:25:17.046Z",
+      "fetched_at": "2026-09-07T07:29:47.534Z",
       "data_source_type": "api"
     },
     {
@@ -5420,7 +5386,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -5457,7 +5423,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -5494,7 +5460,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -5531,7 +5497,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -5568,7 +5534,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -5605,7 +5571,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -5642,7 +5608,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -5714,7 +5680,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:38.921Z",
+      "fetched_at": "2026-09-07T07:29:09.750Z",
       "data_source_type": "api"
     },
     {
@@ -5796,7 +5762,7 @@
           "deposit_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:00.906Z",
+      "fetched_at": "2026-09-07T07:29:31.610Z",
       "data_source_type": "api"
     },
     {
@@ -5877,7 +5843,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:07.877Z",
+      "fetched_at": "2026-09-07T07:29:38.426Z",
       "data_source_type": "api"
     },
     {
@@ -6023,7 +5989,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:15.388Z",
+      "fetched_at": "2026-09-07T07:29:43.316Z",
       "data_source_type": "api"
     },
     {
@@ -6109,7 +6075,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:28.975Z",
+      "fetched_at": "2026-09-07T07:29:59.648Z",
       "data_source_type": "api"
     },
     {
@@ -6161,7 +6127,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:36.211Z",
+      "fetched_at": "2026-09-07T07:30:06.634Z",
       "data_source_type": "api"
     },
     {
@@ -6242,7 +6208,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:26:09.814Z",
+      "fetched_at": "2026-09-07T07:30:36.631Z",
       "data_source_type": "api"
     },
     {
@@ -6279,7 +6245,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -6315,7 +6281,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -6351,74 +6317,8 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
-    },
-    {
-      "id": "gh-scrape-816-59",
-      "source_agency": "GH",
-      "source_notice_id": "816",
-      "title": "(선착순수의계약) 수원영통 경기행복주택 단지 내 일반형 임대상가 임차인 모집 공고",
-      "notice_type": "상가임대",
-      "region_sido": "경기도",
-      "region_sigungu": "(선착순수의계약) 수원영통 경기행복주택 단지 내 일반형 임대상가 임차인 모집 공고",
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": "2026-09-17",
-      "announce_date": "2026-09-03",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.gh.or.kr/sb/sr/sr7170/selectPbancRentSopsrtList.do",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:41.896Z",
-      "data_source_type": "scrape"
-    },
-    {
-      "id": "gh-scrape-815-60",
-      "source_agency": "GH",
-      "source_notice_id": "815",
-      "title": "(선착순수의계약) 하남덕풍 경기행복주택 단지 내 일반형 임대상가 임차인 모집 공고",
-      "notice_type": "상가임대",
-      "region_sido": "경기도",
-      "region_sigungu": "(선착순수의계약) 하남덕풍 경기행복주택 단지 내 일반형 임대상가 임차인 모집 공고",
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": "2026-09-17",
-      "announce_date": "2026-09-03",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.gh.or.kr/sb/sr/sr7170/selectPbancRentSopsrtList.do",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:41.896Z",
-      "data_source_type": "scrape"
     },
     {
       "id": "lh-2015122300020691",
@@ -6468,7 +6368,7 @@
       "unit_types": [
         {}
       ],
-      "fetched_at": "2026-09-07T07:24:54.575Z",
+      "fetched_at": "2026-09-07T07:29:25.272Z",
       "data_source_type": "api"
     },
     {
@@ -6527,7 +6427,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:56.549Z",
+      "fetched_at": "2026-09-07T07:29:27.305Z",
       "data_source_type": "api"
     },
     {
@@ -6579,7 +6479,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:33.740Z",
+      "fetched_at": "2026-09-07T07:30:04.198Z",
       "data_source_type": "api"
     },
     {
@@ -6631,7 +6531,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:35.729Z",
+      "fetched_at": "2026-09-07T07:30:06.151Z",
       "data_source_type": "api"
     },
     {
@@ -6748,7 +6648,92 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:30.951Z",
+      "fetched_at": "2026-09-07T07:29:01.753Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "lh-2015122300020697",
+      "source_agency": "LH",
+      "source_notice_id": "2015122300020697",
+      "title": "인천옹진연평 국민임대주택 예비입주자 모집",
+      "notice_type": "임대주택 · 국민임대",
+      "region_sido": "인천광역시",
+      "region_sigungu": null,
+      "address_detail": "인천광역시 옹진군 연평면 연평로 198",
+      "household_count": 40,
+      "area_range": "24.7~46.79",
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026.09.22",
+      "apply_end_date": "2026.09.22",
+      "announce_date": "2026.09.07",
+      "winner_date": "2026.12.30",
+      "move_in_date": "2022.10",
+      "contact_phone": "032-831-0977",
+      "contact_address": "인천광역시 옹진군 연평면 연평로 198",
+      "contact_note": "▶ 1,2,3순위접수 : 2026년 9월 22일(화) 10:00~16:00 \r\n   ※ 금회 신청은 인터넷/모바일/현장접수 모두 가능합니다.\r\n   ※ 전화문의는 장시간 접속지연 및 통화대기 등의 불편이 있을 수 있으니,\r\n       예비입주자 모집 신청과 관련하여 문의사항이 있을 때에는 가급적 모집공고문을\r\n       통해 확인하시기 바랍니다.",
+      "etc_note": "ㅇ 신청순위별 인터넷 청약은 같은 날짜입니다. 반드시 해당 일자에 접수하여 주시기 바라며,\n    모든 제출서류는 공고일 이후 발급분만 인정됩니다.   \nㅇ 모집공고 관련 전화문의는 장시간 접속지연 및 통화대기 및 올바른 안내가 되지 않을 수 있습니다.\n    자세한 사항은 첨부된 공고문을 반드시 확인하시기 바랍니다.",
+      "status": "공고중",
+      "special_supply_tags": [],
+      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020697&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
+      "attachment_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456746",
+          "label": "기타 첨부파일",
+          "name": "마이마이서비스_고객메뉴얼.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456707",
+          "label": "공고문(hwp)",
+          "name": "옹진연평마을정비형공공주택국민임대예비입주자모집공고문.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456720",
+          "label": "공고문(PDF)",
+          "name": "옹진연평마을정비형공공주택국민임대예비입주자모집공고문.pdf"
+        }
+      ],
+      "image_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067487",
+          "label": "지역조감도"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067488",
+          "label": "위치도"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067489",
+          "label": "단지조감도"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067490",
+          "label": "단지배치도"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067491",
+          "label": "동호배치도"
+        }
+      ],
+      "unit_types": [
+        {
+          "type": "29A",
+          "household_count": "12",
+          "area": "29.75",
+          "deposit_note": "공고문 참조",
+          "rent_note": "공고문 참조"
+        },
+        {
+          "type": "29A(주거약자)",
+          "household_count": "4",
+          "area": "29.75",
+          "deposit_note": "공고문 참조",
+          "rent_note": "공고문 참조"
+        }
+      ],
+      "fetched_at": "2026-09-07T07:29:14.333Z",
       "data_source_type": "api"
     },
     {
@@ -6858,7 +6843,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:43.693Z",
+      "fetched_at": "2026-09-07T07:29:22.157Z",
       "data_source_type": "api"
     },
     {
@@ -6994,92 +6979,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:46.288Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "lh-2015122300020697",
-      "source_agency": "LH",
-      "source_notice_id": "2015122300020697",
-      "title": "인천옹진연평 국민임대주택 예비입주자 모집",
-      "notice_type": "임대주택 · 국민임대",
-      "region_sido": "인천광역시",
-      "region_sigungu": null,
-      "address_detail": "인천광역시 옹진군 연평면 연평로 198",
-      "household_count": 40,
-      "area_range": "24.7~46.79",
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026.09.22",
-      "apply_end_date": "2026.09.22",
-      "announce_date": "2026.09.07",
-      "winner_date": "2026.12.30",
-      "move_in_date": "2022.10",
-      "contact_phone": "032-831-0977",
-      "contact_address": "인천광역시 옹진군 연평면 연평로 198",
-      "contact_note": "▶ 1,2,3순위접수 : 2026년 9월 22일(화) 10:00~16:00 \r\n   ※ 금회 신청은 인터넷/모바일/현장접수 모두 가능합니다.\r\n   ※ 전화문의는 장시간 접속지연 및 통화대기 등의 불편이 있을 수 있으니,\r\n       예비입주자 모집 신청과 관련하여 문의사항이 있을 때에는 가급적 모집공고문을\r\n       통해 확인하시기 바랍니다.",
-      "etc_note": "ㅇ 신청순위별 인터넷 청약은 같은 날짜입니다. 반드시 해당 일자에 접수하여 주시기 바라며,\n    모든 제출서류는 공고일 이후 발급분만 인정됩니다.   \nㅇ 모집공고 관련 전화문의는 장시간 접속지연 및 통화대기 및 올바른 안내가 되지 않을 수 있습니다.\n    자세한 사항은 첨부된 공고문을 반드시 확인하시기 바랍니다.",
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020697&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-      "attachment_urls": [
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456746",
-          "label": "기타 첨부파일",
-          "name": "마이마이서비스_고객메뉴얼.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456707",
-          "label": "공고문(hwp)",
-          "name": "옹진연평마을정비형공공주택국민임대예비입주자모집공고문.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456720",
-          "label": "공고문(PDF)",
-          "name": "옹진연평마을정비형공공주택국민임대예비입주자모집공고문.pdf"
-        }
-      ],
-      "image_urls": [
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067487",
-          "label": "지역조감도"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067488",
-          "label": "위치도"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067489",
-          "label": "단지조감도"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067490",
-          "label": "단지배치도"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067491",
-          "label": "동호배치도"
-        }
-      ],
-      "unit_types": [
-        {
-          "type": "29A",
-          "household_count": "12",
-          "area": "29.75",
-          "deposit_note": "공고문 참조",
-          "rent_note": "공고문 참조"
-        },
-        {
-          "type": "29A(주거약자)",
-          "household_count": "4",
-          "area": "29.75",
-          "deposit_note": "공고문 참조",
-          "rent_note": "공고문 참조"
-        }
-      ],
-      "fetched_at": "2026-09-07T07:24:48.959Z",
+      "fetched_at": "2026-09-07T07:29:24.754Z",
       "data_source_type": "api"
     },
     {
@@ -7347,7 +7247,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:55.129Z",
+      "fetched_at": "2026-09-07T07:30:24.767Z",
       "data_source_type": "api"
     },
     {
@@ -7513,7 +7413,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:36.335Z",
+      "fetched_at": "2026-09-07T07:29:07.125Z",
       "data_source_type": "api"
     },
     {
@@ -7557,7 +7457,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:25:07.469Z",
+      "fetched_at": "2026-09-07T07:29:37.979Z",
       "data_source_type": "api"
     },
     {
@@ -7693,7 +7593,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:26:05.234Z",
+      "fetched_at": "2026-09-07T07:30:33.294Z",
       "data_source_type": "api"
     },
     {
@@ -7822,7 +7722,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:26:06.926Z",
+      "fetched_at": "2026-09-07T07:30:33.797Z",
       "data_source_type": "api"
     },
     {
@@ -7982,7 +7882,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:09.977Z",
+      "fetched_at": "2026-09-07T07:29:40.607Z",
       "data_source_type": "api"
     },
     {
@@ -8095,7 +7995,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:33.633Z",
+      "fetched_at": "2026-09-07T07:29:04.468Z",
       "data_source_type": "api"
     },
     {
@@ -8208,7 +8108,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:54.068Z",
+      "fetched_at": "2026-09-07T07:29:19.503Z",
       "data_source_type": "api"
     },
     {
@@ -8260,7 +8160,7 @@
         }
       ],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:25:20.556Z",
+      "fetched_at": "2026-09-07T07:29:51.133Z",
       "data_source_type": "api"
     },
     {
@@ -8339,7 +8239,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:51.453Z",
+      "fetched_at": "2026-09-07T07:29:16.904Z",
       "data_source_type": "api"
     },
     {
@@ -8430,7 +8330,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-07T07:25:50.173Z",
+      "fetched_at": "2026-09-07T07:30:20.140Z",
       "data_source_type": "api"
     },
     {
@@ -8482,7 +8382,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:26:08.887Z",
+      "fetched_at": "2026-09-07T07:30:35.753Z",
       "data_source_type": "api"
     },
     {
@@ -8518,7 +8418,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:36.453Z",
+      "fetched_at": "2026-09-07T07:29:16.113Z",
       "data_source_type": "api"
     },
     {
@@ -8586,7 +8486,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:45.834Z",
+      "fetched_at": "2026-09-07T07:30:15.910Z",
       "data_source_type": "api"
     },
     {
@@ -8665,7 +8565,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:25:49.755Z",
+      "fetched_at": "2026-09-07T07:30:19.715Z",
       "data_source_type": "api"
     },
     {
@@ -8724,7 +8624,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-07T07:24:40.933Z",
+      "fetched_at": "2026-09-07T07:29:11.835Z",
       "data_source_type": "api"
     },
     {
@@ -8788,1606 +8688,8 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:56.942Z",
+      "fetched_at": "2026-09-07T07:29:27.686Z",
       "data_source_type": "api"
-    },
-    {
-      "id": "gh-509",
-      "source_agency": "GH",
-      "source_notice_id": "509",
-      "title": "시흥시 산업단지 청소년근로자를 위한 매입임대 입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2018-02-28",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-510",
-      "source_agency": "GH",
-      "source_notice_id": "510",
-      "title": "18년도 1차 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2018-03-30",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-511",
-      "source_agency": "GH",
-      "source_notice_id": "511",
-      "title": "18년도 2차 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2018-06-22",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-512",
-      "source_agency": "GH",
-      "source_notice_id": "512",
-      "title": "18년 상반기 장기미입대 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2018-06-25",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-513",
-      "source_agency": "GH",
-      "source_notice_id": "513",
-      "title": "18년 2차 예비입주자 추가 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2018-07-31",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-514",
-      "source_agency": "GH",
-      "source_notice_id": "514",
-      "title": "18년 하반기 장기미임대 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2018-10-22",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-515",
-      "source_agency": "GH",
-      "source_notice_id": "515",
-      "title": "18년 3차 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2018-11-09",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-516",
-      "source_agency": "GH",
-      "source_notice_id": "516",
-      "title": "19년 1차 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2019-03-29",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-517",
-      "source_agency": "GH",
-      "source_notice_id": "517",
-      "title": "19년 청년매입임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2019-04-19",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-518",
-      "source_agency": "GH",
-      "source_notice_id": "518",
-      "title": "19년 1차 예비입주자 추가 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2019-05-17",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-519",
-      "source_agency": "GH",
-      "source_notice_id": "519",
-      "title": "맞춤형 매입임대(산단형) 입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2019-08-14",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-520",
-      "source_agency": "GH",
-      "source_notice_id": "520",
-      "title": "19년 하반기 장기미임대 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2019-09-06",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-521",
-      "source_agency": "GH",
-      "source_notice_id": "521",
-      "title": "19년 2차 예비입주자 모집계획",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2019-11-22",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-522",
-      "source_agency": "GH",
-      "source_notice_id": "522",
-      "title": "19년 하반기 장기미임대 추가 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2019-12-27",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-523",
-      "source_agency": "GH",
-      "source_notice_id": "523",
-      "title": "20년 상반기 청년매입임대 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-01-17",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.493Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-524",
-      "source_agency": "GH",
-      "source_notice_id": "524",
-      "title": "오산대학교 지역수요맞춤형 매입임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-02-13",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-525",
-      "source_agency": "GH",
-      "source_notice_id": "525",
-      "title": "청년근로자 주거안정을 위한 지역수요맞춤형 매입임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-03-27",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-526",
-      "source_agency": "GH",
-      "source_notice_id": "526",
-      "title": "20년 상반기 장기미임대 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-03-27",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-527",
-      "source_agency": "GH",
-      "source_notice_id": "527",
-      "title": "20년 2차 청년매입임대 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-03-27",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-528",
-      "source_agency": "GH",
-      "source_notice_id": "528",
-      "title": "20년 매입임대주택 수시모집 공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-04-29",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-529",
-      "source_agency": "GH",
-      "source_notice_id": "529",
-      "title": "안산시 아동동거가구 주거안정을 위한 지역수요맞춤형 매입임대주택 모집",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-05-15",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-530",
-      "source_agency": "GH",
-      "source_notice_id": "530",
-      "title": "20년 2차 장기미임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-05-22",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-531",
-      "source_agency": "GH",
-      "source_notice_id": "531",
-      "title": "20년 1차 일반 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-06-01",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-532",
-      "source_agency": "GH",
-      "source_notice_id": "532",
-      "title": "20년 1차 일반 예비입주자(추가) 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-06-22",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-533",
-      "source_agency": "GH",
-      "source_notice_id": "533",
-      "title": "20년 매입임대주택 2차 수시모집 공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-06-24",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-534",
-      "source_agency": "GH",
-      "source_notice_id": "534",
-      "title": "20년 3차 장기미임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-07-17",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-535",
-      "source_agency": "GH",
-      "source_notice_id": "535",
-      "title": "20년 2차 일반 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-09-21",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-536",
-      "source_agency": "GH",
-      "source_notice_id": "536",
-      "title": "20년 하반기 청년매입임대 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-10-16",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-537",
-      "source_agency": "GH",
-      "source_notice_id": "537",
-      "title": "20년 4차 장기미임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-10-30",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-538",
-      "source_agency": "GH",
-      "source_notice_id": "538",
-      "title": "20년 매입임대주택 3차 수시모집 공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-11-25",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-539",
-      "source_agency": "GH",
-      "source_notice_id": "539",
-      "title": "전세형 공공임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2020-12-30",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-540",
-      "source_agency": "GH",
-      "source_notice_id": "540",
-      "title": "21년 1차 일반 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-02-05",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-541",
-      "source_agency": "GH",
-      "source_notice_id": "541",
-      "title": "21년 1차 장기미임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-03-16",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-542",
-      "source_agency": "GH",
-      "source_notice_id": "542",
-      "title": "21년 상반기 청년매입임대주택 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-04-02",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-543",
-      "source_agency": "GH",
-      "source_notice_id": "543",
-      "title": "부천시 아동동거가구 수요맞춤형 입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-04-16",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-544",
-      "source_agency": "GH",
-      "source_notice_id": "544",
-      "title": "21년 매입임대주택 1차 수시모집 공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-06-25",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-545",
-      "source_agency": "GH",
-      "source_notice_id": "545",
-      "title": "21년 2차 장기미임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-07-23",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-546",
-      "source_agency": "GH",
-      "source_notice_id": "546",
-      "title": "21년 2차 일반 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-08-06",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-547",
-      "source_agency": "GH",
-      "source_notice_id": "547",
-      "title": "21년 하반기 청년매입임대주택 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-09-10",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-548",
-      "source_agency": "GH",
-      "source_notice_id": "548",
-      "title": "22년 매입임대주택 1차 수시모집 공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2022-01-14",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-549",
-      "source_agency": "GH",
-      "source_notice_id": "549",
-      "title": "22년 1차 일반 예비입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2022-01-25",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-550",
-      "source_agency": "GH",
-      "source_notice_id": "550",
-      "title": "22년 매입임대주택 2차 수시모집 공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2022-03-25",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-551",
-      "source_agency": "GH",
-      "source_notice_id": "551",
-      "title": "22년 상반기 청년매입임대 입주자 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2022-04-08",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-552",
-      "source_agency": "GH",
-      "source_notice_id": "552",
-      "title": "22년 수원시, 안양시 아동동거가구 수요맞춤형 입주자모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2022-04-29",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-553",
-      "source_agency": "GH",
-      "source_notice_id": "553",
-      "title": "22년 1차 장기미임대주택 모집공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2022-08-22",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.494Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-596",
-      "source_agency": "GH",
-      "source_notice_id": "596",
-      "title": "[접수마감]수원광교, 안양관양, 화성진안1,2 경기행복주택[동호추첨 선계약 후검증] 입주자 및 예비입주자 추가모집 공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": "경기도 과천시 별양동 1-23 코오롱",
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2021-09-30",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": "경기도 과천시 별양동 1-23 코오롱",
-      "contact_note": "해당 현장계약 모집공고는 접수 마감되었음을 알려드립니다.1. 모집일정 : 2021.10.11(월) ~ 13(수) 2. 코로나19 확산에 따라 일시에 인원 몰림 방지를 위해 현장 선착순모집이 아닌, 우편제출을 원칙으로 합니다.(10/13(수) 등기 소인(발송)분까지 유효)3. 상담전화: 02)3677-6742 (경기행복주택 1차 계약관리센터) [운영시간 평일 10:00 ~ 17:00] ※ 10월 14,15일 및 27,28,29일은 센터 자체휴무일로 운영하지 않습니다.",
-      "etc_note": null,
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.495Z",
-      "data_source_type": "file"
-    },
-    {
-      "id": "gh-633",
-      "source_agency": "GH",
-      "source_notice_id": "633",
-      "title": "(예비자)수원광교 경기행복주택 입주자 추가모집 공고",
-      "notice_type": null,
-      "region_sido": null,
-      "region_sigungu": null,
-      "address_detail": "경기도 수원시 영통구 이의동 1322-2",
-      "household_count": null,
-      "area_range": null,
-      "room_count_range": null,
-      "supply_kind": null,
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2023-09-25",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": "031-8012-7578",
-      "contact_address": "경기도 수원시 영통구 이의동 1322-2",
-      "contact_note": "1. 본 공고는 선계약 후검증 방식으로 진행됩니다. 자세한 내용은 공고문을 확인하여 주시기 바랍니다.* 중복청약 불가(동일 날짜에 공고된 청약에 한함)",
-      "etc_note": "* 공고내용을 반드시 숙지하신 후 신청자격 등 작성내용을 해당서류로 사전에 본인이 직접 확인하시고 작성 및 신청하시기 바랍니다.* 청약 및 계약 신청자가 신청(작성)한 내용의 누락, 착오, 허위 신청(작성)으로 인해 당첨 또는 계약 취소(해제)등의 불이익이 있을 수 있으며 이로 인한 모든 책임은 신청자 본인에게 있음을 유념하시어 정확한 신청(작성)을 위한 주의를 당부 드립니다.",
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": null,
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-07T07:24:32.496Z",
-      "data_source_type": "file"
     }
   ]
 }
