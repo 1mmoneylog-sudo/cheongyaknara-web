@@ -57,13 +57,23 @@ export default function Home() {
           progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
           isNew: isRecentlyAnnounced(n.announce_date),
         }))
-        .filter((n) => {
-  // 1. SH공사이거나 미리내집, 장기전세 관련 공고는 날짜 상관없이 무조건 표시
-  const isShNotice = n.source_agency === "SH" || n.title?.includes("미리내집") || n.title?.includes("장기전세");
-  if (isShNotice) return true;
+       .filter((n) => {
+  // 1. 마감일 또는 공고일 날짜 추출
+  const endDateStr = n.apply_end_date || n.announce_date;
+  if (!endDateStr) return false;
 
-  // 2. 일반 공고는 기존대로 마감되지 않은 건만 표시
-  return n.apply_end_date && n.dday !== null && n.dday >= 0;
+  // 2. YYYYMMDD 8자리 숫자만 추출
+  const cleanEndDate = String(endDateStr).replace(/[^0-9]/g, "");
+  if (cleanEndDate.length !== 8) return false;
+
+  // 3. 마감일 오후 5시(17:00:00) 객체 생성
+  const year = cleanEndDate.slice(0, 4);
+  const month = cleanEndDate.slice(4, 6);
+  const day = cleanEndDate.slice(6, 8);
+  const deadline = new Date(`${year}-${month}-${day}T17:00:00`);
+
+  // 4. 현재 시간이 마감일 17:00을 지났으면 자동 제외 (지나간 공고 삭제)
+  return Date.now() <= deadline.getTime();
 })
     [notices]
   );
