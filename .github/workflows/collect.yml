@@ -18,22 +18,13 @@ jobs:
       - name: 의존성 설치
         run: npm install
 
-      # 1. API 연동 수집 (LH, 청약홈)
-      - name: API 데이터 수집 (LH, 청약홈)
+      - name: 데이터 전체 통합 수집 (LH, 청약홈, GH, SH)
         env:
           LH_SERVICE_KEY: ${{ secrets.LH_SERVICE_KEY }}
+          GH_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
           REB_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
-        run: npm run collect || true
+        run: npm run collect
 
-      # 2. 웹 스크래핑 수집 (GH)
-      - name: GH 웹 스크래핑 수집
-        run: node lib/collectors/gh-scrape.js || true
-
-      # 3. 웹 스크래핑 수집 (SH)
-      - name: SH 웹 스크래핑 수집
-        run: node lib/collectors/sh-scrape.js || true
-
-      # 4. 최종 누적 결과 저장
       - name: 변경사항 저장소에 반영
         run: |
           git config user.name "cheongyaknara-bot"
