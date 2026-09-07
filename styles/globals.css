@@ -154,7 +154,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
   100% { transform: translate3d(-50%, 0, 0); }
 }
 
-/* ===== Layout & Main Page ===== */
+/* ===== Main Layout & Cards ===== */
 .layout {
   max-width: 1120px;
   margin: 0 auto;
@@ -167,7 +167,6 @@ nav a.active { color: #fff !important; font-weight: 700; }
 .result-count { font-size: 15px; color: var(--ink-soft); margin-bottom: 14px; }
 .result-count b { color: var(--ink); font-weight: 700; }
 
-/* 메인 필터 카드 & 알약/칩 버튼 */
 .filter-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -218,7 +217,6 @@ nav a.active { color: #fff !important; font-weight: 700; }
   margin-left: auto;
 }
 
-/* List Card */
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -263,13 +261,11 @@ nav a.active { color: #fff !important; font-weight: 700; }
 .bookmark { width: 28px; height: 28px; border-radius: 7px; border: 1px solid var(--line); background: #fff; display: flex; align-items: center; justify-content: center; color: var(--ink-faint); font-size: 14px; cursor: pointer; flex-shrink: 0; }
 .bookmark.active { color: #DB8A0E; border-color: #DB8A0E; }
 
-/* Pagination */
 .pagination { display: flex; justify-content: center; gap: 6px; margin-top: 22px; }
 .pagination button { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--line); background: #fff; font-family: 'JetBrains Mono'; font-size: 13.5px; color: var(--ink-soft); cursor: pointer; }
 .pagination button.active { background: var(--brand); color: #fff; border-color: var(--brand); font-weight: 700; }
 .pagination button:disabled { opacity: 0.4; cursor: default; }
 
-/* Sidebar */
 .sidebar { width: 280px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; }
 .side-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
 .side-card h3 { font-size: 14.5px; font-weight: 700; color: var(--ink); margin: 0 0 13px; }
@@ -290,7 +286,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
 .type-grid button:hover, .type-grid button.active { border-color: var(--brand-2); color: var(--brand-2); background: var(--brand-tint); }
 .empty-state { text-align: center; padding: 60px 20px; color: var(--ink-soft); }
 
-/* ===== 청약홈 스타일 캘린더 ===== */
+/* ===== 캘린더 전용 스타일 ===== */
 .calendar-page-container { max-width: 1200px; margin: 24px auto 60px; padding: 0 20px; }
 .calendar-header-bar { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 20px; }
 .month-picker { display: flex; align-items: center; gap: 16px; }
@@ -318,7 +314,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
 .ch-event-bar { padding: 4px 6px; border-radius: 4px; font-size: 11.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; line-height: 1.2; }
 .evt-agency { margin-right: 4px; opacity: 0.9; }
 
-/* ===== 공통 폼 요소 ===== */
+/* ===== 공통 폼 스타일 ===== */
 .input-group { margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px; }
 .input-label { font-size: 13px; font-weight: 600; color: #374151; }
 .form-input {
@@ -334,7 +330,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
 .form-input:focus { border-color: #111827; }
 .form-textarea { height: auto !important; padding: 12px 14px; resize: vertical; line-height: 1.5; }
 
-/* ===== 로그인 / 회원가입 공통 페이지 레이아웃 ===== */
+/* ===== 로그인 / 회원가입 스타일 ===== */
 .page-container {
   min-height: calc(100vh - 60px);
   background-color: #f4f6f8;
@@ -399,7 +395,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
 .checkbox-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #374151; cursor: pointer; }
 .checkbox-item input[type="checkbox"] { width: 16px; height: 16px; border: 1px solid #D1D5DB; border-radius: 4px; cursor: pointer; }
 
-/* ===== 1:1 상담신청 전용 디자인 ===== */
+/* ===== 1:1 상담신청 전용 스타일 ===== */
 .consult-page-container {
   min-height: calc(100vh - 60px);
   background-color: #f8fafc;
