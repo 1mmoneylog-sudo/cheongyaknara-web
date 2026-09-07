@@ -1,5 +1,5 @@
 :root {
-  --bg-main: #F1F5F9;
+  --bg-main: #F8FAFC;
   --header-bg: #0F283D;
   --brand: #2563EB;
   --brand-hover: #1D4ED8;
@@ -98,32 +98,192 @@ nav a.active, nav a:hover {
   font-weight: 700;
 }
 
-/* ===== 상단 히어로 단면 ===== */
-.tool-hero {
+/* ===== 히어로 & 검색 섹션 ===== */
+.hero {
   background: #FFF;
   border-bottom: 1px solid var(--line);
   padding: 40px 20px;
   text-align: center;
 }
 
-.tool-hero h1 {
-  font-size: 28px;
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 32px;
   font-weight: 800;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.tool-hero p {
+.hero p {
   color: var(--ink-soft);
-  font-size: 15px;
+  font-size: 16px;
+  margin-bottom: 24px;
 }
 
-/* ===== 카드 레이아웃 ===== */
+.search-bar {
+  display: flex;
+  max-width: 540px;
+  margin: 0 auto;
+  gap: 8px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-btn {
+  background: var(--brand);
+  color: #FFF;
+  border: none;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ===== 통계 / 현황 요약 ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: 24px auto 0;
+}
+
+.stat-card {
+  background: #FFF;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-card .label {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.stat-card .value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--brand);
+  margin-top: 4px;
+}
+
+/* ===== 메인 레이아웃 및 필터 ===== */
 .layout {
-  max-width: 720px;
+  max-width: 1000px;
   margin: 32px auto;
   padding: 0 20px;
 }
 
+.filter-box {
+  background: #FFF;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-group span {
+  font-size: 14px;
+  font-weight: 700;
+  width: 70px;
+}
+
+.pill-select, .pill-btn {
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  font-size: 14px;
+  background: #FFF;
+  cursor: pointer;
+}
+
+.pill-btn.active {
+  background: var(--brand);
+  color: #FFF;
+  border-color: var(--brand);
+}
+
+/* ===== 공고 카드리스트 ===== */
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notice-card {
+  background: #FFF;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.notice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.notice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.notice-badges {
+  display: flex;
+  gap: 6px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.lh { background: #E0F2FE; color: #0369A1; }
+.badge.sh { background: #DCFCE7; color: #15803D; }
+.badge.d-day { background: #FEE2E2; color: #B91C1C; }
+
+.notice-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.notice-info {
+  display: flex;
+  gap: 16px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+/* ===== 가점계산기 / 자격진단 / 인증 공통 스타일 ===== */
 .info-card {
   background: #FFF;
   border: 1px solid var(--line);
@@ -132,23 +292,6 @@ nav a.active, nav a:hover {
   margin-bottom: 16px;
 }
 
-.info-card h3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.pill-select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  font-size: 15px;
-  background-color: #FFF;
-  outline: none;
-}
-
-/* 체크리스트 스타일 */
 .checklist {
   display: flex;
   flex-direction: column;
@@ -163,13 +306,6 @@ nav a.active, nav a:hover {
   cursor: pointer;
 }
 
-.checklist-item input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--brand);
-}
-
-/* 점수 / 안내 결과 카드 */
 .result-card {
   background: var(--brand);
   color: #FFF;
@@ -179,29 +315,9 @@ nav a.active, nav a:hover {
   margin-top: 24px;
 }
 
-.result-label {
-  font-size: 14px;
-  opacity: 0.9;
-}
-
 .result-total {
   font-size: 42px;
   font-weight: 900;
-  margin: 8px 0;
-}
-
-.result-total span {
-  font-size: 20px;
-  font-weight: 500;
-  opacity: 0.8;
-}
-
-.result-breakdown {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  font-size: 13px;
-  opacity: 0.9;
 }
 
 .warning-box {
@@ -213,17 +329,7 @@ nav a.active, nav a:hover {
   line-height: 1.5;
 }
 
-.empty-state {
-  background: #FFF;
-  border: 1px dashed var(--line);
-  border-radius: 12px;
-  padding: 40px;
-  text-align: center;
-  color: var(--ink-soft);
-  font-size: 14px;
-}
-
-/* ===== 인증 (로그인/회원가입) 페이지 전용 스타일 ===== */
+/* ===== 인증 (로그인/회원가입) ===== */
 .auth-page {
   display: flex;
   justify-content: center;
@@ -248,27 +354,6 @@ nav a.active, nav a:hover {
   text-align: center;
 }
 
-.auth-benefit-box {
-  background: #F0FDF4;
-  border: 1px solid #BBF7D0;
-  border-radius: 8px;
-  padding: 14px;
-  font-size: 13px;
-  color: #166534;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 20px;
-}
-
-.auth-label {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  margin-top: 16px;
-  margin-bottom: 6px;
-}
-
 .auth-input {
   width: 100%;
   padding: 12px 14px;
@@ -276,25 +361,7 @@ nav a.active, nav a:hover {
   border-radius: 8px;
   font-size: 14px;
   outline: none;
-}
-
-.auth-input:focus {
-  border-color: var(--brand);
-}
-
-.auth-hint {
-  font-size: 11.5px;
-  color: var(--ink-soft);
-  margin-top: 4px;
-}
-
-.auth-checkbox-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  margin-top: 12px;
-  cursor: pointer;
+  margin-bottom: 12px;
 }
 
 .auth-submit-btn {
@@ -306,22 +373,8 @@ nav a.active, nav a:hover {
   border-radius: 8px;
   font-size: 15px;
   font-weight: 700;
-  margin-top: 24px;
+  margin-top: 16px;
   cursor: pointer;
-}
-
-.auth-divider {
-  text-align: center;
-  border-bottom: 1px solid var(--line);
-  line-height: 0.1em;
-  margin: 28px 0 20px;
-}
-
-.auth-divider span {
-  background: #FFF;
-  padding: 0 10px;
-  color: var(--ink-soft);
-  font-size: 12px;
 }
 
 .social-btn {
@@ -333,22 +386,8 @@ nav a.active, nav a:hover {
   font-weight: 600;
   margin-bottom: 8px;
   cursor: pointer;
-  background: #FFF;
 }
 
 .social-btn.kakao { background: #FEE500; border: none; color: #000; }
 .social-btn.naver { background: #03C75A; border: none; color: #FFF; }
 .social-btn.google { background: #FFF; color: #000; }
-
-.auth-footer-links {
-  text-align: center;
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin-top: 20px;
-}
-
-.auth-footer-links a {
-  color: var(--brand);
-  text-decoration: none;
-  font-weight: 600;
-}
