@@ -1,41 +1,58 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import noticesData from "../data/notices.json";
+import { fetchShScrapeAll, normalizeShScraped } from "../lib/shScraper"; // shScraper 경로에 맞게 조정
 import { getDday, getUrgencyLevel, getProgressPercent } from "../lib/dday";
 import NoticeCard from "../components/NoticeCard";
 
-// 최신순 정렬용 — lib/dday.js를 건드리지 않도록 이 파일 안에 별도로 둠
+// 최신순 정렬용 YYYY-MM-DD 파싱 함수
 function parseAnnounceDate(str) {
   if (!str) return null;
   const cleaned = String(str).replace(/[^0-9]/g, "");
   if (cleaned.length !== 8) return null;
-  return new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
-}
-
-export async function getStaticProps() {
-  return { props: { generatedAt: noticesData.generated_at }, revalidate: 3600 };
+  const year = parseInt(cleaned.slice(0, 4), 10);
+  const month = parseInt(cleaned.slice(4, 6), 10) - 1;
+  const day = parseInt(cleaned.slice(6, 8), 10);
+  return new Date(year, month, day);
 }
 
 const PAGE_SIZE = 8;
 const NEW_WINDOW_DAYS = 3;
 
-function todayStr() {
-  const d = new Date();
-  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
-}
-
 function isRecentlyAnnounced(announceDate) {
-  if (!announceDate) return false;
-  const cleaned = String(announceDate).replace(/[^0-9]/g, "");
-  if (cleaned.length !== 8) return false;
-  const d = new Date(`${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`);
-  const diffDays = (Date.now() - d.getTime()) / (1000 * 60 * 60 * 24);
+  const d = parseAnnounceDate(announceDate);
+  if (!d) return false;
+  const now = new Date();
+  const diffTime = now.getTime() - d.getTime();
+  const diffDays = diffTime / (1000 * 60 * 60 * 24);
   return diffDays >= 0 && diffDays <= NEW_WINDOW_DAYS;
 }
 
-export default function Home() {
-  const notices = noticesData.notices;
+// ============================================================================
+// [서버 사이드/빌드 타임 실행] - 스크래퍼 자동 실행 및 데이터 가져오기
+// 별도 run.js 실행 필요 없이 Next.js가 직접 스크래핑을 수행합니다.
+// ============================================================================
+export async function getStaticProps() {
+  let fetchedNotices = [];
+  try {
+    // 1. SH 공고 자동 스크래핑 실행 (최대 5페이지)
+    const rawList = await fetchShScrapeAll({ maxPages: 5 });
+    fetchedNotices = rawList.map((item, index) => normalizeShScraped(item, index));
+  } catch (error) {
+    console.error("SH 공고 수집 중 오류 발생:", error);
+  }
+
+  return {
+    props: {
+      initialNotices: fetchedNotices,
+      generatedAt: new Date().toISOString(),
+    },
+    // 1시간(3600초)마다 백그라운드에서 자동으로 최신 데이터 스크래핑 갱신 (ISR)
+    revalidate: 3600,
+  };
+}
+
+export default function Home({ initialNotices = [], generatedAt }) {
   const router = useRouter();
 
   const [query, setQuery] = useState("");
@@ -47,26 +64,53 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [bookmarks, setBookmarks] = useState(new Set());
 
-  // 상세페이지 하단 링크(?agency=LH, ?region=경기도)로 들어온 경우 초기 필터 적용
+  // 북마크 로컬스토리지 연동
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("my_notice_bookmarks");
+      if (saved) {
+        setBookmarks(new Set(JSON.parse(saved)));
+      }
+    } catch (e) {
+      console.error("Failed to load bookmarks:", e);
+    }
+  }, []);
+
+  const toggleBookmark = (id) => {
+    setBookmarks((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      try {
+        localStorage.setItem("my_notice_bookmarks", JSON.stringify([...next]));
+      } catch (e) {
+        console.error("Failed to save bookmarks:", e);
+      }
+      return next;
+    });
+  };
+
   useEffect(() => {
     if (!router.isReady) return;
     if (typeof router.query.agency === "string") setAgencyFilter(router.query.agency);
     if (typeof router.query.region === "string") setRegionFilter(router.query.region);
   }, [router.isReady, router.query.agency, router.query.region]);
 
+  // 마감되지 않은 공고 및 가공 데이터 생성
   const enriched = useMemo(
     () =>
-      notices
-        .map((n) => ({
-          ...n,
-          dday: getDday(n.apply_end_date),
-          urgency: getUrgencyLevel(getDday(n.apply_end_date)),
-          progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
-          isNew: isRecentlyAnnounced(n.announce_date),
-        }))
-        // ✅ 수정: 마감일 정보가 없거나(dday === null), 마감일이 지나지 않은 공고(dday >= 0)만 유지
+      initialNotices
+        .map((n) => {
+          const dday = getDday(n.apply_end_date);
+          return {
+            ...n,
+            dday: dday,
+            urgency: getUrgencyLevel(dday),
+            progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
+            isNew: isRecentlyAnnounced(n.announce_date),
+          };
+        })
         .filter((n) => n.dday === null || n.dday >= 0),
-    [notices]
+    [initialNotices]
   );
 
   const regionCounts = useMemo(() => {
@@ -123,13 +167,10 @@ export default function Home() {
     setPage(1);
   }
 
-  function toggleBookmark(id) {
-    setBookmarks((prev) => {
-      const next = new Set(prev);
-      next.has(id) ? next.delete(id) : next.add(id);
-      return next;
-    });
-  }
+  const handleSearchSubmit = () => {
+    setQuery(pendingQuery);
+    resetPage();
+  };
 
   return (
     <div>
@@ -140,7 +181,7 @@ export default function Home() {
             청약나라
           </Link>
           <nav>
-            <a href="/" className="active">모집공고</a>
+            <Link href="/" className="active">모집공고</Link>
             <Link href="/gajeom">가점계산기</Link>
             <Link href="/jagyeok">자격진단</Link>
             <Link href="/calendar">청약캘린더</Link>
@@ -155,7 +196,7 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-inner">
-          <h1>LH·GH 모집공고, 한 곳에서 놓치지 않게</h1>
+          <h1>LH·GH·SH 모집공고, 한 곳에서 놓치지 않게</h1>
           <p>공공분양·공공임대 공고를 모아 마감 D-day 순으로 정리합니다.</p>
           <div className="stat-row">
             <div className="stat-chip">
@@ -175,6 +216,10 @@ export default function Home() {
               <div className="label">GH 공고</div>
             </div>
             <div className="stat-chip">
+              <div className="num">{shCount}</div>
+              <div className="label">SH 공고</div>
+            </div>
+            <div className="stat-chip">
               <div className="num">{chCount}</div>
               <div className="label">청약홈 공고</div>
             </div>
@@ -188,23 +233,14 @@ export default function Home() {
             <span className="icon">⌕</span>
             <input
               type="text"
-              placeholder="단지명, 지역, 기관으로 검색 (예: 위례, 화성시, LH)"
+              placeholder="단지명, 지역, 기관으로 검색 (예: 위례, 화성시, SH)"
               value={pendingQuery}
               onChange={(e) => setPendingQuery(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  setQuery(pendingQuery);
-                  resetPage();
-                }
+                if (e.key === "Enter") handleSearchSubmit();
               }}
             />
-            <button
-              className="search-confirm-btn"
-              onClick={() => {
-                setQuery(pendingQuery);
-                resetPage();
-              }}
-            >
+            <button className="search-confirm-btn" onClick={handleSearchSubmit}>
               확인
             </button>
           </div>
@@ -369,10 +405,20 @@ export default function Home() {
 
           <div className="cta-card">
             <h4>가점 계산이 헷갈리시나요?</h4>
-            <p>청약저축 기간·부양가족 수를 입력해 예상 가점을 계산하는 기능을 준비 중입니다.</p>
-            <button disabled style={{ opacity: 0.6, cursor: "default" }}>
-              준비중
-            </button>
+            <p>청약저축 기간·부양가족 수를 입력해 예상 가점을 계산하는 기능을 활용해 보세요.</p>
+            <Link
+              href="/gajeom"
+              className="btn-primary"
+              style={{
+                display: "inline-block",
+                textAlign: "center",
+                textDecoration: "none",
+                width: "100%",
+                padding: "8px 0",
+              }}
+            >
+              가점계산기 바로가기
+            </Link>
           </div>
         </aside>
       </div>
