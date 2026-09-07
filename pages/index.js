@@ -57,7 +57,14 @@ export default function Home() {
           progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
           isNew: isRecentlyAnnounced(n.announce_date),
         }))
-        .filter((n) => n.apply_end_date && n.dday !== null && n.dday >= 0),
+        .filter((n) => {
+  // 1. SH공사이거나 미리내집, 장기전세 관련 공고는 날짜 상관없이 무조건 표시
+  const isShNotice = n.source_agency === "SH" || n.title?.includes("미리내집") || n.title?.includes("장기전세");
+  if (isShNotice) return true;
+
+  // 2. 일반 공고는 기존대로 마감되지 않은 건만 표시
+  return n.apply_end_date && n.dday !== null && n.dday >= 0;
+})
     [notices]
   );
 
