@@ -353,3 +353,167 @@ nav a.active { color: #fff; font-weight: 700; }
   .gauge { width: 60px; }
   nav { display: none; }
 }
+/* ===== 청약홈 스타일 캘린더 ===== */
+.calendar-page-container {
+  max-width: 1200px;
+  margin: 24px auto 60px;
+  padding: 0 20px;
+}
+
+.calendar-header-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.month-picker {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.month-picker .nav-btn {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.current-month-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--brand);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.month-tabs {
+  display: flex;
+  gap: 4px;
+  background: #fff;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.month-tab-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.month-tab-btn.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* 범례 바 */
+.calendar-legend-bar {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.legend-badge {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* 캘린더 그리드 */
+.ch-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: var(--line);
+  gap: 1px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ch-weekday-header {
+  background: #F8FAFC;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.ch-weekday-header.sun { color: #E1462C; }
+.ch-weekday-header.sat { color: #2563EB; }
+
+.ch-calendar-cell {
+  background: #fff;
+  min-height: 120px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ch-calendar-cell.empty {
+  background: #F8FAFC;
+}
+
+.ch-day-number {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.ch-day-number.sun { color: #E1462C; }
+.ch-day-number.sat { color: #2563EB; }
+
+.ch-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  max-height: 100px;
+}
+
+.ch-event-bar {
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.evt-agency {
+  margin-right: 4px;
+  opacity: 0.9;
+}
