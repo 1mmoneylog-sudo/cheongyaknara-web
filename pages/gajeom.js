@@ -1,28 +1,31 @@
 import Link from "next/link";
+import { useState } from "react";
 import FloatingContactButton from "../components/FloatingContactButton";
-import { useMemo, useState } from "react";
 
+// 1. 무주택 기간 옵션 (최대 32점)
 const HOMELESS_OPTIONS = [
+  { label: "만 30세 미만 미혼 무주택자 또는 유주택자", score: 0 },
   { label: "1년 미만", score: 2 },
-  { label: "1년 ~ 2년", score: 4 },
-  { label: "2년 ~ 3년", score: 6 },
-  { label: "3년 ~ 4년", score: 8 },
-  { label: "4년 ~ 5년", score: 10 },
-  { label: "5년 ~ 6년", score: 12 },
-  { label: "6년 ~ 7년", score: 14 },
-  { label: "7년 ~ 8년", score: 16 },
-  { label: "8년 ~ 9년", score: 18 },
-  { label: "9년 ~ 10년", score: 20 },
-  { label: "10년 ~ 11년", score: 22 },
-  { label: "11년 ~ 12년", score: 24 },
-  { label: "12년 ~ 13년", score: 26 },
-  { label: "13년 ~ 14년", score: 28 },
-  { label: "14년 ~ 15년", score: 30 },
+  { label: "1년 이상 ~ 2년 미만", score: 4 },
+  { label: "2년 이상 ~ 3년 미만", score: 6 },
+  { label: "3년 이상 ~ 4년 미만", score: 8 },
+  { label: "4년 이상 ~ 5년 미만", score: 10 },
+  { label: "5년 이상 ~ 6년 미만", score: 12 },
+  { label: "6년 이상 ~ 7년 미만", score: 14 },
+  { label: "7년 이상 ~ 8년 미만", score: 16 },
+  { label: "8년 이상 ~ 9년 미만", score: 18 },
+  { label: "9년 이상 ~ 10년 미만", score: 20 },
+  { label: "10년 이상 ~ 11년 미만", score: 22 },
+  { label: "11년 이상 ~ 12년 미만", score: 24 },
+  { label: "12년 이상 ~ 13년 미만", score: 26 },
+  { label: "13년 이상 ~ 14년 미만", score: 28 },
+  { label: "14년 이상 ~ 15년 미만", score: 30 },
   { label: "15년 이상", score: 32 },
 ];
 
+// 2. 부양가족 수 옵션 (최대 35점)
 const FAMILY_OPTIONS = [
-  { label: "0명", score: 5 },
+  { label: "0명 (본인만)", score: 5 },
   { label: "1명", score: 10 },
   { label: "2명", score: 15 },
   { label: "3명", score: 20 },
@@ -31,23 +34,24 @@ const FAMILY_OPTIONS = [
   { label: "6명 이상", score: 35 },
 ];
 
+// 3. 통장 가입기간 옵션 (최대 17점)
 const ACCOUNT_OPTIONS = [
   { label: "6개월 미만", score: 1 },
-  { label: "6개월 ~ 1년", score: 2 },
-  { label: "1년 ~ 2년", score: 3 },
-  { label: "2년 ~ 3년", score: 4 },
-  { label: "3년 ~ 4년", score: 5 },
-  { label: "4년 ~ 5년", score: 6 },
-  { label: "5년 ~ 6년", score: 7 },
-  { label: "6년 ~ 7년", score: 8 },
-  { label: "7년 ~ 8년", score: 9 },
-  { label: "8년 ~ 9년", score: 10 },
-  { label: "9년 ~ 10년", score: 11 },
-  { label: "10년 ~ 11년", score: 12 },
-  { label: "11년 ~ 12년", score: 13 },
-  { label: "12년 ~ 13년", score: 14 },
-  { label: "13년 ~ 14년", score: 15 },
-  { label: "14년 ~ 15년", score: 16 },
+  { label: "6개월 이상 ~ 1년 미만", score: 2 },
+  { label: "1년 이상 ~ 2년 미만", score: 3 },
+  { label: "2년 이상 ~ 3년 미만", score: 4 },
+  { label: "3년 이상 ~ 4년 미만", score: 5 },
+  { label: "4년 이상 ~ 5년 미만", score: 6 },
+  { label: "5년 이상 ~ 6년 미만", score: 7 },
+  { label: "6년 이상 ~ 7년 미만", score: 8 },
+  { label: "7년 이상 ~ 8년 미만", score: 9 },
+  { label: "8년 이상 ~ 9년 미만", score: 10 },
+  { label: "9년 이상 ~ 10년 미만", score: 11 },
+  { label: "10년 이상 ~ 11년 미만", score: 12 },
+  { label: "11년 이상 ~ 12년 미만", score: 13 },
+  { label: "12년 이상 ~ 13년 미만", score: 14 },
+  { label: "13년 이상 ~ 14년 미만", score: 15 },
+  { label: "14년 이상 ~ 15년 미만", score: 16 },
   { label: "15년 이상", score: 17 },
 ];
 
@@ -75,6 +79,10 @@ export default function Gajeom() {
             <Link href="/jagyeok">자격진단</Link>
             <Link href="/calendar">청약캘린더</Link>
           </nav>
+          <div className="header-right">
+            <Link href="/login" className="btn-ghost-inv">로그인</Link>
+            <Link href="/signup" className="btn-primary-inv">회원가입</Link>
+          </div>
         </div>
       </header>
 
@@ -134,7 +142,7 @@ export default function Gajeom() {
           공공임대주택은 소득·자산 기준과 별도의 배점·추첨 방식을 적용하므로, 각 공고문의 자격요건을 반드시 함께 확인하세요.
         </div>
       </div>
-             <FloatingContactButton />
+      <FloatingContactButton />
     </div>
   );
 }
