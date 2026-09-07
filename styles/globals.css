@@ -693,3 +693,23 @@ nav a.active { color: #fff; font-weight: 700; }
   font-weight: 600;
   text-decoration: none;
 }
+/* ===== 회원가입 전용 추가 스타일 ===== */
+.checkbox-group {
+  margin: 16px 0 24px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #111827;
+  cursor: pointer;
+}
