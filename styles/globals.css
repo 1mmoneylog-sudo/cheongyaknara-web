@@ -30,7 +30,7 @@ body {
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; }
 
-/* ===== Header (상단 GNB) ===== */
+/* ===== Header ===== */
 header.site-header, .site-header { 
   background-color: #0F2537; 
   height: 60px; 
@@ -154,7 +154,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
   100% { transform: translate3d(-50%, 0, 0); }
 }
 
-/* ===== Main Layout & Cards ===== */
+/* ===== Layout & Cards ===== */
 .layout {
   max-width: 1120px;
   margin: 0 auto;
@@ -286,7 +286,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
 .type-grid button:hover, .type-grid button.active { border-color: var(--brand-2); color: var(--brand-2); background: var(--brand-tint); }
 .empty-state { text-align: center; padding: 60px 20px; color: var(--ink-soft); }
 
-/* ===== 캘린더 전용 스타일 ===== */
+/* ===== 캘린더 ===== */
 .calendar-page-container { max-width: 1200px; margin: 24px auto 60px; padding: 0 20px; }
 .calendar-header-bar { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 20px; }
 .month-picker { display: flex; align-items: center; gap: 16px; }
@@ -328,6 +328,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
   box-sizing: border-box;
 }
 .form-input:focus { border-color: #111827; }
+.form-select { height: 46px; background-color: #fff; cursor: pointer; }
 .form-textarea { height: auto !important; padding: 12px 14px; resize: vertical; line-height: 1.5; }
 
 /* ===== 로그인 / 회원가입 스타일 ===== */
@@ -445,7 +446,7 @@ nav a.active { color: #fff !important; font-weight: 700; }
 }
 .btn-consult-submit:hover { background-color: #1e40af; }
 
-/* ===== 모바일 반응형 ===== */
+/* ===== 반응형 ===== */
 @media (max-width: 860px) {
   .hero-container { flex-direction: column; }
   .hero-right { width: 100%; }
