@@ -40,34 +40,7 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* 3단계 프로세스 카드 (수정 반영) */}
-        <div className="step-card-list">
-          <div className="step-card">
-            <div className="step-number">1</div>
-            <div className="step-content">
-              <h3>문의 내용 작성</h3>
-              <p>궁금한 점이나 오류 내용을 최대한 자세히 적어주세요.</p>
-            </div>
-          </div>
-
-          <div className="step-card">
-            <div className="step-number">2</div>
-            <div className="step-content">
-              <h3>연락처 입력</h3>
-              <p>답변을 안내받으실 정확한 휴대폰 번호를 남겨주세요.</p>
-            </div>
-          </div>
-
-          <div className="step-card">
-            <div className="step-number">3</div>
-            <div className="step-content">
-              <h3>신속한 답변 안내</h3>
-              <p>담당자 확인 후 남겨주신 연락처로 친절하게 안내해 드립니다.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* 문의 폼 카드 (문의유형 제거 & 이메일->연락처 변경) */}
+        {/* 문의 폼 카드 */}
         <div className="contact-form-card">
           <form onSubmit={handleSubmit}>
             <div className="input-group">
