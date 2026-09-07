@@ -740,7 +740,7 @@ nav a.active { color: #fff; font-weight: 700; }
   border-radius: 4px;
   cursor: pointer;
 }
-/* ===== 문의하기 원본 디자인 전용 스타일 ===== */
+/* ===== 문의하기 텍스트 깨짐 방지 및 정돈 CSS ===== */
 .contact-page-container {
   min-height: calc(100vh - 60px);
   background-color: #f8fafc;
@@ -751,11 +751,12 @@ nav a.active { color: #fff; font-weight: 700; }
 
 .contact-wrapper {
   width: 100%;
-  max-width: 640px;
+  max-width: 580px;
 }
 
 .contact-header {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  text-align: left;
 }
 
 .contact-badge {
@@ -770,68 +771,35 @@ nav a.active { color: #fff; font-weight: 700; }
 }
 
 .contact-title {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   color: #0f172a;
   line-height: 1.3;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .contact-desc {
   font-size: 14px;
   color: #64748b;
-}
-
-/* 3단계 카드 */
-.step-card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 32px;
-}
-
-.step-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.step-number {
-  width: 32px;
-  height: 32px;
-  background-color: #6366f1;
-  color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-
-.step-content h3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #1e293b;
-  margin: 0 0 2px 0;
-}
-
-.step-content p {
-  font-size: 12px;
-  color: #64748b;
   margin: 0;
 }
 
-/* 폼 카드 */
 .contact-form-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Textarea 글자 깨짐 보정 */
+.form-textarea {
+  height: auto !important;
+  padding: 12px 14px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  letter-spacing: -0.02em !important;
+  color: #1f2937 !important;
+  resize: vertical;
 }
