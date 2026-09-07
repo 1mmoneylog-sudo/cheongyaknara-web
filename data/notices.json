@@ -1,6 +1,5 @@
 {
-  "generated_at": "2026-09-07T07:14:41.882Z",
-  "count": 126,
+  "generated_at": "2026-09-07T07:15:11.898Z",
   "notices": [
     {
       "id": "gh-401",
@@ -4361,6 +4360,136 @@
       "unit_types": [],
       "fetched_at": "2026-09-07T07:14:32.817Z",
       "data_source_type": "file"
+    },
+    {
+      "id": "sh-309907",
+      "title": "[SH] NEW\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t2026년 청년 체험형 인턴 서류전형 합격자 발표 및 면접전형 대상자 안내",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-07",
+      "apply_start_date": "2026-09-07",
+      "apply_end_date": "2026-09-07",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309907"
+    },
+    {
+      "id": "sh-292492",
+      "title": "[SH] NEW\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t2026년 서울주택도시개발공사 정보공개 이용자 만족도 설문조사",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-07",
+      "apply_start_date": "2026-09-07",
+      "apply_end_date": "2026-09-07",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=292492"
+    },
+    {
+      "id": "sh-309883",
+      "title": "[SH] NEW\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t[토지임대부 사회주택] 옥류서원 입주자 모집 공고문",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-07",
+      "apply_start_date": "2026-09-07",
+      "apply_end_date": "2026-09-07",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309883"
+    },
+    {
+      "id": "sh-309807",
+      "title": "[SH] NEW\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t[청년형] 특화형 매입임대주택 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-07",
+      "apply_start_date": "2026-09-07",
+      "apply_end_date": "2026-09-07",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309807"
+    },
+    {
+      "id": "sh-309885",
+      "title": "[SH] NEW\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t용산국제업무지구 도시개발사업 단지조성공사 안전점검 수행기관 지정 공고",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-07",
+      "apply_start_date": "2026-09-07",
+      "apply_end_date": "2026-09-07",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309885"
+    },
+    {
+      "id": "sh-309829",
+      "title": "[SH] 마곡 도전숙(2026.5.4. 공고) 당첨자 사전방문 행사 실시 안내",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-04",
+      "apply_start_date": "2026-09-04",
+      "apply_end_date": "2026-09-04",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309829"
+    },
+    {
+      "id": "sh-309803",
+      "title": "[SH] 마곡 도전숙(2026.5.4. 공고) 당첨자 및 예비자 발표",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-04",
+      "apply_start_date": "2026-09-04",
+      "apply_end_date": "2026-09-04",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309803"
+    },
+    {
+      "id": "sh-309801",
+      "title": "[SH] [퀸즈W청량리역] 2026년 1차 청년안심주택 입주 안내문 게시",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-04",
+      "apply_start_date": "2026-09-04",
+      "apply_end_date": "2026-09-04",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309801"
+    },
+    {
+      "id": "sh-309797",
+      "title": "[SH] 한국주택금융공사 전세자금보증 안내",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-04",
+      "apply_start_date": "2026-09-04",
+      "apply_end_date": "2026-09-04",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309797"
+    },
+    {
+      "id": "sh-309794",
+      "title": "[SH] 한국주택금융공사 전세자금보증 안내",
+      "source_agency": "SH",
+      "region_sido": "서울",
+      "region_gugun": "전체",
+      "supply_kind": "임대",
+      "household_count": 0,
+      "announce_date": "2026-09-04",
+      "apply_start_date": "2026-09-04",
+      "apply_end_date": "2026-09-04",
+      "detail_url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_241/view.do?seq=309794"
     }
   ]
 }
