@@ -9,7 +9,7 @@ export default function Login() {
   return (
     <div className="page-container">
       <div className="form-card">
-        <h1 className="card-title">로그인</h1>
+        <h1 className="auth-card-title">로그인</h1>
 
         <form onSubmit={handleSubmit}>
           <div className="input-group">
