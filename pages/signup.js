@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Signup() {
-  const [form, setForm] = useState({ id: "", pw: "", pw2: "", email: "", name: "" });
+  const [form, setForm] = useState({ id: "", pw: "", pw2: "", phone: "", name: "" });
 
   function update(key, value) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -22,6 +22,10 @@ export default function Signup() {
             <Link href="/jagyeok">자격진단</Link>
             <Link href="/calendar">청약캘린더</Link>
           </nav>
+          <div className="header-right">
+            <Link href="/contact" className="btn-ghost-inv">문의하기</Link>
+            <Link href="/login" className="btn-ghost-inv">로그인</Link>
+          </div>
         </div>
       </header>
 
@@ -65,10 +69,10 @@ export default function Signup() {
           <label className="auth-label">연락처</label>
           <input
             className="auth-input"
-            type="email"
+            type="tel"
             placeholder="-빼고 숫자만 입력"
-            value={form.email}
-            onChange={(e) => update("email", e.target.value)}
+            value={form.phone}
+            onChange={(e) => update("phone", e.target.value)}
           />
 
           <label className="auth-label">이름(실명)</label>
