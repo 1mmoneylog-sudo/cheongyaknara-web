@@ -517,3 +517,56 @@ nav a.active { color: #fff; font-weight: 700; }
   margin-right: 4px;
   opacity: 0.9;
 }
+/* ===== 상단 Header (어두운 남색 GNB) ===== */
+.site-header {
+  background-color: #0F2537;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFFFFF !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #FF4500;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.gnb {
+  display: flex;
+  gap: 28px;
+}
+
+.gnb a {
+  color: #E5E7EB !important;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.gnb a:hover {
+  color: #FFFFFF !important;
+}
