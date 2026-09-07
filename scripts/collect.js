@@ -245,3 +245,52 @@ main().catch((err) => {
   console.error("수집 스크립트 실패:", err);
   process.exit(1);
 });
+// scripts/collect.js 예시
+const fs = require("fs");
+const path = require("path");
+
+// 스크래퍼 모듈 불러오기
+const { fetchGhScrapeAll, normalizeGhScraped } = require("../lib/collectors/gh-scrape");
+const { fetchShScrapeAll, normalizeShScraped } = require("../lib/collectors/sh-scrape");
+// LH, 청약홈 API 모듈 불러오기 (기존 코드)
+// const { fetchLhData } = require(...);
+// const { fetchRebData } = require(...);
+
+async function main() {
+  console.log("🚀 전체 청약 공고 데이터 수집 시작...");
+
+  // 1. API 데이터 수집 (LH, 청약홈)
+  console.log("1. LH & 청약홈 API 데이터 수집 중...");
+  const lhNotices = await fetchLhData(); // 기존 LH 수집 함수
+  const rebNotices = await fetchRebData(); // 기존 청약홈 수집 함수
+
+  // 2. GH 스크래핑
+  console.log("2. GH 웹 스크래핑 중...");
+  const rawGh = await fetchGhScrapeAll({ maxPagesPerBoard: 3 });
+  const ghNotices = rawGh.map((item, idx) => normalizeGhScraped(item, idx));
+
+  // 3. SH 스크래핑
+  console.log("3. SH 웹 스크래핑 중...");
+  const rawSh = await fetchShScrapeAll();
+  const shNotices = rawSh.map((item, idx) => normalizeShScraped(item, idx));
+
+  // 4. 모든 기관 데이터 하나로 취합
+  const allNotices = [...lhNotices, ...rebNotices, ...ghNotices, ...shNotices];
+
+  // 5. data/notices.json 단 1회 업데이터 및 저장
+  const payload = {
+    generated_at: new Date().toISOString(),
+    total_count: allNotices.length,
+    notices: allNotices,
+  };
+
+  const outputPath = path.join(process.cwd(), "data", "notices.json");
+  fs.writeFileSync(outputPath, JSON.stringify(payload, null, 2), "utf-8");
+
+  console.log(`✅ 모든 수집 완료! 총 ${allNotices.length}개 공고가 저장되었습니다.`);
+}
+
+main().catch((err) => {
+  console.error("❌ 수집 중 오류 발생:", err);
+  process.exit(1);
+});
