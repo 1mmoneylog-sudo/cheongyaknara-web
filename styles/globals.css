@@ -1,13 +1,13 @@
 :root {
-  --bg-main: #F8FAFC;
-  --header-bg: #0F283D;
-  --brand: #2563EB;
-  --brand-hover: #1D4ED8;
-  --ink: #0F172A;
-  --ink-soft: #64748B;
-  --line: #E2E8F0;
-  --white: #FFFFFF;
-  --red: #EF4444;
+  --bg-main: #f8fafc;
+  --header-bg: #0f283d;
+  --brand: #2563eb;
+  --brand-hover: #1d4ed8;
+  --ink: #0f172a;
+  --ink-soft: #64748b;
+  --line: #e2e8f0;
+  --white: #ffffff;
+  --red: #ef4444;
 }
 
 * {
@@ -23,7 +23,7 @@ body {
   line-height: 1.5;
 }
 
-/* ===== 1. GNB 헤더 ===== */
+/* ===== GNB 헤더 ===== */
 .site-header {
   background-color: var(--header-bg);
   height: 64px;
@@ -42,7 +42,7 @@ body {
 }
 
 .logo {
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
   font-weight: 800;
   text-decoration: none;
@@ -64,14 +64,15 @@ nav {
 }
 
 nav a {
-  color: #94A3B8;
+  color: #94a3b8;
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
 }
 
-nav a.active, nav a:hover {
-  color: #FFF;
+nav a.active,
+nav a:hover {
+  color: #fff;
 }
 
 .header-right {
@@ -80,7 +81,7 @@ nav a.active, nav a:hover {
 }
 
 .btn-ghost-inv {
-  color: #FFF;
+  color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 8px 14px;
   border-radius: 6px;
@@ -90,7 +91,7 @@ nav a.active, nav a:hover {
 }
 
 .btn-primary-inv {
-  background: #FFF;
+  background: #fff;
   color: var(--header-bg);
   padding: 8px 14px;
   border-radius: 6px;
@@ -99,9 +100,9 @@ nav a.active, nav a:hover {
   font-weight: 700;
 }
 
-/* ===== 2. 히어로 섹션 ===== */
+/* ===== 히어로 섹션 ===== */
 .hero-section {
-  background: #FFF;
+  background: #fff;
   border-bottom: 1px solid var(--line);
   padding: 40px 24px;
 }
@@ -122,7 +123,7 @@ nav a.active, nav a:hover {
 .hero-title {
   font-size: 32px;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.3;
   margin-bottom: 12px;
 }
 
@@ -149,15 +150,14 @@ nav a.active, nav a:hover {
 
 .hero-search-box button {
   background: var(--brand);
-  color: #FFF;
+  color: #fff;
   border: none;
-  padding: 0 20px;
+  padding: 0 24px;
   border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
 }
 
-/* 위젯 대시보드 */
 .hero-right {
   width: 340px;
 }
@@ -184,10 +184,22 @@ nav a.active, nav a:hover {
   font-size: 14px;
 }
 
-.widget-item.border-none { border-bottom: none; }
-.widget-item .val { font-weight: 800; font-size: 16px; }
-.text-primary { color: var(--brand); }
-.text-red { color: var(--red); }
+.widget-item.border-none {
+  border-bottom: none;
+}
+
+.widget-item .val {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.text-primary {
+  color: var(--brand);
+}
+
+.text-red {
+  color: var(--red);
+}
 
 .widget-sub-stats {
   display: flex;
@@ -199,12 +211,14 @@ nav a.active, nav a:hover {
   color: var(--ink-soft);
 }
 
-.widget-sub-stats b { color: var(--ink); }
+.widget-sub-stats b {
+  color: var(--ink);
+}
 
-/* ===== 3. 실시간 롤링 띠 배너 ===== */
+/* ===== 롤링 띠 배너 ===== */
 .ticker-banner {
-  background: #0F172A;
-  color: #FFF;
+  background: #0f172a;
+  color: #fff;
   padding: 10px 24px;
   font-size: 13px;
   overflow: hidden;
@@ -217,21 +231,26 @@ nav a.active, nav a:hover {
 
 .ticker-track {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   white-space: nowrap;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
 }
 
 .badge-new {
   background: var(--red);
-  color: #FFF;
+  color: #fff;
   font-size: 10px;
   font-weight: 800;
   padding: 2px 6px;
   border-radius: 4px;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
-/* ===== 4. 메인 콘텐츠 & 필터 ===== */
+/* ===== 메인 레이아웃 및 필터 ===== */
 .layout {
   max-width: 1200px;
   margin: 32px auto;
@@ -245,7 +264,7 @@ nav a.active, nav a:hover {
 }
 
 .filter-card {
-  background: #FFF;
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 20px;
@@ -276,7 +295,7 @@ nav a.active, nav a:hover {
 
 .sort-pill-tabs button.active {
   background: var(--ink);
-  color: #FFF;
+  color: #fff;
   font-weight: 700;
 }
 
@@ -306,7 +325,7 @@ nav a.active, nav a:hover {
 
 .chip-btn.active {
   background: var(--brand);
-  color: #FFF;
+  color: #fff;
   border-color: var(--brand);
   font-weight: 700;
 }
@@ -317,7 +336,7 @@ nav a.active, nav a:hover {
   border: 1px solid var(--line);
   border-radius: 6px;
   font-size: 13px;
-  background: #FFF;
+  background: #fff;
 }
 
 .result-count {
@@ -326,9 +345,142 @@ nav a.active, nav a:hover {
   color: var(--ink-soft);
 }
 
-.result-count b { color: var(--brand); }
+.result-count b {
+  color: var(--brand);
+}
 
-/* 페이지네이션 */
+/* ===== NoticeCard 정밀 스타일 ===== */
+.notice-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.notice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.badge.agency { background: #e0f2fe; color: #0369a1; }
+.badge.kind { background: #f1f5f9; color: #475569; }
+.badge.new { background: #fee2e2; color: #dc2626; }
+
+.bookmark-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #cbd5e1;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.bookmark-btn.active {
+  color: #f59e0b;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: var(--brand);
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.card-info b {
+  color: #334155;
+  font-weight: 600;
+}
+
+.card-info .divider {
+  color: #cbd5e1;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.dday-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dday-badge {
+  background: var(--brand);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.dday-badge.urgency-high { background: var(--red); }
+
+.end-date {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.progress-bar-bg {
+  width: 100px;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--brand);
+  border-radius: 3px;
+}
+
+/* ===== 페이지네이션 ===== */
 .pagination {
   display: flex;
   justify-content: center;
@@ -337,7 +489,7 @@ nav a.active, nav a:hover {
 }
 
 .pagination button {
-  background: #FFF;
+  background: #fff;
   border: 1px solid var(--line);
   padding: 8px 14px;
   border-radius: 6px;
@@ -346,12 +498,12 @@ nav a.active, nav a:hover {
 
 .pagination button.active {
   background: var(--brand);
-  color: #FFF;
+  color: #fff;
   border-color: var(--brand);
   font-weight: 700;
 }
 
-/* ===== 5. 우측 사이드바 ===== */
+/* ===== 사이드바 ===== */
 .sidebar {
   width: 280px;
   display: flex;
@@ -360,7 +512,7 @@ nav a.active, nav a:hover {
 }
 
 .side-card {
-  background: #FFF;
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 20px;
@@ -375,16 +527,17 @@ nav a.active, nav a:hover {
 .side-link-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .side-link-list button {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   background: none;
   border: none;
-  padding: 8px;
+  padding: 8px 10px;
   text-align: left;
   font-size: 13.5px;
   border-radius: 6px;
@@ -392,10 +545,16 @@ nav a.active, nav a:hover {
   color: var(--ink-soft);
 }
 
-.side-link-list button:hover, .side-link-list button.active {
+.side-link-list button:hover,
+.side-link-list button.active {
   background: var(--bg-main);
   color: var(--brand);
   font-weight: 700;
+}
+
+.side-link-list button .n {
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .type-grid {
@@ -411,16 +570,18 @@ nav a.active, nav a:hover {
   border-radius: 6px;
   font-size: 12px;
   cursor: pointer;
+  text-align: center;
 }
 
 .type-grid button.active {
   background: var(--brand);
-  color: #FFF;
+  color: #fff;
   border-color: var(--brand);
+  font-weight: 700;
 }
 
 .empty-state {
-  background: #FFF;
+  background: #fff;
   border: 1px dashed var(--line);
   border-radius: 12px;
   padding: 40px;
