@@ -740,18 +740,18 @@ nav a.active { color: #fff; font-weight: 700; }
   border-radius: 4px;
   cursor: pointer;
 }
-/* ===== 문의하기 텍스트 깨짐 방지 및 정돈 CSS ===== */
+/* ===== 전문가 상담신청(위원나라 톤앤매너) 전용 CSS ===== */
 .contact-page-container {
   min-height: calc(100vh - 60px);
   background-color: #f8fafc;
-  padding: 60px 20px;
+  padding: 50px 20px;
   display: flex;
   justify-content: center;
 }
 
 .contact-wrapper {
   width: 100%;
-  max-width: 580px;
+  max-width: 560px;
 }
 
 .contact-header {
@@ -761,26 +761,28 @@ nav a.active { color: #fff; font-weight: 700; }
 
 .contact-badge {
   display: inline-block;
-  background-color: #f1f5f9;
-  color: #6366f1;
+  background-color: #e0e7ff;
+  color: #3730a3;
   font-size: 12px;
   font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 20px;
+  padding: 5px 12px;
+  border-radius: 6px;
   margin-bottom: 12px;
 }
 
 .contact-title {
   font-size: 26px;
   font-weight: 800;
-  color: #0f172a;
-  line-height: 1.3;
+  color: #0f2537;
+  line-height: 1.35;
   margin-bottom: 8px;
+  letter-spacing: -0.03em;
 }
 
 .contact-desc {
   font-size: 14px;
-  color: #64748b;
+  color: #475569;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -789,17 +791,27 @@ nav a.active { color: #fff; font-weight: 700; }
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(15, 37, 55, 0.04);
 }
 
-/* Textarea 글자 깨짐 보정 */
-.form-textarea {
-  height: auto !important;
-  padding: 12px 14px !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.6 !important;
-  letter-spacing: -0.02em !important;
-  color: #1f2937 !important;
-  resize: vertical;
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%3c475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.btn-consulting {
+  background-color: #0f2537 !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  height: 50px !important;
+  transition: background-color 0.2s ease;
+}
+
+.btn-consulting:hover {
+  background-color: #1e3a5f !important;
 }
