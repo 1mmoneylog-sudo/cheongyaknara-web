@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Contact() {
+export default function Consult() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -25,9 +25,9 @@ export default function Contact() {
       return;
     }
 
-    console.log("제출된 데이터:", formData);
-    alert("상담 신청이 접수되었습니다. 담당 전문가가 빠른 시일 내에 연락드리겠습니다.");
-    
+    console.log("제출된 상담 데이터:", formData);
+    alert("상담 신청이 완료되었습니다. 담당 전문가가 빠른 시일 내에 연락드리겠습니다.");
+
     setFormData({
       name: "",
       phone: "",
@@ -116,7 +116,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="checkbox-item" style={{ margin: "20px 0 24px 0", display: "flex", alignItems: "center", gap: "8px" }}>
+            <div className="checkbox-item" style={{ margin: "20px 0 24px 0" }}>
               <input
                 type="checkbox"
                 name="agree"
@@ -125,7 +125,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
               />
-              <label htmlFor="agree" style={{ cursor: "pointer", fontSize: "14px", color: "#334155" }}>
+              <label htmlFor="agree">
                 개인정보 수집 및 상담 활용 동의 (필수)
               </label>
             </div>
