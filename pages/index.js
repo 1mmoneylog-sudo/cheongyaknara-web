@@ -54,20 +54,20 @@ export default function Home() {
     if (typeof router.query.region === "string") setRegionFilter(router.query.region);
   }, [router.isReady, router.query.agency, router.query.region]);
 
- const enriched = useMemo(
-  () =>
-    notices
-      .map((n) => ({
-        ...n,
-        dday: getDday(n.apply_end_date),
-        urgency: getUrgencyLevel(getDday(n.apply_end_date)),
-        progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
-        isNew: isRecentlyAnnounced(n.announce_date),
-      }))
-      // 마감일이 없거나 이미 지난 공고는 화면에 노출하지 않음
-      .filter((n) => n.apply_end_date && n.dday !== null && n.dday >= 0),
-  [notices]
-);
+  const enriched = useMemo(
+    () =>
+      notices
+        .map((n) => ({
+          ...n,
+          dday: getDday(n.apply_end_date),
+          urgency: getUrgencyLevel(getDday(n.apply_end_date)),
+          progress: getProgressPercent(n.apply_start_date, n.apply_end_date),
+          isNew: isRecentlyAnnounced(n.announce_date),
+        }))
+        // ✅ 수정: 마감일 정보가 없거나(dday === null), 마감일이 지나지 않은 공고(dday >= 0)만 유지
+        .filter((n) => n.dday === null || n.dday >= 0),
+    [notices]
+  );
 
   const regionCounts = useMemo(() => {
     const map = new Map();
@@ -210,7 +210,7 @@ export default function Home() {
           </div>
           <div className="filter-row">
             <div className="seg">
-  {["전체", "LH", "GH", "SH", "청약홈"].map((a) => (
+              {["전체", "LH", "GH", "SH", "청약홈"].map((a) => (
                 <button
                   key={a}
                   className={agencyFilter === a ? "active" : ""}
@@ -307,47 +307,47 @@ export default function Home() {
         </div>
 
         <aside className="sidebar">
-         <div className="side-card">
-  <h3>기관별</h3>
-  <div className="side-link-list">
-    <button
-      className={agencyFilter === "LH" ? "active" : ""}
-      onClick={() => {
-        setAgencyFilter("LH");
-        resetPage();
-      }}
-    >
-      LH <span className="n">{lhCount}</span>
-    </button>
-    <button
-      className={agencyFilter === "GH" ? "active" : ""}
-      onClick={() => {
-        setAgencyFilter("GH");
-        resetPage();
-      }}
-    >
-      GH <span className="n">{ghCount}</span>
-    </button>
-    <button
-      className={agencyFilter === "SH" ? "active" : ""}
-      onClick={() => {
-        setAgencyFilter("SH");
-        resetPage();
-      }}
-    >
-      SH <span className="n">{shCount}</span>
-    </button>
-    <button
-      className={agencyFilter === "청약홈" ? "active" : ""}
-      onClick={() => {
-        setAgencyFilter("청약홈");
-        resetPage();
-      }}
-    >
-      청약홈 <span className="n">{chCount}</span>
-    </button>
-  </div>
-</div>
+          <div className="side-card">
+            <h3>기관별</h3>
+            <div className="side-link-list">
+              <button
+                className={agencyFilter === "LH" ? "active" : ""}
+                onClick={() => {
+                  setAgencyFilter("LH");
+                  resetPage();
+                }}
+              >
+                LH <span className="n">{lhCount}</span>
+              </button>
+              <button
+                className={agencyFilter === "GH" ? "active" : ""}
+                onClick={() => {
+                  setAgencyFilter("GH");
+                  resetPage();
+                }}
+              >
+                GH <span className="n">{ghCount}</span>
+              </button>
+              <button
+                className={agencyFilter === "SH" ? "active" : ""}
+                onClick={() => {
+                  setAgencyFilter("SH");
+                  resetPage();
+                }}
+              >
+                SH <span className="n">{shCount}</span>
+              </button>
+              <button
+                className={agencyFilter === "청약홈" ? "active" : ""}
+                onClick={() => {
+                  setAgencyFilter("청약홈");
+                  resetPage();
+                }}
+              >
+                청약홈 <span className="n">{chCount}</span>
+              </button>
+            </div>
+          </div>
 
           <div className="side-card">
             <h3>지역별 (많은 순)</h3>
