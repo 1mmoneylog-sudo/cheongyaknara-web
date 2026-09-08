@@ -210,56 +210,59 @@ export default function NoticeDetail({ notice }) {
             </div>
           )}
 
-         {(notice.attachment_urls?.length > 0 || notice.image_urls?.length > 0) && (
-  <div className="info-card file-list">
-    <h3>첨부파일 · 이미지</h3>
-    
-    {/* 문서 파일 (HWP, PDF) 다운로드 */}
-    {notice.attachment_urls?.map((f, i) => (
-      <a key={`f${i}`} href={f.url} target="_blank" rel="noreferrer" className="file-item">
-        📎 {f.label} — {f.name}
-      </a>
-    ))}
+          {(notice.attachment_urls?.length > 0 || notice.image_urls?.length > 0) && (
+            <div className="info-card file-list">
+              <h3>첨부파일 · 이미지</h3>
+              
+              {/* 문서 파일 (HWP, PDF) 다운로드 */}
+              {notice.attachment_urls?.map((f, i) => (
+                <a key={`f${i}`} href={f.url} target="_blank" rel="noreferrer" className="file-item">
+                  📎 {f.label} — {f.name}
+                </a>
+              ))}
 
-    {/* 이미지 슬라이더 (가로 스크롤 & 화살표) */}
-    {notice.image_urls?.length > 0 && (
-      <div className="image-slider-container">
-        <button 
-          type="button"
-          className="slider-arrow left"
-          onClick={() => document.getElementById('img-scroll-box').scrollBy({ left: -300, behavior: 'smooth' })}
-        >
-          ‹
-        </button>
-        
-        <div className="image-slider-track" id="img-scroll-box">
-          {notice.image_urls.map((img, i) => (
-            <div key={`i${i}`} className="image-slide-item">
-            <img 
-  src={
-    img.url?.startsWith('http') 
-      ? img.url 
-      : `https://apply.lh.or.kr/${img.url?.replace(/^\//, '')}`
-  } 
-  alt={img.label ?? '공고 이미지'} 
-  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-/>
-            <span className="image-label">{img.label}</span>
-<div
-          ))}
-        </div>
+              {/* 이미지 슬라이더 (가로 스크롤 & 화살표) */}
+              {notice.image_urls?.length > 0 && (
+                <div className="image-slider-container">
+                  <button 
+                    type="button"
+                    className="slider-arrow left"
+                    onClick={() => document.getElementById('img-scroll-box')?.scrollBy({ left: -300, behavior: 'smooth' })}
+                  >
+                    ‹
+                  </button>
+                  
+                  <div className="image-slider-track" id="img-scroll-box">
+                    {notice.image_urls.map((img, i) => {
+                      const rawUrl = img?.url ?? '';
+                      const fullUrl = rawUrl.startsWith('http')
+                        ? rawUrl
+                        : `https://apply.lh.or.kr/${rawUrl.replace(/^\//, '')}`;
 
-        <button 
-          type="button"
-          className="slider-arrow right"
-          onClick={() => document.getElementById('img-scroll-box').scrollBy({ left: 300, behavior: 'smooth' })}
-        >
-          ›
-        </button>
-      </div>
-    )}
-  </div>
-)}
+                      return (
+                        <div key={`i${i}`} className="image-slide-item">
+                          <img 
+                            src={fullUrl} 
+                            alt={img?.label ?? '공고 이미지'} 
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                          />
+                          <span className="image-label">{img?.label}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <button 
+                    type="button"
+                    className="slider-arrow right"
+                    onClick={() => document.getElementById('img-scroll-box')?.scrollBy({ left: 300, behavior: 'smooth' })}
+                  >
+                    ›
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
 
           {notice.etc_note && (
             <div className="info-card">
@@ -289,7 +292,7 @@ export default function NoticeDetail({ notice }) {
           </div>
         </div>
 
-        {/* ===== 오른쪽: 사이드바 (위원나라 스타일) ===== */}
+        {/* ===== 오른쪽: 사이드바 ===== */}
         <aside className="sidebar">
           <div className={`dday-hero-box ${urgency}`}>
             <div className="dday-hero-date">{endDateObj ? formatKorean(endDateObj) : "마감일 미정"} 마감</div>
