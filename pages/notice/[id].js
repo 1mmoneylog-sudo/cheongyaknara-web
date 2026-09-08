@@ -235,15 +235,14 @@ export default function NoticeDetail({ notice }) {
         <div className="image-slider-track" id="img-scroll-box">
           {notice.image_urls.map((img, i) => (
             <div key={`i${i}`} className="image-slide-item">
-             <img 
+            <img 
   src={
-    !img.url ? '' :
-    img.url.startsWith('http') ? img.url :
-    img.url.startsWith('/') ? `https://apply.lh.or.kr${img.url}` :
-    `https://apply.lh.or.kr/${img.url}`
+    img.url?.startsWith('http') 
+      ? img.url 
+      : `https://apply.lh.or.kr/${img.url?.replace(/^\//, '')}`
   } 
-  alt={img.label}
-  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+  alt={img.label ?? '공고 이미지'} 
+  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
 />
               <span className="image-label">{img.label}</span>
             </div>
@@ -368,7 +367,3 @@ export default function NoticeDetail({ notice }) {
     </div>
   );
 }
-{/* 데이터가 어떻게 들어오는지 확인용 (확인 후 삭제) */}
-<pre style={{ fontSize: '11px', background: '#eee' }}>
-  {JSON.stringify(notice.image_urls, null, 2)}
-</pre>
