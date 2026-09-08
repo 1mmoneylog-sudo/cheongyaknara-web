@@ -234,7 +234,7 @@ export default function NoticeDetail({ notice }) {
                   
                   <div className="image-slider-track" id="img-scroll-box">
                     {notice.image_urls.map((img, i) => {
-                    const rawUrl = (img?.url ?? '').trim();
+                      const rawUrl = (img?.url ?? '').trim();
                       let fullUrl = '';
 
                       if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
@@ -252,15 +252,6 @@ export default function NoticeDetail({ notice }) {
                             src={fullUrl} 
                             alt={img?.label ?? '공고 이미지'} 
                             referrerPolicy="no-referrer"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                          />
-                          <span className="image-label">{img?.label}</span>
-                        </div>
-                      );
-                        <div key={`i${i}`} className="image-slide-item">
-                          <img 
-                            src={fullUrl} 
-                            alt={img?.label ?? '공고 이미지'} 
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                           />
                           <span className="image-label">{img?.label}</span>
