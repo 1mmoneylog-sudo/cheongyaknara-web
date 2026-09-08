@@ -138,12 +138,6 @@ export default function NoticeDetail({ notice }) {
         </div>
       </header>
 
-      <div className="breadcrumb-wrap">
-        <div className="breadcrumb">
-          <Link href="/">홈</Link> › <Link href="/">모집공고</Link> › 상세
-        </div>
-      </div>
-
       <div className="layout">
         {/* ===== 왼쪽: 본문 ===== */}
         <div className="main-col">
