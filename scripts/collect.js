@@ -148,14 +148,15 @@ function isTestNotice(notice) {
   return TEST_TITLE_PATTERN.test(notice.title || "");
 }
 
-function parseFlexibleDate(str) {
+function parseFlexibleDate(str, isEndDate = false) {
   if (!str) return null;
   const cleaned = String(str).replace(/[^0-9]/g, "");
   if (cleaned.length !== 8) return null;
   const y = cleaned.slice(0, 4);
   const m = cleaned.slice(4, 6);
   const d = cleaned.slice(6, 8);
-  const parsed = new Date(`${y}-${m}-${d}T23:59:59+09:00`);
+  const timeStr = isEndDate ? "17:00:00" : "23:59:59";
+  const parsed = new Date(`${y}-${m}-${d}T${timeStr}+09:00`);
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
@@ -165,6 +166,7 @@ function parseFlexibleDate(str) {
  *    (접수는 끝났어도 "당첨자 발표" 페이지에서 조회할 수 있어야 하므로)
  *  - 그 외의 경우, 접수마감일이 이미 지났으면 → 제외 (유예 없음)
  *  - 접수시작일이 UPCOMING_WINDOW_DAYS일보다 더 뒤인 "너무 먼 예정"이면 → 제외
+ *    (시작일이 가까워지면 다음 수집 때 자동으로 포함됨)
  */
 function shouldKeep(notice, now) {
   const title = notice.title || "";
@@ -174,9 +176,9 @@ function shouldKeep(notice, now) {
                          title.includes("장기전세") || 
                          title.includes("미리내집");
 
-  const start = parseFlexibleDate(notice.apply_start_date);
-  const end = parseFlexibleDate(notice.apply_end_date);
-  const winner = parseFlexibleDate(notice.winner_date);
+  const start = parseFlexibleDate(notice.apply_start_date, false);
+  const end = parseFlexibleDate(notice.apply_end_date, true);
+  const winner = parseFlexibleDate(notice.winner_date, false);
 
   // SH 공고이고 시작/마감 날짜가 누락된 경우 필터 통과
   if (isSHCoreNotice && !start && !end) {
@@ -213,7 +215,7 @@ async function main() {
     collectGhScrape(),
     collectShScrape(),
   ]);
-  
+
   const combined = [
     ...lhNotices, 
     ...ghNotices, 
@@ -261,8 +263,8 @@ async function main() {
 
   kept.sort(
     (a, b) =>
-      (parseFlexibleDate(a.apply_end_date)?.getTime() ?? Infinity) -
-      (parseFlexibleDate(b.apply_end_date)?.getTime() ?? Infinity)
+      (parseFlexibleDate(a.apply_end_date, true)?.getTime() ?? Infinity) -
+      (parseFlexibleDate(b.apply_end_date, true)?.getTime() ?? Infinity)
   );
 
   fs.writeFileSync(
