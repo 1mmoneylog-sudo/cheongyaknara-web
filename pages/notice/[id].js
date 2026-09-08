@@ -235,7 +235,14 @@ export default function NoticeDetail({ notice }) {
         <div className="image-slider-track" id="img-scroll-box">
           {notice.image_urls.map((img, i) => (
             <div key={`i${i}`} className="image-slide-item">
-              <img src={img.url} alt={img.label} />
+              <img 
+  src={img.url?.startsWith('http') ? img.url : `https://www.applyhome.co.kr${img.url}`} 
+  alt={img.label ?? "공고 이미지"} 
+  onError={(e) => {
+    // 이미지 주소가 깨졌거나 불러올 수 없을 때 엑박 표시를 지웁니다.
+    e.target.style.display = 'none';
+  }}
+/>
               <span className="image-label">{img.label}</span>
             </div>
           ))}
