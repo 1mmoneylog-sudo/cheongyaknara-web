@@ -1078,3 +1078,79 @@ nav a.active { color: #fff; font-weight: 700; }
 .slider-arrow.left { left: -10px; }
 .slider-arrow.right { right: -10px; }
 .slider-arrow:hover { background: #ffffff; }
+/* ===== 이미지 슬라이더 및 카드 정돈 ===== */
+.image-slider-container {
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.image-slider-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 5px 0;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.image-slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.image-slide-item {
+  flex: 0 0 240px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  text-align: center;
+}
+
+.image-box-wrap {
+  width: 100%;
+  height: 160px;
+  background: #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-box-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-label {
+  display: block;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-arrow.left { left: -14px; }
+.slider-arrow.right { right: -14px; }
