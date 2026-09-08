@@ -239,8 +239,12 @@ export default function NoticeDetail({ notice }) {
 
                       if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
                         fullUrl = rawUrl.replace(/^http:\/\//i, 'https://');
-                      } else if (rawUrl.startsWith('apply.lh.or.kr') || rawUrl.startsWith('www.lh.or.kr')) {
-                        fullUrl = `https://${rawUrl}`;
+                      } else if (rawUrl.includes('lhImageView2.do')) {
+                        // LH 이미지 서블릿 전용 경로 연결
+                        const cleanPath = rawUrl.replace(/^\//, '');
+                        fullUrl = cleanPath.startsWith('LH/sys/gis/')
+                          ? `https://apply.lh.or.kr/${cleanPath}`
+                          : `https://apply.lh.or.kr/LH/sys/gis/${cleanPath}`;
                       } else {
                         fullUrl = `https://apply.lh.or.kr/${rawUrl.replace(/^\//, '')}`;
                       }
