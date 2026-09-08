@@ -138,6 +138,12 @@ export default function NoticeDetail({ notice }) {
         </div>
       </header>
 
+      <div className="breadcrumb-wrap">
+        <div className="breadcrumb">
+          <Link href="/">홈</Link> › <Link href="/">모집공고</Link> › 상세
+        </div>
+      </div>
+
       <div className="layout">
         {/* ===== 왼쪽: 본문 ===== */}
         <div className="main-col">
@@ -213,62 +219,16 @@ export default function NoticeDetail({ notice }) {
           {(notice.attachment_urls?.length > 0 || notice.image_urls?.length > 0) && (
             <div className="info-card file-list">
               <h3>첨부파일 · 이미지</h3>
-              
-              {/* 문서 파일 (HWP, PDF) 다운로드 */}
               {notice.attachment_urls?.map((f, i) => (
-                <a key={`f${i}`} href={f.url} target="_blank" rel="noreferrer" className="file-item">
+                <a key={`f${i}`} href={f.url} target="_blank" rel="noreferrer">
                   📎 {f.label} — {f.name}
                 </a>
               ))}
-
-              {/* 이미지 슬라이더 (가로 스크롤 & 화살표) */}
-              {notice.image_urls?.length > 0 && (
-                <div className="image-slider-container">
-                  <button 
-                    type="button"
-                    className="slider-arrow left"
-                    onClick={() => document.getElementById('img-scroll-box')?.scrollBy({ left: -300, behavior: 'smooth' })}
-                  >
-                    ‹
-                  </button>
-                  
-                  <div className="image-slider-track" id="img-scroll-box">
-                    {notice.image_urls.map((img, i) => {
-                      const rawUrl = (img?.url ?? '').trim();
-                      let fullUrl = '';
-
-                      if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
-                        fullUrl = rawUrl.replace(/^http:\/\//i, 'https://');
-                      } else if (rawUrl.includes('lhImageView2.do')) {
-                        const pureParam = rawUrl.replace(/^\/?(LH\/sys\/gis\/)?/, '');
-                        fullUrl = `https://apply.lh.or.kr/LH/sys/gis/${pureParam}`;
-                      } else {
-                        fullUrl = `https://apply.lh.or.kr/${rawUrl.replace(/^\//, '')}`;
-                      }
-
-                      return (
-                        <div key={`i${i}`} className="image-slide-item">
-                          <img 
-                            src={fullUrl} 
-                            alt={img?.label ?? '공고 이미지'} 
-                            referrerPolicy="no-referrer"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                          />
-                          <span className="image-label">{img?.label}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <button 
-                    type="button"
-                    className="slider-arrow right"
-                    onClick={() => document.getElementById('img-scroll-box')?.scrollBy({ left: 300, behavior: 'smooth' })}
-                  >
-                    ›
-                  </button>
-                </div>
-              )}
+              {notice.image_urls?.map((img, i) => (
+                <a key={`i${i}`} href={img.url} target="_blank" rel="noreferrer">
+                  🖼️ {img.label}
+                </a>
+              ))}
             </div>
           )}
 
@@ -300,7 +260,7 @@ export default function NoticeDetail({ notice }) {
           </div>
         </div>
 
-        {/* ===== 오른쪽: 사이드바 ===== */}
+        {/* ===== 오른쪽: 사이드바 (위원나라 스타일) ===== */}
         <aside className="sidebar">
           <div className={`dday-hero-box ${urgency}`}>
             <div className="dday-hero-date">{endDateObj ? formatKorean(endDateObj) : "마감일 미정"} 마감</div>
