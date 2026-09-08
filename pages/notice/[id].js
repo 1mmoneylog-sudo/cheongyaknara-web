@@ -137,7 +137,6 @@ export default function NoticeDetail({ notice }) {
           </nav>
         </div>
       </header>
-
       <div className="layout">
         {/* ===== 왼쪽: 본문 ===== */}
         <div className="main-col">
