@@ -245,7 +245,7 @@ export default function NoticeDetail({ notice }) {
   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
 />
             <span className="image-label">{img.label}</span>
-<div style={{ fontSize: '11px', color: 'red', wordBreak: 'break-all' }}>{img.url}</div>
+<div
           ))}
         </div>
 
