@@ -1078,3 +1078,27 @@ nav a.active { color: #fff; font-weight: 700; }
 .slider-arrow.left { left: -10px; }
 .slider-arrow.right { right: -10px; }
 .slider-arrow:hover { background: #ffffff; }
+/* 이미지가 깨지거나 안 뜰 때 엑박 대신 보완할 스타일 */
+.image-box-wrap {
+  width: 100%;
+  height: 160px;
+  background-color: #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-box-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 엑박으로 이미지가 안 보일 때 대체 텍스트 표시 */
+.image-box-wrap::before {
+  content: "🖼️ 이미지 준비중";
+  font-size: 12px;
+  color: #adb5bd;
+  position: absolute;
+}
