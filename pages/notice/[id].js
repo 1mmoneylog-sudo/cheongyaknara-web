@@ -240,7 +240,6 @@ export default function NoticeDetail({ notice }) {
                       if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
                         fullUrl = rawUrl.replace(/^http:\/\//i, 'https://');
                       } else if (rawUrl.includes('lhImageView2.do')) {
-                        // 맨 앞의 / 나 LH/sys/gis/ 등 기존 접두사 깔끔히 제거 후 재조합
                         const pureParam = rawUrl.replace(/^\/?(LH\/sys\/gis\/)?/, '');
                         fullUrl = `https://apply.lh.or.kr/LH/sys/gis/${pureParam}`;
                       } else {
@@ -258,7 +257,6 @@ export default function NoticeDetail({ notice }) {
                           <span className="image-label">{img?.label}</span>
                         </div>
                       );
-                      return (
                         <div key={`i${i}`} className="image-slide-item">
                           <img 
                             src={fullUrl} 
