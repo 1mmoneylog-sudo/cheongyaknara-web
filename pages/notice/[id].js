@@ -234,11 +234,16 @@ export default function NoticeDetail({ notice }) {
                   
                   <div className="image-slider-track" id="img-scroll-box">
                     {notice.image_urls.map((img, i) => {
-                     const rawUrl = img?.url ?? '';
-                      const cleanedUrl = rawUrl.replace(/^http:\/\//i, 'https://');
-                      const fullUrl = cleanedUrl.startsWith('http')
-                        ? cleanedUrl
-                        : `https://apply.lh.or.kr/${cleanedUrl.replace(/^\//, '')}`;
+                     const rawUrl = (img?.url ?? '').trim();
+                      let fullUrl = '';
+
+                      if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
+                        fullUrl = rawUrl.replace(/^http:\/\//i, 'https://');
+                      } else if (rawUrl.startsWith('apply.lh.or.kr') || rawUrl.startsWith('www.lh.or.kr')) {
+                        fullUrl = `https://${rawUrl}`;
+                      } else {
+                        fullUrl = `https://apply.lh.or.kr/${rawUrl.replace(/^\//, '')}`;
+                      }
                       return (
                         <div key={`i${i}`} className="image-slide-item">
                           <img 
