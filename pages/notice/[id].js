@@ -216,6 +216,7 @@ export default function NoticeDetail({ notice }) {
             </div>
           )}
 
+          {/* ===== 원래대로 복구된 첨부파일 · 이미지 영역 ===== */}
           {(notice.attachment_urls?.length > 0 || notice.image_urls?.length > 0) && (
             <div className="info-card file-list">
               <h3>첨부파일 · 이미지</h3>
@@ -260,7 +261,7 @@ export default function NoticeDetail({ notice }) {
           </div>
         </div>
 
-        {/* ===== 오른쪽: 사이드바 (위원나라 스타일) ===== */}
+        {/* ===== 오른쪽: 사이드바 ===== */}
         <aside className="sidebar">
           <div className={`dday-hero-box ${urgency}`}>
             <div className="dday-hero-date">{endDateObj ? formatKorean(endDateObj) : "마감일 미정"} 마감</div>
