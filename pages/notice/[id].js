@@ -368,3 +368,7 @@ export default function NoticeDetail({ notice }) {
     </div>
   );
 }
+{/* 데이터가 어떻게 들어오는지 확인용 (확인 후 삭제) */}
+<pre style={{ fontSize: '11px', background: '#eee' }}>
+  {JSON.stringify(notice.image_urls, null, 2)}
+</pre>
