@@ -234,20 +234,30 @@ export default function NoticeDetail({ notice }) {
                   
                   <div className="image-slider-track" id="img-scroll-box">
                     {notice.image_urls.map((img, i) => {
-                     const rawUrl = (img?.url ?? '').trim();
+                    const rawUrl = (img?.url ?? '').trim();
                       let fullUrl = '';
 
                       if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
                         fullUrl = rawUrl.replace(/^http:\/\//i, 'https://');
                       } else if (rawUrl.includes('lhImageView2.do')) {
-                        // LH 이미지 서블릿 전용 경로 연결
-                        const cleanPath = rawUrl.replace(/^\//, '');
-                        fullUrl = cleanPath.startsWith('LH/sys/gis/')
-                          ? `https://apply.lh.or.kr/${cleanPath}`
-                          : `https://apply.lh.or.kr/LH/sys/gis/${cleanPath}`;
+                        // 맨 앞의 / 나 LH/sys/gis/ 등 기존 접두사 깔끔히 제거 후 재조합
+                        const pureParam = rawUrl.replace(/^\/?(LH\/sys\/gis\/)?/, '');
+                        fullUrl = `https://apply.lh.or.kr/LH/sys/gis/${pureParam}`;
                       } else {
                         fullUrl = `https://apply.lh.or.kr/${rawUrl.replace(/^\//, '')}`;
                       }
+
+                      return (
+                        <div key={`i${i}`} className="image-slide-item">
+                          <img 
+                            src={fullUrl} 
+                            alt={img?.label ?? '공고 이미지'} 
+                            referrerPolicy="no-referrer"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                          />
+                          <span className="image-label">{img?.label}</span>
+                        </div>
+                      );
                       return (
                         <div key={`i${i}`} className="image-slide-item">
                           <img 
