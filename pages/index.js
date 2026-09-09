@@ -227,18 +227,22 @@ function closeContactModal() {
             <Link href="/signup" className="btn-primary-inv">회원가입</Link>
           </div>
         </div>
-        <div className="mobile-subnav">
-          <a href="/" className="active">모집공고</a>
-          <Link href="/gajeom">가점계산기</Link>
-          <Link href="/jagyeok">자격진단</Link>
-          <Link href="/calendar">청약캘린더</Link>
-        </div>
       </header>
       {/* 위원나라 스타일 히어로 세션 */}
       <section className="hero-section">
         <div className="hero-container">
           {/* 좌측 히어로 메인 */}
           <div className="hero-left">
+                  <div className="hero-left">
+            <div className="mobile-hero-nav">
+              <Link href="/gajeom">가점계산기</Link>
+              <Link href="/jagyeok">자격진단</Link>
+              <Link href="/calendar">청약캘린더</Link>
+            </div>
+            <h1 className="hero-title">
+              청약 모집공고, <br />
+              한 곳에서 한눈에
+            </h1>
             <h1 className="hero-title">
               청약 모집공고, <br />
               한 곳에서 한눈에
