@@ -64,6 +64,17 @@ async function collectLh() {
     listItems = await fetchLhList(serviceKey, formatDate(past), formatDate(future));
   } catch (err) {
     console.error("⚠️ LH 목록 수집 실패, 이번 회차는 LH를 건너뜁니다:", err.message);
+    
+    // 💡 기존 notices.json에서 이전 LH 데이터를 불러와 보존
+    try {
+      if (fs.existsSync(OUTPUT_PATH)) {
+        const existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, "utf-8"));
+        const fallback = (existing.notices || []).filter((n) => n.source_agency === "LH" || n.id?.startsWith("lh-"));
+        console.log(`🛡️ [LH 보존] 이전 저장된 LH 공고 ${fallback.length}건을 그대로 유지합니다.`);
+        return fallback;
+      }
+    } catch (e) {}
+
     return [];
   }
   console.log(`LH 목록: ${listItems.length}건 (필터링 후)`);
