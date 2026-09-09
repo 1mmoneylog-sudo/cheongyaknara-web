@@ -919,3 +919,18 @@ nav a.active { color: #fff; font-weight: 700; }
 .file-list a:hover {
   border-color: var(--ink-faint);
 }
+.report-modal-overlay{
+  position:fixed; inset:0; background:rgba(15,23,42,0.5);
+  display:flex; align-items:center; justify-content:center; z-index:1000; padding:20px;
+}
+.report-modal{
+  background:#fff; border-radius:16px; padding:28px; width:100%; max-width:440px;
+}
+.report-modal h4{font-size:18px; font-weight:800; margin:0 0 8px; color:var(--ink);}
+.report-modal p{font-size:13px; color:var(--ink-soft); margin:0 0 16px; line-height:1.5;}
+.report-modal textarea{
+  width:100%; min-height:100px; border:1px solid var(--line); border-radius:10px;
+  padding:12px; font-size:13.5px; font-family:inherit; resize:vertical; box-sizing:border-box;
+}
+.report-modal-actions{display:flex; gap:8px; margin-top:16px;}
+.report-modal-actions .secondary-btn, .report-modal-actions .primary-btn{margin-bottom:0;}
