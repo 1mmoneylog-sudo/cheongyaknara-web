@@ -274,7 +274,7 @@ async function handleReportSend() {
         </div>
 
         {/* ===== 오른쪽: 사이드바 (위원나라 스타일) ===== */}
-        <aside className="sidebar">
+        <aside className="sidebar detail-sidebar">
           <div className={`dday-hero-box ${urgency}`}>
             <div className="dday-hero-date">{endDateObj ? formatKorean(endDateObj) : "마감일 미정"} 마감</div>
             <div className="dday-hero-num mono">
