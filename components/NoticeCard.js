@@ -14,9 +14,8 @@ function isRecentlyAnnounced(announceDate, windowDays = 3) {
 function MetaRow({ items }) {
   return (
     <div className="meta-row">
-      {items.map((it, i) => (
-        <span key={it.label}>
-          {i > 0 && <span className="meta-divider">|</span>}
+      {items.map((it) => (
+        <span key={it.label} className="meta-item">
           {it.label} <b>{it.value ?? "-"}</b>
         </span>
       ))}
