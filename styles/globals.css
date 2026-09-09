@@ -176,6 +176,7 @@ nav a.active { color: #fff; font-weight: 700; }
   font-size: 13.5px;
   margin-right: 48px;
   color: #E5E7EB;
+  cursor: pointer;
 }
 .badge-new {
   background: var(--urgent);
