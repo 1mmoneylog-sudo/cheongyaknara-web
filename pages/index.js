@@ -233,7 +233,6 @@ function closeContactModal() {
         <div className="hero-container">
           {/* 좌측 히어로 메인 */}
           <div className="hero-left">
-                  <div className="hero-left">
             <div className="mobile-hero-nav">
               <Link href="/gajeom">가점계산기</Link>
               <Link href="/jagyeok">자격진단</Link>
