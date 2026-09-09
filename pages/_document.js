@@ -4,13 +4,12 @@ export default function Document() {
   return (
     <Html lang="ko">
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="stylesheet"
+          as="style"
+          crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&display=swap"
-          rel="stylesheet"
         />
       </Head>
       <body>
