@@ -612,6 +612,7 @@ nav a.active { color: #fff; font-weight: 700; }
   text-overflow: ellipsis;
   cursor: pointer;
   line-height: 1.2;
+  flex-shrink: 0;
 }
 
 .evt-agency {
