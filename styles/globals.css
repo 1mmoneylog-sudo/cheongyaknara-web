@@ -432,6 +432,19 @@ nav a.active { color: #fff; font-weight: 700; }
     white-space: normal;
     word-break: break-word;
   }
+  .mobile-hero-nav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .mobile-hero-nav a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    white-space: nowrap;
   }
   
 /* ===== 청약홈 스타일 캘린더 ===== */
