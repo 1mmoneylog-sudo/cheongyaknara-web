@@ -597,6 +597,7 @@ nav a.active { color: #fff; font-weight: 700; }
   gap: 4px;
   overflow-y: auto;
   max-height: 100px;
+  min-height: 0;
 }
 
 .ch-event-bar {
