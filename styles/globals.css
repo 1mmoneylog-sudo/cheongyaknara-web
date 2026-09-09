@@ -166,6 +166,9 @@ nav a.active { color: #fff; font-weight: 700; }
   display: inline-block;
   animation: ticker 25s linear infinite;
 }
+.ticker-inner:hover .ticker-track {
+  animation-play-state: paused;
+}
 .ticker-item {
   display: inline-flex;
   align-items: center;
