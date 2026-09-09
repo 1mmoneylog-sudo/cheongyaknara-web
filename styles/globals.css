@@ -550,6 +550,7 @@ nav a.active { color: #fff; font-weight: 700; }
 .ch-calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 130px;
   background: var(--line);
   gap: 1px;
   border: 1px solid var(--line);
