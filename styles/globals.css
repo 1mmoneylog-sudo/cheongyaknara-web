@@ -418,6 +418,9 @@ nav a.active { color: #fff; font-weight: 700; }
     white-space: normal;
     word-break: break-word;
   }
+    .meta-divider {
+    display: none;
+  }
   }
   
 /* ===== 청약홈 스타일 캘린더 ===== */
