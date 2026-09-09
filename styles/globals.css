@@ -352,6 +352,27 @@ nav a.active { color: #fff; font-weight: 700; }
   .dday-block { width: auto; flex-direction: row; align-items: center; margin-left: auto; }
   .gauge { width: 60px; }
   nav { display: none; }
+
+  .header-inner { gap: 10px; }
+  .logo { font-size: 15px; }
+  .header-right {
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .header-right a,
+  .header-right button {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 6px 10px;
+    font-size: 12.5px;
+  }
+
+  .layout { flex-direction: column; }
+  .layout .detail-sidebar {
+    display: flex;
+    width: 100%;
+  }
 }
 /* ===== 청약홈 스타일 캘린더 ===== */
 .calendar-page-container {
