@@ -1032,6 +1032,43 @@ nav a.active { color: #fff; font-weight: 700; }
 }
 .report-modal-actions{display:flex; gap:8px; margin-top:16px;}
 .report-modal-actions .secondary-btn, .report-modal-actions .primary-btn{margin-bottom:0;}
+/* ===== 가점계산기·자격진단 페이지 (누락되어 있던 스타일) ===== */
+
+/* 도구 페이지 공통 히어로 */
+.tool-hero{background:linear-gradient(135deg,var(--brand) 0%, #123655 100%); color:#fff; padding:30px 24px;}
+.tool-hero-inner{max-width:720px; margin:0 auto;}
+.tool-hero h1{font-size:26px; font-weight:800; margin:0 0 8px;}
+.tool-hero p{margin:0; color:#B9CADA; font-size:14.5px;}
+
+/* select 박스 (가점계산기 드롭다운) */
+.pill-select{
+  border:1px solid var(--line); background:#fff; border-radius:9px; padding:9px 13px;
+  font-size:14.5px; color:var(--ink-soft); font-weight:500; cursor:pointer;
+}
+.pill-select.full{width:100%; padding:12px 14px; font-size:15px; box-sizing:border-box;}
+
+/* 가점 결과 박스 */
+.result-card{
+  background:var(--brand); color:#fff; border-radius:14px; padding:24px; text-align:center; margin-top:20px;
+}
+.result-label{font-size:13.5px; color:#B9CADA; margin-bottom:6px;}
+.result-total{font-size:44px; font-weight:800;}
+.result-total span{font-size:18px; color:#B9CADA; margin-left:4px; font-weight:600;}
+.result-breakdown{display:flex; justify-content:center; gap:16px; margin-top:12px; font-size:13px; color:#B9CADA; flex-wrap:wrap;}
+
+/* 자격진단 체크리스트 */
+.checklist{display:flex; flex-direction:column; gap:12px;}
+.checklist-item{
+  display:flex; align-items:center; gap:10px; font-size:14.5px; color:var(--ink);
+  padding:10px 12px; border:1px solid var(--line); border-radius:9px; cursor:pointer;
+}
+.checklist-item input{width:17px; height:17px; cursor:pointer; flex-shrink:0;}
+
+/* 자격진단 결과 태그 */
+.result-tag{padding:10px 0; border-bottom:1px solid var(--line);}
+.result-tag:last-child{border-bottom:none;}
+.result-tag-title{font-size:14.5px; font-weight:700; color:var(--brand-2);}
+.result-tag-desc{font-size:13px; color:var(--ink-soft); margin-top:3px;}
 .report-modal .auth-input {
   margin-bottom: 0;
 }
