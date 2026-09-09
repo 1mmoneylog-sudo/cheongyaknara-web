@@ -97,6 +97,26 @@ function MiniCalendar({ startDate, endDate, winnerDate }) {
 export default function NoticeDetail({ notice }) {
   const [bookmarked, setBookmarked] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [reportOpen, setReportOpen] = useState(false);
+const [reportText, setReportText] = useState("");
+const [reportCopied, setReportCopied] = useState(false);
+const KAKAO_LINK = "https://open.kakao.com/o/sJ2e8KMi";
+
+async function handleReportSend() {
+  const message = `[공고 신고] ${notice.title}\n${typeof window !== "undefined" ? window.location.href : ""}\n\n${reportText || "(내용 없음)"}`;
+  if (typeof navigator !== "undefined" && navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(message);
+      setReportCopied(true);
+    } catch (e) {}
+  }
+  window.open(KAKAO_LINK, "_blank", "noopener,noreferrer");
+  setTimeout(() => {
+    setReportOpen(false);
+    setReportCopied(false);
+    setReportText("");
+  }, 1200);
+}
   const isNew = isRecentlyAnnounced(notice.announce_date);
 
   const dday = getDday(notice.apply_end_date);
@@ -293,7 +313,31 @@ export default function NoticeDetail({ notice }) {
               {copied ? "복사됨!" : "🔗 공유"}
             </button>
           </div>
+<button className="secondary-btn" style={{ marginBottom: 14 }} onClick={() => setReportOpen(true)}>
+  이 공고 이상해요
+</button>
 
+{reportOpen && (
+  <div className="report-modal-overlay" onClick={() => setReportOpen(false)}>
+    <div className="report-modal" onClick={(e) => e.stopPropagation()}>
+      <h4>이 공고 이상해요</h4>
+      <p>잘못된 부분을 알려주시면 바로 확인합니다. 안 적고 보내셔도 됩니다.</p>
+      <textarea
+        value={reportText}
+        onChange={(e) => setReportText(e.target.value)}
+        placeholder="예) 마감일이 원문과 달라요 / 첨부파일이 다른 공고 것이에요 (선택)"
+      />
+      <div className="report-modal-actions">
+        <button className="secondary-btn" onClick={() => setReportOpen(false)}>
+          닫기
+        </button>
+        <button className="primary-btn" onClick={handleReportSend}>
+          {reportCopied ? "복사됨! 카톡에서 붙여넣기" : "보내기"}
+        </button>
+      </div>
+    </div>
+  </div>
+)}
           {notice.detail_url && (
             <a href={notice.detail_url} target="_blank" rel="noreferrer" className="primary-btn">
               원문 공고 보기 →
