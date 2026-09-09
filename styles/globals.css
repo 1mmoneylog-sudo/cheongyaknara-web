@@ -449,7 +449,8 @@ nav a.active { color: #fff; font-weight: 700; }
     border-radius: 999px;
     white-space: nowrap;
   }
-  
+  }
+
 /* ===== 청약홈 스타일 캘린더 ===== */
 .calendar-page-container {
   max-width: 1200px;
