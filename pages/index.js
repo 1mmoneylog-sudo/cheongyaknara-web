@@ -299,18 +299,18 @@ function closeContactModal() {
       <div className="ticker-banner">
         <div className="ticker-inner">
           <div className="ticker-track">
-            {newNotices.length > 0 ? (
-              newNotices.map((n) => (
-                <span key={n.id} className="ticker-item">
-                  <span className="badge-new">NEW</span> {n.title} (~{n.apply_end_date})
-                </span>
-              ))
-            ) : (
-              <span className="ticker-item">
-                <span className="badge-new">NEW</span> 실시간 최신 청약 공고가 자동으로 업데이트됩니다.
-              </span>
-            )}
-          </div>
+  {newNotices.length > 0 ? (
+    newNotices.map((n) => (
+      <Link key={n.id} href={`/notice/${n.id}`} className="ticker-item">
+        <span className="badge-new">NEW</span> {n.title} (~{n.apply_end_date})
+      </Link>
+    ))
+  ) : (
+    <span className="ticker-item">
+      <span className="badge-new">NEW</span> 실시간 최신 청약 공고가 자동으로 업데이트됩니다.
+    </span>
+  )}
+</div>
         </div>
       </div>
 
