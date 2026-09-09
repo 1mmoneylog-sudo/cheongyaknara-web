@@ -40,7 +40,14 @@ export default function Home() {
   const [sortMode, setSortMode] = useState("dday");
   const [page, setPage] = useState(1);
   const [bookmarks, setBookmarks] = useState(new Set());
+  const [bookmarks, setBookmarks] = useState(new Set());
+  const [contactOpen, setContactOpen] = useState(false);
+  const [contactName, setContactName] = useState("");
+  const [contactPhone, setContactPhone] = useState("");
+  const [contactContent, setContactContent] = useState("");
+  const [contactDone, setContactDone] = useState(false);
 
+  useEffect(() => {
   useEffect(() => {
     if (!router.isReady) return;
     if (typeof router.query.agency === "string") setAgencyFilter(router.query.agency);
@@ -126,8 +133,82 @@ export default function Home() {
     });
   }
 
+async function handleContactSubmit() {
+  if (!contactName.trim() || !contactPhone.trim() || !contactContent.trim()) {
+    alert("이름, 연락처, 문의내용을 모두 입력해주세요.");
+    return;
+  }
+  const message = `[문의하기]\n이름: ${contactName}\n연락처: ${contactPhone}\n문의내용: ${contactContent}`;
+  if (typeof navigator !== "undefined" && navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(message);
+    } catch (e) {}
+  }
+  window.open("https://open.kakao.com/o/sJ2e8KMi", "_blank", "noopener,noreferrer");
+  setContactDone(true);
+}
+
+function closeContactModal() {
+  setContactOpen(false);
+  setContactDone(false);
+  setContactName("");
+  setContactPhone("");
+  setContactContent("");
+}
   return (
     <div className="bg-light-gray min-h-screen">
+          {contactOpen && (
+        <div className="report-modal-overlay" onClick={closeContactModal}>
+          <div className="report-modal" onClick={(e) => e.stopPropagation()}>
+            {contactDone ? (
+              <div className="contact-done">
+                <div className="contact-done-icon">✓</div>
+                <h2>문의가 접수되었습니다</h2>
+                <p>카카오톡 창에 내용이 자동으로 복사되었어요. 채팅창에 붙여넣기(Ctrl+V) 해주시면 바로 확인할게요.</p>
+                <button className="auth-submit-btn contact-done-btn" onClick={closeContactModal}>
+                  닫기
+                </button>
+              </div>
+            ) : (
+              <>
+                <h4>문의하기</h4>
+                <p>이름, 연락처, 문의내용을 남겨주시면 확인 후 답변드릴게요.</p>
+                <div style={{ marginBottom: 12 }}>
+                  <input
+                    className="auth-input"
+                    type="text"
+                    placeholder="이름"
+                    value={contactName}
+                    onChange={(e) => setContactName(e.target.value)}
+                    style={{ marginBottom: 10 }}
+                  />
+                  <input
+                    className="auth-input"
+                    type="text"
+                    placeholder="연락처 (예: 010-1234-5678)"
+                    value={contactPhone}
+                    onChange={(e) => setContactPhone(e.target.value)}
+                    style={{ marginBottom: 10 }}
+                  />
+                  <textarea
+                    value={contactContent}
+                    onChange={(e) => setContactContent(e.target.value)}
+                    placeholder="문의하실 내용을 적어주세요"
+                  />
+                </div>
+                <div className="report-modal-actions">
+                  <button className="secondary-btn" onClick={closeContactModal}>
+                    닫기
+                  </button>
+                  <button className="primary-btn" onClick={handleContactSubmit}>
+                    보내기
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
       {/* 헤더 네비게이션 */}
       <header className="site-header">
         <div className="header-inner">
@@ -142,6 +223,7 @@ export default function Home() {
             <Link href="/calendar">청약캘린더</Link>
           </nav>
           <div className="header-right">
+            <button className="btn-ghost-inv" onClick={() => setContactOpen(true)}>문의하기</button>
             <a href="https://open.kakao.com/o/sJ2e8KMi" target="_blank" rel="noreferrer" className="btn-ghost-inv">상담신청</a>
             <Link href="/login" className="btn-ghost-inv">로그인</Link>
             <Link href="/signup" className="btn-primary-inv">회원가입</Link>
