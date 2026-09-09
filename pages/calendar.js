@@ -13,18 +13,20 @@ const TYPE_COLORS = {
 export default function CalendarPage() {
   const notices = noticesData.notices || [];
 
-  const [currentYear, setCurrentYear] = useState(2026);
-  const [currentMonth, setCurrentMonth] = useState(9);
+  const today = new Date();
+  const [currentYear, setCurrentYear] = useState(today.getFullYear());
+  const [currentMonth, setCurrentMonth] = useState(today.getMonth() + 1);
   const [selectedType, setSelectedType] = useState("전체");
-  const [selectedDay, setSelectedDay] = useState(1);
+  const [selectedDay, setSelectedDay] = useState(today.getDate());
 
-  const handlePrevMonth = () => {
+   const handlePrevMonth = () => {
     if (currentMonth === 1) {
       setCurrentYear((prev) => prev - 1);
       setCurrentMonth(12);
     } else {
       setCurrentMonth((prev) => prev - 1);
     }
+    setSelectedDay(1);
   };
 
   const handleNextMonth = () => {
@@ -34,6 +36,7 @@ export default function CalendarPage() {
     } else {
       setCurrentMonth((prev) => prev + 1);
     }
+    setSelectedDay(1);
   };
 
   const calendarDays = useMemo(() => {
@@ -85,11 +88,6 @@ export default function CalendarPage() {
     return list;
   }, [currentYear, currentMonth, totalDaysInMonth, eventsByDate]);
 
-  // 월이 바뀌면 선택된 날짜를 1일로 초기화
-  useEffect(() => {
-    setSelectedDay(1);
-  }, [currentYear, currentMonth]);
-
   const selectedDayEvents = eventsByDate[selectedDay] || [];
   const filteredDayEvents =
     selectedType === "전체"
@@ -127,7 +125,10 @@ export default function CalendarPage() {
               <button
                 key={m}
                 className={`month-tab-btn ${m === currentMonth ? "active" : ""}`}
-                onClick={() => setCurrentMonth(m)}
+                onClick={() => {
+                  setCurrentMonth(m);
+                  setSelectedDay(1);
+                }}
               >
                 {m}월
               </button>
