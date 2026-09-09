@@ -242,10 +242,6 @@ function closeContactModal() {
               청약 모집공고, <br />
               한 곳에서 한눈에
             </h1>
-            <h1 className="hero-title">
-              청약 모집공고, <br />
-              한 곳에서 한눈에
-            </h1>
             <p className="hero-desc">
               LH · SH · GH · 청약홈에 흩어진 공공분양 및 임대주택 공고를 실시간 수집하여 정리합니다.
             </p>
