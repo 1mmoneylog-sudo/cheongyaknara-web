@@ -572,10 +572,11 @@ nav a.active { color: #fff; font-weight: 700; }
 
 .ch-calendar-cell {
   background: #fff;
-  min-height: 120px;
+  height: 130px;
   padding: 8px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .ch-calendar-cell.empty {
@@ -597,7 +598,7 @@ nav a.active { color: #fff; font-weight: 700; }
   flex-direction: column;
   gap: 4px;
   overflow-y: auto;
-  max-height: 100px;
+  flex: 1;
   min-height: 0;
 }
 
