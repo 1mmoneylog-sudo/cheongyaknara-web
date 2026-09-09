@@ -244,33 +244,6 @@ async function handleReportSend() {
               ))}
             </div>
           )}
-
-          {notice.etc_note && (
-            <div className="info-card">
-              <h3>유의사항</h3>
-              <p style={{ fontSize: 13.5, color: "var(--ink-soft)", lineHeight: 1.7, whiteSpace: "pre-line" }}>
-                {notice.etc_note}
-              </p>
-            </div>
-          )}
-
-          <div className="bottom-links">
-            <div className="side-card">
-              <h3>기관별 공고 더보기</h3>
-              <div className="type-grid">
-                <Link href="/?agency=LH">LH 공고</Link>
-                <Link href="/?agency=GH">GH 공고</Link>
-              </div>
-            </div>
-            {notice.region_sido && (
-              <div className="side-card">
-                <h3>같은 지역 공고 더보기</h3>
-                <div className="type-grid">
-                  <Link href={`/?region=${encodeURIComponent(notice.region_sido)}`}>{notice.region_sido}</Link>
-                </div>
-              </div>
-            )}
-          </div>
         </div>
 
         {/* ===== 오른쪽: 사이드바 (위원나라 스타일) ===== */}
@@ -370,7 +343,36 @@ async function handleReportSend() {
               )}
             </div>
           )}
-        </aside>
+               </aside>
+      </div>
+
+      <div className="detail-bottom-extra">
+        {notice.etc_note && (
+          <div className="info-card">
+            <h3>유의사항</h3>
+            <p style={{ fontSize: 13.5, color: "var(--ink-soft)", lineHeight: 1.7, whiteSpace: "pre-line" }}>
+              {notice.etc_note}
+            </p>
+          </div>
+        )}
+
+        <div className="bottom-links">
+          <div className="side-card">
+            <h3>기관별 공고 더보기</h3>
+            <div className="type-grid">
+              <Link href="/?agency=LH">LH 공고</Link>
+              <Link href="/?agency=GH">GH 공고</Link>
+            </div>
+          </div>
+          {notice.region_sido && (
+            <div className="side-card">
+              <h3>같은 지역 공고 더보기</h3>
+              <div className="type-grid">
+                <Link href={`/?region=${encodeURIComponent(notice.region_sido)}`}>{notice.region_sido}</Link>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
