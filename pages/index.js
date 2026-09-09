@@ -40,14 +40,12 @@ export default function Home() {
   const [sortMode, setSortMode] = useState("dday");
   const [page, setPage] = useState(1);
   const [bookmarks, setBookmarks] = useState(new Set());
-  const [bookmarks, setBookmarks] = useState(new Set());
   const [contactOpen, setContactOpen] = useState(false);
   const [contactName, setContactName] = useState("");
   const [contactPhone, setContactPhone] = useState("");
   const [contactContent, setContactContent] = useState("");
   const [contactDone, setContactDone] = useState(false);
 
-  useEffect(() => {
   useEffect(() => {
     if (!router.isReady) return;
     if (typeof router.query.agency === "string") setAgencyFilter(router.query.agency);
