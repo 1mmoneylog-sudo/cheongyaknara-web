@@ -351,7 +351,10 @@ nav a.active { color: #fff; font-weight: 700; }
 .type-grid button:hover, .type-grid button.active { border-color: var(--brand-2); color: var(--brand-2); background: var(--brand-tint); }
 
 .empty-state { text-align: center; padding: 60px 20px; color: var(--ink-soft); }
-
+/* PC 화면에서는 안 보이도록 기본값 숨김 처리 */
+.mobile-hero-nav {
+  display: none;
+}
 /* ===== 모바일 반응형 ===== */
 @media (max-width: 860px) {
   .hero-container { flex-direction: column; }
