@@ -142,7 +142,7 @@ export default function Home() {
             <Link href="/calendar">청약캘린더</Link>
           </nav>
           <div className="header-right">
-            <Link href="/contact" className="btn-ghost-inv">문의하기</Link>
+            <a href="https://open.kakao.com/o/sJ2e8KMi" target="_blank" rel="noreferrer" className="btn-ghost-inv">상담신청</a>
             <Link href="/login" className="btn-ghost-inv">로그인</Link>
             <Link href="/signup" className="btn-primary-inv">회원가입</Link>
           </div>
