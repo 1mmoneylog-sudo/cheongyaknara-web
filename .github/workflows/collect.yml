@@ -29,8 +29,8 @@ jobs:
       - name: 변경사항 저장소에 반영
         run: |
           git config user.name "cheongyaknara-bot"
-          git config user.email "bot@users.noreply.github.com"
+          git config user.email "bot@example.com"
           git add data/notices.json
-          git diff --staged --quiet || git commit -m "chore: 청약 공고 자동 업데이트 $(date -u +%Y-%m-%d)"
-          git pull --rebase origin main
-          git push
+          git commit -m "chore: 청약 공고 자동 업데이트" || echo "No changes to commit"
+          git fetch origin main
+          git push origin HEAD:main --force
