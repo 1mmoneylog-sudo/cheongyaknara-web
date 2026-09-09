@@ -396,6 +396,18 @@ nav a.active { color: #fff; font-weight: 700; }
   .card-title {
     word-break: keep-all;
    }
+    .filter-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .sort-pill-tabs {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .region-select {
+    margin-left: 0;
+    width: 100%;
+  }
   }
   
 /* ===== 청약홈 스타일 캘린더 ===== */
