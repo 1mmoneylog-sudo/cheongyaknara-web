@@ -1076,3 +1076,72 @@ nav a.active { color: #fff; font-weight: 700; }
 .report-modal .auth-input {
   margin-bottom: 0;
 }
+/* ===== 캘린더: PC/모바일 뷰 전환 ===== */
+.mobile-calendar-view { display: none; }
+
+@media (max-width: 860px) {
+  .desktop-calendar-view { display: none; }
+  .mobile-calendar-view { display: block; }
+
+  .mobile-day-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+  }
+  .mobile-day-item {
+    flex: 0 0 auto;
+    width: 64px;
+    text-align: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 4px;
+    background: #fff;
+    cursor: pointer;
+  }
+  .mobile-day-item.active {
+    background: var(--brand);
+    border-color: var(--brand);
+  }
+  .mobile-day-item .dow { font-size: 11px; color: var(--ink-faint); }
+  .mobile-day-item.active .dow { color: #B9CADA; }
+  .mobile-day-item .num { font-size: 17px; font-weight: 800; margin: 3px 0; color: var(--ink); }
+  .mobile-day-item.active .num { color: #fff; }
+  .mobile-day-item .cnt { font-size: 10.5px; color: var(--ink-soft); }
+  .mobile-day-item.active .cnt { color: #fff; }
+
+  .mobile-event-list { display: flex; flex-direction: column; gap: 8px; }
+  .mobile-event-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+  .mobile-event-badge {
+    flex-shrink: 0;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .mobile-event-title {
+    font-size: 13.5px;
+    color: var(--ink);
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mobile-empty-day {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--ink-faint);
+    font-size: 13.5px;
+  }
+}
