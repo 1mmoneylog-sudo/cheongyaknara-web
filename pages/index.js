@@ -401,21 +401,33 @@ function closeContactModal() {
             />
           ))}
 
-          {totalPages > 1 && (
-            <div className="pagination">
-              <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>
-                ‹
-              </button>
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                <button key={p} className={p === currentPage ? "active" : ""} onClick={() => setPage(p)}>
-                  {p}
-                </button>
-              ))}
-              <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)}>
-                ›
-              </button>
-            </div>
-          )}
+          {totalPages > 1 && (() => {
+  const pageWindowSize = 5;
+  let startPage = Math.max(1, currentPage - Math.floor(pageWindowSize / 2));
+  let endPage = startPage + pageWindowSize - 1;
+  if (endPage > totalPages) {
+    endPage = totalPages;
+    startPage = Math.max(1, endPage - pageWindowSize + 1);
+  }
+  const visiblePages = [];
+  for (let p = startPage; p <= endPage; p++) visiblePages.push(p);
+
+  return (
+    <div className="pagination">
+      <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>
+        ‹
+      </button>
+      {visiblePages.map((p) => (
+        <button key={p} className={p === currentPage ? "active" : ""} onClick={() => setPage(p)}>
+          {p}
+        </button>
+      ))}
+      <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)}>
+        ›
+      </button>
+    </div>
+  );
+})()}
         </div>
 
         {/* 사이드바 */}
