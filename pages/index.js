@@ -207,7 +207,7 @@ function closeContactModal() {
           </div>
         </div>
       )}
-      {/* 헤더 네비게이션 */}
+           {/* 헤더 네비게이션 */}
       <header className="site-header">
         <div className="header-inner">
           <Link href="/" className="logo">
@@ -227,8 +227,13 @@ function closeContactModal() {
             <Link href="/signup" className="btn-primary-inv">회원가입</Link>
           </div>
         </div>
+        <div className="mobile-subnav">
+          <a href="/" className="active">모집공고</a>
+          <Link href="/gajeom">가점계산기</Link>
+          <Link href="/jagyeok">자격진단</Link>
+          <Link href="/calendar">청약캘린더</Link>
+        </div>
       </header>
-
       {/* 위원나라 스타일 히어로 세션 */}
       <section className="hero-section">
         <div className="hero-container">
