@@ -373,7 +373,26 @@ nav a.active { color: #fff; font-weight: 700; }
     display: flex;
     width: 100%;
   }
-}
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .card-body {
+    width: 100%;
+  }
+  .dday-block {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .card-title {
+    word-break: keep-all;
+   }
+  }
+  
 /* ===== 청약홈 스타일 캘린더 ===== */
 .calendar-page-container {
   max-width: 1200px;
