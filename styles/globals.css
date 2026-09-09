@@ -934,3 +934,6 @@ nav a.active { color: #fff; font-weight: 700; }
 }
 .report-modal-actions{display:flex; gap:8px; margin-top:16px;}
 .report-modal-actions .secondary-btn, .report-modal-actions .primary-btn{margin-bottom:0;}
+.report-modal .auth-input {
+  margin-bottom: 0;
+}
