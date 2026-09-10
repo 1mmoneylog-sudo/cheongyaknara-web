@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import noticesData from "../data/notices.json";
 
@@ -87,6 +87,17 @@ export default function CalendarPage() {
     }
     return list;
   }, [currentYear, currentMonth, totalDaysInMonth, eventsByDate]);
+
+    const dayScrollRef = useRef(null);
+
+  // 선택된 날짜가 바뀌면(특히 처음 들어왔을 때 오늘 날짜로) 그 위치가 화면 가운데 보이도록 자동 스크롤
+  useEffect(() => {
+    if (!dayScrollRef.current) return;
+    const activeEl = dayScrollRef.current.querySelector(`[data-day="${selectedDay}"]`);
+    if (activeEl) {
+      activeEl.scrollIntoView({ behavior: "auto", inline: "center", block: "nearest" });
+    }
+  }, [selectedDay, currentMonth, currentYear]);
 
   const selectedDayEvents = eventsByDate[selectedDay] || [];
   const filteredDayEvents =
@@ -194,10 +205,11 @@ export default function CalendarPage() {
 
         {/* ===== 모바일: 가로 날짜 스크롤 + 하단 리스트 뷰 ===== */}
         <div className="mobile-calendar-view">
-          <div className="mobile-day-scroll">
+                    <div className="mobile-day-scroll" ref={dayScrollRef}>
             {dayList.map(({ day, dow, count }) => (
               <button
                 key={day}
+                data-day={day}
                 className={`mobile-day-item ${day === selectedDay ? "active" : ""}`}
                 onClick={() => setSelectedDay(day)}
               >
