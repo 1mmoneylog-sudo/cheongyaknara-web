@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import noticesData from "../../data/notices.json";
 import { getDday, getUrgencyLevel, getProgressPercent } from "../../lib/dday";
 import { useUser } from "../../lib/useUser";
