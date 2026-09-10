@@ -1083,6 +1083,27 @@ nav a.active { color: #fff; font-weight: 700; }
   .desktop-calendar-view { display: none; }
   .mobile-calendar-view { display: block; }
 
+  .calendar-legend-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 4px;
+    flex-wrap: nowrap;
+  }
+  .legend-item {
+    flex-shrink: 0;
+    gap: 4px;
+  }
+  .legend-label {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .legend-badge {
+    width: 9px;
+    height: 9px;
+  }
+
   .mobile-day-scroll {
     display: flex;
     gap: 8px;
