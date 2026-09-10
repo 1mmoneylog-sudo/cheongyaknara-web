@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import noticesData from "../data/notices.json";
 import { getDday, getUrgencyLevel, getProgressPercent } from "../lib/dday";
+import { useUser } from "../lib/useUser";
+import { supabase } from "../lib/supabaseClient";
 import NoticeCard from "../components/NoticeCard";
 
 function parseAnnounceDate(str) {
@@ -45,7 +47,12 @@ export default function Home() {
   const [contactPhone, setContactPhone] = useState("");
   const [contactContent, setContactContent] = useState("");
   const [contactDone, setContactDone] = useState(false);
+  const { user } = useUser();
 
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    router.push("/");
+  }
   useEffect(() => {
     if (!router.isReady) return;
     if (typeof router.query.agency === "string") setAgencyFilter(router.query.agency);
@@ -223,8 +230,17 @@ function closeContactModal() {
           <div className="header-right">
             <button className="btn-ghost-inv" onClick={() => setContactOpen(true)}>문의하기</button>
             <a href="https://open.kakao.com/o/sJ2e8KMi" target="_blank" rel="noreferrer" className="btn-ghost-inv">상담신청</a>
-            <Link href="/login" className="btn-ghost-inv">로그인</Link>
-            <Link href="/signup" className="btn-primary-inv">회원가입</Link>
+            {user ? (
+              <>
+                <Link href="/mypage" className="btn-ghost-inv">마이페이지</Link>
+                <button className="btn-primary-inv" onClick={handleLogout}>로그아웃</button>
+              </>
+            ) : (
+              <>
+                <Link href="/login" className="btn-ghost-inv">로그인</Link>
+                <Link href="/signup" className="btn-primary-inv">회원가입</Link>
+              </>
+            )}
           </div>
         </div>
       </header>
