@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T05:50:13.626Z",
+  "generated_at": "2026-09-10T06:00:01.302Z",
   "count": 235,
   "notices": [
     {
@@ -33,7 +33,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.300Z",
+      "fetched_at": "2026-09-10T05:58:39.545Z",
       "data_source_type": "file"
     },
     {
@@ -42,7 +42,7 @@
       "source_notice_id": "2026000382",
       "title": "두산위브더제니스 부천",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 부천시 소사구 소사본동 88-39번지 일대",
       "household_count": 1158,
@@ -70,7 +70,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -107,7 +107,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -116,7 +116,7 @@
       "source_notice_id": "2026000371",
       "title": "용인반도체클러스터 동일하이빌 파크밸리(D1-1블록)",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 용인시 처인구 원삼면 용인 반도체 클러스터 일반산업단지 D1-1BL",
       "household_count": 589,
@@ -144,7 +144,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -181,7 +181,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -218,7 +218,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -227,7 +227,7 @@
       "source_notice_id": "2026940174",
       "title": "서수원 에피트 센트럴마크(M2BL)(2차)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 수원시 권선구 당수동 3002번지 일원 (수원당수 공공주택지구 M2BL)",
       "household_count": 12,
@@ -251,7 +251,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -284,7 +284,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -293,7 +293,7 @@
       "source_notice_id": "2026950072",
       "title": "덕은 DMC에일린의뜰 센트럴 1차",
       "notice_type": "오피스텔·도시형·민간임대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 고양시 덕양구 덕은동 691",
       "household_count": 5,
@@ -317,7 +317,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -352,7 +352,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -361,7 +361,7 @@
       "source_notice_id": "2026850045",
       "title": "의왕청계역 시티프라디움 디하모니",
       "notice_type": "공공지원 민간임대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 의왕시 포일동(의왕청계2 공공주택지구 M-1블록)",
       "household_count": 15,
@@ -385,7 +385,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.769Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -394,7 +394,7 @@
       "source_notice_id": "2026940176",
       "title": "파주 운정신도시 A2블록 호반써밋 이스트파크(5차)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 파주시 별하람로 63, 호반써밋 이스트파크 (파주 운정3지구 A2블록)",
       "household_count": 21,
@@ -418,7 +418,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -451,7 +451,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -484,7 +484,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -517,7 +517,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -550,7 +550,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -585,7 +585,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -618,7 +618,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -655,7 +655,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -692,7 +692,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -701,7 +701,7 @@
       "source_notice_id": "2026000354",
       "title": "상동역 롯데캐슬 시그니처",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 부천시 원미구 상동 540-1번지",
       "household_count": 1859,
@@ -729,7 +729,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -766,7 +766,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -775,7 +775,7 @@
       "source_notice_id": "2026000365",
       "title": "오남역 서희스타힐스 여의재 1단지",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 남양주시 오남읍 양지리 101번지 일원",
       "household_count": 180,
@@ -803,7 +803,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -812,7 +812,7 @@
       "source_notice_id": "2026820006",
       "title": "시흥거모 A-5블록 신혼희망타운(공공분양)(본청약)",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 시흥시 거모동, 군자동 일원 시흥거모 공공주택지구 내 A-5블록",
       "household_count": 290,
@@ -839,7 +839,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -848,7 +848,7 @@
       "source_notice_id": "2026930028",
       "title": "구리역 롯데캐슬 시그니처",
       "notice_type": "무순위·잔여세대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 구리시 인창동 289-29번지 일원",
       "household_count": 1,
@@ -874,7 +874,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -907,7 +907,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -944,7 +944,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -953,7 +953,7 @@
       "source_notice_id": "2026000377",
       "title": "의왕역 한신더휴",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 의왕시 삼동 244-1번지 일원",
       "household_count": 108,
@@ -981,7 +981,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -990,7 +990,7 @@
       "source_notice_id": "2026910229",
       "title": "호반써밋 풍무Ⅲ",
       "notice_type": "무순위·잔여세대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "김포 풍무역세권 B4블록 (경기도 김포시 사우동 458번지 일원)",
       "household_count": 4,
@@ -1016,7 +1016,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1025,7 +1025,7 @@
       "source_notice_id": "2026910222",
       "title": "오산헤리티지자이 1단지",
       "notice_type": "무순위·잔여세대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 오산시 양산동 223번지 일원",
       "household_count": 256,
@@ -1051,7 +1051,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1084,7 +1084,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -1117,7 +1117,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -1152,7 +1152,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1187,7 +1187,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1220,7 +1220,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -1289,7 +1289,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:03.725Z",
+      "fetched_at": "2026-09-10T05:58:51.568Z",
       "data_source_type": "api"
     },
     {
@@ -1326,7 +1326,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -1363,7 +1363,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -1372,7 +1372,7 @@
       "source_notice_id": "2026950079",
       "title": "동탄2신도시 동탄역 디에트르 퍼스티지",
       "notice_type": "오피스텔·도시형·민간임대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 화성시 여울동 979번지",
       "household_count": 5,
@@ -1396,7 +1396,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -1431,7 +1431,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1467,7 +1467,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1476,7 +1476,7 @@
       "source_notice_id": "2026910225",
       "title": "의왕역 SK VIEW",
       "notice_type": "무순위·잔여세대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 의왕시 삼동 192-244번지 일원",
       "household_count": 17,
@@ -1502,7 +1502,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1535,7 +1535,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -1570,7 +1570,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1579,7 +1579,7 @@
       "source_notice_id": "2026940182",
       "title": "서수원 에피트 센트럴마크(M1BL)(2차)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 수원시 권선구 당수동 3001번지 일원 (수원당수 공공주택지구 M1BL)",
       "household_count": 11,
@@ -1603,7 +1603,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -1612,7 +1612,7 @@
       "source_notice_id": "308971",
       "title": "[SH] 2026년 일반주택형 미리내집(공공한옥) 잔여세대 입주자 모집공고(2026. 8. 24.)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -1636,7 +1636,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -1671,7 +1671,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1706,7 +1706,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1742,7 +1742,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -1751,7 +1751,7 @@
       "source_notice_id": "2026820008",
       "title": "성남복정2 A1블록 신혼희망타운(공공분양)(본청약)",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 성남시 수정구 신흥동 81-8",
       "household_count": 594,
@@ -1778,7 +1778,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -1787,7 +1787,7 @@
       "source_notice_id": "2026950078",
       "title": "해링턴 스퀘어 과천",
       "notice_type": "오피스텔·도시형·민간임대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 과천시 과천지식정보타운 공공주택지구 일반상업 5BL",
       "household_count": 20,
@@ -1811,7 +1811,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -1844,7 +1844,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -1853,7 +1853,7 @@
       "source_notice_id": "2026910228",
       "title": "남양주 진접 서한이다음(S1BL)",
       "notice_type": "무순위·잔여세대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 남양주시 진접2 공공주택지구 S1BL",
       "household_count": 141,
@@ -1879,7 +1879,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -1912,7 +1912,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.769Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -1921,7 +1921,7 @@
       "source_notice_id": "2026940192",
       "title": "엘리프 한신더휴 수원 D3블록 (2차)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 수원시 권선구 당수동 당수1지구 공공주택지구 내 D3블록",
       "household_count": 19,
@@ -1945,7 +1945,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -1954,7 +1954,7 @@
       "source_notice_id": "2026940185",
       "title": "고촌센트럴자이(13차)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 김포시 고촌읍 신곡리 김포신곡6지구 도시개발사업구역 A3BL",
       "household_count": 10,
@@ -1978,7 +1978,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -1987,7 +1987,7 @@
       "source_notice_id": "2026940184",
       "title": "더샵 분당센트로(5차)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 성남시 분당구 미금로 66",
       "household_count": 4,
@@ -2011,7 +2011,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -2098,7 +2098,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:49:40.620Z",
+      "fetched_at": "2026-09-10T05:59:28.014Z",
       "data_source_type": "api"
     },
     {
@@ -2169,7 +2169,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:49:41.299Z",
+      "fetched_at": "2026-09-10T05:59:28.661Z",
       "data_source_type": "api"
     },
     {
@@ -2229,7 +2229,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:49:41.887Z",
+      "fetched_at": "2026-09-10T05:59:29.204Z",
       "data_source_type": "api"
     },
     {
@@ -2283,7 +2283,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:42.677Z",
+      "fetched_at": "2026-09-10T05:59:29.968Z",
       "data_source_type": "api"
     },
     {
@@ -2292,7 +2292,7 @@
       "source_notice_id": "2015122300020693",
       "title": "[정정공고][인천지역본부] 26년 6차 청년 매입임대주택 예비입주자 모집공고(인천,부천)",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "인천광역시 외",
+      "region_sido": "인천",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -2337,7 +2337,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:43.321Z",
+      "fetched_at": "2026-09-10T05:59:30.599Z",
       "data_source_type": "api"
     },
     {
@@ -2346,7 +2346,7 @@
       "source_notice_id": "2015122300020685",
       "title": "[정정공고]청주산단1,청주산단2 행복주택 예비입주자 모집",
       "notice_type": "임대주택 · 행복주택",
-      "region_sido": "충청북도",
+      "region_sido": "충북",
       "region_sigungu": null,
       "address_detail": "충청북도 청주시 흥덕구 대신로 142(송정동) 청주산단1단지",
       "household_count": 552,
@@ -2434,7 +2434,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:57.324Z",
+      "fetched_at": "2026-09-10T05:59:44.181Z",
       "data_source_type": "api"
     },
     {
@@ -2443,7 +2443,7 @@
       "source_notice_id": "2015122300020676",
       "title": "[정정공고]진천성석,진천이월,청주우암 행복주택(입주자격완화) 예비입주자 추가모집",
       "notice_type": "임대주택 · 행복주택",
-      "region_sido": "충청북도",
+      "region_sido": "충북",
       "region_sigungu": null,
       "address_detail": "충청북도 진천군 진천읍 문화로 394 진천성석 행복주택",
       "household_count": 450,
@@ -2643,7 +2643,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:50:00.810Z",
+      "fetched_at": "2026-09-10T05:59:48.588Z",
       "data_source_type": "api"
     },
     {
@@ -2652,7 +2652,7 @@
       "source_notice_id": "2015122300020672",
       "title": "[정정공고]진천성석,진천이월,청주우암 행복주택(입주자격완화) 예비입주자 추가모집",
       "notice_type": "임대주택 · 행복주택",
-      "region_sido": "충청북도",
+      "region_sido": "충북",
       "region_sigungu": null,
       "address_detail": "충청북도 진천군 진천읍 문화로 394 진천성석 행복주택",
       "household_count": 450,
@@ -2852,7 +2852,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:50:02.899Z",
+      "fetched_at": "2026-09-10T05:59:50.762Z",
       "data_source_type": "api"
     },
     {
@@ -2861,7 +2861,7 @@
       "source_notice_id": "2015122300020671",
       "title": "[정정공고]청주산단1,청주산단2 행복주택 예비입주자 모집",
       "notice_type": "임대주택 · 행복주택",
-      "region_sido": "충청북도",
+      "region_sido": "충북",
       "region_sigungu": null,
       "address_detail": "충청북도 청주시 흥덕구 대신로 142(송정동) 청주산단1단지",
       "household_count": 552,
@@ -2949,7 +2949,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:50:04.923Z",
+      "fetched_at": "2026-09-10T05:59:52.721Z",
       "data_source_type": "api"
     },
     {
@@ -2958,7 +2958,7 @@
       "source_notice_id": "2015122300020661",
       "title": "[정정공고][인천지역본부]26년 6차 신혼·신생아Ⅱ(전세형) 예비입주자 모집공고(인천,부천)",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "인천광역시 외",
+      "region_sido": "인천",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -3012,7 +3012,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:50:09.416Z",
+      "fetched_at": "2026-09-10T05:59:57.098Z",
       "data_source_type": "api"
     },
     {
@@ -3021,7 +3021,7 @@
       "source_notice_id": "2026820009",
       "title": "남양주진접2지구 A-4블록 신혼희망타운(공공분양) 잔여세대 추가입주자모집공고",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 남양주시 진접읍 내각리, 연평리 일원 남양주진접2 공공주택지구 A-4블록",
       "household_count": 5,
@@ -3048,7 +3048,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -3083,7 +3083,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -3116,7 +3116,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -3125,7 +3125,7 @@
       "source_notice_id": "308944",
       "title": "[SH] 제8차 장기전세주택2(미리내집) 입주자 모집 공고(2026. 8. 21.)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": 496,
@@ -3149,7 +3149,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -3186,7 +3186,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -3223,7 +3223,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -3232,7 +3232,7 @@
       "source_notice_id": "2026940187",
       "title": "풍무역세권 수자인 그라센트 2차(3차)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 김포시 풍무역세권도시개발사업 B1BL(김포시 사우동 167-1번지)",
       "household_count": 8,
@@ -3256,7 +3256,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -3265,7 +3265,7 @@
       "source_notice_id": "2015122300020666",
       "title": "[정정공고]정읍시(정읍수성1)영구임대주택 입주자격완화 예비입주자 모집공고",
       "notice_type": "임대주택 · 영구임대",
-      "region_sido": "전북특별자치도",
+      "region_sido": "전북",
       "region_sigungu": null,
       "address_detail": "전북특별자치도 정읍시 수성2로 13-12(수성동) 주공1단지아파트",
       "household_count": 925,
@@ -3308,7 +3308,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:50:08.814Z",
+      "fetched_at": "2026-09-10T05:59:56.542Z",
       "data_source_type": "api"
     },
     {
@@ -3341,7 +3341,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -3350,7 +3350,7 @@
       "source_notice_id": "2026940197",
       "title": "수원역 아너스빌 타임원",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 수원시 권선구 평동 135-1번지 일원",
       "household_count": 10,
@@ -3374,7 +3374,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -3383,7 +3383,7 @@
       "source_notice_id": "2026940196",
       "title": "의정부역 센트럴 아이파크 (4차)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 의정부시 의정부동 253-19번지 일원",
       "household_count": 11,
@@ -3407,7 +3407,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -3440,7 +3440,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -3473,7 +3473,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -3482,7 +3482,7 @@
       "source_notice_id": "309337",
       "title": "[SH] 2026년 2차 행복주택 입주자 모집공고 (2026. 8. 28. 공고)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -3506,7 +3506,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -3539,7 +3539,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -3574,7 +3574,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -3583,7 +3583,7 @@
       "source_notice_id": "2026910232",
       "title": "역북 서희스타힐스 프라임시티(조합원 취소분)",
       "notice_type": "무순위·잔여세대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 용인시 처인구 역북동 89-25번지 일원",
       "household_count": 4,
@@ -3609,7 +3609,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -3618,7 +3618,7 @@
       "source_notice_id": "2026910227",
       "title": "한강 푸르지오 리버프론트",
       "notice_type": "무순위·잔여세대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 김포시 고촌읍 향산리 588-45번지 일원",
       "household_count": 832,
@@ -3644,7 +3644,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -3679,7 +3679,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -3714,7 +3714,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -3749,7 +3749,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.764Z",
+      "fetched_at": "2026-09-10T05:58:43.855Z",
       "data_source_type": "api"
     },
     {
@@ -3758,7 +3758,7 @@
       "source_notice_id": "2026940191",
       "title": "고덕신도시 아테라 A-63블록 공공분양주택",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 평택시 고덕동, 고덕면 일원(평택고덕국제화계획지구 내 A-63BL)",
       "household_count": 49,
@@ -3782,7 +3782,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -3791,7 +3791,7 @@
       "source_notice_id": "2015122300020636",
       "title": "익산시 국민임대주택 예비입주자 모집 공고('26.09.03)",
       "notice_type": "임대주택 · 국민임대",
-      "region_sido": "전북특별자치도",
+      "region_sido": "전북",
       "region_sigungu": null,
       "address_detail": "전북특별자치도 익산시 오산면 선화로4길 66(장신휴먼시아1단지)",
       "household_count": 696,
@@ -3894,7 +3894,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:53.589Z",
+      "fetched_at": "2026-09-10T05:59:40.717Z",
       "data_source_type": "api"
     },
     {
@@ -3903,7 +3903,7 @@
       "source_notice_id": "2015122300020681",
       "title": "[정정공고]남원노암 공공임대 50년 예비입주자 모집",
       "notice_type": "임대주택 · 공공임대",
-      "region_sido": "전북특별자치도",
+      "region_sido": "전북",
       "region_sigungu": null,
       "address_detail": "전북특별자치도 남원시 노송로 1255-9(노암동,주공아파트)",
       "household_count": 625,
@@ -3966,7 +3966,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:57.784Z",
+      "fetched_at": "2026-09-10T05:59:45.703Z",
       "data_source_type": "api"
     },
     {
@@ -3975,7 +3975,7 @@
       "source_notice_id": "2015122300020623",
       "title": "남원노암 공공임대 50년 예비입주자 모집",
       "notice_type": "임대주택 · 공공임대",
-      "region_sido": "전북특별자치도",
+      "region_sido": "전북",
       "region_sigungu": null,
       "address_detail": "전북특별자치도 남원시 노송로 1255-9(노암동,주공아파트)",
       "household_count": 625,
@@ -4038,7 +4038,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:58.262Z",
+      "fetched_at": "2026-09-10T05:59:46.135Z",
       "data_source_type": "api"
     },
     {
@@ -4047,7 +4047,7 @@
       "source_notice_id": "2026950081",
       "title": "테라스99 동탄",
       "notice_type": "오피스텔·도시형·민간임대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 화성시 동탄구 여울동 968-1",
       "household_count": 15,
@@ -4071,7 +4071,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -4080,7 +4080,7 @@
       "source_notice_id": "2026850047",
       "title": "오산세교2지구 A5BL 우미 린 포레아시티",
       "notice_type": "공공지원 민간임대",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 오산시 오산세교2지구 A5BL (오산시 궐동 822번지 일원)",
       "household_count": 195,
@@ -4104,7 +4104,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.769Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -4113,7 +4113,7 @@
       "source_notice_id": "2026940186",
       "title": "야목역 서희스타힐스 그랜드힐(조합원 취소분)",
       "notice_type": "임의공급",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 화성시 효행구 비봉면 구포리 614-18번지 일원",
       "household_count": 23,
@@ -4137,7 +4137,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.770Z",
+      "fetched_at": "2026-09-10T05:58:43.859Z",
       "data_source_type": "api"
     },
     {
@@ -4146,7 +4146,7 @@
       "source_notice_id": "309467",
       "title": "[SH] 제51차 장기전세주택 입주자 모집공고(2026.08.31.공고)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": 1381,
@@ -4170,8 +4170,118 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
+    },
+    {
+      "id": "lh-2015122300020675",
+      "source_agency": "LH",
+      "source_notice_id": "2015122300020675",
+      "title": "[강원지역본부] 26년 3차 신혼신생아1 매입임대주택 예비자 모집공고",
+      "notice_type": "주거복지 · 매입임대",
+      "region_sido": "강원",
+      "region_sigungu": null,
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026.09.14",
+      "apply_end_date": "2026.09.16",
+      "announce_date": "2026.09.03",
+      "winner_date": "2026.11.30",
+      "move_in_date": null,
+      "contact_phone": "1600-1004",
+      "contact_address": "",
+      "contact_note": "신혼신생아1 매입임대는 인터넷(https://apply.lh.or.kr) 또는 모바일 앱(LH청약플러스)으로 신청 가능하며, 현장접수는 받지 않습니다.",
+      "etc_note": null,
+      "status": "공고중",
+      "special_supply_tags": [],
+      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020675&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+      "attachment_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68422010",
+          "label": "공고문(PDF)",
+          "name": "1-2.26년3차신혼신생아Ⅰ입주자모집공고문(강원지역본부).pdf"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68422003",
+          "label": "공고문(hwp)",
+          "name": "1-2.26년3차신혼신생아Ⅰ입주자모집공고문(강원지역본부)_게시.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68424996",
+          "label": "기타 첨부파일",
+          "name": "2-2.26년3차신혼신생아매입임대1_공급주택목록(강원지역본부).xlsx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68425003",
+          "label": "기타 첨부파일",
+          "name": "3-2.26년3차신혼？신생아매입임대Ⅰ_QnA_게시.hwpx"
+        }
+      ],
+      "image_urls": [],
+      "unit_types": [
+        {}
+      ],
+      "fetched_at": "2026-09-10T05:59:41.190Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "lh-2015122300020673",
+      "source_agency": "LH",
+      "source_notice_id": "2015122300020673",
+      "title": "[강원지역본부] 26년 3차 청년 매입임대주택 예비자 모집공고",
+      "notice_type": "주거복지 · 매입임대",
+      "region_sido": "강원",
+      "region_sigungu": null,
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026.09.14",
+      "apply_end_date": "2026.09.16",
+      "announce_date": "2026.09.03",
+      "winner_date": "2026.11.30",
+      "move_in_date": null,
+      "contact_phone": "1600-1004",
+      "contact_address": "",
+      "contact_note": "청년 매입임대는 인터넷(https://apply.lh.or.kr) 또는 모바일 앱(LH청약플러스)으로 신청 가능하며, 현장접수는 받지 않습니다.",
+      "etc_note": null,
+      "status": "공고중",
+      "special_supply_tags": [],
+      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020673&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+      "attachment_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68421289",
+          "label": "공고문(PDF)",
+          "name": "1-1.26년3차청년매입임대입주자모집공고문(강원지역본부).pdf"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68421287",
+          "label": "공고문(hwp)",
+          "name": "1-1.26년3차청년매입임대입주자모집공고문(강원지역본부)_게시.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68424833",
+          "label": "기타 첨부파일",
+          "name": "2-1.26년3차청년매입임대_공급주택목록(강원지역본부).xlsx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68424840",
+          "label": "기타 첨부파일",
+          "name": "3-1.26년3차청년매입임대_QnA_게시.hwpx"
+        }
+      ],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-10T05:59:41.705Z",
+      "data_source_type": "api"
     },
     {
       "id": "lh-2015122300020679",
@@ -4179,7 +4289,7 @@
       "source_notice_id": "2015122300020679",
       "title": "[강원지역본부] 26년 3차 신혼신생아2(전세형) 매입임대주택 예비자 모집공고",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "강원특별자치도",
+      "region_sido": "강원",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -4227,117 +4337,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:49:54.120Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "lh-2015122300020675",
-      "source_agency": "LH",
-      "source_notice_id": "2015122300020675",
-      "title": "[강원지역본부] 26년 3차 신혼신생아1 매입임대주택 예비자 모집공고",
-      "notice_type": "주거복지 · 매입임대",
-      "region_sido": "강원특별자치도",
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026.09.14",
-      "apply_end_date": "2026.09.16",
-      "announce_date": "2026.09.03",
-      "winner_date": "2026.11.30",
-      "move_in_date": null,
-      "contact_phone": "1600-1004",
-      "contact_address": "",
-      "contact_note": "신혼신생아1 매입임대는 인터넷(https://apply.lh.or.kr) 또는 모바일 앱(LH청약플러스)으로 신청 가능하며, 현장접수는 받지 않습니다.",
-      "etc_note": null,
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020675&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
-      "attachment_urls": [
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68422010",
-          "label": "공고문(PDF)",
-          "name": "1-2.26년3차신혼신생아Ⅰ입주자모집공고문(강원지역본부).pdf"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68422003",
-          "label": "공고문(hwp)",
-          "name": "1-2.26년3차신혼신생아Ⅰ입주자모집공고문(강원지역본부)_게시.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68424996",
-          "label": "기타 첨부파일",
-          "name": "2-2.26년3차신혼신생아매입임대1_공급주택목록(강원지역본부).xlsx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68425003",
-          "label": "기타 첨부파일",
-          "name": "3-2.26년3차신혼？신생아매입임대Ⅰ_QnA_게시.hwpx"
-        }
-      ],
-      "image_urls": [],
-      "unit_types": [
-        {}
-      ],
-      "fetched_at": "2026-09-10T05:49:54.640Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "lh-2015122300020673",
-      "source_agency": "LH",
-      "source_notice_id": "2015122300020673",
-      "title": "[강원지역본부] 26년 3차 청년 매입임대주택 예비자 모집공고",
-      "notice_type": "주거복지 · 매입임대",
-      "region_sido": "강원특별자치도",
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026.09.14",
-      "apply_end_date": "2026.09.16",
-      "announce_date": "2026.09.03",
-      "winner_date": "2026.11.30",
-      "move_in_date": null,
-      "contact_phone": "1600-1004",
-      "contact_address": "",
-      "contact_note": "청년 매입임대는 인터넷(https://apply.lh.or.kr) 또는 모바일 앱(LH청약플러스)으로 신청 가능하며, 현장접수는 받지 않습니다.",
-      "etc_note": null,
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020673&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
-      "attachment_urls": [
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68421289",
-          "label": "공고문(PDF)",
-          "name": "1-1.26년3차청년매입임대입주자모집공고문(강원지역본부).pdf"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68421287",
-          "label": "공고문(hwp)",
-          "name": "1-1.26년3차청년매입임대입주자모집공고문(강원지역본부)_게시.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68424833",
-          "label": "기타 첨부파일",
-          "name": "2-1.26년3차청년매입임대_공급주택목록(강원지역본부).xlsx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68424840",
-          "label": "기타 첨부파일",
-          "name": "3-1.26년3차청년매입임대_QnA_게시.hwpx"
-        }
-      ],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:55.156Z",
+      "fetched_at": "2026-09-10T05:59:42.177Z",
       "data_source_type": "api"
     },
     {
@@ -4374,7 +4374,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.836Z",
       "data_source_type": "api"
     },
     {
@@ -4411,7 +4411,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.836Z",
       "data_source_type": "api"
     },
     {
@@ -4448,7 +4448,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.836Z",
       "data_source_type": "api"
     },
     {
@@ -4485,7 +4485,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.836Z",
       "data_source_type": "api"
     },
     {
@@ -4494,7 +4494,7 @@
       "source_notice_id": "2026000394",
       "title": "더샵 여주역더퍼스트",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 여주시 홍문동 332-2번지 일원",
       "household_count": 696,
@@ -4522,7 +4522,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -4559,7 +4559,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -4596,7 +4596,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -4605,7 +4605,7 @@
       "source_notice_id": "2015122300020701",
       "title": "김제하동 국민임대주택 모집공고",
       "notice_type": "임대주택 · 국민임대",
-      "region_sido": "전북특별자치도",
+      "region_sido": "전북",
       "region_sigungu": null,
       "address_detail": "전북특별자치도 김제시 하동1길 127(하동,김제하동주공아파트)",
       "household_count": 79,
@@ -4668,7 +4668,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:18.354Z",
+      "fetched_at": "2026-09-10T05:59:05.978Z",
       "data_source_type": "api"
     },
     {
@@ -4677,7 +4677,7 @@
       "source_notice_id": "2015122300020606",
       "title": "무안 오룡마을 남악휴먼시아 잔여세대 일반매각 공고(상시, 유주택)",
       "notice_type": "분양주택 · 분양주택",
-      "region_sido": "전남광주통합특별시",
+      "region_sido": "전남",
       "region_sigungu": null,
       "address_detail": "전남광주통합특별시 무안군 삼향읍 남악2로74번길 13(오룡마을휴먼시아아파트)",
       "household_count": 660,
@@ -4750,7 +4750,7 @@
           "deposit_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:39.791Z",
+      "fetched_at": "2026-09-10T05:59:27.186Z",
       "data_source_type": "api"
     },
     {
@@ -4831,7 +4831,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:49:46.272Z",
+      "fetched_at": "2026-09-10T05:59:33.505Z",
       "data_source_type": "api"
     },
     {
@@ -4840,7 +4840,7 @@
       "source_notice_id": "2015122300020663",
       "title": "군산시 국민임대주택 예비입주자 모집 공고('26.09.03)",
       "notice_type": "임대주택 · 국민임대",
-      "region_sido": "전북특별자치도",
+      "region_sido": "전북",
       "region_sigungu": null,
       "address_detail": "전북특별자치도 군산시 사옥로 69(내흥동)",
       "household_count": 831,
@@ -4977,7 +4977,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:50.879Z",
+      "fetched_at": "2026-09-10T05:59:38.094Z",
       "data_source_type": "api"
     },
     {
@@ -4986,7 +4986,7 @@
       "source_notice_id": "2015122300020658",
       "title": "양산사송 A-8BL 영구임대주택 입주자격완화 예비입주자 모집",
       "notice_type": "임대주택 · 영구임대",
-      "region_sido": "경상남도",
+      "region_sido": "경남",
       "region_sigungu": null,
       "address_detail": "경상남도 양산시 동면 사송로 183",
       "household_count": 255,
@@ -5063,7 +5063,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:50:06.790Z",
+      "fetched_at": "2026-09-10T05:59:54.718Z",
       "data_source_type": "api"
     },
     {
@@ -5072,7 +5072,7 @@
       "source_notice_id": "2026000393",
       "title": "시흥 은계 에피트(조합원 취소분)",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 시흥시 은행동 289-31번지 일원",
       "household_count": 24,
@@ -5100,7 +5100,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.836Z",
       "data_source_type": "api"
     },
     {
@@ -5109,7 +5109,7 @@
       "source_notice_id": "2026000416",
       "title": "양주회천지구 A-26블록 공공분양주택",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 양주시 덕정동 일원 양주신도시 택지개발지구 내 A-26블록",
       "household_count": 792,
@@ -5136,7 +5136,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -5145,7 +5145,7 @@
       "source_notice_id": "2026000409",
       "title": "의정부우정 A2블록 공공분양주택(본청약)",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 의정부시 녹양동 일원 의정부우정 공공주택지구 내 A-2블록",
       "household_count": 463,
@@ -5172,7 +5172,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -5205,7 +5205,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:01.686Z",
+      "fetched_at": "2026-09-10T05:58:48.967Z",
       "data_source_type": "scrape"
     },
     {
@@ -5238,7 +5238,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:01.686Z",
+      "fetched_at": "2026-09-10T05:58:48.967Z",
       "data_source_type": "scrape"
     },
     {
@@ -5247,7 +5247,7 @@
       "source_notice_id": "309342",
       "title": "[SH] 제49차 장기전세주택(2025.12.15.공고) 예비 2차 입주대상자 발표",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -5271,7 +5271,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -5345,7 +5345,7 @@
       "unit_types": [
         {}
       ],
-      "fetched_at": "2026-09-10T05:48:56.773Z",
+      "fetched_at": "2026-09-10T05:58:44.513Z",
       "data_source_type": "api"
     },
     {
@@ -5354,7 +5354,7 @@
       "source_notice_id": "2015122300020691",
       "title": "[제주지역본부] 다자녀 매입임대주택 예비입주자 모집 공고(서귀포시)",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "제주특별자치도",
+      "region_sido": "제주",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -5396,7 +5396,7 @@
       "unit_types": [
         {}
       ],
-      "fetched_at": "2026-09-10T05:49:33.446Z",
+      "fetched_at": "2026-09-10T05:59:21.072Z",
       "data_source_type": "api"
     },
     {
@@ -5455,7 +5455,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:35.503Z",
+      "fetched_at": "2026-09-10T05:59:23.056Z",
       "data_source_type": "api"
     },
     {
@@ -5512,7 +5512,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:49:04.229Z",
+      "fetched_at": "2026-09-10T05:58:52.053Z",
       "data_source_type": "api"
     },
     {
@@ -5568,7 +5568,7 @@
       "unit_types": [
         {}
       ],
-      "fetched_at": "2026-09-10T05:49:04.727Z",
+      "fetched_at": "2026-09-10T05:58:52.540Z",
       "data_source_type": "api"
     },
     {
@@ -5622,7 +5622,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:05.250Z",
+      "fetched_at": "2026-09-10T05:58:53.042Z",
       "data_source_type": "api"
     },
     {
@@ -5631,7 +5631,7 @@
       "source_notice_id": "2015122300020651",
       "title": "포항창포 영구임대아파트 예비입주자 모집",
       "notice_type": "임대주택 · 영구임대",
-      "region_sido": "경상북도",
+      "region_sido": "경북",
       "region_sigungu": null,
       "address_detail": "경상북도 포항시 북구 새천년대로1075번길 10(창포동,창포주공1단지아파트)",
       "household_count": 984,
@@ -5674,7 +5674,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:50:11.369Z",
+      "fetched_at": "2026-09-10T05:59:59.071Z",
       "data_source_type": "api"
     },
     {
@@ -5683,7 +5683,7 @@
       "source_notice_id": "2015122300020650",
       "title": "포항학산 영구임대아파트 예비입주자 모집",
       "notice_type": "임대주택 · 영구임대",
-      "region_sido": "경상북도",
+      "region_sido": "경북",
       "region_sigungu": null,
       "address_detail": "경상북도 포항시 북구 장미길 31(학산동,학산주공아파트)",
       "household_count": 485,
@@ -5726,7 +5726,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:50:13.293Z",
+      "fetched_at": "2026-09-10T06:00:00.975Z",
       "data_source_type": "api"
     },
     {
@@ -5759,7 +5759,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:01.686Z",
+      "fetched_at": "2026-09-10T05:58:48.967Z",
       "data_source_type": "scrape"
     },
     {
@@ -5792,7 +5792,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:01.686Z",
+      "fetched_at": "2026-09-10T05:58:48.967Z",
       "data_source_type": "scrape"
     },
     {
@@ -5825,7 +5825,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:01.686Z",
+      "fetched_at": "2026-09-10T05:58:48.967Z",
       "data_source_type": "scrape"
     },
     {
@@ -5834,7 +5834,7 @@
       "source_notice_id": "2015122300020725",
       "title": "[정정공고]26-4차 인천본부 든든전세주택 입주자 모집공고(인천, 부천)",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "인천광역시 외",
+      "region_sido": "인천",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -5894,7 +5894,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:48:53.744Z",
+      "fetched_at": "2026-09-10T05:58:41.776Z",
       "data_source_type": "api"
     },
     {
@@ -5903,7 +5903,7 @@
       "source_notice_id": "2015122300020715",
       "title": "26-4차 인천본부 든든전세주택 입주자 모집공고(인천, 부천)",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "인천광역시 외",
+      "region_sido": "인천",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -5963,7 +5963,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:48:54.368Z",
+      "fetched_at": "2026-09-10T05:58:42.383Z",
       "data_source_type": "api"
     },
     {
@@ -5972,7 +5972,7 @@
       "source_notice_id": "2015122300020619",
       "title": "'26년 9월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.09.07)",
       "notice_type": "임대주택 · 국민임대",
-      "region_sido": "인천광역시",
+      "region_sido": "인천",
       "region_sigungu": null,
       "address_detail": "인천광역시 남동구 서창남순환로 124-14(서창동,인천서창엘에이치1단지)",
       "household_count": 2186,
@@ -6080,92 +6080,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:13.143Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "lh-2015122300020697",
-      "source_agency": "LH",
-      "source_notice_id": "2015122300020697",
-      "title": "인천옹진연평 국민임대주택 예비입주자 모집",
-      "notice_type": "임대주택 · 국민임대",
-      "region_sido": "인천광역시",
-      "region_sigungu": null,
-      "address_detail": "인천광역시 옹진군 연평면 연평로 198",
-      "household_count": 40,
-      "area_range": "24.7~46.79",
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026.09.22",
-      "apply_end_date": "2026.09.22",
-      "announce_date": "2026.09.07",
-      "winner_date": "2026.12.30",
-      "move_in_date": "2022.10",
-      "contact_phone": "032-831-0977",
-      "contact_address": "인천광역시 옹진군 연평면 연평로 198",
-      "contact_note": "▶ 1,2,3순위접수 : 2026년 9월 22일(화) 10:00~16:00 \r\n   ※ 금회 신청은 인터넷/모바일/현장접수 모두 가능합니다.\r\n   ※ 전화문의는 장시간 접속지연 및 통화대기 등의 불편이 있을 수 있으니,\r\n       예비입주자 모집 신청과 관련하여 문의사항이 있을 때에는 가급적 모집공고문을\r\n       통해 확인하시기 바랍니다.",
-      "etc_note": "ㅇ 신청순위별 인터넷 청약은 같은 날짜입니다. 반드시 해당 일자에 접수하여 주시기 바라며,\n    모든 제출서류는 공고일 이후 발급분만 인정됩니다.   \nㅇ 모집공고 관련 전화문의는 장시간 접속지연 및 통화대기 및 올바른 안내가 되지 않을 수 있습니다.\n    자세한 사항은 첨부된 공고문을 반드시 확인하시기 바랍니다.",
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020697&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-      "attachment_urls": [
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456746",
-          "label": "기타 첨부파일",
-          "name": "마이마이서비스_고객메뉴얼.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456707",
-          "label": "공고문(hwp)",
-          "name": "옹진연평마을정비형공공주택국민임대예비입주자모집공고문.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456720",
-          "label": "공고문(PDF)",
-          "name": "옹진연평마을정비형공공주택국민임대예비입주자모집공고문.pdf"
-        }
-      ],
-      "image_urls": [
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067487",
-          "label": "지역조감도"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067488",
-          "label": "위치도"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067489",
-          "label": "단지조감도"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067490",
-          "label": "단지배치도"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067491",
-          "label": "동호배치도"
-        }
-      ],
-      "unit_types": [
-        {
-          "type": "29A",
-          "household_count": "12",
-          "area": "29.75",
-          "deposit_note": "공고문 참조",
-          "rent_note": "공고문 참조"
-        },
-        {
-          "type": "29A(주거약자)",
-          "household_count": "4",
-          "area": "29.75",
-          "deposit_note": "공고문 참조",
-          "rent_note": "공고문 참조"
-        }
-      ],
-      "fetched_at": "2026-09-10T05:49:22.743Z",
+      "fetched_at": "2026-09-10T05:59:00.833Z",
       "data_source_type": "api"
     },
     {
@@ -6275,7 +6190,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:25.328Z",
+      "fetched_at": "2026-09-10T05:59:15.513Z",
       "data_source_type": "api"
     },
     {
@@ -6284,7 +6199,7 @@
       "source_notice_id": "2015122300020578",
       "title": "인천옹진백령 국민임대주택 예비입주자 모집",
       "notice_type": "임대주택 · 국민임대",
-      "region_sido": "인천광역시",
+      "region_sido": "인천",
       "region_sigungu": null,
       "address_detail": "인천광역시 옹진군 백령면 백령로278번길 133-31",
       "household_count": 50,
@@ -6411,238 +6326,92 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:27.882Z",
+      "fetched_at": "2026-09-10T05:59:18.007Z",
       "data_source_type": "api"
     },
     {
-      "id": "lh-2015122300020721",
+      "id": "lh-2015122300020697",
       "source_agency": "LH",
-      "source_notice_id": "2015122300020721",
-      "title": "[경남지역본부]26년 3차 분양전환형 든든전세주택 예비입주자 모집 공고",
-      "notice_type": "주거복지 · 매입임대",
-      "region_sido": "경상남도",
+      "source_notice_id": "2015122300020697",
+      "title": "인천옹진연평 국민임대주택 예비입주자 모집",
+      "notice_type": "임대주택 · 국민임대",
+      "region_sido": "인천",
       "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
+      "address_detail": "인천광역시 옹진군 연평면 연평로 198",
+      "household_count": 40,
+      "area_range": "24.7~46.79",
       "supply_kind": "임대",
       "deposit_range": null,
       "monthly_rent_range": null,
       "price_range": null,
-      "apply_start_date": "2026.09.21",
-      "apply_end_date": "2026.09.23",
-      "announce_date": "2026.09.10",
-      "winner_date": "2026.11.13",
-      "move_in_date": null,
-      "contact_phone": "",
-      "contact_address": "",
-      "contact_note": "",
-      "etc_note": null,
+      "apply_start_date": "2026.09.22",
+      "apply_end_date": "2026.09.22",
+      "announce_date": "2026.09.07",
+      "winner_date": "2026.12.30",
+      "move_in_date": "2022.10",
+      "contact_phone": "032-831-0977",
+      "contact_address": "인천광역시 옹진군 연평면 연평로 198",
+      "contact_note": "▶ 1,2,3순위접수 : 2026년 9월 22일(화) 10:00~16:00 \r\n   ※ 금회 신청은 인터넷/모바일/현장접수 모두 가능합니다.\r\n   ※ 전화문의는 장시간 접속지연 및 통화대기 등의 불편이 있을 수 있으니,\r\n       예비입주자 모집 신청과 관련하여 문의사항이 있을 때에는 가급적 모집공고문을\r\n       통해 확인하시기 바랍니다.",
+      "etc_note": "ㅇ 신청순위별 인터넷 청약은 같은 날짜입니다. 반드시 해당 일자에 접수하여 주시기 바라며,\n    모든 제출서류는 공고일 이후 발급분만 인정됩니다.   \nㅇ 모집공고 관련 전화문의는 장시간 접속지연 및 통화대기 및 올바른 안내가 되지 않을 수 있습니다.\n    자세한 사항은 첨부된 공고문을 반드시 확인하시기 바랍니다.",
       "status": "공고중",
       "special_supply_tags": [],
-      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020721&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020697&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
       "attachment_urls": [
         {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513907",
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456746",
           "label": "기타 첨부파일",
-          "name": "(경남지역본부)26년3차든든전세매입임대주택주택목록(분양전환형).xlsx"
+          "name": "마이마이서비스_고객메뉴얼.hwpx"
         },
         {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513908",
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456707",
           "label": "공고문(hwp)",
-          "name": "(경남지역본부)26년3차분양전환형든든전세주택예비입주자모집공고문.hwpx"
+          "name": "옹진연평마을정비형공공주택국민임대예비입주자모집공고문.hwpx"
         },
         {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513909",
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68456720",
           "label": "공고문(PDF)",
-          "name": "(경남지역본부)26년3차분양전환형든든전세주택예비입주자모집공고문.pdf"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513910",
-          "label": "기타 첨부파일",
-          "name": "26년든든전세주택(분양전환형)_QnA_260825.hwpx"
+          "name": "옹진연평마을정비형공공주택국민임대예비입주자모집공고문.pdf"
         }
       ],
-      "image_urls": [],
+      "image_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067487",
+          "label": "지역조감도"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067488",
+          "label": "위치도"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067489",
+          "label": "단지조감도"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067490",
+          "label": "단지배치도"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhImageView2.do?fileid=46067491",
+          "label": "동호배치도"
+        }
+      ],
       "unit_types": [
-        {},
-        {},
-        {},
-        {},
-        {}
-      ],
-      "fetched_at": "2026-09-10T05:48:49.098Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "lh-2015122300020720",
-      "source_agency": "LH",
-      "source_notice_id": "2015122300020720",
-      "title": "[경남지역본부]26년 3차 비분양전환형 든든전세주택 입주자 모집 공고",
-      "notice_type": "주거복지 · 매입임대",
-      "region_sido": "경상남도",
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026.09.21",
-      "apply_end_date": "2026.09.23",
-      "announce_date": "2026.09.10",
-      "winner_date": "2026.11.13",
-      "move_in_date": null,
-      "contact_phone": "",
-      "contact_address": "",
-      "contact_note": "",
-      "etc_note": null,
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020720&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
-      "attachment_urls": [
         {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513844",
-          "label": "기타 첨부파일",
-          "name": "(경남지역본부)26년3차든든전세매입임대주택주택목록(비분양전환형).xlsx"
+          "type": "29A",
+          "household_count": "12",
+          "area": "29.75",
+          "deposit_note": "공고문 참조",
+          "rent_note": "공고문 참조"
         },
         {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513845",
-          "label": "공고문(hwp)",
-          "name": "(경남지역본부)26년3차비분양전환형든든전세주택입주자모집공고문.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513846",
-          "label": "공고문(PDF)",
-          "name": "(경남지역본부)26년3차비분양전환형든든전세주택입주자모집공고문.pdf"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513847",
-          "label": "기타 첨부파일",
-          "name": "26년든든전세주택_QnA_260825.hwtx"
+          "type": "29A(주거약자)",
+          "household_count": "4",
+          "area": "29.75",
+          "deposit_note": "공고문 참조",
+          "rent_note": "공고문 참조"
         }
       ],
-      "image_urls": [],
-      "unit_types": [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-      ],
-      "fetched_at": "2026-09-10T05:48:49.675Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "lh-2015122300020717",
-      "source_agency": "LH",
-      "source_notice_id": "2015122300020717",
-      "title": "[경남지역본부]26년 3차 청년매입임대 예비입주자 모집공고",
-      "notice_type": "주거복지 · 매입임대",
-      "region_sido": "경상남도",
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026.09.21",
-      "apply_end_date": "2026.09.23",
-      "announce_date": "2026.09.10",
-      "winner_date": "2026.12.04",
-      "move_in_date": null,
-      "contact_phone": "",
-      "contact_address": "",
-      "contact_note": "",
-      "etc_note": null,
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020717&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
-      "attachment_urls": [
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511286",
-          "label": "기타 첨부파일",
-          "name": "(경남지역본부)26년3차청년매입임대공급주택목록요약.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511287",
-          "label": "공고문(hwp)",
-          "name": "(경남지역본부)26년3차청년매입임대예비입주자모집공고문.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511288",
-          "label": "공고문(PDF)",
-          "name": "(경남지역본부)26년3차청년매입임대예비입주자모집공고문.pdf"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511289",
-          "label": "기타 첨부파일",
-          "name": "(경남지역본부)청년매입임대공급주택목록.xlsx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511407",
-          "label": "기타 첨부파일",
-          "name": "(필독)청년매입임대신청시유의사항.hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511290",
-          "label": "기타 첨부파일",
-          "name": "26년청년매입임대_QnA_260825.hwpx"
-        }
-      ],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:50.241Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "lh-2015122300020711",
-      "source_agency": "LH",
-      "source_notice_id": "2015122300020711",
-      "title": "경남 함양군 서하면 다자녀 매입임대주택 예비입주자 모집공고",
-      "notice_type": "주거복지 · 매입임대",
-      "region_sido": "전국",
-      "region_sigungu": null,
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026.09.14",
-      "apply_end_date": "2026.09.23",
-      "announce_date": "2026.09.10",
-      "winner_date": "2026.11.27",
-      "move_in_date": null,
-      "contact_phone": "",
-      "contact_address": "",
-      "contact_note": "",
-      "etc_note": null,
-      "status": "공고중",
-      "special_supply_tags": [],
-      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020711&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
-      "attachment_urls": [
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68495456",
-          "label": "공고문(hwp)",
-          "name": "함양군다자녀매입임대예비입주자모집공고문(260910).hwpx"
-        },
-        {
-          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68495460",
-          "label": "공고문(PDF)",
-          "name": "함양군다자녀매입임대예비입주자모집공고문(260910).pdf"
-        }
-      ],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.505Z",
+      "fetched_at": "2026-09-10T05:59:20.621Z",
       "data_source_type": "api"
     },
     {
@@ -6651,7 +6420,7 @@
       "source_notice_id": "2015122300020723",
       "title": "[경남지역본부]26년 3차 신혼·신생아매입임대Ⅱ(전세형) 예비입주자 모집공고",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "경상남도",
+      "region_sido": "경남",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -6707,7 +6476,7 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:48:52.076Z",
+      "fetched_at": "2026-09-10T05:58:37.327Z",
       "data_source_type": "api"
     },
     {
@@ -6716,7 +6485,7 @@
       "source_notice_id": "2015122300020722",
       "title": "[경남지역본부]26년 3차 신혼·신생아매입임대Ⅰ 예비입주자 모집공고",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "경상남도",
+      "region_sido": "경남",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -6774,7 +6543,238 @@
         {},
         {}
       ],
-      "fetched_at": "2026-09-10T05:48:52.640Z",
+      "fetched_at": "2026-09-10T05:58:37.900Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "lh-2015122300020721",
+      "source_agency": "LH",
+      "source_notice_id": "2015122300020721",
+      "title": "[경남지역본부]26년 3차 분양전환형 든든전세주택 예비입주자 모집 공고",
+      "notice_type": "주거복지 · 매입임대",
+      "region_sido": "경남",
+      "region_sigungu": null,
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026.09.21",
+      "apply_end_date": "2026.09.23",
+      "announce_date": "2026.09.10",
+      "winner_date": "2026.11.13",
+      "move_in_date": null,
+      "contact_phone": "",
+      "contact_address": "",
+      "contact_note": "",
+      "etc_note": null,
+      "status": "공고중",
+      "special_supply_tags": [],
+      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020721&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+      "attachment_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513907",
+          "label": "기타 첨부파일",
+          "name": "(경남지역본부)26년3차든든전세매입임대주택주택목록(분양전환형).xlsx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513908",
+          "label": "공고문(hwp)",
+          "name": "(경남지역본부)26년3차분양전환형든든전세주택예비입주자모집공고문.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513909",
+          "label": "공고문(PDF)",
+          "name": "(경남지역본부)26년3차분양전환형든든전세주택예비입주자모집공고문.pdf"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513910",
+          "label": "기타 첨부파일",
+          "name": "26년든든전세주택(분양전환형)_QnA_260825.hwpx"
+        }
+      ],
+      "image_urls": [],
+      "unit_types": [
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "fetched_at": "2026-09-10T05:58:38.409Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "lh-2015122300020720",
+      "source_agency": "LH",
+      "source_notice_id": "2015122300020720",
+      "title": "[경남지역본부]26년 3차 비분양전환형 든든전세주택 입주자 모집 공고",
+      "notice_type": "주거복지 · 매입임대",
+      "region_sido": "경남",
+      "region_sigungu": null,
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026.09.21",
+      "apply_end_date": "2026.09.23",
+      "announce_date": "2026.09.10",
+      "winner_date": "2026.11.13",
+      "move_in_date": null,
+      "contact_phone": "",
+      "contact_address": "",
+      "contact_note": "",
+      "etc_note": null,
+      "status": "공고중",
+      "special_supply_tags": [],
+      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020720&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+      "attachment_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513844",
+          "label": "기타 첨부파일",
+          "name": "(경남지역본부)26년3차든든전세매입임대주택주택목록(비분양전환형).xlsx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513845",
+          "label": "공고문(hwp)",
+          "name": "(경남지역본부)26년3차비분양전환형든든전세주택입주자모집공고문.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513846",
+          "label": "공고문(PDF)",
+          "name": "(경남지역본부)26년3차비분양전환형든든전세주택입주자모집공고문.pdf"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68513847",
+          "label": "기타 첨부파일",
+          "name": "26년든든전세주택_QnA_260825.hwtx"
+        }
+      ],
+      "image_urls": [],
+      "unit_types": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "fetched_at": "2026-09-10T05:58:38.955Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "lh-2015122300020717",
+      "source_agency": "LH",
+      "source_notice_id": "2015122300020717",
+      "title": "[경남지역본부]26년 3차 청년매입임대 예비입주자 모집공고",
+      "notice_type": "주거복지 · 매입임대",
+      "region_sido": "경남",
+      "region_sigungu": null,
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026.09.21",
+      "apply_end_date": "2026.09.23",
+      "announce_date": "2026.09.10",
+      "winner_date": "2026.12.04",
+      "move_in_date": null,
+      "contact_phone": "",
+      "contact_address": "",
+      "contact_note": "",
+      "etc_note": null,
+      "status": "공고중",
+      "special_supply_tags": [],
+      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020717&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+      "attachment_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511286",
+          "label": "기타 첨부파일",
+          "name": "(경남지역본부)26년3차청년매입임대공급주택목록요약.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511287",
+          "label": "공고문(hwp)",
+          "name": "(경남지역본부)26년3차청년매입임대예비입주자모집공고문.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511288",
+          "label": "공고문(PDF)",
+          "name": "(경남지역본부)26년3차청년매입임대예비입주자모집공고문.pdf"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511289",
+          "label": "기타 첨부파일",
+          "name": "(경남지역본부)청년매입임대공급주택목록.xlsx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511407",
+          "label": "기타 첨부파일",
+          "name": "(필독)청년매입임대신청시유의사항.hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68511290",
+          "label": "기타 첨부파일",
+          "name": "26년청년매입임대_QnA_260825.hwpx"
+        }
+      ],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-10T05:58:39.478Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "lh-2015122300020711",
+      "source_agency": "LH",
+      "source_notice_id": "2015122300020711",
+      "title": "경남 함양군 서하면 다자녀 매입임대주택 예비입주자 모집공고",
+      "notice_type": "주거복지 · 매입임대",
+      "region_sido": "전국",
+      "region_sigungu": null,
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026.09.14",
+      "apply_end_date": "2026.09.23",
+      "announce_date": "2026.09.10",
+      "winner_date": "2026.11.27",
+      "move_in_date": null,
+      "contact_phone": "",
+      "contact_address": "",
+      "contact_note": "",
+      "etc_note": null,
+      "status": "공고중",
+      "special_supply_tags": [],
+      "detail_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020711&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+      "attachment_urls": [
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68495456",
+          "label": "공고문(hwp)",
+          "name": "함양군다자녀매입임대예비입주자모집공고문(260910).hwpx"
+        },
+        {
+          "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=68495460",
+          "label": "공고문(PDF)",
+          "name": "함양군다자녀매입임대예비입주자모집공고문(260910).pdf"
+        }
+      ],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-10T05:58:40.686Z",
       "data_source_type": "api"
     },
     {
@@ -6783,7 +6783,7 @@
       "source_notice_id": "2015122300020705",
       "title": "[전남광주통합특별시] 기존주택 등 매입임대주택 예비입주자 모집 공고",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "전남광주통합특별시",
+      "region_sido": "전남",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -7259,7 +7259,7 @@
           "area": "77.05"
         }
       ],
-      "fetched_at": "2026-09-10T05:48:55.856Z",
+      "fetched_at": "2026-09-10T05:58:43.597Z",
       "data_source_type": "api"
     },
     {
@@ -7523,7 +7523,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:10.579Z",
+      "fetched_at": "2026-09-10T05:58:58.318Z",
       "data_source_type": "api"
     },
     {
@@ -7689,7 +7689,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:15.776Z",
+      "fetched_at": "2026-09-10T05:59:03.520Z",
       "data_source_type": "api"
     },
     {
@@ -7698,7 +7698,7 @@
       "source_notice_id": "2015122300020694",
       "title": "익산한스빌 국민임대주택 예비입주자 자격완화 모집 공고",
       "notice_type": "임대주택 · 국민임대",
-      "region_sido": "전북특별자치도",
+      "region_sido": "전북",
       "region_sigungu": null,
       "address_detail": "전북특별자치도 익산시 목천로 30-14(목천동,한스빌아파트) 30-14 (한스빌아파트)",
       "household_count": 746,
@@ -7733,7 +7733,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:45.885Z",
+      "fetched_at": "2026-09-10T05:59:33.134Z",
       "data_source_type": "api"
     },
     {
@@ -7742,7 +7742,7 @@
       "source_notice_id": "2026000431",
       "title": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
       "notice_type": "APT 분양",
-      "region_sido": "경기",
+      "region_sido": "경기도",
       "region_sigungu": null,
       "address_detail": "경기도 남양주시 오남읍 양지리 186-10번지 일원",
       "household_count": 133,
@@ -7770,7 +7770,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.836Z",
       "data_source_type": "api"
     },
     {
@@ -7803,7 +7803,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.762Z",
+      "fetched_at": "2026-09-10T05:58:43.853Z",
       "data_source_type": "api"
     },
     {
@@ -7963,7 +7963,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:48.296Z",
+      "fetched_at": "2026-09-10T05:59:35.474Z",
       "data_source_type": "api"
     },
     {
@@ -8015,7 +8015,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:48:53.129Z",
+      "fetched_at": "2026-09-10T05:58:41.136Z",
       "data_source_type": "api"
     },
     {
@@ -8128,7 +8128,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:01.802Z",
+      "fetched_at": "2026-09-10T05:58:49.640Z",
       "data_source_type": "api"
     },
     {
@@ -8190,7 +8190,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:07.776Z",
+      "fetched_at": "2026-09-10T05:58:55.510Z",
       "data_source_type": "api"
     },
     {
@@ -8303,7 +8303,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:32.960Z",
+      "fetched_at": "2026-09-10T05:59:12.934Z",
       "data_source_type": "api"
     },
     {
@@ -8312,7 +8312,7 @@
       "source_notice_id": "0000061163",
       "title": "부산만덕5 2블록 10년 분양전환공공임대주택(e편한세상 금정산) 예비입주자 모집공고",
       "notice_type": "임대주택 · 공공임대",
-      "region_sido": "부산광역시",
+      "region_sido": "부산",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -8355,7 +8355,7 @@
         }
       ],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:58.646Z",
+      "fetched_at": "2026-09-10T05:59:46.490Z",
       "data_source_type": "api"
     },
     {
@@ -8364,7 +8364,7 @@
       "source_notice_id": "310107",
       "title": "[SH] (수정) 2026년 2차 장기미임대 매입임대주택 입주자모집공고(2026. 8. 28.)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -8388,7 +8388,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -8660,7 +8660,7 @@
           "area": "38.36"
         }
       ],
-      "fetched_at": "2026-09-10T05:48:51.046Z",
+      "fetched_at": "2026-09-10T05:58:40.262Z",
       "data_source_type": "api"
     },
     {
@@ -8669,7 +8669,7 @@
       "source_notice_id": "2015122300020706",
       "title": "[경남지역본부] 일반 매입임대주택 입주자 모집 공고(김해시, 밀양시)",
       "notice_type": "주거복지 · 매입임대",
-      "region_sido": "경상남도",
+      "region_sido": "경남",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -8776,7 +8776,7 @@
           "area": "41.75"
         }
       ],
-      "fetched_at": "2026-09-10T05:48:56.396Z",
+      "fetched_at": "2026-09-10T05:58:44.149Z",
       "data_source_type": "api"
     },
     {
@@ -8855,7 +8855,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:48:59.315Z",
+      "fetched_at": "2026-09-10T05:58:47.068Z",
       "data_source_type": "api"
     },
     {
@@ -8934,7 +8934,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:30.420Z",
+      "fetched_at": "2026-09-10T05:59:10.303Z",
       "data_source_type": "api"
     },
     {
@@ -8970,7 +8970,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:54.748Z",
+      "fetched_at": "2026-09-10T05:58:43.837Z",
       "data_source_type": "api"
     },
     {
@@ -8979,7 +8979,7 @@
       "source_notice_id": "310041",
       "title": "[SH] 2026년 재개발임대주택 일반모집 공고(2026. 9. 9.)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -9003,7 +9003,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -9012,7 +9012,7 @@
       "source_notice_id": "2015122300020649",
       "title": "남원노암단지 영구임대주택 입주자격완화 예비입주자 모집공고",
       "notice_type": "임대주택 · 영구임대",
-      "region_sido": "전북특별자치도",
+      "region_sido": "전북",
       "region_sigungu": null,
       "address_detail": "전북특별자치도 남원시 노송로 1255-9(노암동,주공아파트)",
       "household_count": 625,
@@ -9062,7 +9062,7 @@
           "rent_note": "공고문 참조"
         }
       ],
-      "fetched_at": "2026-09-10T05:49:20.231Z",
+      "fetched_at": "2026-09-10T05:59:07.824Z",
       "data_source_type": "api"
     },
     {
@@ -9071,7 +9071,7 @@
       "source_notice_id": "0000061171",
       "title": "대전대동2 1BL 공공분양 추가 입주자모집공고[선착순 동호지정/계약금 정액제(천만원)]",
       "notice_type": "분양주택 · 분양주택",
-      "region_sido": "대전광역시",
+      "region_sido": "대전",
       "region_sigungu": null,
       "address_detail": null,
       "household_count": null,
@@ -9126,7 +9126,7 @@
       ],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:35.880Z",
+      "fetched_at": "2026-09-10T05:59:23.399Z",
       "data_source_type": "api"
     },
     {
@@ -9160,7 +9160,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9194,7 +9194,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9228,7 +9228,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9262,7 +9262,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9296,7 +9296,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9330,7 +9330,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9364,7 +9364,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9398,7 +9398,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9432,7 +9432,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9466,7 +9466,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9500,7 +9500,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9534,7 +9534,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9568,7 +9568,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9602,7 +9602,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.303Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9636,7 +9636,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9670,7 +9670,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9704,7 +9704,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9738,7 +9738,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9772,7 +9772,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9806,7 +9806,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9840,7 +9840,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9874,7 +9874,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9908,7 +9908,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9942,7 +9942,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -9976,7 +9976,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -10010,7 +10010,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -10044,7 +10044,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -10078,7 +10078,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.549Z",
       "data_source_type": "file"
     },
     {
@@ -10112,7 +10112,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10146,7 +10146,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10180,7 +10180,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10214,7 +10214,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10248,7 +10248,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10282,7 +10282,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10316,7 +10316,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10350,7 +10350,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10384,7 +10384,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10418,7 +10418,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10452,7 +10452,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10486,7 +10486,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10520,7 +10520,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10554,7 +10554,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10588,7 +10588,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10622,7 +10622,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10656,7 +10656,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.304Z",
+      "fetched_at": "2026-09-10T05:58:39.550Z",
       "data_source_type": "file"
     },
     {
@@ -10690,7 +10690,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.306Z",
+      "fetched_at": "2026-09-10T05:58:39.551Z",
       "data_source_type": "file"
     },
     {
@@ -10724,7 +10724,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:48:51.306Z",
+      "fetched_at": "2026-09-10T05:58:39.552Z",
       "data_source_type": "file"
     },
     {
@@ -10733,7 +10733,7 @@
       "source_notice_id": "309802",
       "title": "[SH] [청년형] 특화형 매입임대주택(금천구) 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -10757,7 +10757,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -10766,7 +10766,7 @@
       "source_notice_id": "310081",
       "title": "[SH] 제8차 장기전세주택2(미리내집) 입주자 모집공고(2026. 8. 21.) 최종 청약접수 결과 안내",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -10790,7 +10790,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -10799,7 +10799,7 @@
       "source_notice_id": "310005",
       "title": "[SH] 홍은동 청년협동조합(이웃기웃) 조합단 인터뷰 대상자 발표(2026.06.05.공고)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -10823,7 +10823,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -10832,7 +10832,7 @@
       "source_notice_id": "310037",
       "title": "[SH] [토지지원 사회주택]함께주택4호 401-3호 입주자 모집 공고",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -10856,7 +10856,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -10865,7 +10865,7 @@
       "source_notice_id": "309915",
       "title": "[SH] 장기안심주택 2027년 2월 재계약 대상자 입주자격 심사서류 제출 안내",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -10889,7 +10889,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -10898,7 +10898,7 @@
       "source_notice_id": "309982",
       "title": "[SH] 2026년 일반주택형 미리내집(공공한옥) 잔여세대 입주자 모집공고(2026. 8. 24.) 서류심사대상자 발표 및 서류제출 안내",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -10922,7 +10922,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -10931,7 +10931,7 @@
       "source_notice_id": "310001",
       "title": "[SH] 제8차 장기전세주택2, 제51차 장기전세주택 영등포자이 디그니티 모두 확장형임을 알려드립니다.",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": 1,
@@ -10955,7 +10955,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape",
       "household_count_source": "reb"
     },
@@ -10965,7 +10965,7 @@
       "source_notice_id": "309820",
       "title": "[SH] [서류심사대상자 발표] 2026년 1차 일반주택형 미리내집(신혼신생아매입임대주택Ⅱ)(2026.08.14.) 서류심사대상자 발표",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -10989,7 +10989,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -10998,7 +10998,7 @@
       "source_notice_id": "309883",
       "title": "[SH] [토지임대부 사회주택] 옥류서원 입주자 모집 공고문",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11022,7 +11022,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11031,7 +11031,7 @@
       "source_notice_id": "309807",
       "title": "[SH] [청년형] 특화형 매입임대주택 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11055,7 +11055,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11064,7 +11064,7 @@
       "source_notice_id": "309717",
       "title": "[SH] [토지지원 사회주택]유니버설디자인하우스_창동 입주자 모집 공고",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11088,7 +11088,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11097,7 +11097,7 @@
       "source_notice_id": "309516",
       "title": "[SH] 홍은동 청년협동조합(이웃기웃) 조합단 면담평가 대상자 발표일 변경(연기) 안내",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11121,7 +11121,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11130,7 +11130,7 @@
       "source_notice_id": "309523",
       "title": "[SH] 2026년 1~2인가구를 위한 도시형생활주택(건설형원룸) 잔여세대 입주자 모집공고(26. 8. 5.) 서류심사대상자 발표 및 서류제출 안내",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11154,7 +11154,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11163,7 +11163,7 @@
       "source_notice_id": "309511",
       "title": "[SH] 2026년 기존주택 전세임대 입주자 모집공고(2026. 2. 11.) 예비1차 입주대상자 발표",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11187,7 +11187,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11196,7 +11196,7 @@
       "source_notice_id": "309338",
       "title": "[SH] 제6차 장기전세주택2(2025.11.28.공고) 예비 4차 입주대상자 발표",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11220,7 +11220,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11229,7 +11229,7 @@
       "source_notice_id": "308446",
       "title": "[SH] 2026년 1차 일반주택형 미리내집(신혼신생아매입임대주택Ⅱ) 입주자 모집공고(2026.08.14.) 주택정보 추가",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11253,7 +11253,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11262,7 +11262,7 @@
       "source_notice_id": "309269",
       "title": "[SH] 장기안심주택 2026년 12월 재계약 대상자 입주자격 심사결과",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11286,7 +11286,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11295,7 +11295,7 @@
       "source_notice_id": "309303",
       "title": "[SH] 2026년 하반기 일반 매입임대주택(다가구, 원룸) 입주대기자 모집공고(2026.08.27.)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11319,7 +11319,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11328,7 +11328,7 @@
       "source_notice_id": "309926",
       "title": "[SH] 2026년 2차 청년안심주택 서류심사대상자 발표(2026.07.31. 공고)(정정)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11352,7 +11352,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11361,7 +11361,7 @@
       "source_notice_id": "308887",
       "title": "[SH] 2026-3차 충신동 연극인 두레주택 잔여세대 입주자 모집공고(26. 8. 21.)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11385,7 +11385,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11394,7 +11394,7 @@
       "source_notice_id": "308828",
       "title": "[SH] 2026년 1~2인가구를 위한 도시형생활주택(건설형원룸) 잔여세대 입주자 모집공고(26. 8. 5.) 1순위 청약경쟁률 및 2순위 청약안내",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11418,7 +11418,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11427,7 +11427,7 @@
       "source_notice_id": "308605",
       "title": "[SH] [청년형] 특화형 매입임대주택(성북구) 입주자 모집 공고(운영기관 : 에스이임파워 사회적협동조합)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11451,7 +11451,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11460,7 +11460,7 @@
       "source_notice_id": "308799",
       "title": "[SH] 금천구 1인가구 청년 맞춤형주택(수요자맞춤형) 추가 입주자 모집 공고",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11484,7 +11484,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11493,7 +11493,7 @@
       "source_notice_id": "308746",
       "title": "[SH] 행복주택 예비당첨자 게시",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11517,7 +11517,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11526,7 +11526,7 @@
       "source_notice_id": "307767",
       "title": "[SH] 행복주택 예비자 계약결과알림",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11550,7 +11550,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11559,7 +11559,7 @@
       "source_notice_id": "308549",
       "title": "[SH] [청년형] 특화형 매입임대주택(금천구) 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11583,7 +11583,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     },
     {
@@ -11592,7 +11592,7 @@
       "source_notice_id": "308738",
       "title": "[SH] 제5차 장기전세주택2(2025.07.28.공고) 예비 3차 입주대상자 발표",
       "notice_type": "임대/분양",
-      "region_sido": "서울특별시",
+      "region_sido": "서울",
       "region_sigungu": "전체",
       "address_detail": null,
       "household_count": null,
@@ -11616,7 +11616,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-10T05:49:39.524Z",
+      "fetched_at": "2026-09-10T05:59:23.765Z",
       "data_source_type": "scrape"
     }
   ]
