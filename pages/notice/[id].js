@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useState } from "react";
 import noticesData from "../../data/notices.json";
 import { getDday, getUrgencyLevel, getProgressPercent } from "../../lib/dday";
+import { useUser } from "../../lib/useUser";
+import { supabase } from "../../lib/supabaseClient";
 
 export async function getStaticPaths() {
   const paths = noticesData.notices.map((n) => ({ params: { id: n.id } }));
@@ -98,6 +100,8 @@ export default function NoticeDetail({ notice }) {
   const [bookmarked, setBookmarked] = useState(false);
   const [copied, setCopied] = useState(false);
   const ai = notice.ai_analysis;
+  const { user } = useUser();
+  const router = useRouter();
 
   const [reportOpen, setReportOpen] = useState(false);
 const [reportText, setReportText] = useState("");
