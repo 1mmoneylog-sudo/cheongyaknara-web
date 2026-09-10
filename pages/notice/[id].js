@@ -97,12 +97,8 @@ function MiniCalendar({ startDate, endDate, winnerDate }) {
 export default function NoticeDetail({ notice }) {
   const [bookmarked, setBookmarked] = useState(false);
   const [copied, setCopied] = useState(false);
-  const ai = notice.ai_analysis || {
-  price_and_finance: { max_price: "공고문 원문 참조", payment_schedule: "계약금 10%, 중도금 60%, 잔금 30%", financing_conditions: "주택담보대출 가능 여부 확인 필요" },
-  qualification_and_conditions: { residence_requirement: "해당 지역 거주자 우선", home_ownership: "무주택 세대 구성원", restrictions: "전매제한 및 재당첨 제한 적용" },
-  supply_and_selection: { supply_types: "특별공급 / 일반공급", selection_method: "순위별 가점제 및 추첨제" },
-  location_and_complex: { location_info: "단지 주변 인프라 및 교통망 수립", move_in_date: "공고문 내 입주예정월 확인" }
-};
+  const ai = notice.ai_analysis;
+
   const [reportOpen, setReportOpen] = useState(false);
 const [reportText, setReportText] = useState("");
 const [reportCopied, setReportCopied] = useState(false);
