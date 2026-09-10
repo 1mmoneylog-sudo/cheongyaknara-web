@@ -26,6 +26,7 @@ const { fetchGhAll, normalizeGhNotice } = require("../lib/collectors/gh");
 const { fetchRebAll, normalizeAllRebNotices, fillHouseholdCountFromReb } = require("../lib/collectors/reb");
 const { fetchGhScrapeAll, normalizeGhScraped } = require("../lib/collectors/gh-scrape");
 const { fetchShScrapeAll, normalizeShScraped } = require("../lib/collectors/sh-scrape");
+const { normalizeRegion } = require("../lib/normalizeRegion");
 
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "notices.json");
 
@@ -257,6 +258,11 @@ async function main() {
     `마감(당첨자 발표 ${WINNER_TRACK_DAYS}일 이내 제외)·너무 먼 예정(${UPCOMING_WINDOW_DAYS}일 초과) 제외: ` +
       `${supplemented.length}건 → ${kept.length}건`
   );
+
+  // ✅ 2026-09-09: 기관마다 다르게 표기하는 지역명(경기/경기도, 강원/강원특별자치도 등)을 하나로 통일
+  kept.forEach((n) => {
+    n.region_sido = normalizeRegion(n.region_sido);
+  });
 
   kept.sort(
     (a, b) =>
