@@ -15,16 +15,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          
       - name: 의존성 설치
-        run: npm install
+        run: |
+          npm install
+          pip install requests pdfplumber olefile google-genai
 
       - name: 데이터 전체 수집 (LH, GH, 청약홈, SH)
         env:
           LH_SERVICE_KEY: ${{ secrets.LH_SERVICE_KEY }}
           GH_SERVICE_KEY: ${{ secrets.GH_SERVICE_KEY }}
           REB_SERVICE_KEY: ${{ secrets.REB_SERVICE_KEY }}
-        run: npm run collect
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          npm run collect
+          python main.py
 
       - name: 변경사항 저장소에 반영
         run: |
