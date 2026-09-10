@@ -71,6 +71,10 @@ def process_notices():
 
     updated = False
     for notice in notices:
+        # 데이터 타입 안전성 체크 (dict가 아닌 경우 스킵)
+        if not isinstance(notice, dict):
+            continue
+
         # 이미 AI 분석이 완료된 공고는 스킵
         if notice.get("ai_analysis"):
             continue
@@ -88,13 +92,13 @@ def process_notices():
             except AttachmentError as e:
                 print(f"[{notice_id}] 첨부파일 처리 실패 (건너뜀): {e}")
 
-        if not extracted_text.strip():
+        if not extracted_text or not str(extracted_text).strip():
             print(f"[{notice_id}] 분석할 텍스트가 없습니다.")
             continue
 
         print(f"[{notice_id}] Gemini AI 구조화 분석 시작...")
         try:
-            ai_result = analyze_with_gemini(client, extracted_text)
+            ai_result = analyze_with_gemini(client, str(extracted_text))
             notice["ai_analysis"] = ai_result
             updated = True
             print(f"[{notice_id}] AI 분석 완료")
