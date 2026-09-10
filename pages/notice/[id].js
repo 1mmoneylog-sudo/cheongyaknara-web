@@ -97,6 +97,7 @@ function MiniCalendar({ startDate, endDate, winnerDate }) {
 export default function NoticeDetail({ notice }) {
   const [bookmarked, setBookmarked] = useState(false);
   const [copied, setCopied] = useState(false);
+  const ai = notice.ai_analysis;
   const [reportOpen, setReportOpen] = useState(false);
 const [reportText, setReportText] = useState("");
 const [reportCopied, setReportCopied] = useState(false);
@@ -179,7 +180,61 @@ async function handleReportSend() {
             ⚠️ 꼭 확인하세요 — 이 페이지는 공공데이터포털 API로 자동 수집된 요약 정보입니다. 정확한 자격요건·제출서류·평형별
             보증금은 반드시 <b>원문 공고문(PDF/HWP)</b>을 확인하세요.
           </div>
+{/* ⚠️ warning-box 아래에 이 AI 카드 블록을 그대로 추가하세요 */}
+          {ai && (
+            <div className="info-card" style={{ border: "1.5px solid #3b82f6", backgroundColor: "#f0f7ff" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
+                <span style={{ fontSize: "20px" }}>🤖</span>
+                <h3 style={{ margin: 0, color: "#1e3a8a", fontSize: "17px", fontWeight: "bold" }}>
+                  AI 공고문 핵심 요약
+                </h3>
+              </div>
 
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "14px", lineHeight: "1.6" }}>
+                {ai.price_and_finance && (
+                  <div>
+                    <strong style={{ color: "#1d4ed8" }}>💰 분양가 및 대출 조건</strong>
+                    <ul style={{ margin: "4px 0 0 18px", padding: 0 }}>
+                      {ai.price_and_finance.max_price && <li>최고 분양가: {ai.price_and_finance.max_price}</li>}
+                      {ai.price_and_finance.payment_schedule && <li>납부 일정: {ai.price_and_finance.payment_schedule}</li>}
+                      {ai.price_and_finance.financing_conditions && <li>대출 조건: {ai.price_and_finance.financing_conditions}</li>}
+                    </ul>
+                  </div>
+                )}
+
+                {ai.qualification_and_conditions && (
+                  <div>
+                    <strong style={{ color: "#1d4ed8" }}>📋 자격 요건 및 제한 사항</strong>
+                    <ul style={{ margin: "4px 0 0 18px", padding: 0 }}>
+                      {ai.qualification_and_conditions.residence_requirement && <li>거주 요건: {ai.qualification_and_conditions.residence_requirement}</li>}
+                      {ai.qualification_and_conditions.home_ownership && <li>주택 소유 여부: {ai.qualification_and_conditions.home_ownership}</li>}
+                      {ai.qualification_and_conditions.restrictions && <li>제한 사항: {ai.qualification_and_conditions.restrictions}</li>}
+                    </ul>
+                  </div>
+                )}
+
+                {ai.supply_and_selection && (
+                  <div>
+                    <strong style={{ color: "#1d4ed8" }}>📊 공급 규모 및 당첨자 선정 방식</strong>
+                    <ul style={{ margin: "4px 0 0 18px", padding: 0 }}>
+                      {ai.supply_and_selection.supply_types && <li>공급 유형: {ai.supply_and_selection.supply_types}</li>}
+                      {ai.supply_and_selection.selection_method && <li>선정 방식: {ai.supply_and_selection.selection_method}</li>}
+                    </ul>
+                  </div>
+                )}
+
+                {ai.location_and_complex && (
+                  <div>
+                    <strong style={{ color: "#1d4ed8" }}>🏘️ 입지 환경 및 단지 특징</strong>
+                    <ul style={{ margin: "4px 0 0 18px", padding: 0 }}>
+                      {ai.location_and_complex.location_info && <li>입지 정보: {ai.location_and_complex.location_info}</li>}
+                      {ai.location_and_complex.move_in_date && <li>입주 예정 시기: {ai.location_and_complex.move_in_date}</li>}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
           <div className="info-card">
             <h3>기본 정보</h3>
             <div className="info-row">
