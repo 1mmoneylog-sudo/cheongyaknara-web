@@ -7,7 +7,6 @@ from attachment_parser import download_and_extract, AttachmentError
 NOTICES_FILE = "data/notices.json"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
-# 5가지 핵심 항목 구조화 프롬프트
 PROMPT_SCHEMA = """
 너는 대한민국 부동산 청약 모집공고 분석 전문가이다.
 전달받은 청약 공고문 텍스트를 분석하여 아래 5가지 핵심 항목 기준의 Pure JSON 형식으로만 응답해라.
@@ -43,7 +42,6 @@ PROMPT_SCHEMA = """
 
 
 def analyze_with_gemini(client: genai.Client, text: str) -> dict:
-    """Gemini API를 호출하여 텍스트를 구조화된 JSON으로 변환합니다."""
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=[PROMPT_SCHEMA, f"--- 공고문 텍스트 시작 ---\n{text[:30000]}"],
@@ -57,7 +55,7 @@ def analyze_with_gemini(client: genai.Client, text: str) -> dict:
 
 def process_notices():
     if not os.path.exists(NOTICES_FILE):
-        print(f"[{NOTICES_FILE}] 파일이 존재하지 않습니다. 스크랩을 먼저 확인하세요.")
+        print(f"[{NOTICES_FILE}] 파일이 존재하지 않습니다.")
         return
 
     if not GEMINI_API_KEY:
@@ -67,22 +65,30 @@ def process_notices():
     client = genai.Client(api_key=GEMINI_API_KEY)
 
     with open(NOTICES_FILE, "r", encoding="utf-8") as f:
-        notices = json.load(f)
+        data = json.load(f)
+
+    # 데이터 구조 자동 호환 ({ "notices": [...] } 또는 [...])
+    if isinstance(data, dict) and "notices" in data:
+        notices = data["notices"]
+        is_dict_wrapper = True
+    elif isinstance(data, list):
+        notices = data
+        is_dict_wrapper = False
+    else:
+        print("올바르지 않은 JSON 데이터 구조입니다.")
+        return
 
     updated = False
     for notice in notices:
-        # 데이터 타입 안전성 체크 (dict가 아닌 경우 스킵)
         if not isinstance(notice, dict):
             continue
 
-        # 이미 AI 분석이 완료된 공고는 스킵
         if notice.get("ai_analysis"):
             continue
 
         notice_id = notice.get("id") or notice.get("notice_id") or "notice_tmp"
         file_url = notice.get("attachment_url") or notice.get("file_url")
 
-        # 첨부파일 URL이 없는 경우 본문 텍스트가 있다면 사용
         extracted_text = notice.get("body_text", "")
 
         if file_url:
@@ -90,10 +96,10 @@ def process_notices():
             try:
                 extracted_text = download_and_extract(file_url, notice_id)
             except AttachmentError as e:
-                print(f"[{notice_id}] 첨부파일 처리 실패 (건너뜀): {e}")
+                print(f"[{notice_id}] 첨부파일 처리 실패: {e}")
 
         if not extracted_text or not str(extracted_text).strip():
-            print(f"[{notice_id}] 분석할 텍스트가 없습니다.")
+            print(f"[{notice_id}] 분석할 텍스트가 없어 건너뜁니다.")
             continue
 
         print(f"[{notice_id}] Gemini AI 구조화 분석 시작...")
@@ -105,11 +111,11 @@ def process_notices():
         except Exception as e:
             print(f"[{notice_id}] AI 분석 실패: {e}")
 
-    # 변경사항이 있으면 JSON 업데이트 저장
     if updated:
+        save_data = {"notices": notices} if is_dict_wrapper else notices
         with open(NOTICES_FILE, "w", encoding="utf-8") as f:
-            json.dump(notices, f, ensure_ascii=False, indent=2)
-        print("data/notices.json 에 AI 분석 결과가 성공적으로 반영되었습니다.")
+            json.dump(save_data, f, ensure_ascii=False, indent=2)
+        print("data/notices.json에 AI 분석 결과 저장 완료")
 
 
 if __name__ == "__main__":
