@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-11T14:14:42.530Z",
-  "count": 229,
+  "generated_at": "2026-09-11T16:13:48.136Z",
+  "count": 228,
   "notices": [
     {
       "id": "gh-401",
@@ -33,82 +33,8 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.258Z",
+      "fetched_at": "2026-09-11T16:13:14.909Z",
       "data_source_type": "file"
-    },
-    {
-      "id": "reb-apt-2026000382",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026000382",
-      "title": "두산위브더제니스 부천",
-      "notice_type": "APT 분양",
-      "region_sido": "경기도",
-      "region_sigungu": null,
-      "address_detail": "경기도 부천시 소사구 소사본동 88-39번지 일대",
-      "household_count": 1158,
-      "area_range": null,
-      "supply_kind": "분양",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-19",
-      "apply_end_date": "2026-08-21",
-      "announce_date": "2026-08-12",
-      "winner_date": "2026-08-28",
-      "move_in_date": "203202",
-      "contact_phone": "0323272008",
-      "contact_address": "경기도 부천시 소사구 소사본동 88-39번지 일대",
-      "contact_note": "사업주체: 소사본1의1구역 재개발정비사업조합 · 시공사: 두산건설 주식회사, 쌍용건설(주)",
-      "etc_note": "분양주택 · APT · 민영",
-      "status": null,
-      "special_supply_tags": [
-        "특별공급",
-        "1순위",
-        "2순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000382&pblancNo=2026000382",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-apt-2026000364",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026000364",
-      "title": "써밋 클라비온",
-      "notice_type": "APT 분양",
-      "region_sido": "서울",
-      "region_sigungu": null,
-      "address_detail": "서울특별시 영등포구 신길동 3590번지 일원",
-      "household_count": 176,
-      "area_range": null,
-      "supply_kind": "분양",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-18",
-      "apply_end_date": "2026-08-21",
-      "announce_date": "2026-08-07",
-      "winner_date": "2026-08-28",
-      "move_in_date": "203001",
-      "contact_phone": "15774991",
-      "contact_address": "서울특별시 영등포구 신길동 3590번지 일원",
-      "contact_note": "사업주체: (주)한국토지신탁 · 시공사: (주)대우건설",
-      "etc_note": "분양주택 · APT · 민영",
-      "status": null,
-      "special_supply_tags": [
-        "특별공급",
-        "1순위",
-        "2순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000364&pblancNo=2026000364",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
-      "data_source_type": "api"
     },
     {
       "id": "reb-apt-2026000358",
@@ -144,141 +70,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-urbty-2026950074",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026950074",
-      "title": "둔촌 월드메르디앙 올림픽파크",
-      "notice_type": "오피스텔·도시형·민간임대",
-      "region_sido": "서울",
-      "region_sigungu": null,
-      "address_detail": "서울특별시 강동구 천호대로 1156 (둔촌동, 월드메르디앙올림픽파크)",
-      "household_count": 5,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-24",
-      "apply_end_date": "2026-08-24",
-      "announce_date": "2026-08-18",
-      "winner_date": "2026-08-28",
-      "move_in_date": "202608",
-      "contact_phone": "16660047",
-      "contact_address": "서울특별시 강동구 천호대로 1156 (둔촌동, 월드메르디앙올림픽파크)",
-      "contact_note": "사업주체: 신영부동산신탁 주식회사",
-      "etc_note": "도시형/오피스텔/생활숙박시설/민간임대 · 오피스텔",
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950074&pblancNo=2026950074&houseSecd=02",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-urbty-2026950073",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026950073",
-      "title": "강동 리버스시티",
-      "notice_type": "오피스텔·도시형·민간임대",
-      "region_sido": "서울",
-      "region_sigungu": null,
-      "address_detail": "서울특별시 강동구 천호동 557번지",
-      "household_count": 18,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-24",
-      "apply_end_date": "2026-08-25",
-      "announce_date": "2026-08-19",
-      "winner_date": "2026-08-28",
-      "move_in_date": "202609",
-      "contact_phone": "15663294",
-      "contact_address": "서울특별시 강동구 천호동 557번지",
-      "contact_note": "사업주체: 신영부동산신탁 주식회사",
-      "etc_note": "도시형/오피스텔/생활숙박시설/민간임대 · 오피스텔",
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950073&pblancNo=2026950073&houseSecd=02",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-urbty-2026950070",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026950070",
-      "title": "선유 노블레르",
-      "notice_type": "오피스텔·도시형·민간임대",
-      "region_sido": "서울",
-      "region_sigungu": null,
-      "address_detail": "서울특별시 영등포구 양평동6가 2-1",
-      "household_count": 6,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-19",
-      "apply_end_date": "2026-08-25",
-      "announce_date": "2026-08-14",
-      "winner_date": "2026-08-28",
-      "move_in_date": "202609",
-      "contact_phone": "16681252",
-      "contact_address": "서울특별시 영등포구 양평동6가 2-1",
-      "contact_note": "사업주체: 노블레르",
-      "etc_note": "도시형/오피스텔/생활숙박시설/민간임대 · 오피스텔",
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950070&pblancNo=2026950070&houseSecd=02",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-remndr-2026910219",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026910219",
-      "title": "트리븐 김해",
-      "notice_type": "무순위·잔여세대",
-      "region_sido": "경남",
-      "region_sigungu": null,
-      "address_detail": "경상남도 김해시 내동 243-1번지 일원",
-      "household_count": 1,
-      "area_range": null,
-      "supply_kind": "무순위",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-25",
-      "apply_end_date": "2026-08-25",
-      "announce_date": "2026-08-20",
-      "winner_date": "2026-08-28",
-      "move_in_date": "202908",
-      "contact_phone": "0553348100",
-      "contact_address": "경상남도 김해시 내동 243-1번지 일원",
-      "contact_note": "사업주체: 한국투자부동산신탁 주식회사",
-      "etc_note": "무순위",
-      "status": null,
-      "special_supply_tags": [
-        "무순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910219&pblancNo=2026910219",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -311,7 +103,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -348,7 +140,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -385,7 +177,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -422,7 +214,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -459,7 +251,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -496,7 +288,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -532,7 +324,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -567,7 +359,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -600,7 +392,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -637,7 +429,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -674,7 +466,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -709,7 +501,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -744,7 +536,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -777,7 +569,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -810,7 +602,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
+      "fetched_at": "2026-09-11T16:13:18.968Z",
       "data_source_type": "api"
     },
     {
@@ -845,7 +637,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -880,7 +672,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -913,7 +705,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -1019,7 +811,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -1056,7 +848,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -1089,7 +881,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
+      "fetched_at": "2026-09-11T16:13:18.968Z",
       "data_source_type": "api"
     },
     {
@@ -1124,7 +916,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -1160,7 +952,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -1195,7 +987,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -1228,7 +1020,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -1263,7 +1055,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -1296,7 +1088,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -1329,7 +1121,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -1364,7 +1156,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -1399,7 +1191,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -1435,7 +1227,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -1471,7 +1263,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -1504,7 +1296,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
+      "fetched_at": "2026-09-11T16:13:18.968Z",
       "data_source_type": "api"
     },
     {
@@ -1537,7 +1329,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
+      "fetched_at": "2026-09-11T16:13:18.968Z",
       "data_source_type": "api"
     },
     {
@@ -1572,7 +1364,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -1605,7 +1397,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.974Z",
       "data_source_type": "api"
     },
     {
@@ -1638,7 +1430,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -1671,7 +1463,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -1704,7 +1496,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -2678,7 +2470,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -2713,7 +2505,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -2746,7 +2538,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -2779,7 +2571,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -2816,7 +2608,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -2853,7 +2645,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -2886,7 +2678,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -2919,7 +2711,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -2952,7 +2744,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -2985,7 +2777,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -3018,7 +2810,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -3051,7 +2843,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -3084,7 +2876,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -3117,7 +2909,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
+      "fetched_at": "2026-09-11T16:13:18.968Z",
       "data_source_type": "api"
     },
     {
@@ -3152,7 +2944,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3187,7 +2979,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3222,7 +3014,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3257,7 +3049,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3292,7 +3084,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3327,7 +3119,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3360,7 +3152,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -3649,7 +3441,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
+      "fetched_at": "2026-09-11T16:13:18.968Z",
       "data_source_type": "api"
     },
     {
@@ -3684,7 +3476,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3719,7 +3511,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3754,7 +3546,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.145Z",
+      "fetched_at": "2026-09-11T16:13:18.970Z",
       "data_source_type": "api"
     },
     {
@@ -3787,7 +3579,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.974Z",
       "data_source_type": "api"
     },
     {
@@ -3820,7 +3612,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -3853,7 +3645,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.157Z",
+      "fetched_at": "2026-09-11T16:13:18.975Z",
       "data_source_type": "api"
     },
     {
@@ -3886,7 +3678,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -4176,7 +3968,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4213,7 +4005,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4250,7 +4042,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4287,7 +4079,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4324,7 +4116,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4361,7 +4153,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4398,7 +4190,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4816,7 +4608,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4852,7 +4644,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4888,7 +4680,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -4921,7 +4713,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:33.014Z",
+      "fetched_at": "2026-09-11T16:13:30.169Z",
       "data_source_type": "scrape"
     },
     {
@@ -4954,7 +4746,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:33.014Z",
+      "fetched_at": "2026-09-11T16:13:30.169Z",
       "data_source_type": "scrape"
     },
     {
@@ -4987,7 +4779,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -5371,7 +5163,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:33.014Z",
+      "fetched_at": "2026-09-11T16:13:30.169Z",
       "data_source_type": "scrape"
     },
     {
@@ -5404,7 +5196,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:33.014Z",
+      "fetched_at": "2026-09-11T16:13:30.169Z",
       "data_source_type": "scrape"
     },
     {
@@ -5437,7 +5229,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:33.014Z",
+      "fetched_at": "2026-09-11T16:13:30.169Z",
       "data_source_type": "scrape"
     },
     {
@@ -8673,6 +8465,154 @@
       "data_source_type": "api"
     },
     {
+      "id": "reb-apt-2026000449",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026000449",
+      "title": "화서역 호수공원 아너스빌",
+      "notice_type": "APT 분양",
+      "region_sido": "경기도",
+      "region_sigungu": null,
+      "address_detail": "경기도 수원시 권선구 서둔동 212-1번지 일원",
+      "household_count": 476,
+      "area_range": null,
+      "supply_kind": "분양",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026-09-21",
+      "apply_end_date": "2026-09-23",
+      "announce_date": "2026-09-11",
+      "winner_date": "2026-10-01",
+      "move_in_date": "202910",
+      "contact_phone": "15511480",
+      "contact_address": "경기도 수원시 권선구 서둔동 212-1번지 일원",
+      "contact_note": "사업주체: 삼환기업(주) · 시공사: 삼환기업㈜",
+      "etc_note": "분양주택 · APT · 민영",
+      "status": null,
+      "special_supply_tags": [
+        "특별공급",
+        "1순위",
+        "2순위"
+      ],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000449&pblancNo=2026000449",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-11T16:13:18.960Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-apt-2026000441",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026000441",
+      "title": "문수로 비스타 더파크",
+      "notice_type": "APT 분양",
+      "region_sido": "울산",
+      "region_sigungu": null,
+      "address_detail": "울산광역시 남구 무거동 1615-1번지(무거삼호지구 11BL) 일원",
+      "household_count": 700,
+      "area_range": null,
+      "supply_kind": "분양",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026-09-21",
+      "apply_end_date": "2026-09-23",
+      "announce_date": "2026-09-11",
+      "winner_date": "2026-10-01",
+      "move_in_date": "202905",
+      "contact_phone": "15518454",
+      "contact_address": "울산광역시 남구 무거동 1615-1번지(무거삼호지구 11BL) 일원",
+      "contact_note": "사업주체: (주)동원개발 · 시공사: (주)동원개발",
+      "etc_note": "분양주택 · APT · 민영",
+      "status": null,
+      "special_supply_tags": [
+        "특별공급",
+        "1순위",
+        "2순위"
+      ],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000441&pblancNo=2026000441",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-11T16:13:18.960Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-apt-2026000438",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026000438",
+      "title": "힐스테이트 고덕엘리스트 A65BL 공공분양주택",
+      "notice_type": "APT 분양",
+      "region_sido": "경기도",
+      "region_sigungu": null,
+      "address_detail": "경기도 평택시 고덕동 고덕면 일원(평택고덕국제화계획지구 A65BL)",
+      "household_count": 837,
+      "area_range": null,
+      "supply_kind": "분양",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026-09-21",
+      "apply_end_date": "2026-09-23",
+      "announce_date": "2026-09-11",
+      "winner_date": "2026-10-02",
+      "move_in_date": "202906",
+      "contact_phone": "03180941260",
+      "contact_address": "경기도 평택시 고덕동 고덕면 일원(평택고덕국제화계획지구 A65BL)",
+      "contact_note": "사업주체: 한국토지주택공사 경기남부지역본부 · 시공사: 현대건설(주), 동부건설(주), 우미건설(주)",
+      "etc_note": "분양주택 · APT · 국민",
+      "status": null,
+      "special_supply_tags": [
+        "특별공급",
+        "1순위",
+        "2순위"
+      ],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000438&pblancNo=2026000438",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-11T16:13:18.960Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-apt-2026000437",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026000437",
+      "title": "힐스테이트 고덕엘리스트 A12BL 공공분양주택",
+      "notice_type": "APT 분양",
+      "region_sido": "경기도",
+      "region_sigungu": null,
+      "address_detail": "경기도 평택시 고덕동 고덕면 일원(평택고덕국제화계획지구 A12BL)",
+      "household_count": 942,
+      "area_range": null,
+      "supply_kind": "분양",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026-09-21",
+      "apply_end_date": "2026-09-23",
+      "announce_date": "2026-09-11",
+      "winner_date": "2026-10-01",
+      "move_in_date": "202906",
+      "contact_phone": "03180941260",
+      "contact_address": "경기도 평택시 고덕동 고덕면 일원(평택고덕국제화계획지구 A12BL)",
+      "contact_note": "사업주체: 한국토지주택공사 경기남부지역본부 · 시공사: 현대건설(주), 동부건설(주), 우미건설(주)",
+      "etc_note": "분양주택 · APT · 국민",
+      "status": null,
+      "special_supply_tags": [
+        "특별공급",
+        "1순위",
+        "2순위"
+      ],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000437&pblancNo=2026000437",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-11T16:13:18.960Z",
+      "data_source_type": "api"
+    },
+    {
       "id": "reb-apt-2026000314",
       "source_agency": "청약홈",
       "source_notice_id": "2026000314",
@@ -8706,7 +8646,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -8743,7 +8683,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -8776,7 +8716,44 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.143Z",
+      "fetched_at": "2026-09-11T16:13:18.968Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-apt-2026000103",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026000103",
+      "title": "더샵 분당하이스트",
+      "notice_type": "APT 분양",
+      "region_sido": "경기도",
+      "region_sigungu": null,
+      "address_detail": "경기도 성남시 분당구 정자동 90번지",
+      "household_count": 143,
+      "area_range": null,
+      "supply_kind": "분양",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026-09-21",
+      "apply_end_date": "2026-09-28",
+      "announce_date": "2026-09-11",
+      "winner_date": "2026-10-02",
+      "move_in_date": "202712",
+      "contact_phone": "18001430",
+      "contact_address": "경기도 성남시 분당구 정자동 90번지",
+      "contact_note": "사업주체: 느티마을4단지 리모델링주택조합 · 시공사: (주)포스코이앤씨",
+      "etc_note": "분양주택 · APT · 민영",
+      "status": null,
+      "special_supply_tags": [
+        "특별공급",
+        "1순위",
+        "2순위"
+      ],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000103&pblancNo=2026000103",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -9361,7 +9338,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -9943,7 +9920,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:26.134Z",
+      "fetched_at": "2026-09-11T16:13:18.960Z",
       "data_source_type": "api"
     },
     {
@@ -9976,7 +9953,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -10133,7 +10110,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10167,7 +10144,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10201,7 +10178,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10235,7 +10212,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10269,7 +10246,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10303,7 +10280,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10337,7 +10314,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10371,7 +10348,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10405,7 +10382,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10439,7 +10416,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10473,7 +10450,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10507,7 +10484,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10541,7 +10518,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10575,7 +10552,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.913Z",
       "data_source_type": "file"
     },
     {
@@ -10609,7 +10586,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10643,7 +10620,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10677,7 +10654,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10711,7 +10688,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10745,7 +10722,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10779,7 +10756,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10813,7 +10790,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10847,7 +10824,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10881,7 +10858,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10915,7 +10892,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10949,7 +10926,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -10983,7 +10960,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11017,7 +10994,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11051,7 +11028,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11085,7 +11062,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11119,7 +11096,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11153,7 +11130,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11187,7 +11164,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11221,7 +11198,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.262Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11255,7 +11232,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11289,7 +11266,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11323,7 +11300,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11357,7 +11334,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11391,7 +11368,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11425,7 +11402,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11459,7 +11436,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11493,7 +11470,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11527,7 +11504,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11561,7 +11538,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11595,7 +11572,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11629,7 +11606,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.263Z",
+      "fetched_at": "2026-09-11T16:13:14.914Z",
       "data_source_type": "file"
     },
     {
@@ -11663,7 +11640,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.264Z",
+      "fetched_at": "2026-09-11T16:13:14.915Z",
       "data_source_type": "file"
     },
     {
@@ -11697,7 +11674,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:23.265Z",
+      "fetched_at": "2026-09-11T16:13:14.916Z",
       "data_source_type": "file"
     },
     {
@@ -11730,7 +11707,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -11763,7 +11740,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -11796,7 +11773,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -11829,7 +11806,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -11862,7 +11839,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -11895,7 +11872,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -11928,7 +11905,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -11961,7 +11938,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape",
       "household_count_source": "reb"
     },
@@ -11995,7 +11972,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -12028,7 +12005,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -12061,7 +12038,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -12094,7 +12071,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -12127,7 +12104,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.943Z",
       "data_source_type": "scrape"
     },
     {
@@ -12160,7 +12137,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12193,7 +12170,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12226,7 +12203,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12259,7 +12236,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12292,7 +12269,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12325,7 +12302,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12358,7 +12335,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12391,7 +12368,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12424,7 +12401,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12457,7 +12434,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12490,7 +12467,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12523,7 +12500,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12556,7 +12533,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     },
     {
@@ -12589,7 +12566,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-11T14:13:59.275Z",
+      "fetched_at": "2026-09-11T16:13:47.944Z",
       "data_source_type": "scrape"
     }
   ]
