@@ -1165,7 +1165,7 @@ nav a.active { color: #fff; font-weight: 700; }
     color: var(--ink-faint);
     font-size: 13.5px;
   }
- /* ===== 로그인 유도 모달 오버레이 (화면 중앙 정렬 및 배경 어둡게) ===== */
+/* ===== 로그인 유도 모달 오버레이 ===== */
 .report-modal-overlay {
   position: fixed;
   top: 0;
