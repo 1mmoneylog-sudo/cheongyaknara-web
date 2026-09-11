@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { supabase } from "../lib/supabaseClient";
+import { useUser } from "../lib/useUser";
+import { useBookmarks } from "../lib/useBookmarks";
+import noticesData from "../data/notices.json";
+import { getDday } from "../lib/dday";
 
 const REGION_OPTIONS = [
   "서울", "경기도", "인천", "부산", "대구", "광주", "대전", "울산", "세종",
@@ -11,20 +14,31 @@ const KIND_OPTIONS = ["분양", "임대"];
 
 export default function MyPage() {
   const router = useRouter();
+  const { user, loading: userLoading } = useUser();
+  const { bookmarks, toggleBookmark } = useBookmarks();
   const [mounted, setMounted] = useState(false);
-  const [bookmarks, setBookmarks] = useState([]);
   const [selectedRegions, setSelectedRegions] = useState([]);
   const [selectedKinds, setSelectedKinds] = useState([]);
 
-  // 클라이언트 마운트 이후에만 렌더링 실행 (빌드 에러 방지 핵심 코드)
   useEffect(() => {
     setMounted(true);
-    // 기존에 localStorage나 supabase 데이터 가져오던 로직을 여기에 넣으세요
   }, []);
 
-  const handleRemoveBookmark = (id) => {
-    setBookmarks((prev) => prev.filter((item) => item.id !== id));
-  };
+  useEffect(() => {
+    if (mounted && !userLoading && !user) {
+      router.push("/login");
+    }
+  }, [mounted, userLoading, user, router]);
+
+  const bookmarkedNotices = useMemo(() => {
+    return noticesData.notices
+      .filter((n) => bookmarks.has(n.id))
+      .map((n) => ({ ...n, dday: getDday(n.apply_end_date) }));
+  }, [bookmarks]);
+
+  const urgentCount = bookmarkedNotices.filter(
+    (n) => n.dday !== null && n.dday >= 0 && n.dday <= 3
+  ).length;
 
   const toggleRegion = (region) => {
     setSelectedRegions((prev) =>
@@ -42,37 +56,42 @@ export default function MyPage() {
     alert("설정이 저장되었습니다.");
   };
 
-  // 마운트되기 전(서버 렌더링 시점)에는 빈 컴포넌트 반환
-  if (!mounted) return null;
+  if (!mounted || !user) return null;
 
   return (
     <div className="mypage-container">
-      {/* 관심공고 섹션 */}
       <section className="mypage-section">
-        <h3>관심공고</h3>
-        {bookmarks.length === 0 ? (
+        <h3>
+          관심공고
+          {bookmarkedNotices.length > 0 && ` ${bookmarkedNotices.length}개`}
+          {urgentCount > 0 && ` · 마감임박 ${urgentCount}개`}
+        </h3>
+        {bookmarkedNotices.length === 0 ? (
           <p className="sub-desc">
-            저장된 관심공고가 없습니다. 공고 목록에서 [관심공고 등록]을 눌러 저장해보세요.
+            저장된 관심공고가 없습니다. 공고 목록에서 ☆를 눌러 저장해보세요.
           </p>
         ) : (
           <div className="bookmark-list">
-            {bookmarks.map((item) => (
+            {bookmarkedNotices.map((item) => (
               <div key={item.id} className="bookmark-item">
                 <div className="bookmark-item-main">
-                  <Link href={`/detail/${item.id}`} className="bookmark-item-title">
+                  <Link href={`/notice/${item.id}`} className="bookmark-item-title">
                     {item.title}
                   </Link>
                   <div className="bookmark-item-meta">
-                    <span>{item.region}</span>
-                    <span>{item.agency}</span>
-                    <span>{item.type}</span>
+                    <span>{item.region_sido ?? "-"}</span>
+                    <span>{item.source_agency}</span>
+                    <span>
+                      {item.apply_start_date ?? "-"} ~ {item.apply_end_date ?? "-"}
+                    </span>
+                    {item.dday !== null && <span>D-{item.dday}</span>}
                   </div>
                 </div>
                 <button
                   className="bookmark-text-btn active"
-                  onClick={() => handleRemoveBookmark(item.id)}
+                  onClick={() => toggleBookmark(item.id)}
                 >
-                  ♥ 관심공고 등록됨
+                  ♥ 관심공고 삭제
                 </button>
               </div>
             ))}
@@ -80,7 +99,6 @@ export default function MyPage() {
         )}
       </section>
 
-      {/* 나의 청약 설정 섹션 */}
       <section className="mypage-section">
         <h3>나의 청약 설정</h3>
         <p className="sub-desc">내가 원하는 청약만 골라서 받아보세요.</p>
