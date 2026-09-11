@@ -35,14 +35,13 @@ export default function Home() {
   const notices = noticesData.notices;
   const router = useRouter();
 
-  const [query, setQuery] = useState("");
+    const [query, setQuery] = useState("");
   const [pendingQuery, setPendingQuery] = useState("");
   const [agencyFilter, setAgencyFilter] = useState("전체");
   const [regionFilter, setRegionFilter] = useState("전체");
   const [kindFilter, setKindFilter] = useState("전체");
   const [sortMode, setSortMode] = useState("dday");
   const [page, setPage] = useState(1);
-  const [bookmarks, setBookmarks] = useState(new Set());
   const [contactOpen, setContactOpen] = useState(false);
   const [contactName, setContactName] = useState("");
   const [contactPhone, setContactPhone] = useState("");
