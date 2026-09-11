@@ -449,6 +449,16 @@ nav a.active { color: #fff; font-weight: 700; }
     border-radius: 999px;
     white-space: nowrap;
   }
+
+  .dday-block {
+    flex-wrap: wrap;
+  }
+  .bookmark-text-btn {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 12px;
+    order: -1;
+  }
 }
 
 /* ===== 청약홈 스타일 캘린더 ===== */
