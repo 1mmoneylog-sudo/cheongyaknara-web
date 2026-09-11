@@ -1329,4 +1329,24 @@ nav a.active { color: #fff; font-weight: 700; }
     content: "";
     margin-left: 0;
   }
+  .inapp-browser-banner {
+  background: #fff8e6;
+  border: 1px solid #ffe4a3;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.inapp-browser-banner p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #92600a;
+  line-height: 1.5;
+  flex: 1;
+  min-width: 200px;
+}
 }
