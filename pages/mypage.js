@@ -1,197 +1,300 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { supabase } from "../lib/supabaseClient";
 import { useUser } from "../lib/useUser";
+import { getDday, getUrgencyLevel } from "../lib/dday";
 
 const REGION_OPTIONS = [
   "서울", "경기도", "인천", "부산", "대구", "광주", "대전", "울산", "세종",
   "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주",
 ];
+
 const KIND_OPTIONS = ["분양", "임대"];
-const AGENCY_OPTIONS = ["LH", "SH", "GH", "청약홈"];
 
 export default function MyPage() {
   const router = useRouter();
-  const { user, loading } = useUser();
+  const { user, loading: userLoading } = useUser();
 
   const [regions, setRegions] = useState([]);
   const [kinds, setKinds] = useState([]);
-  const [agencies, setAgencies] = useState([]);
-  const [emailNotify, setEmailNotify] = useState(true);
-  const [bookmarks, setBookmarks] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [saveMsg, setSaveMsg] = useState("");
+  const [toastMsg, setToastMsg] = useState("");
 
+  const [bookmarks, setBookmarks] = useState([]);
+  const [bmLoading, setBmLoading] = useState(true);
+
+  // 미로그인 시 로그인 페이지로 이동
   useEffect(() => {
-    if (!loading && !user) {
-      router.push("/login");
+    if (!userLoading && !user) {
+      router.replace("/login");
     }
-  }, [loading, user, router]);
+  }, [user, userLoading, router]);
 
+  // 관심 조건 및 관심공고 목록 불러오기
   useEffect(() => {
     if (!user) return;
 
-    supabase
-      .from("user_preferences")
-      .select("*")
-      .eq("id", user.id)
-      .maybeSingle()
-      .then(({ data }) => {
-        if (data) {
-          setRegions(data.interested_regions ?? []);
-          setKinds(data.interested_kinds ?? []);
-          setAgencies(data.interested_agencies ?? []);
-          setEmailNotify(data.email_notify ?? true);
-        }
-      });
+    async function fetchData() {
+      setLoading(true);
+      setBmLoading(true);
 
-    supabase
-      .from("user_bookmarks")
-      .select("*")
-      .eq("user_id", user.id)
-      .order("created_at", { ascending: false })
-      .then(({ data }) => {
-        setBookmarks(data ?? []);
-      });
+      // 1. 관심 설정 불러오기
+      const { data: prefData } = await supabase
+        .from("user_preferences")
+        .select("*")
+        .eq("user_id", user.id)
+        .single();
+
+      if (prefData) {
+        setRegions(prefData.regions || []);
+        setKinds(prefData.kinds || []);
+      }
+      setLoading(false);
+
+      // 2. 관심공고 목록 불러오기
+      const { data: bmData } = await supabase
+        .from("user_bookmarks")
+        .select("*")
+        .eq("user_id", user.id)
+        .order("created_at", { ascending: false });
+
+      if (bmData) {
+        setBookmarks(bmData);
+      }
+      setBmLoading(false);
+    }
+
+    fetchData();
   }, [user]);
 
-  function toggleItem(list, setList, item) {
-    setList((prev) =>
-      prev.includes(item) ? prev.filter((v) => v !== item) : [...prev, item]
+  function showToast(msg) {
+    setToastMsg(msg);
+    setTimeout(() => setToastMsg(""), 2200);
+  }
+
+  // 관심지역 토글
+  function toggleRegion(r) {
+    setRegions((prev) =>
+      prev.includes(r) ? prev.filter((i) => i !== r) : [...prev, r]
     );
   }
 
-  async function handleSave() {
+  // 관심유형 토글
+  function toggleKind(k) {
+    setKinds((prev) =>
+      prev.includes(k) ? prev.filter((i) => i !== k) : [...prev, k]
+    );
+  }
+
+  // 관심 설정 저장
+  async function handleSavePreferences() {
+    if (!user || saving) return;
     setSaving(true);
-    setSaveMsg("");
-    const { error } = await supabase.from("user_preferences").upsert({
-      id: user.id,
-      interested_regions: regions,
-      interested_kinds: kinds,
-      interested_agencies: agencies,
-      email_notify: emailNotify,
-      updated_at: new Date().toISOString(),
-    });
-    setSaving(false);
-    setSaveMsg(error ? "저장에 실패했어요. 다시 시도해주세요." : "저장됐어요!");
+
+    try {
+      const { error } = await supabase.from("user_preferences").upsert({
+        user_id: user.id,
+        regions,
+        kinds,
+        updated_at: new Date().toISOString(),
+      });
+
+      if (error) throw error;
+      showToast("청약 설정이 저장되었습니다.");
+    } catch (err) {
+      console.error("설정 저장 실패:", err);
+      showToast("저장에 실패했습니다. 다시 시도해주세요.");
+    } finally {
+      setSaving(false);
+    }
   }
 
+  // 북마크 삭제 처리
   async function handleRemoveBookmark(noticeId) {
-    await supabase.from("user_bookmarks").delete().eq("user_id", user.id).eq("notice_id", noticeId);
-    setBookmarks((prev) => prev.filter((b) => b.notice_id !== noticeId));
+    if (!user) return;
+
+    try {
+      const { error } = await supabase
+        .from("user_bookmarks")
+        .delete()
+        .eq("user_id", user.id)
+        .eq("notice_id", noticeId);
+
+      if (error) throw error;
+
+      setBookmarks((prev) => prev.filter((b) => b.notice_id !== noticeId));
+      showToast("관심공고에서 삭제했습니다.");
+    } catch (err) {
+      console.error("북마크 삭제 실패:", err);
+      showToast("삭제 실패했습니다. 다시 시도해주세요.");
+    }
   }
 
-  if (loading || !user) {
-    return <div style={{ padding: 60, textAlign: "center" }}>불러오는 중...</div>;
+  // 마감임박 공고 수 계산 (D-3 이하)
+  const urgentCount = useMemo(() => {
+    return bookmarks.filter((b) => {
+      const d = getDday(b.apply_end_date);
+      return d !== null && d >= 0 && d <= 3;
+    }).length;
+  }, [bookmarks]);
+
+  if (userLoading || loading) {
+    return (
+      <div className="container" style={{ paddingTop: 40, textAlign: "center" }}>
+        로딩 중...
+      </div>
+    );
   }
 
   return (
-    <div className="bg-light-gray min-h-screen">
-      <header className="site-header">
-        <div className="header-inner">
-          <Link href="/" className="logo">
-            <span className="dot" />
-            청약나라
-          </Link>
-          <nav>
-            <Link href="/">모집공고</Link>
-            <Link href="/gajeom">가점계산기</Link>
-            <Link href="/jagyeok">자격진단</Link>
-            <Link href="/calendar">청약캘린더</Link>
-          </nav>
-        </div>
-      </header>
+    <div className="container" style={{ paddingTop: 24, paddingBottom: 60 }}>
+      {/* 1. 관심공고 섹션 */}
+      <section style={{ marginBottom: 40 }}>
+        <h2 style={{ fontSize: 20, fontWeight: 800, marginBottom: 12 }}>관심공고</h2>
 
-      <div className="layout" style={{ flexDirection: "column" }}>
-        <h2 className="section-title" style={{ marginBottom: 20 }}>마이페이지</h2>
-
-        <div className="filter-card">
-          <h3 style={{ marginBottom: 14 }}>관심 지역</h3>
-          <div className="chip-row">
-            {REGION_OPTIONS.map((r) => (
-              <button
-                key={r}
-                className={`chip-btn ${regions.includes(r) ? "active" : ""}`}
-                onClick={() => toggleItem(regions, setRegions, r)}
-              >
-                {r}
-              </button>
-            ))}
+        {bmLoading ? (
+          <div>관심공고를 불러오는 중...</div>
+        ) : bookmarks.length === 0 ? (
+          <div style={{ color: "var(--ink-soft)", padding: "20px 0" }}>
+            저장된 관심공고가 없습니다. 공고 목록에서 ☆를 눌러 저장해보세요.
           </div>
+        ) : (
+          <>
+            <div className="bookmark-summary">
+              <span>
+                관심공고 <b>{bookmarks.length}개</b>
+              </span>
+              <span className="urgent-count">
+                마감임박 <b>{urgentCount}개</b>
+              </span>
+            </div>
 
-          <h3 style={{ margin: "22px 0 14px" }}>관심 유형</h3>
-          <div className="chip-row">
-            {KIND_OPTIONS.map((k) => (
-              <button
-                key={k}
-                className={`chip-btn ${kinds.includes(k) ? "active" : ""}`}
-                onClick={() => toggleItem(kinds, setKinds, k)}
-              >
-                {k}
-              </button>
-            ))}
-          </div>
+            <div className="bookmark-list">
+              {bookmarks.map((bm) => {
+                const dday = getDday(bm.apply_end_date);
+                const urgency = getUrgencyLevel(dday);
+                const applyRange =
+                  bm.apply_start_date && bm.apply_end_date
+                    ? `${bm.apply_start_date} ~ ${bm.apply_end_date}`
+                    : bm.apply_end_date
+                    ? `~${bm.apply_end_date}`
+                    : "-";
 
-          <h3 style={{ margin: "22px 0 14px" }}>관심 기관</h3>
-          <div className="chip-row">
-            {AGENCY_OPTIONS.map((a) => (
-              <button
-                key={a}
-                className={`chip-btn ${agencies.includes(a) ? "active" : ""}`}
-                onClick={() => toggleItem(agencies, setAgencies, a)}
-              >
-                {a}
-              </button>
-            ))}
-          </div>
+                return (
+                  <div key={bm.notice_id} className="bookmark-item">
+                    <div className="bookmark-item-main">
+                      <Link href={`/notice/${bm.notice_id}`} className="bookmark-item-title">
+                        {bm.notice_title}
+                      </Link>
+                      <div className="bookmark-item-meta">
+                        <span>{bm.region_sido ?? "-"}</span>
+                        <span>{bm.source_agency ?? "-"}</span>
+                        <span>접수기간: {applyRange}</span>
+                      </div>
+                    </div>
 
-          <label style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 22, fontSize: 14 }}>
-            <input
-              type="checkbox"
-              checked={emailNotify}
-              onChange={(e) => setEmailNotify(e.target.checked)}
-            />
-            관심 조건에 맞는 새 공고를 이메일로 받기
-          </label>
+                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                      <span className={`bookmark-item-dday ${urgency}`}>
+                        {dday === null || dday < 0 ? "마감" : `D-${dday}`}
+                      </span>
+                      <button
+                        onClick={() => handleRemoveBookmark(bm.notice_id)}
+                        style={{
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          color: "var(--ink-faint)",
+                          fontSize: 16,
+                        }}
+                        title="삭제"
+                      >
+                        ★
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        )}
+      </section>
 
-          <button
-            className="primary-btn"
-            style={{ marginTop: 20, width: 200 }}
-            onClick={handleSave}
-            disabled={saving}
-          >
-            {saving ? "저장 중..." : "설정 저장"}
-          </button>
-          {saveMsg && <p style={{ marginTop: 10, fontSize: 13.5, color: "var(--ink-soft)" }}>{saveMsg}</p>}
-        </div>
+      {/* 2. 나의 청약 설정 섹션 */}
+      <section>
+        <h2 style={{ fontSize: 20, fontWeight: 800, marginBottom: 4 }}>나의 청약 설정</h2>
+        <p style={{ color: "var(--ink-soft)", fontSize: 14, marginBottom: 20 }}>
+          내가 원하는 청약만 골라서 받아보세요.
+        </p>
 
-        <div className="filter-card" style={{ marginTop: 20 }}>
-          <h3 style={{ marginBottom: 14 }}>관심 공고 ({bookmarks.length})</h3>
-          {bookmarks.length === 0 ? (
-            <p style={{ fontSize: 14, color: "var(--ink-soft)" }}>아직 등록한 관심 공고가 없어요.</p>
-          ) : (
-            bookmarks.map((b) => (
-              <div
-                key={b.notice_id}
-                className="info-row"
-                style={{ alignItems: "center" }}
-              >
-                <Link href={`/notice/${b.notice_id}`} style={{ fontSize: 14, fontWeight: 600 }}>
-                  {b.notice_title || b.notice_id}
-                </Link>
+        <div style={{ marginBottom: 24 }}>
+          <label style={{ display: "block", fontWeight: 700, marginBottom: 8 }}>관심 지역</label>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {REGION_OPTIONS.map((r) => {
+              const active = regions.includes(r);
+              return (
                 <button
-                  className="secondary-btn"
-                  style={{ width: "auto", padding: "6px 12px", marginBottom: 0 }}
-                  onClick={() => handleRemoveBookmark(b.notice_id)}
+                  key={r}
+                  type="button"
+                  onClick={() => toggleRegion(r)}
+                  style={{
+                    padding: "6px 12px",
+                    borderRadius: 20,
+                    border: "1px solid var(--line)",
+                    background: active ? "var(--ink)" : "#fff",
+                    color: active ? "#fff" : "var(--ink)",
+                    fontSize: 13,
+                    cursor: "pointer",
+                  }}
                 >
-                  삭제
+                  {r}
                 </button>
-              </div>
-            ))
-          )}
+              );
+            })}
+          </div>
         </div>
-      </div>
+
+        <div style={{ marginBottom: 28 }}>
+          <label style={{ display: "block", fontWeight: 700, marginBottom: 8 }}>관심 유형</label>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {KIND_OPTIONS.map((k) => {
+              const active = kinds.includes(k);
+              return (
+                <button
+                  key={k}
+                  type="button"
+                  onClick={() => toggleKind(k)}
+                  style={{
+                    padding: "6px 12px",
+                    borderRadius: 20,
+                    border: "1px solid var(--line)",
+                    background: active ? "var(--ink)" : "#fff",
+                    color: active ? "#fff" : "var(--ink)",
+                    fontSize: 13,
+                    cursor: "pointer",
+                  }}
+                >
+                  {k}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <button
+          type="button"
+          onClick={handleSavePreferences}
+          disabled={saving}
+          className="primary-btn"
+          style={{ width: "100%", padding: "12px 0" }}
+        >
+          {saving ? "저장 중..." : "설정 저장하기"}
+        </button>
+      </section>
+
+      {/* 토스트 메시지 */}
+      {toastMsg && <div className="toast-message">{toastMsg}</div>}
     </div>
   );
 }
