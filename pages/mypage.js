@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";ㄴ
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useUser } from "../lib/useUser";
@@ -7,6 +7,7 @@ import { supabase } from "../lib/supabaseClient";
 import { subscribeToPush } from "../lib/pushClient";
 import noticesData from "../data/notices.json";
 import { getDday } from "../lib/dday";
+import InAppBrowserBanner from "../components/InAppBrowserBanner";
 
 const REGION_OPTIONS = [
   "서울", "경기도", "인천", "부산", "대구", "광주", "대전", "울산", "세종",
@@ -148,9 +149,10 @@ export default function MyPage() {
         )}
       </section>
 
-      <section className="mypage-section">
+            <section className="mypage-section">
         <h3>나의 청약 설정</h3>
         <p className="sub-desc">내가 원하는 청약만 골라서 받아보세요.</p>
+        <InAppBrowserBanner />
 
         <div style={{ marginBottom: "20px" }}>
           <div style={{ fontWeight: 700, fontSize: "14px", marginBottom: "10px" }}>관심 지역</div>
