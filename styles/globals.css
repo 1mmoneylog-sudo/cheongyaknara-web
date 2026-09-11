@@ -1213,23 +1213,14 @@ nav a.active { color: #fff; font-weight: 700; }
 }
 .bookmark-summary b{color:var(--ink); font-weight:800; font-size:16px;}
 .bookmark-summary .urgent-count b{color:var(--urgent);}
-.bookmark-item{
-  display:flex; justify-content:space-between; align-items:center;
-  padding:14px 0; border-bottom:1px solid var(--line); gap:12px;
-}
-.bookmark-item:last-child{border-bottom:none;}
-.bookmark-item-main{flex:1; min-width:0;}
-.bookmark-item-title{font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:5px; display:block;}
-.bookmark-item-meta{display:flex; gap:8px; flex-wrap:wrap; font-size:12.5px; color:var(--ink-soft);}
-.bookmark-item-meta span:not(:last-child)::after{content:"|"; margin-left:8px; color:var(--line);}
 .bookmark-item-dday{font-family:'JetBrains Mono'; font-weight:800; font-size:15px; flex-shrink:0;}
 .bookmark-item-dday.urgent{color:var(--urgent);}
 .bookmark-item-dday.soon{color:var(--soon);}
 .bookmark-item-dday.calm{color:var(--calm);}
 
-/* ===== 마이페이지 레이아웃 정돈 ===== */
+/* ===== 마이페이지 레이아웃 ===== */
 .mypage-container {
-  max-width: 1000px;
+  max-width: 1120px;
   margin: 40px auto 80px;
   padding: 0 24px;
 }
@@ -1246,34 +1237,10 @@ nav a.active { color: #fff; font-weight: 700; }
   margin: 0 0 12px;
   color: var(--ink);
 }
-.mypage-section p.sub-desc {
+.sub-desc {
   font-size: 14px;
   color: var(--ink-soft);
   margin: 0 0 24px;
-}
-/* ===== 마이페이지 관심공고 목록 ===== */
-.mypage-container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 28px 24px 60px;
-}
-.mypage-section {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 22px 24px;
-  margin-bottom: 20px;
-}
-.mypage-section h3 {
-  font-size: 17px;
-  font-weight: 800;
-  margin: 0 0 8px;
-  color: var(--ink);
-}
-.sub-desc {
-  font-size: 13.5px;
-  color: var(--ink-soft);
-  margin: 0 0 16px;
 }
 
 .bookmark-list {
@@ -1286,9 +1253,11 @@ nav a.active { color: #fff; font-weight: 700; }
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.bookmark-item:last-child {
+  border-bottom: none;
 }
 .bookmark-item-main {
   flex: 1;
@@ -1304,20 +1273,15 @@ nav a.active { color: #fff; font-weight: 700; }
 .bookmark-item-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   font-size: 13px;
   color: var(--ink-soft);
 }
-
-@media (max-width: 860px) {
-  .bookmark-item {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .bookmark-item-meta {
-    flex-direction: column;
-    gap: 4px;
-  }
+.bookmark-item-meta span:not(:last-child)::after {
+  content: "|";
+  margin-left: 8px;
+  color: var(--line);
+}
 
 /* ===== 관심공고 등록 버튼 (기존 별표 아이콘 대체) ===== */
 .bookmark-text-btn {
@@ -1336,6 +1300,7 @@ nav a.active { color: #fff; font-weight: 700; }
   white-space: nowrap;
   width: 100%;
   transition: all 0.15s ease;
+  flex-shrink: 0;
 }
 .bookmark-text-btn:hover {
   background: var(--bg);
@@ -1345,4 +1310,19 @@ nav a.active { color: #fff; font-weight: 700; }
   background: #FFF4E6;
   border-color: #FFD8A8;
   color: #D9480F;
+}
+
+@media (max-width: 860px) {
+  .bookmark-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .bookmark-item-meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .bookmark-item-meta span:not(:last-child)::after {
+    content: "";
+    margin-left: 0;
+  }
 }
