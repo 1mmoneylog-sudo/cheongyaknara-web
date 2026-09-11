@@ -136,13 +136,19 @@ async function handleContactSubmit() {
     alert("이름, 연락처, 문의내용을 모두 입력해주세요.");
     return;
   }
-  const message = `[문의하기]\n이름: ${contactName}\n연락처: ${contactPhone}\n문의내용: ${contactContent}`;
-  if (typeof navigator !== "undefined" && navigator.clipboard) {
-    try {
-      await navigator.clipboard.writeText(message);
-    } catch (e) {}
+
+  const { error } = await supabase.from("contact_inquiries").insert({
+    name: contactName.trim(),
+    phone: contactPhone.trim(),
+    content: contactContent.trim(),
+  });
+
+  if (error) {
+    console.error("문의 저장 실패:", error.message);
+    alert("문의 접수 중 오류가 발생했어요. 잠시 후 다시 시도해주세요.");
+    return;
   }
-  window.open("https://open.kakao.com/o/sJ2e8KMi", "_blank", "noopener,noreferrer");
+
   setContactDone(true);
 }
 
