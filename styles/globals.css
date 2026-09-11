@@ -1216,3 +1216,55 @@ nav a.active { color: #fff; font-weight: 700; }
 .bookmark-item-dday.urgent{color:var(--urgent);}
 .bookmark-item-dday.soon{color:var(--soon);}
 .bookmark-item-dday.calm{color:var(--calm);}
+
+/* ===== 마이페이지 레이아웃 정돈 ===== */
+.mypage-container {
+  max-width: 1000px;
+  margin: 40px auto 80px;
+  padding: 0 24px;
+}
+.mypage-section {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.mypage-section h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.mypage-section p.sub-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 24px;
+}
+
+/* ===== 관심공고 등록 버튼 (기존 별표 아이콘 대체) ===== */
+.bookmark-text-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+.bookmark-text-btn:hover {
+  background: var(--bg);
+  border-color: var(--ink-faint);
+}
+.bookmark-text-btn.active {
+  background: #FFF4E6;
+  border-color: #FFD8A8;
+  color: #D9480F;
+}
