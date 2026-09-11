@@ -1,10 +1,53 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { supabase } from "../lib/supabaseClient";
+
+const REGION_OPTIONS = [
+  "서울", "경기도", "인천", "부산", "대구", "광주", "대전", "울산", "세종",
+  "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"
+];
+const KIND_OPTIONS = ["분양", "임대"];
+
 export default function MyPage() {
   const router = useRouter();
-  // ... (기존 state 및 함수 로직 유지)
+  const [mounted, setMounted] = useState(false);
+  const [bookmarks, setBookmarks] = useState([]);
+  const [selectedRegions, setSelectedRegions] = useState([]);
+  const [selectedKinds, setSelectedKinds] = useState([]);
+
+  // 클라이언트 마운트 이후에만 렌더링 실행 (빌드 에러 방지 핵심 코드)
+  useEffect(() => {
+    setMounted(true);
+    // 기존에 localStorage나 supabase 데이터 가져오던 로직을 여기에 넣으세요
+  }, []);
+
+  const handleRemoveBookmark = (id) => {
+    setBookmarks((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  const toggleRegion = (region) => {
+    setSelectedRegions((prev) =>
+      prev.includes(region) ? prev.filter((r) => r !== region) : [...prev, region]
+    );
+  };
+
+  const toggleKind = (kind) => {
+    setSelectedKinds((prev) =>
+      prev.includes(kind) ? prev.filter((k) => k !== kind) : [...prev, kind]
+    );
+  };
+
+  const handleSaveSettings = () => {
+    alert("설정이 저장되었습니다.");
+  };
+
+  // 마운트되기 전(서버 렌더링 시점)에는 빈 컴포넌트 반환
+  if (!mounted) return null;
 
   return (
     <div className="mypage-container">
-      {/* 관심공고 영역 */}
+      {/* 관심공고 섹션 */}
       <section className="mypage-section">
         <h3>관심공고</h3>
         {bookmarks.length === 0 ? (
@@ -25,7 +68,6 @@ export default function MyPage() {
                     <span>{item.type}</span>
                   </div>
                 </div>
-                {/* 우측 관심공고 등록 버튼 */}
                 <button
                   className="bookmark-text-btn active"
                   onClick={() => handleRemoveBookmark(item.id)}
@@ -38,12 +80,11 @@ export default function MyPage() {
         )}
       </section>
 
-      {/* 나의 청약 설정 영역 */}
+      {/* 나의 청약 설정 섹션 */}
       <section className="mypage-section">
         <h3>나의 청약 설정</h3>
         <p className="sub-desc">내가 원하는 청약만 골라서 받아보세요.</p>
 
-        {/* 관심 지역 */}
         <div style={{ marginBottom: "20px" }}>
           <div style={{ fontWeight: 700, fontSize: "14px", marginBottom: "10px" }}>관심 지역</div>
           <div className="chip-row">
@@ -59,7 +100,6 @@ export default function MyPage() {
           </div>
         </div>
 
-        {/* 관심 유형 */}
         <div style={{ marginBottom: "28px" }}>
           <div style={{ fontWeight: 700, fontSize: "14px", marginBottom: "10px" }}>관심 유형</div>
           <div className="chip-row">
@@ -75,7 +115,6 @@ export default function MyPage() {
           </div>
         </div>
 
-        {/* 저장 버튼 */}
         <button className="primary-btn" onClick={handleSaveSettings}>
           설정 저장하기
         </button>
