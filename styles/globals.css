@@ -1194,6 +1194,7 @@ nav a.active { color: #fff; font-weight: 700; }
 @keyframes toast-in{
   from{opacity:0; transform:translate(-50%, 10px);}
   to{opacity:1; transform:translate(-50%, 0);}
+}
 
 /* ===== 마이페이지 관심공고 카드 ===== */
 .bookmark-summary{
