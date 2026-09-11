@@ -123,7 +123,7 @@ export default function NoticeCard({ notice, bookmarked, onBookmarkChange, close
                 <div className="dday-block">
           <button
             type="button"
-            className={`bookmark-btn ${isBookmarked ? "active" : ""}`}
+            className={`bookmark-text-btn ${isBookmarked ? "active" : ""}`}
             onClick={handleBookmarkClick}
           >
             {isBookmarked ? "♥ 관심공고 등록됨" : "♡ 관심공고 등록"}
