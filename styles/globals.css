@@ -1164,6 +1164,7 @@ nav a.active { color: #fff; font-weight: 700; }
     padding: 40px 0;
     color: var(--ink-faint);
     font-size: 13.5px;
+   }
   }
 /* ===== 관심공고 로그인 유도 모달 ===== */
 .login-prompt-modal{
