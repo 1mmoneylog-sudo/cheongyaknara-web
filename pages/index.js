@@ -165,7 +165,6 @@ function closeContactModal() {
         <div className="report-modal-overlay" onClick={closeContactModal}>
           <div className="report-modal" onClick={(e) => e.stopPropagation()}>
             {contactDone ? (
-              {contactDone ? (
   <div className="contact-done">
     <div className="contact-done-icon">✓</div>
     <h2>문의가 접수되었습니다</h2>
