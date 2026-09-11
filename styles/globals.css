@@ -1255,13 +1255,15 @@ nav a.active { color: #fff; font-weight: 700; }
   gap: 16px;
   padding: 16px 0;
   border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
 }
 .bookmark-item:last-child {
   border-bottom: none;
 }
 .bookmark-item-main {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
+  width: 100%;
 }
 .bookmark-item-title {
   display: block;
@@ -1269,6 +1271,8 @@ nav a.active { color: #fff; font-weight: 700; }
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 8px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 .bookmark-item-meta {
   display: flex;
