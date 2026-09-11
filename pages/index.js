@@ -165,15 +165,16 @@ function closeContactModal() {
         <div className="report-modal-overlay" onClick={closeContactModal}>
           <div className="report-modal" onClick={(e) => e.stopPropagation()}>
             {contactDone ? (
-              <div className="contact-done">
-                <div className="contact-done-icon">✓</div>
-                <h2>문의가 접수되었습니다</h2>
-                <p>카카오톡 창에 내용이 자동으로 복사되었어요. 채팅창에 붙여넣기(Ctrl+V) 해주시면 바로 확인할게요.</p>
-                <button className="auth-submit-btn contact-done-btn" onClick={closeContactModal}>
-                  닫기
-                </button>
-              </div>
-            ) : (
+              {contactDone ? (
+  <div className="contact-done">
+    <div className="contact-done-icon">✓</div>
+    <h2>문의가 접수되었습니다</h2>
+    <p>남겨주신 연락처로 확인 후 답변드릴게요. 감사합니다!</p>
+    <button className="auth-submit-btn contact-done-btn" onClick={closeContactModal}>
+      닫기
+    </button>
+  </div>
+) : (
               <>
                 <h4>문의하기</h4>
                 <p>이름, 연락처, 문의내용을 남겨주시면 확인 후 답변드릴게요.</p>
