@@ -1347,7 +1347,7 @@ nav a.active { color: #fff; font-weight: 700; }
 }
 
 .bookmark-item-dday {
-  font-family: 'JetBrains Mono';
+  font-family: 'JetBrains Mono', monospace;
   font-weight: 800;
   font-size: 15px;
   flex-shrink: 0;
