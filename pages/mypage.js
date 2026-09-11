@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useUser } from "../lib/useUser";
 import { useBookmarks } from "../lib/useBookmarks";
+import { supabase } from "../lib/supabaseClient";
+import { subscribeToPush } from "../lib/pushClient";
 import noticesData from "../data/notices.json";
 import { getDday } from "../lib/dday";
 
@@ -19,6 +21,8 @@ export default function MyPage() {
   const [mounted, setMounted] = useState(false);
   const [selectedRegions, setSelectedRegions] = useState([]);
   const [selectedKinds, setSelectedKinds] = useState([]);
+  const [saving, setSaving] = useState(false);
+  const [saveMsg, setSaveMsg] = useState("");
 
   useEffect(() => {
     setMounted(true);
@@ -29,6 +33,21 @@ export default function MyPage() {
       router.push("/login");
     }
   }, [mounted, userLoading, user, router]);
+
+  useEffect(() => {
+    if (!user) return;
+    supabase
+      .from("user_preferences")
+      .select("*")
+      .eq("id", user.id)
+      .maybeSingle()
+      .then(({ data }) => {
+        if (data) {
+          setSelectedRegions(data.interested_regions ?? []);
+          setSelectedKinds(data.interested_kinds ?? []);
+        }
+      });
+  }, [user]);
 
   const bookmarkedNotices = useMemo(() => {
     return noticesData.notices
@@ -52,8 +71,38 @@ export default function MyPage() {
     );
   };
 
-  const handleSaveSettings = () => {
-    alert("설정이 저장되었습니다.");
+  const handleSaveSettings = async () => {
+    if (!user) return;
+    setSaving(true);
+    setSaveMsg("");
+
+    const { error } = await supabase.from("user_preferences").upsert({
+      id: user.id,
+      interested_regions: selectedRegions,
+      interested_kinds: selectedKinds,
+      email_notify: true,
+      updated_at: new Date().toISOString(),
+    });
+
+    if (error) {
+      console.error("설정 저장 실패:", error.message);
+      setSaving(false);
+      setSaveMsg("저장에 실패했어요. 다시 시도해주세요.");
+      return;
+    }
+
+    const pushResult = await subscribeToPush(user.id);
+    setSaving(false);
+
+    if (pushResult.ok) {
+      setSaveMsg("🔔 알림 설정 완료! 조건에 맞는 새 공고가 뜨면 알려드릴게요.");
+    } else if (pushResult.reason === "denied") {
+      setSaveMsg("조건은 저장됐어요. 알림을 받으시려면 브라우저 알림 권한을 허용해주세요.");
+    } else if (pushResult.reason === "unsupported") {
+      setSaveMsg("조건은 저장됐어요. (이 브라우저는 알림 기능을 지원하지 않아요.)");
+    } else {
+      setSaveMsg("조건은 저장됐지만, 알림 구독 중 오류가 발생했어요.");
+    }
   };
 
   if (!mounted || !user) return null;
@@ -133,9 +182,12 @@ export default function MyPage() {
           </div>
         </div>
 
-        <button className="primary-btn" onClick={handleSaveSettings}>
-          설정 저장하기
+        <button className="primary-btn" onClick={handleSaveSettings} disabled={saving}>
+          {saving ? "처리 중..." : "나에게 맞는 청약공고 알림받기 🔔"}
         </button>
+        {saveMsg && (
+          <p style={{ marginTop: 12, fontSize: 13.5, color: "var(--ink-soft)" }}>{saveMsg}</p>
+        )}
       </section>
     </div>
   );
