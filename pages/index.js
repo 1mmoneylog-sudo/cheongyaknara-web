@@ -6,6 +6,7 @@ import { getDday, getUrgencyLevel, getProgressPercent } from "../lib/dday";
 import { useUser } from "../lib/useUser";
 import { supabase } from "../lib/supabaseClient";
 import NoticeCard from "../components/NoticeCard";
+import { useBookmarks } from "../lib/useBookmarks";
 
 function parseAnnounceDate(str) {
   if (!str) return null;
@@ -48,7 +49,8 @@ export default function Home() {
   const [contactContent, setContactContent] = useState("");
   const [contactDone, setContactDone] = useState(false);
   const { user } = useUser();
-
+  const { bookmarks, toggleBookmark } = useBookmarks();
+  
   async function handleLogout() {
     await supabase.auth.signOut();
     router.push("/");
@@ -128,14 +130,6 @@ export default function Home() {
 
   function resetPage() {
     setPage(1);
-  }
-
-  function toggleBookmark(id) {
-    setBookmarks((prev) => {
-      const next = new Set(prev);
-      next.has(id) ? next.delete(id) : next.add(id);
-      return next;
-    });
   }
 
 async function handleContactSubmit() {
