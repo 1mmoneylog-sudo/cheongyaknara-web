@@ -94,21 +94,6 @@ export default function MyPage() {
     setSaveMsg("✅ 설정이 저장됐어요! 관심 조건에 맞는 새 공고를 이메일로 보내드릴게요.");
   };
 
-
-    const pushResult = await subscribeToPush(user.id);
-    setSaving(false);
-
-    if (pushResult.ok) {
-      setSaveMsg("🔔 알림 설정 완료! 조건에 맞는 새 공고가 뜨면 알려드릴게요.");
-    } else if (pushResult.reason === "denied") {
-      setSaveMsg("조건은 저장됐어요. 알림을 받으시려면 브라우저 알림 권한을 허용해주세요.");
-    } else if (pushResult.reason === "unsupported") {
-      setSaveMsg("조건은 저장됐어요. (이 브라우저는 알림 기능을 지원하지 않아요.)");
-    } else {
-      setSaveMsg("조건은 저장됐지만, 알림 구독 중 오류가 발생했어요.");
-    }
-  };
-
   if (!mounted || !user) return null;
 
   return (
@@ -152,7 +137,7 @@ export default function MyPage() {
         )}
       </section>
 
-            <section className="mypage-section">
+      <section className="mypage-section">
         <h3>나의 청약 설정</h3>
         <p className="sub-desc">내가 원하는 청약만 골라서 받아보세요.</p>
 
