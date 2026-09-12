@@ -4,10 +4,8 @@ import Link from "next/link";
 import { useUser } from "../lib/useUser";
 import { useBookmarks } from "../lib/useBookmarks";
 import { supabase } from "../lib/supabaseClient";
-import { subscribeToPush } from "../lib/pushClient";
 import noticesData from "../data/notices.json";
 import { getDday } from "../lib/dday";
-import InAppBrowserBanner from "../components/InAppBrowserBanner";
 
 const REGION_OPTIONS = [
   "서울", "경기도", "인천", "부산", "대구", "광주", "대전", "울산", "세종",
@@ -85,12 +83,17 @@ export default function MyPage() {
       updated_at: new Date().toISOString(),
     });
 
+    setSaving(false);
+
     if (error) {
       console.error("설정 저장 실패:", error.message);
-      setSaving(false);
       setSaveMsg("저장에 실패했어요. 다시 시도해주세요.");
       return;
     }
+
+    setSaveMsg("✅ 설정이 저장됐어요! 관심 조건에 맞는 새 공고를 이메일로 보내드릴게요.");
+  };
+
 
     const pushResult = await subscribeToPush(user.id);
     setSaving(false);
@@ -152,7 +155,6 @@ export default function MyPage() {
             <section className="mypage-section">
         <h3>나의 청약 설정</h3>
         <p className="sub-desc">내가 원하는 청약만 골라서 받아보세요.</p>
-        <InAppBrowserBanner />
 
         <div style={{ marginBottom: "20px" }}>
           <div style={{ fontWeight: 700, fontSize: "14px", marginBottom: "10px" }}>관심 지역</div>
