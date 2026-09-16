@@ -5,6 +5,7 @@ import noticesData from "../../data/notices.json";
 import { getDday, getUrgencyLevel, getProgressPercent } from "../../lib/dday";
 import { useUser } from "../../lib/useUser";
 import { supabase } from "../../lib/supabaseClient";
+import ImageSlider from "../../components/ImageSlider";
 
 export async function getStaticPaths() {
   const paths = noticesData.notices.map((n) => ({ params: { id: n.id } }));
@@ -290,21 +291,23 @@ async function handleReportSend() {
             </div>
           )}
 
-          {(notice.attachment_urls?.length > 0 || notice.image_urls?.length > 0) && (
-            <div className="info-card file-list">
-              <h3>첨부파일 · 이미지</h3>
-              {notice.attachment_urls?.map((f, i) => (
-                <a key={`f${i}`} href={f.url} target="_blank" rel="noreferrer">
-                  📎 {f.label} — {f.name}
-                </a>
-              ))}
-              {notice.image_urls?.map((img, i) => (
-                <a key={`i${i}`} href={img.url} target="_blank" rel="noreferrer">
-                  🖼️ {img.label}
-                </a>
-              ))}
-            </div>
-          )}
+          {notice.image_urls?.length > 0 && (
+  <div className="info-card">
+    <h3>단지 사진 · 평면도</h3>
+    <ImageSlider images={notice.image_urls} />
+  </div>
+)}
+
+{notice.attachment_urls?.length > 0 && (
+  <div className="info-card file-list">
+    <h3>첨부파일</h3>
+    {notice.attachment_urls.map((f, i) => (
+      <a key={`f${i}`} href={f.url} target="_blank" rel="noreferrer">
+        📎 {f.label} — {f.name}
+      </a>
+    ))}
+  </div>
+)}
         </div>
 
         {/* ===== 오른쪽: 사이드바 (위원나라 스타일) ===== */}
