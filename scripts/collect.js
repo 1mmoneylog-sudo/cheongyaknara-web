@@ -113,13 +113,47 @@ async function collectGh() {
   }
 }
 
+function loadPreviousGhScraped() {
+  try {
+    if (fs.existsSync(OUTPUT_PATH)) {
+      const existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, "utf-8"));
+      const fallback = (existing.notices || []).filter(
+        (n) => n.id?.startsWith("gh-scrape-")
+      );
+      return fallback;
+    }
+  } catch (e) {
+    console.error("⚠️ 이전 GH 스크래핑 데이터 로드 실패:", e.message);
+  }
+  return [];
+}
+
 async function collectGhScrape() {
   try {
     const rows = await fetchGhScrapeAll({ maxPagesPerBoard: 5 });
     console.log(`GH 스크래핑: ${rows.length}건`);
+
+    if (rows.length === 0) {
+      const fallback = loadPreviousGhScraped();
+      if (fallback.length > 0) {
+        console.log(
+          `🛡️ [GH 보존] 이번 수집이 0건이라 이전 저장된 GH 공고 ${fallback.length}건을 그대로 유지합니다.`
+        );
+        return fallback;
+      }
+      return [];
+    }
+
     return rows.map((row, i) => normalizeGhScraped(row, i));
   } catch (err) {
     console.error("GH 스크래핑 실패:", err.message);
+    const fallback = loadPreviousGhScraped();
+    if (fallback.length > 0) {
+      console.log(
+        `🛡️ [GH 보존] 예외 발생으로 이전 저장된 GH 공고 ${fallback.length}건을 그대로 유지합니다.`
+      );
+      return fallback;
+    }
     return [];
   }
 }
