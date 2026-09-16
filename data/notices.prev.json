@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-12T04:13:40.957Z",
-  "count": 230,
+  "generated_at": "2026-09-16T02:28:06.562Z",
+  "count": 229,
   "notices": [
     {
       "id": "gh-401",
@@ -33,263 +33,8 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.676Z",
+      "fetched_at": "2026-09-16T02:27:28.395Z",
       "data_source_type": "file"
-    },
-    {
-      "id": "reb-apt-2026000358",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026000358",
-      "title": "충정로역자이르네",
-      "notice_type": "APT 분양",
-      "region_sido": "서울",
-      "region_sigungu": null,
-      "address_detail": "서울특별시 중구 중림동 157-2번지 일원",
-      "household_count": 186,
-      "area_range": null,
-      "supply_kind": "분양",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-18",
-      "apply_end_date": "2026-08-21",
-      "announce_date": "2026-08-07",
-      "winner_date": "2026-08-31",
-      "move_in_date": "203005",
-      "contact_phone": "16601245",
-      "contact_address": "서울특별시 중구 중림동 157-2번지 일원",
-      "contact_note": "사업주체: (주)이노디앤씨 · 시공사: 자이에스앤디(주), 지에스건설(주)",
-      "etc_note": "분양주택 · APT · 민영",
-      "status": null,
-      "special_supply_tags": [
-        "특별공급",
-        "1순위",
-        "2순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000358&pblancNo=2026000358",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-opt-2026940177",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026940177",
-      "title": "검암역자이르네",
-      "notice_type": "임의공급",
-      "region_sido": "인천",
-      "region_sigungu": null,
-      "address_detail": "인천광역시 서해구 경서동 4-8번지 일원 (검암역세권 B-2블록)",
-      "household_count": 20,
-      "area_range": null,
-      "supply_kind": "임의공급",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "20260824",
-      "apply_end_date": "20260825",
-      "announce_date": "20260820",
-      "winner_date": "20260831",
-      "move_in_date": "202812",
-      "contact_phone": "18332595",
-      "contact_address": "인천광역시 서해구 경서동 4-8번지 일원 (검암역세권 B-2블록)",
-      "contact_note": "사업주체: 신영부동산신탁 주식회사",
-      "etc_note": "임의공급",
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026940177&pblancNo=2026940177",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-apt-2026000383",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026000383",
-      "title": "포레나힐스테이트 진주",
-      "notice_type": "APT 분양",
-      "region_sido": "경남",
-      "region_sigungu": null,
-      "address_detail": "경상남도 진주시 이현동 10-1번지 외 13필지",
-      "household_count": 398,
-      "area_range": null,
-      "supply_kind": "분양",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-24",
-      "apply_end_date": "2026-08-26",
-      "announce_date": "2026-08-14",
-      "winner_date": "2026-09-01",
-      "move_in_date": "202909",
-      "contact_phone": "0557471032",
-      "contact_address": "경상남도 진주시 이현동 10-1번지 외 13필지",
-      "contact_note": "사업주체: 이현1-5구역재건축정비사업조합 · 시공사: 주식회사 한화, 현대건설 주식회사",
-      "etc_note": "분양주택 · APT · 민영",
-      "status": null,
-      "special_supply_tags": [
-        "특별공급",
-        "1순위",
-        "2순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000383&pblancNo=2026000383",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-apt-2026000368",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026000368",
-      "title": "아르티엠 라 테라스",
-      "notice_type": "APT 분양",
-      "region_sido": "전북",
-      "region_sigungu": null,
-      "address_detail": "전북특별자치도 전주시 덕진구 우아동3가 752-41 일원",
-      "household_count": 300,
-      "area_range": null,
-      "supply_kind": "분양",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-24",
-      "apply_end_date": "2026-08-26",
-      "announce_date": "2026-08-14",
-      "winner_date": "2026-09-01",
-      "move_in_date": "202905",
-      "contact_phone": "16881886",
-      "contact_address": "전북특별자치도 전주시 덕진구 우아동3가 752-41 일원",
-      "contact_note": "사업주체: 주식회사 우경주택건설 · 시공사: 세영건설 주식회사",
-      "etc_note": "분양주택 · APT · 민영",
-      "status": null,
-      "special_supply_tags": [
-        "특별공급",
-        "1순위",
-        "2순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000368&pblancNo=2026000368",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-apt-2026000354",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026000354",
-      "title": "상동역 롯데캐슬 시그니처",
-      "notice_type": "APT 분양",
-      "region_sido": "경기도",
-      "region_sigungu": null,
-      "address_detail": "경기도 부천시 원미구 상동 540-1번지",
-      "household_count": 1859,
-      "area_range": null,
-      "supply_kind": "분양",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-24",
-      "apply_end_date": "2026-08-26",
-      "announce_date": "2026-08-14",
-      "winner_date": "2026-09-01",
-      "move_in_date": "203203",
-      "contact_phone": "15513555",
-      "contact_address": "경기도 부천시 원미구 상동 540-1번지",
-      "contact_note": "사업주체: 한국자산신탁(주) · 시공사: 롯데건설(주)",
-      "etc_note": "분양주택 · APT · 민영",
-      "status": null,
-      "special_supply_tags": [
-        "특별공급",
-        "1순위",
-        "2순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000354&pblancNo=2026000354",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-apt-2026000342",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026000342",
-      "title": "제일풍경채 첨단3지구(A6BL)",
-      "notice_type": "APT 분양",
-      "region_sido": "광주",
-      "region_sigungu": null,
-      "address_detail": "광주연구개발특구 첨단3지구 A6블록(전남광주통합특별시 북구 월출동) ",
-      "household_count": 638,
-      "area_range": null,
-      "supply_kind": "분양",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-24",
-      "apply_end_date": "2026-08-26",
-      "announce_date": "2026-08-14",
-      "winner_date": "2026-09-01",
-      "move_in_date": "202908",
-      "contact_phone": "16442344",
-      "contact_address": "광주연구개발특구 첨단3지구 A6블록(전남광주통합특별시 북구 월출동) ",
-      "contact_note": "사업주체: 첨단678피에프브이 주식회사 · 시공사: 제일건설 주식회사",
-      "etc_note": "분양주택 · APT · 민영",
-      "status": null,
-      "special_supply_tags": [
-        "특별공급",
-        "1순위",
-        "2순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000342&pblancNo=2026000342",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-apt-2026000365",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026000365",
-      "title": "오남역 서희스타힐스 여의재 1단지",
-      "notice_type": "APT 분양",
-      "region_sido": "경기도",
-      "region_sigungu": null,
-      "address_detail": "경기도 남양주시 오남읍 양지리 101번지 일원",
-      "household_count": 180,
-      "area_range": null,
-      "supply_kind": "분양",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-24",
-      "apply_end_date": "2026-08-26",
-      "announce_date": "2026-08-13",
-      "winner_date": "2026-09-01",
-      "move_in_date": "203008",
-      "contact_phone": "15550074",
-      "contact_address": "경기도 남양주시 오남읍 양지리 101번지 일원",
-      "contact_note": "사업주체: 양지7지구 1단지 지역주택조합 · 시공사: (주)서희건설",
-      "etc_note": "분양주택 · APT · 민영",
-      "status": null,
-      "special_supply_tags": [
-        "특별공급",
-        "1순위",
-        "2순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000365&pblancNo=2026000365",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
-      "data_source_type": "api"
     },
     {
       "id": "reb-apt-2026820006",
@@ -324,75 +69,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-remndr-2026930028",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026930028",
-      "title": "구리역 롯데캐슬 시그니처",
-      "notice_type": "무순위·잔여세대",
-      "region_sido": "경기도",
-      "region_sigungu": null,
-      "address_detail": "경기도 구리시 인창동 289-29번지 일원",
-      "household_count": 1,
-      "area_range": null,
-      "supply_kind": "무순위",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "2026-08-26",
-      "apply_end_date": "2026-08-26",
-      "announce_date": "2026-08-21",
-      "winner_date": "2026-08-31",
-      "move_in_date": "202609",
-      "contact_phone": "15519320",
-      "contact_address": "경기도 구리시 인창동 289-29번지 일원",
-      "contact_note": "사업주체: 인창씨구역주택재개발정비사업조합",
-      "etc_note": "불법행위 재공급",
-      "status": null,
-      "special_supply_tags": [
-        "무순위"
-      ],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930028&pblancNo=2026930028",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
-      "data_source_type": "api"
-    },
-    {
-      "id": "reb-opt-2026940178",
-      "source_agency": "청약홈",
-      "source_notice_id": "2026940178",
-      "title": "인천영종국제도시 디에트르 라 메르Ⅰ(RC4-1,2BL)(6차)",
-      "notice_type": "임의공급",
-      "region_sido": "인천",
-      "region_sigungu": null,
-      "address_detail": "인천광역시 영종구 중산동 1958-8,9 (인천광역시 영종구 중산동 RC4-1,2BL)",
-      "household_count": 29,
-      "area_range": null,
-      "supply_kind": "임의공급",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": "20260825",
-      "apply_end_date": "20260826",
-      "announce_date": "20260821",
-      "winner_date": "20260831",
-      "move_in_date": "202910",
-      "contact_phone": "16887377",
-      "contact_address": "인천광역시 영종구 중산동 1958-8,9 (인천광역시 영종구 중산동 RC4-1,2BL)",
-      "contact_note": "사업주체: 디비종합건설주식회사,디비주택주식회사",
-      "etc_note": "임의공급",
-      "status": null,
-      "special_supply_tags": [],
-      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026940178&pblancNo=2026940178",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.088Z",
       "data_source_type": "api"
     },
     {
@@ -429,7 +106,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -466,7 +143,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.088Z",
       "data_source_type": "api"
     },
     {
@@ -501,7 +178,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -536,7 +213,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -569,7 +246,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -602,7 +279,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.602Z",
+      "fetched_at": "2026-09-16T02:27:37.096Z",
       "data_source_type": "api"
     },
     {
@@ -637,7 +314,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -672,7 +349,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -705,7 +382,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -811,7 +488,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -848,7 +525,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -881,7 +558,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.602Z",
+      "fetched_at": "2026-09-16T02:27:37.096Z",
       "data_source_type": "api"
     },
     {
@@ -916,7 +593,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -952,7 +629,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -987,7 +664,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -1020,7 +697,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -1055,7 +732,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -1088,7 +765,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -1121,7 +798,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -1156,7 +833,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -1191,7 +868,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -1227,7 +904,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -1263,7 +940,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.088Z",
       "data_source_type": "api"
     },
     {
@@ -1296,7 +973,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.602Z",
+      "fetched_at": "2026-09-16T02:27:37.096Z",
       "data_source_type": "api"
     },
     {
@@ -1329,7 +1006,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.602Z",
+      "fetched_at": "2026-09-16T02:27:37.096Z",
       "data_source_type": "api"
     },
     {
@@ -1364,7 +1041,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -1397,7 +1074,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.607Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -1430,7 +1107,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -1463,7 +1140,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -1496,7 +1173,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -2470,7 +2147,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -2505,7 +2182,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -2538,7 +2215,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -2571,7 +2248,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -2608,7 +2285,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -2645,7 +2322,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -2678,7 +2355,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -2711,7 +2388,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -2744,7 +2421,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -2777,7 +2454,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -2810,7 +2487,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -2843,7 +2520,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -2876,7 +2553,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -2909,7 +2586,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.602Z",
+      "fetched_at": "2026-09-16T02:27:37.096Z",
       "data_source_type": "api"
     },
     {
@@ -2944,7 +2621,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -2979,7 +2656,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -3014,7 +2691,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -3049,7 +2726,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -3084,7 +2761,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -3119,7 +2796,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -3152,7 +2829,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -3441,7 +3118,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.602Z",
+      "fetched_at": "2026-09-16T02:27:37.096Z",
       "data_source_type": "api"
     },
     {
@@ -3476,7 +3153,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -3511,7 +3188,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -3546,7 +3223,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.603Z",
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -3579,7 +3256,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.607Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -3612,7 +3289,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -3645,7 +3322,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -3678,7 +3355,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -3711,7 +3388,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.608Z",
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -3744,7 +3421,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -4034,7 +3711,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -4071,7 +3748,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -4108,7 +3785,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -4145,7 +3822,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -4182,7 +3859,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -4219,7 +3896,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -4256,7 +3933,40 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-opt-2026940200",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026940200",
+      "title": "이천자이 더 레브(2차)",
+      "notice_type": "임의공급",
+      "region_sido": "경기도",
+      "region_sigungu": null,
+      "address_detail": "경기도 이천시 송정동 산31번지 일원",
+      "household_count": 11,
+      "area_range": null,
+      "supply_kind": "임의공급",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "20260916",
+      "apply_end_date": "20260916",
+      "announce_date": "20260914",
+      "winner_date": "20260921",
+      "move_in_date": "202704",
+      "contact_phone": "0316332010",
+      "contact_address": "경기도 이천시 송정동 산31번지 일원",
+      "contact_note": "사업주체: 교보자산신탁(주)",
+      "etc_note": "임의공급",
+      "status": null,
+      "special_supply_tags": [],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026940200&pblancNo=2026940200",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -4674,7 +4384,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -4710,7 +4420,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -4746,7 +4456,73 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.586Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-opt-2026940201",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026940201",
+      "title": "이천 중리지구 B3블록 금성백조 예미지",
+      "notice_type": "임의공급",
+      "region_sido": "경기도",
+      "region_sigungu": null,
+      "address_detail": "경기도 이천시 중리지구 B3블록(중리동 518번지)",
+      "household_count": 30,
+      "area_range": null,
+      "supply_kind": "임의공급",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "20260917",
+      "apply_end_date": "20260917",
+      "announce_date": "20260915",
+      "winner_date": "20260922",
+      "move_in_date": "202611",
+      "contact_phone": "0316380518",
+      "contact_address": "경기도 이천시 중리지구 B3블록(중리동 518번지)",
+      "contact_note": "사업주체: (주)금성백조주택",
+      "etc_note": "임의공급",
+      "status": null,
+      "special_supply_tags": [],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026940201&pblancNo=2026940201",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:27:37.104Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-opt-2026940193",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026940193",
+      "title": "밀양 수자인 더퍼스트 2단지 공공분양주택",
+      "notice_type": "임의공급",
+      "region_sido": "경남",
+      "region_sigungu": null,
+      "address_detail": "경상남도 밀양시 부북지구 S-2BL",
+      "household_count": 13,
+      "area_range": null,
+      "supply_kind": "임의공급",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "20260917",
+      "apply_end_date": "20260917",
+      "announce_date": "20260915",
+      "winner_date": "20260922",
+      "move_in_date": "202809",
+      "contact_phone": "18336767",
+      "contact_address": "경상남도 밀양시 부북지구 S-2BL",
+      "contact_note": "사업주체: 주식회사비에스한양",
+      "etc_note": "임의공급",
+      "status": null,
+      "special_supply_tags": [],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026940193&pblancNo=2026940193",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:27:37.104Z",
       "data_source_type": "api"
     },
     {
@@ -4779,7 +4555,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:29.504Z",
+      "fetched_at": "2026-09-16T02:27:58.572Z",
       "data_source_type": "scrape"
     },
     {
@@ -4812,7 +4588,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:29.504Z",
+      "fetched_at": "2026-09-16T02:27:58.572Z",
       "data_source_type": "scrape"
     },
     {
@@ -4845,7 +4621,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -5033,6 +4809,39 @@
       "data_source_type": "api"
     },
     {
+      "id": "reb-opt-2026940206",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026940206",
+      "title": "청계백상앨리츠(3차)",
+      "notice_type": "임의공급",
+      "region_sido": "서울",
+      "region_sigungu": null,
+      "address_detail": "서울특별시 성동구 마장동 767-56 ",
+      "household_count": 11,
+      "area_range": null,
+      "supply_kind": "임의공급",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "20260917",
+      "apply_end_date": "20260918",
+      "announce_date": "20260915",
+      "winner_date": "20260930",
+      "move_in_date": "202805",
+      "contact_phone": "0222966521",
+      "contact_address": "서울특별시 성동구 마장동 767-56 ",
+      "contact_note": "사업주체: 미성주택 소규모재건축사업조합",
+      "etc_note": "임의공급",
+      "status": null,
+      "special_supply_tags": [],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026940206&pblancNo=2026940206",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:27:37.104Z",
+      "data_source_type": "api"
+    },
+    {
       "id": "lh-2015122300020703",
       "source_agency": "LH",
       "source_notice_id": "2015122300020703",
@@ -5200,6 +5009,74 @@
       "data_source_type": "api"
     },
     {
+      "id": "reb-remndr-2026910240",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026910240",
+      "title": "아야진 라메르 데시앙",
+      "notice_type": "무순위·잔여세대",
+      "region_sido": "강원",
+      "region_sigungu": null,
+      "address_detail": "강원특별자치도 고성군 토성면 아야진길 24-10, 아야진 라메르 데시앙",
+      "household_count": 3,
+      "area_range": null,
+      "supply_kind": "무순위",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026-09-21",
+      "apply_end_date": "2026-09-21",
+      "announce_date": "2026-09-15",
+      "winner_date": "2026-09-28",
+      "move_in_date": "202609",
+      "contact_phone": "0336350742",
+      "contact_address": "강원특별자치도 고성군 토성면 아야진길 24-10, 아야진 라메르 데시앙",
+      "contact_note": "사업주체: (주)무궁화신탁",
+      "etc_note": "무순위",
+      "status": null,
+      "special_supply_tags": [
+        "무순위"
+      ],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910240&pblancNo=2026910240",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:27:37.098Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-pblPvtRent-2026850048",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026850048",
+      "title": "의왕청계역 시티프라디움 디하모니",
+      "notice_type": "공공지원 민간임대",
+      "region_sido": "경기도",
+      "region_sigungu": null,
+      "address_detail": "경기도 의왕시 포일동(의왕청계2 공공주택지구 M-1블록)",
+      "household_count": 11,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "20260921",
+      "apply_end_date": "20260921",
+      "announce_date": "20260914",
+      "winner_date": "20260928",
+      "move_in_date": "202804",
+      "contact_phone": "15775378",
+      "contact_address": "경기도 의왕시 포일동(의왕청계2 공공주택지구 M-1블록)",
+      "contact_note": "사업주체: 주식회사 그린시티건설",
+      "etc_note": "공공지원민간임대",
+      "status": null,
+      "special_supply_tags": [],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026850048&pblancNo=2026850048&houseSecd=03",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:27:37.104Z",
+      "data_source_type": "api"
+    },
+    {
       "id": "gh-scrape-819-59",
       "source_agency": "GH",
       "source_notice_id": "819",
@@ -5229,7 +5106,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:29.504Z",
+      "fetched_at": "2026-09-16T02:27:58.572Z",
       "data_source_type": "scrape"
     },
     {
@@ -5262,7 +5139,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:29.504Z",
+      "fetched_at": "2026-09-16T02:27:58.572Z",
       "data_source_type": "scrape"
     },
     {
@@ -5295,7 +5172,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:29.504Z",
+      "fetched_at": "2026-09-16T02:27:58.572Z",
       "data_source_type": "scrape"
     },
     {
@@ -5882,6 +5759,41 @@
         }
       ],
       "fetched_at": "2026-09-12T04:13:06.053Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-remndr-2026910244",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026910244",
+      "title": "더 리치먼드 미아(3차)",
+      "notice_type": "무순위·잔여세대",
+      "region_sido": "서울",
+      "region_sigungu": null,
+      "address_detail": "서울특별시 강북구 미아동 703-13번지",
+      "household_count": 14,
+      "area_range": null,
+      "supply_kind": "무순위",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026-09-22",
+      "apply_end_date": "2026-09-22",
+      "announce_date": "2026-09-15",
+      "winner_date": "2026-09-29",
+      "move_in_date": "202809",
+      "contact_phone": "15516264",
+      "contact_address": "서울특별시 강북구 미아동 703-13번지",
+      "contact_note": "사업주체: 우리자산신탁 주식회사",
+      "etc_note": "무순위",
+      "status": null,
+      "special_supply_tags": [
+        "무순위"
+      ],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910244&pblancNo=2026910244",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -8564,7 +8476,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -8601,7 +8513,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -8638,7 +8550,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -8675,7 +8587,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -8712,7 +8624,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -8749,7 +8661,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -8782,7 +8694,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.602Z",
+      "fetched_at": "2026-09-16T02:27:37.096Z",
       "data_source_type": "api"
     },
     {
@@ -8819,7 +8731,42 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
+      "data_source_type": "api"
+    },
+    {
+      "id": "reb-remndr-2026930032",
+      "source_agency": "청약홈",
+      "source_notice_id": "2026930032",
+      "title": "태화강 에피트",
+      "notice_type": "무순위·잔여세대",
+      "region_sido": "울산",
+      "region_sigungu": null,
+      "address_detail": "울산광역시 울주군 범서읍 굴화리 일원 공공주택지구 내 S1블럭",
+      "household_count": 1,
+      "area_range": null,
+      "supply_kind": "무순위",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": "2026-09-28",
+      "apply_end_date": "2026-09-28",
+      "announce_date": "2026-09-15",
+      "winner_date": "2026-10-06",
+      "move_in_date": "202707",
+      "contact_phone": "0522570255",
+      "contact_address": "울산광역시 울주군 범서읍 굴화리 일원 공공주택지구 내 S1블럭",
+      "contact_note": "사업주체: 에이치엘디앤아이한라 주식회사",
+      "etc_note": "불법행위 재공급",
+      "status": null,
+      "special_supply_tags": [
+        "무순위"
+      ],
+      "detail_url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930032&pblancNo=2026930032",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:27:37.098Z",
       "data_source_type": "api"
     },
     {
@@ -9404,7 +9351,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -9986,7 +9933,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:27.585Z",
+      "fetched_at": "2026-09-16T02:27:37.087Z",
       "data_source_type": "api"
     },
     {
@@ -10019,7 +9966,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -10176,7 +10123,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10210,7 +10157,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10244,7 +10191,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10278,7 +10225,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10312,7 +10259,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10346,7 +10293,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10380,7 +10327,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10414,7 +10361,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10448,7 +10395,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10482,7 +10429,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10516,7 +10463,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10550,7 +10497,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10584,7 +10531,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10618,7 +10565,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10652,7 +10599,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10686,7 +10633,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10720,7 +10667,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10754,7 +10701,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.680Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10788,7 +10735,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10822,7 +10769,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10856,7 +10803,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10890,7 +10837,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10924,7 +10871,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10958,7 +10905,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -10992,7 +10939,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.398Z",
       "data_source_type": "file"
     },
     {
@@ -11026,7 +10973,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11060,7 +11007,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11094,7 +11041,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11128,7 +11075,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11162,7 +11109,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11196,7 +11143,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11230,7 +11177,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11264,7 +11211,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11298,7 +11245,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11332,7 +11279,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11366,7 +11313,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11400,7 +11347,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11434,7 +11381,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11468,7 +11415,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11502,7 +11449,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11536,7 +11483,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11570,7 +11517,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11604,7 +11551,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11638,7 +11585,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11672,7 +11619,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.681Z",
+      "fetched_at": "2026-09-16T02:27:28.399Z",
       "data_source_type": "file"
     },
     {
@@ -11706,7 +11653,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.683Z",
+      "fetched_at": "2026-09-16T02:27:28.400Z",
       "data_source_type": "file"
     },
     {
@@ -11740,8 +11687,107 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:19.684Z",
+      "fetched_at": "2026-09-16T02:27:28.401Z",
       "data_source_type": "file"
+    },
+    {
+      "id": "sh-scrape-310364",
+      "source_agency": "SH",
+      "source_notice_id": "310364",
+      "title": "[SH] 제51차 장기전세주택(2026.08.31.공고) 1순위 청약접수 결과 및 2순위 청약접수 가능 단지 안내",
+      "notice_type": "임대/분양",
+      "region_sido": "서울",
+      "region_sigungu": "전체",
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": null,
+      "apply_end_date": null,
+      "announce_date": "2026-09-16",
+      "winner_date": null,
+      "move_in_date": null,
+      "contact_phone": null,
+      "contact_address": null,
+      "contact_note": null,
+      "etc_note": null,
+      "status": "진행중",
+      "special_supply_tags": [],
+      "detail_url": "https://www.i-sh.co.kr/app/lay2/program/S48T1581C563/www/brd/m_247/view.do?seq=310364&multi_itm_seq=2",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:28:06.385Z",
+      "data_source_type": "scrape"
+    },
+    {
+      "id": "sh-scrape-310309",
+      "source_agency": "SH",
+      "source_notice_id": "310309",
+      "title": "[SH] 2026년 국민임대주택 입주자 모집(2026.8.20.공고) 선순위 청약접수결과 및 접수마감 안내",
+      "notice_type": "임대/분양",
+      "region_sido": "서울",
+      "region_sigungu": "전체",
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": null,
+      "apply_end_date": null,
+      "announce_date": "2026-09-16",
+      "winner_date": null,
+      "move_in_date": null,
+      "contact_phone": null,
+      "contact_address": null,
+      "contact_note": null,
+      "etc_note": null,
+      "status": "진행중",
+      "special_supply_tags": [],
+      "detail_url": "https://www.i-sh.co.kr/app/lay2/program/S48T1581C563/www/brd/m_247/view.do?seq=310309&multi_itm_seq=2",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:28:06.385Z",
+      "data_source_type": "scrape"
+    },
+    {
+      "id": "sh-scrape-310300",
+      "source_agency": "SH",
+      "source_notice_id": "310300",
+      "title": "[SH] [토지임대부 사회주택] 옥류서원 입주자 모집 공고문",
+      "notice_type": "임대/분양",
+      "region_sido": "서울",
+      "region_sigungu": "전체",
+      "address_detail": null,
+      "household_count": null,
+      "area_range": null,
+      "supply_kind": "임대",
+      "deposit_range": null,
+      "monthly_rent_range": null,
+      "price_range": null,
+      "apply_start_date": null,
+      "apply_end_date": null,
+      "announce_date": "2026-09-15",
+      "winner_date": null,
+      "move_in_date": null,
+      "contact_phone": null,
+      "contact_address": null,
+      "contact_note": null,
+      "etc_note": null,
+      "status": "진행중",
+      "special_supply_tags": [],
+      "detail_url": "https://www.i-sh.co.kr/app/lay2/program/S48T1581C563/www/brd/m_247/view.do?seq=310300&multi_itm_seq=2",
+      "attachment_urls": [],
+      "image_urls": [],
+      "unit_types": [],
+      "fetched_at": "2026-09-16T02:28:06.385Z",
+      "data_source_type": "scrape"
     },
     {
       "id": "sh-scrape-310135",
@@ -11773,7 +11819,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -11806,7 +11852,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -11839,7 +11885,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -11872,7 +11918,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -11905,7 +11951,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -11938,7 +11984,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -11971,7 +12017,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12004,7 +12050,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape",
       "household_count_source": "reb"
     },
@@ -12038,7 +12084,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12071,7 +12117,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12104,7 +12150,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12137,7 +12183,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12170,7 +12216,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12203,7 +12249,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12236,7 +12282,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12269,7 +12315,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12302,7 +12348,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12335,7 +12381,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12368,7 +12414,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12401,7 +12447,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12434,7 +12480,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12467,7 +12513,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12500,7 +12546,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     },
     {
@@ -12533,106 +12579,7 @@
       "attachment_urls": [],
       "image_urls": [],
       "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
-      "data_source_type": "scrape"
-    },
-    {
-      "id": "sh-scrape-308746",
-      "source_agency": "SH",
-      "source_notice_id": "308746",
-      "title": "[SH] 행복주택 예비당첨자 게시",
-      "notice_type": "임대/분양",
-      "region_sido": "서울",
-      "region_sigungu": "전체",
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2026-08-19",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": "진행중",
-      "special_supply_tags": [],
-      "detail_url": "https://www.i-sh.co.kr/app/lay2/program/S48T1581C563/www/brd/m_247/view.do?seq=308746&multi_itm_seq=2",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
-      "data_source_type": "scrape"
-    },
-    {
-      "id": "sh-scrape-307767",
-      "source_agency": "SH",
-      "source_notice_id": "307767",
-      "title": "[SH] 행복주택 예비자 계약결과알림",
-      "notice_type": "임대/분양",
-      "region_sido": "서울",
-      "region_sigungu": "전체",
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2026-08-18",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": "진행중",
-      "special_supply_tags": [],
-      "detail_url": "https://www.i-sh.co.kr/app/lay2/program/S48T1581C563/www/brd/m_247/view.do?seq=307767&multi_itm_seq=2",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
-      "data_source_type": "scrape"
-    },
-    {
-      "id": "sh-scrape-308549",
-      "source_agency": "SH",
-      "source_notice_id": "308549",
-      "title": "[SH] [청년형] 특화형 매입임대주택(금천구) 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
-      "notice_type": "임대/분양",
-      "region_sido": "서울",
-      "region_sigungu": "전체",
-      "address_detail": null,
-      "household_count": null,
-      "area_range": null,
-      "supply_kind": "임대",
-      "deposit_range": null,
-      "monthly_rent_range": null,
-      "price_range": null,
-      "apply_start_date": null,
-      "apply_end_date": null,
-      "announce_date": "2026-08-18",
-      "winner_date": null,
-      "move_in_date": null,
-      "contact_phone": null,
-      "contact_address": null,
-      "contact_note": null,
-      "etc_note": null,
-      "status": "진행중",
-      "special_supply_tags": [],
-      "detail_url": "https://www.i-sh.co.kr/app/lay2/program/S48T1581C563/www/brd/m_247/view.do?seq=308549&multi_itm_seq=2",
-      "attachment_urls": [],
-      "image_urls": [],
-      "unit_types": [],
-      "fetched_at": "2026-09-12T04:12:53.915Z",
+      "fetched_at": "2026-09-16T02:28:06.385Z",
       "data_source_type": "scrape"
     }
   ]
