@@ -1349,4 +1349,12 @@ nav a.active { color: #fff; font-weight: 700; }
   flex: 1;
   min-width: 200px;
 }
+  .ch-calendar-cell.today{
+  background: var(--brand-tint);
+  box-shadow: inset 0 0 0 2px var(--brand-2);
+}
+.ch-calendar-cell.today .ch-day-number{
+  color: var(--brand-2);
+  font-weight: 800;
+}
 }
