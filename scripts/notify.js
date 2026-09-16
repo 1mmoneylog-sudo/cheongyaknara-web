@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const ws = require("ws");
 const { createClient } = require("@supabase/supabase-js");
 const { Resend } = require("resend");
 
