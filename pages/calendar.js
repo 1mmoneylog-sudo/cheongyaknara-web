@@ -169,11 +169,18 @@ export default function CalendarPage() {
               </div>
             ))}
             {calendarDays.map((dayNum, idx) => {
-              const dayEvents = dayNum ? eventsByDate[dayNum] || [] : [];
-              const isSunday = idx % 7 === 0;
-              const isSaturday = idx % 7 === 6;
-              return (
-                <div key={idx} className={`ch-calendar-cell ${!dayNum ? "empty" : ""}`}>
+  const dayEvents = dayNum ? eventsByDate[dayNum] || [] : [];
+  const isSunday = idx % 7 === 0;
+  const isSaturday = idx % 7 === 6;
+  const today = new Date();
+  const isToday =
+    dayNum &&
+    currentYear === today.getFullYear() &&
+    currentMonth === today.getMonth() + 1 &&
+    dayNum === today.getDate();
+
+  return (
+    <div key={idx} className={`ch-calendar-cell ${!dayNum ? "empty" : ""} ${isToday ? "today" : ""}`}>
                   {dayNum && (
                     <>
                       <div className={`ch-day-number ${isSunday ? "sun" : isSaturday ? "sat" : ""}`}>
@@ -183,15 +190,16 @@ export default function CalendarPage() {
                         {dayEvents.map((evt, i) => {
                           const style = TYPE_COLORS[evt.type] || TYPE_COLORS["기타"];
                           return (
-                            <div
-                              key={i}
-                              className="ch-event-bar"
-                              style={{ backgroundColor: style.bg, color: style.text }}
-                              title={evt.title}
-                            >
-                              <span className="evt-agency">[{evt.agency}]</span>
-                              <span className="evt-title">{evt.title}</span>
-                            </div>
+                            <Link
+  key={i}
+  href={`/notice/${evt.id}`}
+  className="ch-event-bar"
+  style={{ backgroundColor: style.bg, color: style.text }}
+  title={evt.title}
+>
+  <span className="evt-agency">[{evt.agency}]</span>
+  <span className="evt-title">{evt.title}</span>
+</Link>
                           );
                         })}
                       </div>
