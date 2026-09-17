@@ -18,6 +18,14 @@
 //    LH 목록 수집만 별도로 try/catch로 감싸서, LH가 점검 중이어도 GH·청약홈은
 //    정상적으로 계속 수집·저장되도록 격리함. LH는 점검이 끝나면 다음 회차에 자동 복구됨.
 // ✅ 2026-09-07: SH 공고 웹 스크래핑 수집 모듈(collectShScrape) 추가 통합
+// ✅ 2026-09-15: GH 목록 스크래핑이 완전히 실패해도(사이트 접속 차단 등) 이전에
+//    저장해둔 GH 공고를 그대로 유지하도록 방어 로직 추가 (loadPreviousGhScraped)
+// ✅ 2026-09-16: PDF 공고문 AI 분석(enrichWithAiAnalysis) 추가.
+//    - 2시간마다 실행되는 워크플로우 기준, 하루 무료 한도(보수적으로 약 250건)를
+//      넘지 않도록 한 번 실행에 최대 20건만 새로 분석 (MAX_NEW_AI_ANALYSES_PER_RUN)
+//    - 분당 요청 제한(약 10RPM)을 넘지 않도록 요청 사이 7초 대기 (AI_ANALYSIS_DELAY_MS)
+//    - 429(사용량 한도 초과) 발생 시, 이후 요청도 다 실패할 것이므로 그 자리에서
+//      바로 중단하고 나머지는 다음 실행으로 넘김 (시간 낭비 방지)
 
 const fs = require("fs");
 const path = require("path");
@@ -39,6 +47,10 @@ const WINNER_TRACK_DAYS = 14;
 // 예정 공고를 얼마나 먼 미래까지 노출할지 (일 단위). 이보다 먼 예정 공고는
 // 이번 회차에서는 빼고, 시작일이 이 범위 안으로 들어오면 다음 수집 때 자동으로 포함됨.
 const UPCOMING_WINDOW_DAYS = 30;
+
+// AI 분석 관련 설정 (Gemini 무료 등급 한도 대응용)
+const MAX_NEW_AI_ANALYSES_PER_RUN = 20; // 한 번 실행당 새로 분석할 최대 건수
+const AI_ANALYSIS_DELAY_MS = 7000; // 요청 사이 대기시간 (분당 요청 제한 대응)
 
 function formatDate(d) {
   const y = d.getFullYear();
@@ -65,7 +77,7 @@ async function collectLh() {
     listItems = await fetchLhList(serviceKey, formatDate(past), formatDate(future));
   } catch (err) {
     console.error("⚠️ LH 목록 수집 실패, 이번 회차는 LH를 건너뜁니다:", err.message);
-    
+
     // 💡 기존 notices.json에서 이전 LH 데이터를 불러와 보존
     try {
       if (fs.existsSync(OUTPUT_PATH)) {
@@ -237,6 +249,14 @@ function shouldKeep(notice, now) {
 
   return true;
 }
+
+/** 공고들의 PDF 공고문을 Gemini로 분석해서 ai_analysis 필드를 채운다.
+ *  - 이전에 이미 분석된 결과는 캐시로 재사용 (비용/시간 절약)
+ *  - 한 번 실행에 새로 분석하는 건수는 MAX_NEW_AI_ANALYSES_PER_RUN까지만
+ *    (무료 등급 하루 요청 한도를 넘지 않기 위함 — 나머지는 다음 실행 때 이어서 처리됨)
+ *  - 429(사용량 한도 초과)가 뜨면 이후 요청도 전부 실패할 것이므로 그 자리에서
+ *    바로 중단하고 나머지는 다음 실행으로 넘김
+ */
 async function enrichWithAiAnalysis(notices) {
   const previousAnalysis = new Map();
   try {
@@ -250,13 +270,25 @@ async function enrichWithAiAnalysis(notices) {
     console.error("⚠️ 이전 AI 분석 캐시 로드 실패:", e.message);
   }
 
-  let analyzed = 0, cached = 0, skipped = 0, failed = 0;
+  let analyzed = 0,
+    cached = 0,
+    skipped = 0,
+    failed = 0,
+    quotaStopped = false;
+
   for (const notice of notices) {
     if (previousAnalysis.has(notice.id)) {
       notice.ai_analysis = previousAnalysis.get(notice.id);
       cached++;
       continue;
     }
+
+    // 이번 실행에서 새로 분석할 수 있는 건수를 다 썼으면 건너뜀 (다음 실행에서 이어서 처리)
+    if (analyzed >= MAX_NEW_AI_ANALYSES_PER_RUN) {
+      skipped++;
+      continue;
+    }
+
     try {
       const result = await analyzeNoticePdf(notice);
       if (result) {
@@ -268,14 +300,27 @@ async function enrichWithAiAnalysis(notices) {
     } catch (err) {
       console.error(`[AI 분석 실패] ${notice.id}:`, err.message);
       failed++;
+
+      if (err.message.includes("429") || err.message.toLowerCase().includes("quota")) {
+        console.warn(
+          "⚠️ Gemini API 사용량 한도에 도달했습니다. 이번 실행의 AI 분석을 여기서 중단하고, " +
+            "나머지는 다음 실행 때 이어서 처리합니다."
+        );
+        quotaStopped = true;
+        break;
+      }
     }
-    await new Promise((r) => setTimeout(r, 1000));
+    await new Promise((r) => setTimeout(r, AI_ANALYSIS_DELAY_MS));
   }
+
   console.log(
-    `[AI 분석] 새로 분석: ${analyzed}건, 캐시 재사용: ${cached}건, PDF 없어서 건너뜀: ${skipped}건, 실패: ${failed}건`
+    `[AI 분석] 새로 분석: ${analyzed}건, 캐시 재사용: ${cached}건, ` +
+      `건너뜀(한도/PDF없음): ${skipped}건, 실패: ${failed}건` +
+      (quotaStopped ? " (사용량 한도로 중간에 중단됨)" : "")
   );
   return notices;
 }
+
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
   const [lhNotices, ghNotices, reb, ghScrapedNotices, shScrapedNotices] = await Promise.all([
@@ -285,12 +330,12 @@ async function main() {
     collectGhScrape(),
     collectShScrape(),
   ]);
-  
+
   const combined = [
-    ...lhNotices, 
-    ...ghNotices, 
-    ...reb.notices, 
-    ...ghScrapedNotices, 
+    ...lhNotices,
+    ...ghNotices,
+    ...reb.notices,
+    ...ghScrapedNotices,
     ...shScrapedNotices
   ];
 
@@ -330,6 +375,7 @@ async function main() {
     `마감(당첨자 발표 ${WINNER_TRACK_DAYS}일 이내 제외)·너무 먼 예정(${UPCOMING_WINDOW_DAYS}일 초과) 제외: ` +
       `${supplemented.length}건 → ${kept.length}건`
   );
+
   await enrichWithAiAnalysis(kept);
 
   // ✅ 2026-09-09: 기관마다 다르게 표기하는 지역명(경기/경기도, 강원/강원특별자치도 등)을 하나로 통일
