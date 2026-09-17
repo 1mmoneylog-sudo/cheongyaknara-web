@@ -27,7 +27,7 @@ const { fetchRebAll, normalizeAllRebNotices, fillHouseholdCountFromReb } = requi
 const { fetchGhScrapeAll, normalizeGhScraped } = require("../lib/collectors/gh-scrape");
 const { fetchShScrapeAll, normalizeShScraped } = require("../lib/collectors/sh-scrape");
 const { normalizeRegion } = require("../lib/normalizeRegion");
-
+const { analyzeNoticePdf } = require("../lib/pdf-analyzer");
 const OUTPUT_PATH = path.join(__dirname, "..", "data", "notices.json");
 
 // ✅ 2026-09-04: 마감 유예(3일) 없애고 바로 제외하도록 단순화.
@@ -237,7 +237,45 @@ function shouldKeep(notice, now) {
 
   return true;
 }
+async function enrichWithAiAnalysis(notices) {
+  const previousAnalysis = new Map();
+  try {
+    if (fs.existsSync(OUTPUT_PATH)) {
+      const existing = JSON.parse(fs.readFileSync(OUTPUT_PATH, "utf-8"));
+      for (const n of existing.notices || []) {
+        if (n.ai_analysis) previousAnalysis.set(n.id, n.ai_analysis);
+      }
+    }
+  } catch (e) {
+    console.error("⚠️ 이전 AI 분석 캐시 로드 실패:", e.message);
+  }
 
+  let analyzed = 0, cached = 0, skipped = 0, failed = 0;
+  for (const notice of notices) {
+    if (previousAnalysis.has(notice.id)) {
+      notice.ai_analysis = previousAnalysis.get(notice.id);
+      cached++;
+      continue;
+    }
+    try {
+      const result = await analyzeNoticePdf(notice);
+      if (result) {
+        notice.ai_analysis = result;
+        analyzed++;
+      } else {
+        skipped++;
+      }
+    } catch (err) {
+      console.error(`[AI 분석 실패] ${notice.id}:`, err.message);
+      failed++;
+    }
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+  console.log(
+    `[AI 분석] 새로 분석: ${analyzed}건, 캐시 재사용: ${cached}건, PDF 없어서 건너뜀: ${skipped}건, 실패: ${failed}건`
+  );
+  return notices;
+}
 async function main() {
   console.log("=== 청약나라 데이터 수집 시작 ===");
   const [lhNotices, ghNotices, reb, ghScrapedNotices, shScrapedNotices] = await Promise.all([
@@ -292,6 +330,7 @@ async function main() {
     `마감(당첨자 발표 ${WINNER_TRACK_DAYS}일 이내 제외)·너무 먼 예정(${UPCOMING_WINDOW_DAYS}일 초과) 제외: ` +
       `${supplemented.length}건 → ${kept.length}건`
   );
+  await enrichWithAiAnalysis(kept);
 
   // ✅ 2026-09-09: 기관마다 다르게 표기하는 지역명(경기/경기도, 강원/강원특별자치도 등)을 하나로 통일
   kept.forEach((n) => {
