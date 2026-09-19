@@ -257,6 +257,13 @@ function shouldKeep(notice, now) {
  *  - 429(사용량 한도 초과)가 뜨면 이후 요청도 전부 실패할 것이므로 그 자리에서
  *    바로 중단하고 나머지는 다음 실행으로 넘김
  */
+/** 지금 이 순간 실제로 접수기간 안에 있는(=신청 가능한) 공고인지 판단 */
+function isCurrentlyRecruiting(notice, now) {
+  const start = parseFlexibleDate(notice.apply_start_date);
+  const end = parseFlexibleDate(notice.apply_end_date);
+  if (!start || !end) return false;
+  return start.getTime() <= now.getTime() && now.getTime() <= end.getTime();
+}
 async function enrichWithAiAnalysis(notices) {
   const previousAnalysis = new Map();
   try {
@@ -376,7 +383,9 @@ async function main() {
       `${supplemented.length}건 → ${kept.length}건`
   );
 
-  await enrichWithAiAnalysis(kept);
+    const recruitingNow = kept.filter((n) => isCurrentlyRecruiting(n, now));
+  console.log(`[AI 분석 대상] 현재 모집중인 공고만 선별: ${kept.length}건 → ${recruitingNow.length}건`);
+  await enrichWithAiAnalysis(recruitingNow);
 
   // ✅ 2026-09-09: 기관마다 다르게 표기하는 지역명(경기/경기도, 강원/강원특별자치도 등)을 하나로 통일
   kept.forEach((n) => {
