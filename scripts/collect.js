@@ -296,8 +296,19 @@ async function enrichWithAiAnalysis(notices) {
       continue;
     }
 
-    try {
-      const result = await analyzeNoticePdf(notice);
+        try {
+      let result;
+      try {
+        result = await analyzeNoticePdf(notice);
+      } catch (err) {
+        if (err.message.includes("503")) {
+          console.warn(`[AI 분석] ${notice.id} 일시적 과부하(503) — 5초 후 한 번 더 시도`);
+          await new Promise((r) => setTimeout(r, 5000));
+          result = await analyzeNoticePdf(notice);
+        } else {
+          throw err;
+        }
+      }
       if (result) {
         notice.ai_analysis = result;
         analyzed++;
