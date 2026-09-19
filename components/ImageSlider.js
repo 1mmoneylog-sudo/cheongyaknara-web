@@ -22,7 +22,10 @@ export default function ImageSlider({ images }) {
       </div>
 
       <div className="img-slider-view">
-        <img src={images[index].url} alt={images[index].label || ""} />
+        <img
+  src={`/api/image-proxy?url=${encodeURIComponent(images[index].url)}`}
+  alt={images[index].label || ""}
+/>
         <button className="img-slider-btn prev" onClick={prev}>‹</button>
         <button className="img-slider-btn next" onClick={next}>›</button>
         <div className="img-slider-count">{index + 1} / {images.length}</div>
