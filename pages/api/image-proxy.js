@@ -12,6 +12,9 @@
 //    JPEG인데 image/gif로 표시)가 확인됨. 원본 Content-Type을 그대로 믿지 않고,
 //    응답 바이트의 매직 넘버(시그니처)로 실제 이미지 포맷을 직접 판별해서
 //    Content-Type을 재지정한다.
+// ✅ v6: Referer만으로는 부족함을 확인. LH가 세션(쿠키)까지 검증하는 것으로 보여,
+//    이미지 요청 전에 먼저 LH 목록 페이지에 접속해 세션 쿠키를 확보하고,
+//    그 쿠키를 이미지 요청에 함께 실어 보내도록 변경.
 
 const ALLOWED_HOSTS = [
   "apply-cdn.gh.or.kr",
@@ -56,11 +59,9 @@ function extractImgSrc(html) {
 function detectImageType(buffer) {
   if (!buffer || buffer.length < 4) return null;
 
-  // JPEG: FF D8 FF
   if (buffer[0] === 0xff && buffer[1] === 0xd8 && buffer[2] === 0xff) {
     return "image/jpeg";
   }
-  // PNG: 89 50 4E 47
   if (
     buffer[0] === 0x89 &&
     buffer[1] === 0x50 &&
@@ -69,7 +70,6 @@ function detectImageType(buffer) {
   ) {
     return "image/png";
   }
-  // GIF: 47 49 46 38 ("GIF8")
   if (
     buffer[0] === 0x47 &&
     buffer[1] === 0x49 &&
@@ -78,11 +78,9 @@ function detectImageType(buffer) {
   ) {
     return "image/gif";
   }
-  // BMP: 42 4D ("BM")
   if (buffer[0] === 0x42 && buffer[1] === 0x4d) {
     return "image/bmp";
   }
-  // WEBP: RIFF....WEBP
   if (
     buffer.length >= 12 &&
     buffer[0] === 0x52 &&
@@ -97,9 +95,10 @@ function detectImageType(buffer) {
     return "image/webp";
   }
 
-  return null; // 위 어느 시그니처도 아니면 판별 실패
+  return null;
 }
 
+/** 세션 쿠키 없이 단순 요청 */
 async function fetchOnce(url, referer) {
   const headers = { ...FETCH_HEADERS };
   if (referer) headers.Referer = referer;
@@ -107,6 +106,36 @@ async function fetchOnce(url, referer) {
   const contentType = res.headers.get("content-type") || "";
   const buffer = Buffer.from(await res.arrayBuffer());
   return { ok: res.ok, status: res.status, contentType, buffer };
+}
+
+/** Referer + 세션 쿠키를 함께 실어 보내는 요청 */
+async function fetchWithCookie(url, referer, cookie) {
+  const headers = { ...FETCH_HEADERS };
+  if (referer) headers.Referer = referer;
+  if (cookie) headers.Cookie = cookie;
+  const res = await fetch(url, { headers });
+  const contentType = res.headers.get("content-type") || "";
+  const buffer = Buffer.from(await res.arrayBuffer());
+  return { ok: res.ok, status: res.status, contentType, buffer };
+}
+
+/** LH 목록/상세 페이지에 먼저 접속해 세션 쿠키를 확보한다 */
+async function getLhSessionCookie() {
+  try {
+    const res = await fetch("https://apply.lh.or.kr/lhapply/lhFrcUascList.do", {
+      headers: FETCH_HEADERS,
+    });
+    const setCookieHeader = res.headers.get("set-cookie") || "";
+    // 여러 쿠키가 콤마로 이어져 오는 경우 각 쿠키의 "key=value" 부분만 추출
+    return setCookieHeader
+      .split(/,(?=[^;]+?=)/)
+      .map((c) => c.split(";")[0].trim())
+      .filter(Boolean)
+      .join("; ");
+  } catch (e) {
+    console.error("LH 세션 쿠키 확보 실패:", e.message);
+    return "";
+  }
 }
 
 export default async function handler(req, res) {
@@ -127,7 +156,16 @@ export default async function handler(req, res) {
   }
 
   try {
-    let result = await fetchOnce(target.href, "https://apply.lh.or.kr/");
+    // ✅ v6: LH 도메인이면 먼저 세션 쿠키를 확보하고, 그 쿠키를 실어 이미지 요청
+    let result;
+    let sessionCookie = "";
+
+    if (target.hostname === "apply.lh.or.kr") {
+      sessionCookie = await getLhSessionCookie();
+      result = await fetchWithCookie(target.href, "https://apply.lh.or.kr/", sessionCookie);
+    } else {
+      result = await fetchOnce(target.href);
+    }
 
     if (!result.ok) {
       return res.status(result.status).send(`원본 이미지 서버 오류 (${result.status})`);
@@ -150,7 +188,11 @@ export default async function handler(req, res) {
         return res.status(502).send(`이미지 경로 변환 실패: ${innerSrc}`);
       }
 
-      result = await fetchOnce(realImageUrl, target.href);
+      result =
+        target.hostname === "apply.lh.or.kr"
+          ? await fetchWithCookie(realImageUrl, target.href, sessionCookie)
+          : await fetchOnce(realImageUrl, target.href);
+
       if (!result.ok) {
         return res.status(result.status).send(`진짜 이미지 요청 실패 (${result.status}): ${realImageUrl}`);
       }
