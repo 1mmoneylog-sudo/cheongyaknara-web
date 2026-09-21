@@ -34,7 +34,7 @@ jobs:
           npm run collect
           python main.py
 
-           - name: LH 이미지 다운로드 테스트
+      - name: LH 이미지 다운로드 테스트
         continue-on-error: true
         run: |
           npm install --no-save playwright
@@ -60,53 +60,3 @@ jobs:
             const imgUrl = n.image_urls[0].url;
             const detailUrl = n.detail_url;
             console.log("[상세페이지]", detailUrl);
-            console.log("[이미지 URL]", imgUrl);
-
-            try {
-              const r1 = await fetch(imgUrl, { headers: { "User-Agent": UA, Referer: detailUrl } });
-              const b1 = Buffer.from(await r1.arrayBuffer());
-              const t1 = r1.headers.get("content-type");
-              console.log(`[1. fetch+Referer] status=${r1.status} type=${t1} size=${b1.length}`);
-              console.log("  본문:", show(t1, b1));
-            } catch (e) {
-              console.log("[1] 실패:", e.message);
-            }
-
-            const browser = await chromium.launch();
-            const ctx = await browser.newContext({ userAgent: UA, locale: "ko-KR" });
-            const page = await ctx.newPage();
-            try {
-              const dr = await page.goto(detailUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
-              const db = await dr.body();
-              console.log(`[2-a. 상세페이지 방문] status=${dr.status()} size=${db.length}`);
-              console.log("  본문 앞부분:", show("text", db).slice(0, 300));
-            } catch (e) {
-              console.log("[2-a] 실패:", e.message);
-            }
-            try {
-              const r2 = await page.request.get(imgUrl, { headers: { Referer: detailUrl } });
-              const b2 = await r2.body();
-              const t2 = r2.headers()["content-type"];
-              console.log(`[2-b. 방문 후 이미지 요청] status=${r2.status()} type=${t2} size=${b2.length}`);
-              console.log("  본문:", show(t2, b2));
-            } catch (e) {
-              console.log("[2-b] 실패:", e.message);
-            }
-            await browser.close();
-          })().catch((e) => console.log("[테스트 오류]", e.message));
-          EOF
-      - name: 신규 공고 이메일 알림 발송
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: npm run notify
-
-      - name: 변경사항 저장소에 반영
-        run: |
-          git config user.name "cheongyaknara-bot"
-          git config user.email "bot@example.com"
-          git add data/notices.json data/notices.prev.json
-          git commit -m "chore: 청약 공고 자동 업데이트" || echo "No changes to commit"
-          git fetch origin main
-          git push origin HEAD:main --force
