@@ -23,7 +23,7 @@ export default function ImageSlider({ images }) {
 
       <div className="img-slider-view">
         <img
-  src={`/api/image-proxy?url=${encodeURIComponent(images[index].url)}`}
+  src={images[index].url}
   alt={images[index].label || ""}
 />
         <button className="img-slider-btn prev" onClick={prev}>‹</button>
