@@ -127,7 +127,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    let result = await fetchOnce(target.href);
+    let result = await fetchOnce(target.href, "https://apply.lh.or.kr/");
 
     if (!result.ok) {
       return res.status(result.status).send(`원본 이미지 서버 오류 (${result.status})`);
