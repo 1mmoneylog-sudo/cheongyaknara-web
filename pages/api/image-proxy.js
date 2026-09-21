@@ -47,9 +47,9 @@ function extractImgSrc(html) {
 }
 
 async function fetchOnce(url, referer) {
-  const res = await fetch(url, {
-    headers: { ...FETCH_HEADERS, Referer: referer },
-  });
+  const headers = { ...FETCH_HEADERS };
+  if (referer) headers.Referer = referer;
+  const res = await fetch(url, { headers });
   const contentType = res.headers.get("content-type") || "";
   const buffer = Buffer.from(await res.arrayBuffer());
   return { ok: res.ok, status: res.status, contentType, buffer };
@@ -73,7 +73,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    let result = await fetchOnce(target.href, `${target.protocol}//${target.hostname}/`);
+        let result = await fetchOnce(target.href);
 
     if (!result.ok) {
       return res.status(result.status).send(`원본 이미지 서버 오류 (${result.status})`);
