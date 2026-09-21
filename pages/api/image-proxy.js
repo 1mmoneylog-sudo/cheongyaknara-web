@@ -117,3 +117,6 @@ export default async function handler(req, res) {
     return res.status(500).send("이미지를 불러오지 못했습니다.");
   }
 }
+export const config = {
+  regions: ["icn1"], // 서울(인천) 리전
+};
