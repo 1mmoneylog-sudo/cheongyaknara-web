@@ -8,6 +8,10 @@
 //    <img src="진짜경로"> 하나만 들어있는 "래퍼(wrapper) HTML 페이지"임을 확인.
 //    이제 HTML이 오면 그 안의 <img> 태그를 찾아서, 진짜 이미지 경로를
 //    한 번 더 가져오도록 처리한다.
+// ✅ v5: LH 원본 서버가 Content-Type 헤더를 잘못 내려주는 경우(예: 실제로는
+//    JPEG인데 image/gif로 표시)가 확인됨. 원본 Content-Type을 그대로 믿지 않고,
+//    응답 바이트의 매직 넘버(시그니처)로 실제 이미지 포맷을 직접 판별해서
+//    Content-Type을 재지정한다.
 
 const ALLOWED_HOSTS = [
   "apply-cdn.gh.or.kr",
@@ -46,6 +50,56 @@ function extractImgSrc(html) {
   return match ? match[1] : null;
 }
 
+/** 실제 바이트 시그니처(매직 넘버)로 이미지 포맷을 판별한다.
+ *  원본 서버가 내려주는 Content-Type 헤더는 신뢰하지 않는다 —
+ *  LH 서버가 실제로는 JPEG인 파일에 image/gif를 붙여 내려주는 사례가 확인됨. */
+function detectImageType(buffer) {
+  if (!buffer || buffer.length < 4) return null;
+
+  // JPEG: FF D8 FF
+  if (buffer[0] === 0xff && buffer[1] === 0xd8 && buffer[2] === 0xff) {
+    return "image/jpeg";
+  }
+  // PNG: 89 50 4E 47
+  if (
+    buffer[0] === 0x89 &&
+    buffer[1] === 0x50 &&
+    buffer[2] === 0x4e &&
+    buffer[3] === 0x47
+  ) {
+    return "image/png";
+  }
+  // GIF: 47 49 46 38 ("GIF8")
+  if (
+    buffer[0] === 0x47 &&
+    buffer[1] === 0x49 &&
+    buffer[2] === 0x46 &&
+    buffer[3] === 0x38
+  ) {
+    return "image/gif";
+  }
+  // BMP: 42 4D ("BM")
+  if (buffer[0] === 0x42 && buffer[1] === 0x4d) {
+    return "image/bmp";
+  }
+  // WEBP: RIFF....WEBP
+  if (
+    buffer.length >= 12 &&
+    buffer[0] === 0x52 &&
+    buffer[1] === 0x49 &&
+    buffer[2] === 0x46 &&
+    buffer[3] === 0x46 &&
+    buffer[8] === 0x57 &&
+    buffer[9] === 0x45 &&
+    buffer[10] === 0x42 &&
+    buffer[11] === 0x50
+  ) {
+    return "image/webp";
+  }
+
+  return null; // 위 어느 시그니처도 아니면 판별 실패
+}
+
 async function fetchOnce(url, referer) {
   const headers = { ...FETCH_HEADERS };
   if (referer) headers.Referer = referer;
@@ -73,13 +127,13 @@ export default async function handler(req, res) {
   }
 
   try {
-        let result = await fetchOnce(target.href);
+    let result = await fetchOnce(target.href);
 
     if (!result.ok) {
       return res.status(result.status).send(`원본 이미지 서버 오류 (${result.status})`);
     }
 
-    // ✅ HTML이 왔으면, 그 안에 진짜 이미지 경로가 있는지 한 번 더 확인
+    // HTML이 왔으면, 그 안에 진짜 이미지 경로가 있는지 한 번 더 확인
     if (result.contentType.includes("text/html")) {
       const html = result.buffer.toString("utf-8");
       const innerSrc = extractImgSrc(html);
@@ -102,14 +156,23 @@ export default async function handler(req, res) {
       }
     }
 
-    if (!result.contentType.startsWith("image/")) {
-      const preview = result.buffer.slice(0, 300).toString("utf-8").replace(/\s+/g, " ").trim();
+    // ✅ 원본 Content-Type을 신뢰하지 않고, 실제 바이트로 이미지 포맷을 재판별
+    const realContentType = detectImageType(result.buffer);
+
+    if (!realContentType) {
+      const preview = result.buffer
+        .slice(0, 300)
+        .toString("utf-8")
+        .replace(/\s+/g, " ")
+        .trim();
       return res
         .status(502)
-        .send(`여전히 이미지가 아닌 응답입니다 (content-type: ${result.contentType}). 미리보기: ${preview}`);
+        .send(
+          `이미지 시그니처를 인식하지 못했습니다 (원본 content-type: ${result.contentType}). 미리보기: ${preview}`
+        );
     }
 
-    res.setHeader("Content-Type", result.contentType);
+    res.setHeader("Content-Type", realContentType);
     res.setHeader("Cache-Control", "public, max-age=86400, immutable");
     return res.status(200).send(result.buffer);
   } catch (err) {
@@ -117,6 +180,7 @@ export default async function handler(req, res) {
     return res.status(500).send("이미지를 불러오지 못했습니다.");
   }
 }
+
 export const config = {
   regions: ["icn1"], // 서울(인천) 리전
 };
